@@ -1,6 +1,7 @@
 /*----------------------------------------*/
 /*  01. Template default CSS
 /*----------------------------------------*/
+
 @mixin placeholder {
     &::-webkit-input-placeholder {
         @content
@@ -20,6 +21,8 @@
 }
 
 /* Common Style */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 *,
 *::after,
 *::before {

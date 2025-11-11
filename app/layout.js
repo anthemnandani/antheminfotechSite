@@ -1,42 +1,33 @@
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import "swiper/css";
-import 'swiper/css/pagination';
+import "swiper/css/pagination";
 import "aos/dist/aos.css";
-import 'react-modal-video/scss/modal-video.scss';
-import './assets/scss/style.scss';
-import './assets/css/style.css';
-import './assets/css/custom.css';
-
-// import './assets/scss/_header.scss';
-//  import './assets/css/style.min.css';
-import '../styles/App.css'; 
+import "react-modal-video/scss/modal-video.scss";
+import "./assets/scss/style.scss";
 import "./globals.css";
-
+import "../app/assets/scss/style.scss";
+import "../app/assets/css/custom.css";
+import "../app/assets/css/plugins/animate.css";
+import "../app/assets/css/font-awesome/css/all.css";
+import "../app/assets/css/font-awesome/css/fontawesome.min.css";
 import Header from "../partials/header/Header";
 import Footer from "../components/FooterComponent/Footer";
-
-// RootLayout.js
 import Script from "next/script";
 
-<Script
-  src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  strategy="beforeInteractive"
-/>
-
-
 export const metadata = {
-  title: "Anthem Infotech - Software Product Development & IT Solutions",
+  title: "Anthem Infotech - SOFTWARE PRODUCT DEVELOPMENT AND MAINTENANCE COMPANY",
   description: "Anthem Infotech specializes in end-to-end software product development, IT consulting, and digital solutions for businesses worldwide.",
-  keywords: "Software Development, IT Solutions, Digital Transformation, Product Development, Anthem Infotech",
+  keywords: "designing services, ASP.net Development, Search Engine Optimization, custom Software Development, Desktop Applications, windows applications, SQL Server, application development,web development,mobile application development,iOS mobile applications,custom business solutions,Australian web development, website development australia, web design company australia, web development company in australia, website designing company in sydney, SEO companies india, Mobile app development company india, web development companies india, web design company india, custom software development companies",
   authors: [
-    { name: "Hemant Gupta - CEO, Anthem Infotech", url: "https://antheminfotech.com" }
+    { name: "Hemant Gupta - CEO - Anthem Infotech Private Limited", url: "https://antheminfotech.com" }
   ],
-  creator: "Hemant Gupta - CEO, Anthem Infotech",
-    icons: {
-    icon: "https://res.cloudinary.com/dzmfvr3dm/image/upload/images/favicon.png", // favicon for browsers
-    shortcut: "https://res.cloudinary.com/dzmfvr3dm/image/upload/images/favicon.png", // Windows / legacy
-    apple: "https://res.cloudinary.com/dzmfvr3dm/image/upload/images/favicon.png", // Apple Touch Icon
+  creator: "Hemant Gupta - CEO - Anthem Infotech Private Limited",
+  themeColor: "#000000",
+  icons: {
+    icon: "/images/favicon.png",
+    shortcut: "/images/favicon.png",
+    apple: "/logo192.png",
   },
   openGraph: {
     title: "Anthem Infotech - Software Product Development & IT Solutions",
@@ -66,21 +57,109 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-bs-theme="dark">
       <head>
-        {/* ✅ Load Google Fonts like React */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Muli:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
+        {/* Preconnect to critical domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Preload critical resources */}
+        <link 
+          rel="preload" 
+          href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" 
+          as="style" 
         />
+        <link 
+          rel="preload" 
+          href="https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700&display=swap" 
+          as="style" 
+        />
+        <link 
+          rel="preload" 
+          as="image" 
+          href="https://res.cloudinary.com/dzmfvr3dm/image/upload/images/logo/logo.webp"
+        />
+        
+        {/* Google Fonts with async loading */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+          media="print"
+          id="rubik-font"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+          media="print"
+          id="muli-font"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function enableFont(fontId) {
+                  var font = document.getElementById(fontId);
+                  if (font) {
+                    font.onload = function() { this.media = 'all'; };
+                    font.addEventListener('load', function() { this.media = 'all'; });
+                    // Fallback: if already loaded, enable immediately
+                    if (font.sheet) {
+                      font.media = 'all';
+                    }
+                  }
+                }
+                enableFont('rubik-font');
+                enableFont('muli-font');
+              })();
+            `,
+          }}
+        />
+        
+        {/* Fallback for fonts */}
+        <noscript>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+        </noscript>
+        
+        {/* Critical CSS */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            /* Critical font fallback */
+            .section-title .title {
+              font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            /* Prevent layout shift */
+            .section-title {
+              min-height: 42px;
+            }
+          `
+        }} />
       </head>
       <body className="antialiased">
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-YGDQN3RN6W"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YGDQN3RN6W');
+          `}
+        </Script>
+        
         <Header />
-
-        {/* Page content */}
         <main>{children}</main>
-
-        {/* Footer is global */}
         <Footer />
       </body>
     </html>
