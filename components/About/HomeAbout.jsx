@@ -68,7 +68,7 @@ const HomeAbout = ({ classOption }) => {
             <div className="about-content-area">
               <SectionTitleTwo
                 subTitle="Trust, Commitment and Delivery"
-                title="We automate manual business processes"
+                title="We automate manual business processes."
               />
 
               <div className="row mb-n6 mt-5 text-lg-start">

@@ -1,4 +1,3 @@
-
 import React from "react";
 import IntroTwo from "@/container/IntroSlider/IntroTwo";
 import AboutFour from "@/container/About/AboutFour";
@@ -6,6 +5,8 @@ import Video from "@/container/Video/Video";
 import AboutFive from "@/container/About/AboutFive";
 import TestimonialContainer from "@/container/Testimonial/TestimonialContainer";
 import CallToActionTwo from "@/container/CallToAction/CallToActionTwo";
+import Script from "next/script";
+
 // Server-side SEO metadata using SSG
 export async function generateMetadata() {
   const title =
@@ -16,11 +17,22 @@ export async function generateMetadata() {
   return {
     title,
     description,
+    keywords: [
+      "About Anthem Infotech",
+      "Software Development Company History",
+      "Web Development Company Chandigarh",
+      "IT Company Since 2011",
+      "Custom Software Development",
+      "AI Solutions Provider",
+      "Technology Partner",
+    ],
     openGraph: {
       title,
       description,
       url: "https://antheminfotech.com/about-us",
       siteName: "Anthem Infotech",
+      type: "website",
+      locale: "en_IN",
       images: [
         {
           url: "/images/og-image.png",
@@ -29,7 +41,6 @@ export async function generateMetadata() {
           alt: "Anthem Infotech About",
         },
       ],
-      type: "website",
     },
     twitter: {
       card: "summary_large_image",
@@ -37,13 +48,44 @@ export async function generateMetadata() {
       description,
       images: ["/images/og-image.png"],
     },
+    alternates: {
+      canonical: "https://antheminfotech.com/about-us",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 
 const AboutUs = () => {
   return (
     <>
-      
+      {/* Structured Data - AboutPage */}
+      <Script
+        id="about-page-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "About Anthem Infotech",
+            "description": "Leading Web Development and AI Software Company in Chandigarh, India since 2011",
+            "url": "https://antheminfotech.com/about-us",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Anthem Infotech Private Limited",
+              "foundingDate": "2011",
+              "founder": {
+                "@type": "Person",
+                "name": "Hemant Gupta",
+                "jobTitle": "CEO"
+              },
+              "description": "Leading Software Product Development and IT Solutions company"
+            }
+          }),
+        }}
+      />
 
       {/* Intro Section with Background Video */}
       <IntroTwo />

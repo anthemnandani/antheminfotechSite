@@ -16,42 +16,118 @@ import Footer from "../components/FooterComponent/Footer";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Anthem Infotech - SOFTWARE PRODUCT DEVELOPMENT AND MAINTENANCE COMPANY",
-  description: "Anthem Infotech specializes in end-to-end software product development, IT consulting, and digital solutions for businesses worldwide.",
-  keywords: "designing services, ASP.net Development, Search Engine Optimization, custom Software Development, Desktop Applications, windows applications, SQL Server, application development,web development,mobile application development,iOS mobile applications,custom business solutions,Australian web development, website development australia, web design company australia, web development company in australia, website designing company in sydney, SEO companies india, Mobile app development company india, web development companies india, web design company india, custom software development companies",
+  metadataBase: new URL("https://antheminfotech.com"),
+  title: {
+    default: "Anthem Infotech - SOFTWARE PRODUCT DEVELOPMENT AND MAINTENANCE COMPANY",
+    template: "%s | Anthem Infotech",
+  },
+  description: "Anthem Infotech specializes in end-to-end software product development, IT consulting, and digital solutions for businesses worldwide. Leading Web Development Company in Chandigarh, India since 2011.",
+  keywords: [
+    "designing services",
+    "ASP.net Development",
+    "Search Engine Optimization",
+    "custom Software Development",
+    "Desktop Applications",
+    "windows applications",
+    "SQL Server",
+    "application development",
+    "web development",
+    "mobile application development",
+    "iOS mobile applications",
+    "custom business solutions",
+    "Australian web development",
+    "website development australia",
+    "web design company australia",
+    "web development company in australia",
+    "website designing company in sydney",
+    "SEO companies india",
+    "Mobile app development company india",
+    "web development companies india",
+    "web design company india",
+    "custom software development companies",
+    "AI Software Development",
+    "Full Stack Development",
+    "Enterprise Software Development",
+    "Chandigarh web development",
+    "India software company",
+  ],
   authors: [
     { name: "Hemant Gupta - CEO - Anthem Infotech Private Limited", url: "https://antheminfotech.com" }
   ],
   creator: "Hemant Gupta - CEO - Anthem Infotech Private Limited",
+  publisher: "Anthem Infotech Private Limited",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://antheminfotech.com",
+  },
+  category: "Technology",
+  classification: "Software Development Company",
   themeColor: "#000000",
+  colorScheme: "dark",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
   icons: {
-    icon: "/images/favicon.png",
+    icon: [
+      { url: "/images/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/favicon.png", sizes: "16x16", type: "image/png" },
+    ],
     shortcut: "/images/favicon.png",
     apple: "/logo192.png",
   },
+  manifest: "/manifest.json",
   openGraph: {
-    title: "Anthem Infotech - Software Product Development & IT Solutions",
-    description: "Providing software product development, IT consulting, and digital solutions to businesses worldwide.",
+    type: "website",
+    locale: "en_IN",
     url: "https://antheminfotech.com",
     siteName: "Anthem Infotech",
+    title: "Anthem Infotech - Software Product Development & IT Solutions",
+    description: "Providing software product development, IT consulting, and digital solutions to businesses worldwide. Leading Web Development Company in Chandigarh, India since 2011.",
     images: [
       {
         url: "https://res.cloudinary.com/dzmfvr3dm/image/upload/images/logo/logo.webp",
         width: 1200,
         height: 630,
-        alt: "Anthem Infotech Logo",
+        alt: "Anthem Infotech - Software Product Development & IT Solutions",
+        type: "image/webp",
       },
     ],
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     site: "@AnthemInfotech",
+    creator: "@AnthemInfotech",
     title: "Anthem Infotech - Software Product Development & IT Solutions",
     description: "Providing software product development, IT consulting, and digital solutions to businesses worldwide.",
     images: [
-      "https://res.cloudinary.com/dzmfvr3dm/image/upload/images/logo/logo.webp"
+      {
+        url: "https://res.cloudinary.com/dzmfvr3dm/image/upload/images/logo/logo.webp",
+        alt: "Anthem Infotech Logo",
+      },
     ],
+  },
+  verification: {
+    google: "your-google-verification-code", // Replace with actual verification code
+    // yandex: "your-yandex-verification-code",
+    // bing: "your-bing-verification-code",
+  },
+  other: {
+    "geo.region": "IN-PB",
+    "geo.placename": "Chandigarh",
+    "geo.position": "30.7333;76.7794",
+    "ICBM": "30.7333, 76.7794",
   },
 };
 
@@ -143,6 +219,86 @@ export default function RootLayout({ children }) {
       </head>
       <body className="antialiased">
         <noscript>You need to enable JavaScript to run this app.</noscript>
+        
+        {/* Structured Data - Organization */}
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Anthem Infotech Private Limited",
+              "alternateName": "Anthem Infotech",
+              "url": "https://antheminfotech.com",
+              "logo": "https://res.cloudinary.com/dzmfvr3dm/image/upload/images/logo/logo.webp",
+              "description": "Leading Software Product Development and IT Solutions company specializing in Custom Software Development, Web Development, AI Solutions, and Enterprise Software since 2011.",
+              "foundingDate": "2011",
+              "founder": {
+                "@type": "Person",
+                "name": "Hemant Gupta",
+                "jobTitle": "CEO"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Chandigarh",
+                "addressRegion": "Punjab",
+                "addressCountry": "IN"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "Customer Service",
+                "areaServed": "Worldwide",
+                "availableLanguage": ["English", "Hindi"]
+              },
+              "sameAs": [
+                "https://www.linkedin.com/company/anthem-infotech",
+                "https://twitter.com/AnthemInfotech",
+                "https://www.facebook.com/antheminfotech"
+              ],
+              "areaServed": {
+                "@type": "Place",
+                "name": "Worldwide"
+              },
+              "knowsAbout": [
+                "Software Development",
+                "Web Development",
+                "AI Solutions",
+                "Custom Software Development",
+                "Mobile App Development",
+                "Enterprise Software",
+                "IT Consulting"
+              ]
+            }),
+          }}
+        />
+        
+        {/* Structured Data - WebSite */}
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Anthem Infotech",
+              "url": "https://antheminfotech.com",
+              "description": "Software Product Development and IT Solutions Company",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Anthem Infotech Private Limited"
+              },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://antheminfotech.com/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            }),
+          }}
+        />
         
         {/* Google Analytics */}
         <Script
