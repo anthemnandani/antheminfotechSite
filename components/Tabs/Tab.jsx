@@ -21,7 +21,7 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter, useSearchParams } from "next/navigation";
-
+import Link from "next/link";
 import industrySolutions from "../../data/IndustriesTabs/industry_solutions.json";
 import { getToken } from "../../services/tokenservice";
 import { getProjects } from "../../services/projectsservices";
@@ -36,7 +36,6 @@ const ReactTabs = () => {
   const [filteredProjects, setFilteredProjects] = useState(null);
   const [loading, setLoading] = useState(true);
   const [relatedProductsID, setRelatedProductsID] = useState(null);
-
   const router = useRouter();
   const searchParams = useSearchParams();
   const industryType = searchParams.get("Industrytype");
@@ -187,8 +186,10 @@ const ReactTabs = () => {
                     <div className="row">
                       <div className="col-12">
                         <div className="tagcloud">
-                          {solution.highlights.map((highlight, idx) => (
-                            <p key={idx}>{highlight}</p>
+                          {solution.highlights.map((highlight, index) => (
+                           <p key={index}>
+                                                            <Link href={`#`}>{highlight}</Link>
+                                                        </p>
                           ))}
                         </div>
                       </div>

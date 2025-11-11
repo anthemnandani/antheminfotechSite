@@ -117,8 +117,8 @@ const Header = () => {
         </div>
       </div>
 
-      {/* <MobileMenu show={offcanvasShow} onClose={() => setOffcanvasShow(false)} /> */}
-      {/* <MainSearch show={searchbarShow} onClose={() => setSearchbarShow(false)} /> */}
+      <MobileMenu show={offcanvasShow} onClose={() => setOffcanvasShow(false)} />
+      <MainSearch show={searchbarShow} onClose={() => setSearchbarShow(false)} />
     </Fragment>
   );
 };
