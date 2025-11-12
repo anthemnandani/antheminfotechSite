@@ -1,6 +1,8 @@
 import React from "react";
 import WordCloud from "../../container/WordCloud/WordCloud";
 import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
+import { getToken } from "../../services/tokenservice";
+import { getProjects } from "../../services/projectsservices";
 import Script from "next/script";
 
 export const metadata = {
@@ -76,7 +78,7 @@ const Technologies = () => {
         content="Home"
         contentTwo="Technologies"
       />
-      <WordCloud classOption="bg-white" />
+      <WordCloud classOption="bg-white"/>
     </React.Fragment>
   );
 };

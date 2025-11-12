@@ -1,3 +1,4 @@
+
 import React, { Fragment } from 'react';
 import { useForm } from "react-hook-form";
 
@@ -52,7 +53,7 @@ const ProjectForm = () => {
                         </span>
                     </div>
                     <div className="col-12 text-center mb-4">
-                        <button type="submit" className="btn btn-primary btn-hover-secondary">Get a free consultation</button>
+                        <button type="submit" className="btn btn-secondary btn-hover-primary">Get a free consultation</button>
                     </div>
                 </div>
             </form>

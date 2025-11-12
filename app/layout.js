@@ -81,8 +81,8 @@ export const metadata = {
   },
   icons: {
     icon: [
-      { url: "/images/favicon.png", sizes: "32x32", type: "image/png" },
-      { url: "/images/favicon.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/logo/logo.webp", sizes: "32x32", type: "image/webp" },
+      { url: "/images/logo/logo.webp", sizes: "16x16", type: "image/webp" },
     ],
     shortcut: "/images/favicon.png",
     apple: "/logo192.png",
