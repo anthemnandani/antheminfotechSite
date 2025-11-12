@@ -37,7 +37,7 @@ const SectionTitleComponent = ({ title,
                 }}
             />
             {subTitle && (
-                <div
+                <p
                     className="mt-2"
                     dangerouslySetInnerHTML={subTitleContent}
                     style={{

@@ -58,7 +58,7 @@ const ServiceIconBoxTwo = ({ classOption }) => {
         </div>
 
         <div className="col-12 d-flex justify-content-center mt-16">
-          <Link href="/Technologies" passHref>
+          <Link href="/technologies" passHref>
             <button
               type="button"
               className="btn btn-bottom"
