@@ -1,5 +1,5 @@
 import React from "react";
-import IntroThree from "../../container/IntroSlider/IntroThree";
+import IntroThree from "@/container/IntroSlider/IntroThree";
 import ContactInformation from "../../container/ContactInformation/ContactInformation";
 import GoogleMap from "../../container/Map/GoogleMap";
 import ContactFromContainer from "../../container/ContactFromContainer/ContactFromContainer";
