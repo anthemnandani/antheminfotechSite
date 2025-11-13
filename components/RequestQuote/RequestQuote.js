@@ -1,3 +1,4 @@
+"use client";
 import axios from "axios";
 import React, { useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -49,7 +50,7 @@ const RequestQuote = () => {
         };
 
         const response = await axios.post(
-          `${process.env.REACT_APP_PUBLIC_API_URL}/api/ContactUs/RequestQuote`,
+          `${process.env.NEXT_PUBLIC_API_URL}/api/ContactUs/RequestQuote`,
           jsonData,
           {
             headers: {
@@ -271,7 +272,7 @@ const RequestQuote = () => {
           <div className="col-12 mb-6">
             <ReCAPTCHA
               ref={recaptchaRef}
-              sitekey={process.env.REACT_APP_RECAPTCHA}
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA}
               onChange={onRecaptchaChange}
             />
           </div>

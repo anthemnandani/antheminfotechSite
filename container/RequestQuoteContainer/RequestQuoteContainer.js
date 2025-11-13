@@ -1,6 +1,7 @@
+"use client";
 import React, { useEffect, useRef, useState } from "react";
-import SectionTitle from "../../components/SectionTitles/SectionTitle.jsx";
-import RequestQuote from "../../components/RequestQuote/RequestQuote.js";
+import SectionTitle from "../../components/SectionTitles/SectionTitle";
+import RequestQuote from "../../components/RequestQuote/RequestQuote";
 import Tilt from "react-parallax-tilt";
 import Parallax from "parallax-js";
 
@@ -71,8 +72,8 @@ const RequestQuoteContainer = ({ classOption }) => {
                   <Tilt scale={scale} transitionSpeed={4000}>
                     <img
                       src={
-                        process.env.PUBLIC_URL +
-                        "../images/about/home-one-about/home_agency_about_1.jpg"
+                       process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL+
+                        "/images/about/home-one-about/home_agency_about_2.jpg"
                       }
                       alt="home_agency_about"
                     />
@@ -84,7 +85,7 @@ const RequestQuoteContainer = ({ classOption }) => {
                     <img
                       src={
                         process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL +
-                        "/images/about/home-one-about/home_agency_about_2.webp"
+                        "/images/about/home-one-about/home_agency_about_1.webp"
                       }
                       alt="home_agency_about"
                     />
