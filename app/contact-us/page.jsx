@@ -48,6 +48,30 @@ export const metadata = {
 };
 
 const ContactUs = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Anthem Infotech",
+    "description": "Contact the leading Web Development and AI Solutions company in Chandigarh, India",
+    "url": "https://antheminfotech.com/contact-us",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Anthem Infotech Private Limited",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chandigarh",
+        "addressRegion": "Punjab",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "areaServed": "Worldwide",
+        "availableLanguage": ["English", "Hindi"]
+      }
+    }
+  };
+
   return (
     <>
       {/* Structured Data - ContactPage */}
@@ -55,29 +79,7 @@ const ContactUs = () => {
         id="contact-page-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ContactPage",
-            "name": "Contact Anthem Infotech",
-            "description": "Contact the leading Web Development and AI Solutions company in Chandigarh, India",
-            "url": "https://antheminfotech.com/contact-us",
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "Anthem Infotech Private Limited",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Chandigarh",
-                "addressRegion": "Punjab",
-                "addressCountry": "IN"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "Customer Service",
-                "areaServed": "Worldwide",
-                "availableLanguage": ["English", "Hindi"]
-              }
-            }
-          }),
+          __html: JSON.stringify(structuredData),
         }}
       />
       
