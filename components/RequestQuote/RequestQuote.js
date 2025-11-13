@@ -1,16 +1,24 @@
 "use client";
 import axios from "axios";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
 const RequestQuote = () => {
-  const [token] = useState(localStorage.getItem("token"));
-
+  const [token, setToken] = useState(null);
   const [recaptchaToken, setRecaptchaToken] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const recaptchaRef = useRef();
+
+  
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedToken = localStorage.getItem("token");
+      console.log("Retrieved token from localStorage:", storedToken);
+      setToken(storedToken);
+    }
+  }, []);
 
   function onRecaptchaChange(token) {
     setRecaptchaToken(token);
@@ -21,19 +29,17 @@ const RequestQuote = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm({
-    mode: "onBlur",
-  });
+  } = useForm({ mode: "onBlur" });
+
   const onSubmit = async (data) => {
-    if (isSubmitting) {
-      return;
-    }
+    if (isSubmitting) return;
     setIsSubmitting(true);
+
     try {
       if (!recaptchaToken) {
         Swal.fire({
           title: "Please complete the ReCAPTCHA",
-          icon: "error", //error,success,
+          icon: "error",
         });
         setIsSubmitting(false);
         return;
@@ -46,7 +52,7 @@ const RequestQuote = () => {
           number: data.contactnumber,
           website: data.website,
           message: data.message,
-          goal: data.goal.join(","), // Append goal
+          goal: data.goal.join(","),
         };
 
         const response = await axios.post(
@@ -54,7 +60,6 @@ const RequestQuote = () => {
           jsonData,
           {
             headers: {
-              // "Content-Type": "application/json",
               Authorization: `Bearer ${token}`,
             },
           }
@@ -63,7 +68,7 @@ const RequestQuote = () => {
         if (response.status === 200) {
           Swal.fire({
             title: response.data.msg,
-            icon: "success", //error,success,
+            icon: "success",
           });
           setRecaptchaToken(null);
           recaptchaRef.current.reset();
@@ -78,6 +83,7 @@ const RequestQuote = () => {
       setIsSubmitting(false);
     }
   };
+
 
   return (
     <div className="contact-form" data-aos="fade-up" data-aos-delay="300">
