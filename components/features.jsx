@@ -187,7 +187,7 @@ export const Features = (props) => {
       <div className="container-fluid">
       <div >
         <div className="col-md-10 col-md-offset-1 section-title">
-          <h2>OUR COMPANY AT A GLANCE</h2>
+          <h2>OUR SERVICES AT A GLANCE</h2>
         </div>
       </div>
       <nav className="navbar navbar-expand-lg navbar-light gradient-bg">

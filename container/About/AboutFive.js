@@ -67,7 +67,7 @@ const AboutFive = ({ classOption }) => {
           >
             <div className="about-content-area">
               <SectionTitleTwo
-                subTitle="Our Company at a Glance"
+                subTitle="Our Service at a Glance"
                 title="Offering innovative digital solutions and expanding our services across diverse industries."
               />
 
