@@ -1,6 +1,3 @@
-
-"use client"
-
 // pages/services/custom-software.js
 import React from "react";
 import SEO from "../../../components/SEO";
@@ -15,7 +12,7 @@ const CustomSoftware = () => {
   const filteredServices = Array.isArray(servicesData)
     ? servicesData.filter((data) => data.title === filterservices)
     : [];
-
+    console.log("Filtered:", filteredServices);
   return (
     <>
       <SEO
