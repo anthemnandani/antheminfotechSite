@@ -57,7 +57,7 @@ const CareerForm = () => {
     try {
       if (token && recaptchaToken) {
         const res = await axios.post(
-          `${process.env.NEXT_PUBLIC_API_URL}/api/Career/ApplyforJobCareer`,
+          `${process.env.NEXT_PUBLIC_API_URl}/api/Career/ApplyforJobCareer`,
           formData,
           { headers: { "Content-Type": "multipart/form-data", Authorization: `Bearer ${token}` } }
         );
