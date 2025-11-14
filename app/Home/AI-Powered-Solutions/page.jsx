@@ -5,7 +5,6 @@ import SEO from "@/components/SEO";
 import Breadcrumb from "@/container/Breadcrumb/Breadcrumb";
 import ServiceDesign from "@/container/service/serviceDesign";
 import ServiceGrid from "@/components/Services/ServiceGrid";
-
 import servicesData from "@/data/services/services.json";
 
 const AIMLDevelopment = () => {

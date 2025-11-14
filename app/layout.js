@@ -14,6 +14,7 @@ import "../app/assets/css/font-awesome/css/fontawesome.min.css";
 import Header from "../partials/header/Header";
 import Footer from "../components/FooterComponent/Footer";
 import Script from "next/script";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata = {
   metadataBase: new URL("https://antheminfotech.com"),
@@ -316,6 +317,7 @@ export default function RootLayout({ children }) {
         
         <Header />
         <main>{children}</main>
+        <ScrollToTop />
         <Footer />
       </body>
     </html>
