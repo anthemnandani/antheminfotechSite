@@ -1,6 +1,7 @@
+"use client";
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import ImageCarousel from "../../components/swiper/ImageCarousel";
 import Loader from "../Loader/Loader";
 
@@ -100,7 +101,7 @@ const WorkDetailsContainer = ({ projects, loading, classOption }) => {
                         .map((highlight) => highlight.trim())
                         .filter((highlight) => highlight)
                         .map((highlight, index) => (
-                          <Link key={index} to={`#`}>
+                          <Link key={index} href={`#`}>
                             {toTitleCase(highlight)}
                           </Link>
                         ))}

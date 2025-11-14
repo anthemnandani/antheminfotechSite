@@ -52,7 +52,7 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "management.workanthem.com",
-        pathname: "/ClientImages/**", // match your folder
+        pathname: "/**", // match your folder
       },
     ],
   },

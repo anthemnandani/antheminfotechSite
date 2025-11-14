@@ -63,7 +63,7 @@ const ServiceGrid = ({ service, classOption }) => {
             data-aos-delay="300"
           >
             <SectionTitleTwo
-              subTitle="Our Company at a Glance"
+              subTitle="Our Services"
               title={service.at(0).title}
             />
 
