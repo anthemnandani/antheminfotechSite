@@ -6,7 +6,7 @@ import IconBoxData from "../../data/iconBox/icon-box.json";
 import IconBox from "../../components/IconBox/IconBox.jsx";
 import SectionTitle from "../../components/SectionTitles/SectionTitle";
 
-const ServiceIconBox = ({ classOption = "" }) => {
+const ServiceIconBox = ({ classOption}) => {
   return (
     <section className={`section section-padding-t90-b100 ${classOption}`}>
       <div className="container">

@@ -26,7 +26,7 @@ const ContactInfoItem = ({ data }) => {
     }, []);
     return (
         <div style={{ height: "fit-content" }}>
-            <div className="contact-info h-100">
+            <div className="contact-info">
                 <div className="icon">
                     <ReactVivus
                         id={`contactsvg-${data.id}`}
