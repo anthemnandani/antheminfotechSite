@@ -25,6 +25,7 @@ const WorkContainer = ({ classOption }) => {
   const [itemsToShow, setItemsToShow] = useState(6);
   const [hasMore, setHasMore] = useState(true);
 
+
   const params = useParams();
   const slug = params?.slug;
 
@@ -157,8 +158,48 @@ const WorkContainer = ({ classOption }) => {
             />
           </div>
         </div>
+{loading ? (
+  <Loader />
+) : filterProjects.length === 0 ? (
+  <div className="text-center py-5">
+    <h3 className="text-danger fw-bold">No projects found for this technology.</h3>
+    <p className="text-muted mt-2">
+      Please explore our other case studies and services.
+    </p>
 
-        {loading ? (
+    <a href="/OurWork" className="btn btn-primary mt-3">
+      View All Projects
+    </a>
+  </div>
+) : (
+  <InfiniteScroll
+    dataLength={visibleData.length}
+    next={loadMoreData}
+    hasMore={hasMore}
+    loader={
+      <div className="d-flex justify-content-center w-100">
+        <BeatLoader color="#0a507a" />
+      </div>
+    }
+    endMessage={
+      <div className="d-flex justify-content-center w-100">
+        <p className="text-primary fw-bold">
+          You have reached the end of this section.
+        </p>
+      </div>
+    }
+  >
+    <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 mb-n6">
+      {visibleData.map((single, index) => (
+        <div key={index} className="col mb-6" data-aos="fade-up">
+          <WorkItemTwo classOption="box-border" data={single} />
+        </div>
+      ))}
+    </div>
+  </InfiniteScroll>
+)}
+
+        {/* {loading ? (
           <Loader />
         ) : (
           <InfiniteScroll
@@ -186,7 +227,7 @@ const WorkContainer = ({ classOption }) => {
               ))}
             </div>
           </InfiniteScroll>
-        )}
+        )} */}
       </div>
     </div>
   );
