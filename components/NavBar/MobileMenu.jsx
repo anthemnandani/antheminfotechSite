@@ -1,9 +1,20 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import PropTypes from "prop-types"
 import Logo from '../../components/logo/Logo';
 import MobileNavMenu from './sub-component/MobileNavMenu';
 
 const MobileMenu = ({ show, onClose }) => {
+    
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 992 && show) {
+                onClose(); // Auto-hide mobile menu
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [show, onClose]);
     return (
         <div id="site-main-mobile-menu" className={`site-main-mobile-menu ${show ? "active" : ""}`}>
             <div className="site-main-mobile-menu-inner">
