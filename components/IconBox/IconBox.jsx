@@ -1,16 +1,46 @@
 "use client";
 import PropTypes from "prop-types";
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactVivus from 'react-vivus';
 import Link from "next/link";
 
 const IconBox = ({ data, classOption }) => {
-    // Extract the icon name from the path
     const iconName = data.icon;
     const iconUrl = `${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/${iconName}`;
 
+    useEffect(() => {
+        const equalizeHeights = () => {
+            const boxes = document.querySelectorAll(".icon-box.equal-height");
+
+            let maxHeight = 0;
+
+            // Reset & find max
+            boxes.forEach(box => {
+                box.style.height = "auto";
+                const h = box.offsetHeight;
+                if (h > maxHeight) maxHeight = h;
+            });
+
+            // Set equal height
+            boxes.forEach(box => {
+                box.style.height = `${maxHeight}px`;
+            });
+        };
+
+        // 🟦 Delay ensures SVG + content are fully rendered
+        const timer = setTimeout(() => {
+            equalizeHeights();
+            window.addEventListener("resize", equalizeHeights);
+        }, 250); // 250ms = perfect timing for Vivus SVG
+
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener("resize", equalizeHeights);
+        };
+    }, []);
+
     return (
-        <div className={`icon-box text-center ${classOption}`}>
+        <div className={`icon-box equal-height text-center ${classOption}`}>
             <Link href={data.link} className="link">
                 <div className="icon">
                     <ReactVivus
@@ -31,8 +61,8 @@ const IconBox = ({ data, classOption }) => {
                 </div>
             </Link>
         </div>
-    )
-}
+    );
+};
 
 IconBox.propTypes = {
     data: PropTypes.object,
@@ -44,24 +74,4 @@ IconBox.defaultProps = {
 };
 
 export default IconBox;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

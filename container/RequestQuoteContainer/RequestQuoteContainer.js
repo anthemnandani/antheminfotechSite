@@ -19,6 +19,10 @@ const RequestQuoteContainer = ({ classOption }) => {
 
   return () => parallaxInstance.disable();
 }, []);
+
+useEffect(() => {
+  require("aos").init();
+}, []);
   // useEffect(() => {
   //   const parallaxInstance = new Parallax(sceneEl.current, {
   //     relativeInput: true,
