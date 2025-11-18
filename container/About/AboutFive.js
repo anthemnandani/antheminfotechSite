@@ -9,15 +9,32 @@ const AboutFive = ({ classOption }) => {
   const [scale] = useState(1.04);
   const sceneEl = useRef(null);
 
+
+
   useEffect(() => {
-    const parallaxInstance = new Parallax(sceneEl.current, {
-      relativeInput: true,
-    });
+  if (!sceneEl.current) return;
 
-    parallaxInstance.enable();
+  const Parallax = require("parallax-js");
+  const parallaxInstance = new Parallax(sceneEl.current, {
+    relativeInput: true,
+  });
 
-    return () => parallaxInstance.disable();
-  }, []);
+  return () => parallaxInstance.disable();
+}, []);
+
+useEffect(() => {
+  require("aos").init();
+}, []);
+
+  // useEffect(() => {
+  //   const parallaxInstance = new Parallax(sceneEl.current, {
+  //     relativeInput: true,
+  //   });
+
+  //   parallaxInstance.enable();
+
+  //   return () => parallaxInstance.disable();
+  // }, []);
   return (
     <div
       className={`section section-padding-top section-padding-bottom-180 ${classOption}`}

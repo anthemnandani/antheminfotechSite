@@ -15,20 +15,42 @@ const AboutFour = ({ classOption }) => {
   const [refClients, inViewClients] = useInView({ triggerOnce: true, threshold: 0.3 });
   const [refProjects, inViewProjects] = useInView({ triggerOnce: true, threshold: 0.3 });
 
+  
   useEffect(() => {
-    setMounted(true); // component is mounted on client
+  if (!sceneEl.current) return;
 
-    if (!sceneEl.current) return;
+  const Parallax = require("parallax-js");
+  const parallaxInstance = new Parallax(sceneEl.current, {
+    relativeInput: true,
+  });
 
-    const parallaxInstance = new Parallax(sceneEl.current, {
-      relativeInput: true,
-    });
-    parallaxInstance.enable();
+  return () => parallaxInstance.disable();
+}, []);
 
-    return () => parallaxInstance.disable();
-  }, []);
+useEffect(() => {
+  require("aos").init();
+}, []);
 
-  if (!mounted) return null; // ✅ prevent SSR render
+  
+  
+  
+  
+  
+  
+  // useEffect(() => {
+  //   setMounted(true); // component is mounted on client
+
+  //   if (!sceneEl.current) return;
+
+  //   const parallaxInstance = new Parallax(sceneEl.current, {
+  //     relativeInput: true,
+  //   });
+  //   parallaxInstance.enable();
+
+  //   return () => parallaxInstance.disable();
+  // }, []);
+
+  // if (!mounted) return null; // ✅ prevent SSR render
 
   return (
     <div className={`section section-padding-top about-section-padding-bottom-200 ${classOption}`}>

@@ -9,15 +9,30 @@ import Image from "next/image";
 
 const ContactInformation = ({ classOption }) => {
   const sceneEl = useRef(null);
-  useEffect(() => {
+
+   useEffect(() => {
+    if (!sceneEl.current) return;
+  
+    const Parallax = require("parallax-js");
     const parallaxInstance = new Parallax(sceneEl.current, {
       relativeInput: true,
     });
-
-    parallaxInstance.enable();
-
+  
     return () => parallaxInstance.disable();
   }, []);
+  
+  useEffect(() => {
+    require("aos").init();
+  }, []);
+  // useEffect(() => {
+  //   const parallaxInstance = new Parallax(sceneEl.current, {
+  //     relativeInput: true,
+  //   });
+
+  //   parallaxInstance.enable();
+
+  //   return () => parallaxInstance.disable();
+  // }, []);
   const cloudBase = process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL
   return (
     <div className={`section section-padding-t90-b100 ${classOption}`}>
