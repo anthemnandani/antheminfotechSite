@@ -1,4 +1,5 @@
 "use client";
+import "aos/dist/aos.css"; 
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
@@ -6,6 +7,15 @@ import ImageCarousel from "../../components/swiper/ImageCarousel";
 import Loader from "../Loader/Loader";
 
 const WorkDetailsContainer = ({ projects, loading, classOption }) => {
+  useEffect(() => {
+  import("aos").then((AOS) => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+  });
+}, []);
   const toTitleCase = (str) =>
     str
       .split(" ")

@@ -28,13 +28,25 @@ const WorkContainer = ({ classOption }) => {
   const params = useParams();
   const slug = params?.slug;
 
-  useEffect(() => {
+
+
+    useEffect(() => {
+    const AOS = require("aos");   // ← require fixes SSR issue
+
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
       once: true,
     });
   }, []);
+
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1000,
+  //     easing: "ease-in-out",
+  //     once: true,
+  //   });
+  // }, []);
 
   useEffect(() => {
     const fetchToken = async () => {
