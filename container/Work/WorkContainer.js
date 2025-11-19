@@ -12,7 +12,7 @@ import { BeatLoader } from "react-spinners";
 import { getToken } from "../../services/tokenservice";
 import { getProjects } from "../../services/projectsservices";
 import Loader from "../Loader/Loader";
-import { useParams } from "next/navigation"; // ✅ Next.js hook
+import { useParams } from "next/navigation";
 
 const WorkContainer = ({ classOption }) => {
   const [token, setToken] = useState(null);
@@ -24,7 +24,6 @@ const WorkContainer = ({ classOption }) => {
   const [visibleData, setVisibleData] = useState([]);
   const [itemsToShow, setItemsToShow] = useState(6);
   const [hasMore, setHasMore] = useState(true);
-
 
   const params = useParams();
   const slug = params?.slug;
@@ -60,24 +59,33 @@ const WorkContainer = ({ classOption }) => {
           let filtered = allProjects;
 
           if (slug) {
-            const slugTerms = slug
-              .toLowerCase()
-              .replace(/\.js/gi, "-js")
-              .replace(/[\s_]+/g, "-**")
-              .split("-");
+  const slugTerm = slug.toLowerCase().trim();
 
-            filtered = allProjects.filter((project) =>
-              slugTerms.some(
-                (term) =>
-                  project.projectName.toLowerCase().includes(term) ||
-                  project.projectCategory.toLowerCase().includes(term) ||
-                  project.technolgies.toLowerCase().includes(term) ||
-                  project.description.toLowerCase().includes(term) ||
-                  project.projectSubCategory.toLowerCase().includes(term) ||
-                  project.smallDesciption.toLowerCase().includes(term)
-              )
-            );
-          }
+  filtered = allProjects.filter((project) =>
+    project.technolgies?.toLowerCase().includes(slugTerm)
+  );
+}
+
+
+          // if (slug) {
+          //   const slugTerms = slug
+          //     .toLowerCase()
+          //     .replace(/\.js/gi, "-js")
+          //     .replace(/[\s_]+/g, "-**")
+          //     .split("-");
+
+          //   filtered = allProjects.filter((project) =>
+          //     slugTerms.some(
+          //       (term) =>
+          //         project.projectName.toLowerCase().includes(term) ||
+          //         project.projectCategory.toLowerCase().includes(term) ||
+          //         project.technolgies.toLowerCase().includes(term) ||
+          //         project.description.toLowerCase().includes(term) ||
+          //         project.projectSubCategory.toLowerCase().includes(term) ||
+          //         project.smallDesciption.toLowerCase().includes(term)
+          //     )
+          //   );
+          // }
 
           setFilterProjects(filtered);
 
@@ -102,6 +110,42 @@ const WorkContainer = ({ classOption }) => {
       fetchProjects();
     }
   }, [token, slug, itemsToShow]);
+
+  // ✅ DEBUG: Check which projects match the slug
+  useEffect(() => {
+    if (!projects.length || !slug) return;
+
+    console.log("🔍 SLUG FOUND:", slug);
+
+    const term = slug.toLowerCase();
+
+    projects.forEach((project) => {
+      const fullString = JSON.stringify(project).toLowerCase();
+
+      if (fullString.includes(term)) {
+        console.log("--------------------------------------------------");
+        console.log("✔ MATCHED PROJECT:", project.projectName);
+
+        if (project.projectName?.toLowerCase().includes(term))
+          console.log("  → Found in: projectName");
+
+        if (project.projectCategory?.toLowerCase().includes(term))
+          console.log("  → Found in: projectCategory");
+
+        if (project.technolgies?.toLowerCase().includes(term))
+          console.log("  → Found in: technologies");
+
+        if (project.description?.toLowerCase().includes(term))
+          console.log("  → Found in: description");
+
+        if (project.projectSubCategory?.toLowerCase().includes(term))
+          console.log("  → Found in: projectSubCategory");
+
+        if (project.smallDesciption?.toLowerCase().includes(term))
+          console.log("  → Found in: smallDescription");
+      }
+    });
+  }, [projects, slug]);
 
   const handleProjectWithCategory = useCallback(
     (category) => {
@@ -158,49 +202,20 @@ const WorkContainer = ({ classOption }) => {
             />
           </div>
         </div>
-{loading ? (
-  <Loader />
-) : filterProjects.length === 0 ? (
-  <div className="text-center py-5">
-    <h3 className="text-danger fw-bold">No projects found for this technology.</h3>
-    <p className="text-muted mt-2">
-      Please explore our other case studies and services.
-    </p>
 
-    <a href="/OurWork" className="btn btn-primary mt-3">
-      View All Projects
-    </a>
-  </div>
-) : (
-  <InfiniteScroll
-    dataLength={visibleData.length}
-    next={loadMoreData}
-    hasMore={hasMore}
-    loader={
-      <div className="d-flex justify-content-center w-100">
-        <BeatLoader color="#0a507a" />
-      </div>
-    }
-    endMessage={
-      <div className="d-flex justify-content-center w-100">
-        <p className="text-primary fw-bold">
-          You have reached the end of this section.
-        </p>
-      </div>
-    }
-  >
-    <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 mb-n6">
-      {visibleData.map((single, index) => (
-        <div key={index} className="col mb-6" data-aos="fade-up">
-          <WorkItemTwo classOption="box-border" data={single} />
-        </div>
-      ))}
-    </div>
-  </InfiniteScroll>
-)}
-
-        {/* {loading ? (
+        {loading ? (
           <Loader />
+        ) : filterProjects.length === 0 ? (
+          <div className="text-center py-5">
+            <h3 className="text-danger fw-bold">No projects found for this technology.</h3>
+            <p className="text-muted mt-2">
+              Please explore our other case studies and services.
+            </p>
+
+            <a href="/OurWork" className="btn btn-primary mt-3">
+              View All Projects
+            </a>
+          </div>
         ) : (
           <InfiniteScroll
             dataLength={visibleData.length}
@@ -227,7 +242,7 @@ const WorkContainer = ({ classOption }) => {
               ))}
             </div>
           </InfiniteScroll>
-        )} */}
+        )}
       </div>
     </div>
   );
