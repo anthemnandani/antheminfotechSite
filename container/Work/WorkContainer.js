@@ -13,6 +13,7 @@ import { getToken } from "../../services/tokenservice";
 import { getProjects } from "../../services/projectsservices";
 import Loader from "../Loader/Loader";
 import { useParams } from "next/navigation";
+import { normalize } from "path";
 
 const WorkContainer = ({ classOption }) => {
   const [token, setToken] = useState(null);
@@ -30,7 +31,7 @@ const WorkContainer = ({ classOption }) => {
 
 
 
-    useEffect(() => {
+  useEffect(() => {
     const AOS = require("aos");   // ← require fixes SSR issue
 
     AOS.init({
@@ -66,38 +67,58 @@ const WorkContainer = ({ classOption }) => {
         try {
           setLoading(true);
           const allProjects = await getProjects();
+          console.log("fetched projcts before filterig:", allProjects)
           setProjects(allProjects);
 
           let filtered = allProjects;
+if (slug) {
+  const normalize = (str) =>
+    str
+      ?.toLowerCase()
+      .trim()
+      .replace(/[.\-_#+]/g, " ")  // convert . - _ # + → spaces
+      .replace(/\s+/g, " ");       // collapse multiple spaces
 
-          if (slug) {
-  const slugTerm = slug.toLowerCase().trim();
+  const slugTerm = normalize(slug);
+  const slugWords = slugTerm.split(" "); // ["node","js"]
 
-  filtered = allProjects.filter((project) =>
-    project.technolgies?.toLowerCase().includes(slugTerm)
-  );
+  filtered = allProjects.filter((project) => {
+    // normalize all fields before searching
+    const name = normalize(project.projectName || "");
+    const category = normalize(project.projectCategory || "");
+    const tech = normalize(project.technolgies || "");
+    const desc = normalize(project.description || "");
+    const subCat = normalize(project.projectSubCategory || "");
+    const smallDesc = normalize(project.smallDesciption || "");
+
+    const fullString = `${name} ${category} ${tech} ${desc} ${subCat} ${smallDesc}`;
+
+    // Check every slug word inside fullString
+    return slugWords.every((w) => fullString.includes(w));
+  });
 }
+// if (slug) {
+//   // Normalize ANY tech string or slug
+//   const normalize = (str) =>
+//     str
+//       ?.toLowerCase()
+//       .trim()
+//       .replace(/[.\-_#+]/g, " ")   // convert . - _ # + to spaces
+//       .replace(/\s+/g, " ");        // collapse multiple spaces
+
+//   const slugTerm = normalize(slug);        // e.g. "node-js" → "node js"
+//   const slugWords = slugTerm.split(" ");   // ["node", "js"]
+
+//   filtered = allProjects.filter((project) => {
+//     const tech = normalize(project.technolgies) // e.g. "node.js" → "node js"
+//     const techWords = tech.split(" ");          // ["node", "js"]
+
+//     // check if ANY slug word is present in techWords
+//     return slugWords.some((word) => techWords.includes(word));
+//   });
+// }
 
 
-          // if (slug) {
-          //   const slugTerms = slug
-          //     .toLowerCase()
-          //     .replace(/\.js/gi, "-js")
-          //     .replace(/[\s_]+/g, "-**")
-          //     .split("-");
-
-          //   filtered = allProjects.filter((project) =>
-          //     slugTerms.some(
-          //       (term) =>
-          //         project.projectName.toLowerCase().includes(term) ||
-          //         project.projectCategory.toLowerCase().includes(term) ||
-          //         project.technolgies.toLowerCase().includes(term) ||
-          //         project.description.toLowerCase().includes(term) ||
-          //         project.projectSubCategory.toLowerCase().includes(term) ||
-          //         project.smallDesciption.toLowerCase().includes(term)
-          //     )
-          //   );
-          // }
 
           setFilterProjects(filtered);
 
@@ -189,7 +210,7 @@ const WorkContainer = ({ classOption }) => {
         word.charAt(0).toUpperCase() + word.slice(1)
       )
       .join(" ");
-
+const cleanSlug = slug?.replace(/-/g, " ");
   return (
     <div className={`section section-padding-t90-b100 ${classOption}`}>
       <div className="container">
@@ -201,9 +222,8 @@ const WorkContainer = ({ classOption }) => {
         <div className="row align-items-center">
           <div className="col-lg-5">
             <SectionTitleTwo
-              subTitle={`Portfolio ${
-                slug ? `<span class='fw-bold'>(${toTitleCase(slug)})</span>` : ""
-              }`}
+              subTitle={`Portfolio ${slug ? `<span class='fw-bold'>(${toTitleCase(cleanSlug)})</span>` : ""
+                }`}
               title="Our Work"
             />
           </div>
@@ -220,13 +240,21 @@ const WorkContainer = ({ classOption }) => {
         ) : filterProjects.length === 0 ? (
           <div className="text-center py-5">
             <h3 className="text-danger fw-bold">No projects found for this technology.</h3>
-            <p className="text-muted mt-2">
+            <p className="text mt-2">
               Please explore our other case studies and services.
             </p>
+<a
+  href="/OurWork"
+  className="btn btn btn-bottom mt-xl-12 mt-lg-8 mt-md-6 mt-4"
+   data-hover=" View All Projects"
+  style={{ background: "#0e6497" }}
+>
+  View All Projects
+</a>
 
-            <a href="/OurWork" className="btn btn-primary mt-3">
+            {/* <a href="/OurWork" className="btn btn-primary mt-3 text-black">
               View All Projects
-            </a>
+            </a> */}
           </div>
         ) : (
           <InfiniteScroll
