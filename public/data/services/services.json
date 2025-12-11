@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Custom Software Development",
-    "introduction": "Tailored software solutions designed to meet the unique needs of your business, enhancing operations and driving efficiency.",
+    "introduction": "We build customised digital platforms crafted to match your specific business goals, helping you improve workflows and enhance operational efficiency.",
     "key_services": [
       {
         "name": "Customer Relationship Management (CRM)",
@@ -45,14 +45,14 @@
         "icon": "images/mega-menu/custom-software/supply-chain-optimization-02.svg"
       }
     ],
-    "why_choose_us": "Custom solutions that scale with your business needs, with a focus on efficiency and future-proof technology.",
+    "why_choose_us": "Our scalable, performance-focused solutions evolve with your organisation and deliver consistent efficiency using modern, future-ready technology.",
     "img": "images/bg/ph-Custom-Software.webp",
     "video": "images/videos/WebDesign_tiny.mp4"
   },
   {
     "id": 2,
     "title": "Web & Mobile Apps",
-    "introduction": "Develop high-performance, cross-platform web and mobile apps to reach a wider audience with seamless user experiences.",
+    "introduction": "Build high-performance, cross-platform digital applications that help you reach more users while ensuring a smooth and reliable experience across devices.",
     "key_services": [
       {
         "name": "WordPress Websites",
@@ -95,14 +95,14 @@
         "icon": "images/mega-menu/Web-Mobile-Apps/windows.svg"
       }
     ],
-    "why_choose_us": "We deliver apps that not only perform well but also provide a compelling and intuitive user experience.",
+    "why_choose_us": "We create apps that are optimised for speed, usability, and engagement, delivering an intuitive interface that enhances the overall user journey.",
     "img": "images/bg/ph-Web-Mobile-Apps.webp",
     "video": "images/videos/webMobile_small.mp4"
   },
   {
     "id": 5,
     "title": "AI-Powered Solutions",
-    "introduction": "Transform your business with cutting-edge AI solutions that enhance creativity, automate processes, and improve customer interactions. Our AI-driven services, from content creation to predictive analytics, cater to your unique requirements.",
+    "introduction": "Transform your business with advanced AI solutions that boost creativity, automate workflows, and enhance customer engagement. Our AI-driven services, from intelligent content generation to predictive analytics, are tailored to your unique business needs.",
     "key_services": [
       {
         "name": "Generative AI",
@@ -140,14 +140,14 @@
         "icon": "images/mega-menu/AI-Powered-Solutions/AI-1.svg"
       }
     ],
-    "why_choose_us": "Our expertise in cutting-edge AI technologies streamlines your content creation, optimises customer interactions, and drives data-driven insights, empowering your business for sustainable growth and success.",
+    "why_choose_us": "Our expertise in state-of-the-art AI technologies streamlines content creation, optimises customer interactions, and delivers data-driven insights, empowering your business for long-term growth and sustainable success.",
     "img": "images/bg/ph-AI-ML-Development.webp",
     "video": "images/videos/AIML.mp4"
   },
   {
     "id": 6,
     "title": "Marketing Automation",
-    "introduction": "Automate your marketing efforts with advanced tools that enhance engagement, optimise campaigns, and increase ROI.",
+    "introduction": "Automate your marketing strategies with advanced AI-driven tools that boost engagement, optimise campaigns, and maximize ROI.",
     "key_services": [
       {
         "name": "Email Campaigns",
@@ -190,14 +190,14 @@
         "icon": "images/mega-menu/Marketing-Automation/customer-service.svg"
       }
     ],
-    "why_choose_us": "We automate and optimise your marketing campaigns to increase efficiency and drive better results.",
+    "why_choose_us": "We streamline and enhance your marketing campaigns to improve efficiency, performance, and deliver better measurable results.",
     "img": "images/bg/ph-Marketing-Automation.webp",
     "video": "images/videos/marketing_tiny.mp4"
   },
   {
     "id": 7,
     "title": "MVP Development",
-    "introduction": "Quickly develop a Minimum Viable Product to test and validate your idea in the market and gather user feedback.",
+    "introduction": "Rapidly develop a Minimum Viable Product (MVP) to validate your business idea, gather user feedback, and test its market potential.",
     "key_services": [
       {
         "name": "Prototyping",
@@ -240,14 +240,14 @@
         "icon": "images/mega-menu/MVP-Development/performance.svg"
       }
     ],
-    "why_choose_us": "We help startups and businesses rapidly launch and iterate products to achieve market fit.",
+    "why_choose_us": "We assist startups and enterprises to quickly launch, iterate, and refine products, ensuring faster time-to-market and achieving market fit efficiently.",
     "img": "images/bg/ph-Custom-Software.webp",
     "video": "images/videos/mvp-development_small.mp4"
   },
   {
     "id": 8,
     "title": "Enterprise Software",
-    "introduction": "Develop robust, scalable enterprise software solutions that drive operational efficiency and support data management at scale.",
+    "introduction": "Develop secure, scalable enterprise platforms that improve operational workflows, enhance productivity, and support large-scale data ecosystems.",
     "key_services": [
       {
         "name": "Security Solutions",
@@ -279,14 +279,14 @@
         "icon": "images/mega-menu/Enterprise-Software/workflow-diagram.svg"
       }
     ],
-    "why_choose_us": "We build scalable, secure, and future-proof software that powers enterprise growth.",
+    "why_choose_us": "We build high-performance, future-ready enterprise solutions designed to strengthen security, boost efficiency, and support long-term organisational growth.",
     "img": "images/bg/ph-Enterprise-Software.webp",
     "video": "images/videos/EnterpriseSolutions_small.mp4"
   },
   {
     "id": 9,
     "title": "Data Analysis & ETL",
-    "introduction": "Empower your business with comprehensive data analysis, ETL processes, and custom dashboards to make informed decisions.",
+    "introduction": "Empower your business with comprehensive data analysis, ETL pipelines, and custom analytics dashboards to enable smarter, data-driven decisions.",
     "key_services": [
       {
         "name": "Data Extraction",
@@ -324,14 +324,14 @@
         "icon": "images/mega-menu/Data-Analysis-ETL/DataCleaning.svg"
       }
     ],
-    "why_choose_us": "Our data solutions help businesses unlock the power of their data to make smarter decisions.",
+    "why_choose_us": "Our data-driven solutions help businesses unlock actionable insights, optimise operations, and make informed strategic decisions.",
     "img": "images/bg/ph-Data-Analysis-ETL.webp",
     "video": "images/videos/DataAnalyses_tiny.mp4"
   },
   {
     "id": 10,
     "title": "UI/UX Design",
-    "introduction": "Create intuitive, visually appealing user interfaces that enhance user experiences and drive engagement across web and mobile platforms.",
+    "introduction": "Design intuitive, visually engaging user interfaces that enhance user experiences and increase engagement across web and mobile platforms.",
     "key_services": [
       {
         "name": "Web Design",
@@ -359,14 +359,14 @@
         "icon": "images/mega-menu/UI-UX-Design/Responsive.svg"
       }
     ],
-    "why_choose_us": "We focus on delivering user-centred design that not only looks great but also functions seamlessly.",
+    "why_choose_us": "We provide expert, dedicated talent that delivers high-quality solutions, ensuring projects are executed seamlessly and on time.",
     "img": "images/bg/ph-ui-ux.webp",
     "video": "images/videos/UI-UX_tiny.mp4"
   },
   {
     "id": 11,
     "title": "On-Demand Dedicated Talent",
-    "introduction": "Acquire Flexible, skilled resources to speed up your project and scale effectively.",
+    "introduction": "Access flexible, skilled professionals to accelerate your projects, scale efficiently, and meet dynamic business demands.",
     "key_services": [
       {
         "name": "Dedicated Professionals",
@@ -399,7 +399,7 @@
         "icon": "images/mega-menu/On-Demand-Dedicated-Talent/people-dialogue.svg"
       }
     ],
-    "why_choose_us": "We focus on delivering user-centred design that not only looks great but also functions seamlessly.",
+    "why_choose_us": "We provide expert, dedicated talent that delivers high-quality solutions, ensuring projects are executed seamlessly and on time.",
     "img": "images/bg/OnDemand.webp",
     "video": "images/videos/OnDemand_tiny.mp4"
   }

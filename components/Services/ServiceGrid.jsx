@@ -78,7 +78,7 @@ useEffect(() => {
             data-aos-delay="300"
           >
             <SectionTitleTwo
-              subTitle="Our Services"
+              subTitle="Our Core Services"
               title={service.at(0).title}
             />
 

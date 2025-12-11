@@ -15,10 +15,12 @@ const EnterpriseSoftware = () => {
   return (
     <React.Fragment>
       <SEO
-        title="Anthem Infotech - Enterprise Software"
-        description="Empower your business with Anthem Infotech’s enterprise software solutions. We provide secure software for large-scale data management and seamless integration to drive business growth."
-        ogtitle="Anthem Infotech - Enterprise Software"
-        ogdescription="Empower your business with Anthem Infotech’s enterprise software solutions. We provide secure software for large-scale data management and seamless integration to drive business growth."
+        title="Enterprise Software Development Company in Chandigarh | Anthem Infotech"
+        description="Build scalable, secure enterprise software to improve data management, workflow efficiency, and operational performance. Anthem Infotech delivers custom enterprise solutions for long-term growth.
+"
+        ogtitle="Enterprise Software Development Company in Chandigarh | Anthem Infotech"
+        ogdescription="Build scalable, secure enterprise software to improve data management, workflow efficiency, and operational performance. Anthem Infotech delivers custom enterprise solutions for long-term growth.
+"
       />
 
   

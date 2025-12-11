@@ -16,10 +16,12 @@ const UIUXDesign = () => {
   return (
     <React.Fragment>
       <SEO
-        title="Anthem Infotech - UI/UX Design"
-        description="Discover Anthem Infotech’s expert UI/UX design services. We create intuitive, user-centered designs that enhance the user experience and drive business success."
-        ogtitle="Anthem Infotech - UI/UX Design"
-        ogdescription="Discover Anthem Infotech’s expert UI/UX design services. We create intuitive, user-centered designs that enhance the user experience and drive business success."
+        title="UI/UX Design Company in Chandigarh | Anthem Infotech
+"
+        description=" Design intuitive and engaging user interfaces for web and mobile apps. Our user-centred UI/UX design services enhance usability, increase engagement, and deliver a seamless digital experience."
+        ogtitle="UI/UX Design Company in Chandigarh | Anthem Infotech
+"
+        ogdescription=" Design intuitive and engaging user interfaces for web and mobile apps. Our user-centred UI/UX design services enhance usability, increase engagement, and deliver a seamless digital experience."
       />
 
    

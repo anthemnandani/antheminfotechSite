@@ -14,10 +14,10 @@ const MarketingAutomation = () => {
   return (
     <React.Fragment>
       <SEO
-        title="Anthem Infotech - Marketing Automation"
-        description="Boost lead generation and customer engagement with Anthem Infotech’s marketing automation solutions. Streamline workflows and drive better results with our innovative tools and strategies."
-        ogtitle="Anthem Infotech - Marketing Automation"
-        ogdescription="Boost lead generation and customer engagement with Anthem Infotech’s marketing automation solutions. Streamline workflows and drive better results with our innovative tools and strategies."
+        title="Marketing Automation Services in Chandigarh | Anthem Infotech"
+        description="Automate and optimise your marketing campaigns with AI-driven tools. Enhance engagement, increase ROI, and streamline marketing strategies with Anthem Infotech’s digital marketing and automation expertise."
+        ogtitle="Marketing Automation Services in Chandigarh | Anthem Infotech"
+        ogdescription="Automate and optimise your marketing campaigns with AI-driven tools. Enhance engagement, increase ROI, and streamline marketing strategies with Anthem Infotech’s digital marketing and automation expertise."
       />
 
   

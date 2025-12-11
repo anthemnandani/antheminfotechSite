@@ -15,10 +15,10 @@ const MVPDevelopment = () => {
   return (
     <React.Fragment>
       <SEO
-        title="Anthem Infotech - MVP Development"
-        description="Bring your market idea to life with a Minimum Viable Product (MVP). Anthem Infotech uses an Agile Iterative Process to quickly validate ideas and accelerate product development."
-        ogtitle="Anthem Infotech - MVP Development"
-        ogdescription="Bring your market idea to life with a Minimum Viable Product (MVP). Anthem Infotech uses an Agile Iterative Process to quickly validate ideas and accelerate product development."
+        title="MVP Development Company in Chandigarh | Anthem Infotech"
+        description="Rapidly develop a Minimum Viable Product (MVP) to test, validate, and launch your idea. Our AI and web development experts help startups and businesses achieve fast time-to-market and product-market fit."
+        ogtitle="MVP Development Company in Chandigarh | Anthem Infotech"
+        ogdescription="Rapidly develop a Minimum Viable Product (MVP) to test, validate, and launch your idea. Our AI and web development experts help startups and businesses achieve fast time-to-market and product-market fit."
       />
 
      

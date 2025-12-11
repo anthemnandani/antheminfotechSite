@@ -37,11 +37,19 @@ const HomeAbout = ({ classOption }) => {
   return (
     <div className={`section section-padding-t90 section-padding-bottom ${classOption}`}>
       <div className="container">
-        <SectionTitle
+        {/* <SectionTitle
           title="We provide custom software solutions that drive business growth through innovation"
           subTitle="Delivering innovative, custom software technology solutions that empower businesses to thrive
                                 and stay ahead in a rapidly evolving digital landscape."
-        />
+                  
+        /> */}
+<SectionTitle
+  title="We deliver custom software solutions and AI-powered development services that fuel business growth through smart innovation."
+  subTitle="Providing advanced web, AI, and custom software technologies that help businesses thrive, improve efficiency, and stay ahead in today’s fast-moving digital landscape."
+  className="!leading-normal !pb-1 !overflow-visible"
+/>
+
+
 
         <div className="row">
           <div className="col-xl-7 col-lg-6 col-12">
@@ -68,7 +76,7 @@ const HomeAbout = ({ classOption }) => {
             <div className="about-content-area">
               <SectionTitleTwo
                 subTitle="Trust, Commitment and Delivery"
-                title="We automate manual business processes."
+                title="We streamline and automate core business processes."
               />
 
               <div className="row mb-n6 mt-5 text-lg-start">
@@ -92,7 +100,7 @@ const HomeAbout = ({ classOption }) => {
               </div>
 
               <p className="justify-content">
-                At Anthem Infotech, we focus on building trust through unwavering commitment and seamless delivery. Automating manual business processes empowers organisations to streamline operations, boost efficiency, and stay ahead in a rapidly evolving digital landscape.
+                At Anthem Infotech, we build trust through consistent commitment and reliable delivery. By automating manual workflows with AI-enabled and custom software solutions, we help organisations optimise operations, improve efficiency, and stay ahead in today’s fast-changing digital landscape.
               </p>
             </div>
           </div>

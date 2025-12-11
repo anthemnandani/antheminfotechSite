@@ -60,8 +60,8 @@ useEffect(() => {
           <div className="col-xl-6 col-lg-6 col-12" data-aos="fade-up">
             <div className="about-content-area mt-0 mb-md-10 mb-10">
               <SectionTitleTwo
-                subTitle="Web design and digital marketing"
-                title="We think strategy, UI/UX design, and software development"
+                subTitle="Web Design, Digital Marketing & Software Solutions"
+                title="We combine strategic planning, UI/UX design, and advanced software development to deliver impactful digital solutions"
               />
               <div className="row row-cols-sm-2 row-cols-auto mb-n6">
                 <div className="col mb-6">
@@ -71,8 +71,7 @@ useEffect(() => {
                     </div>
                     <h6 className="text">Satisfied Clients</h6>
                     <p>
-                      We've empowered clients and businesses to grow and succeed
-                      through enhanced digital presence and innovative solutions.
+                       We have empowered clients and businesses to achieve growth through stronger digital presence and innovative, customized solutions.
                     </p>
                   </div>
                 </div>
@@ -83,8 +82,7 @@ useEffect(() => {
                     </div>
                     <h6 className="text">Successful Projects</h6>
                     <p>
-                      Delivering customised digital solutions, streamlining operations, 
-                      and boosting client performance across industries.
+                     Providing tailored digital solutions that optimize operations, enhance productivity, and drive measurable results across industries.
                     </p>
                   </div>
                 </div>

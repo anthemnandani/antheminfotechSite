@@ -94,6 +94,7 @@ const MobileNavMenu = () => {
                         <li><Link href="/testimonials"><span className="menu-text">Testimonials</span></Link></li>
                     </ul>
                 </li>
+                   <li><Link href="/gallery"><span className="menu-text">Gallery</span></Link></li>
                 <li><Link href="/contact-us"><span className="menu-text">Contact Us</span></Link></li>
             </ul>
         </nav>

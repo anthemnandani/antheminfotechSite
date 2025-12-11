@@ -78,7 +78,6 @@ if (slug) {
       .trim()
       .replace(/[.\-_#+]/g, " ")  // convert . - _ # + → spaces
       .replace(/\s+/g, " ");       // collapse multiple spaces
-
   const slugTerm = normalize(slug);
   const slugWords = slugTerm.split(" "); // ["node","js"]
 
@@ -97,26 +96,7 @@ if (slug) {
     return slugWords.every((w) => fullString.includes(w));
   });
 }
-// if (slug) {
-//   // Normalize ANY tech string or slug
-//   const normalize = (str) =>
-//     str
-//       ?.toLowerCase()
-//       .trim()
-//       .replace(/[.\-_#+]/g, " ")   // convert . - _ # + to spaces
-//       .replace(/\s+/g, " ");        // collapse multiple spaces
 
-//   const slugTerm = normalize(slug);        // e.g. "node-js" → "node js"
-//   const slugWords = slugTerm.split(" ");   // ["node", "js"]
-
-//   filtered = allProjects.filter((project) => {
-//     const tech = normalize(project.technolgies) // e.g. "node.js" → "node js"
-//     const techWords = tech.split(" ");          // ["node", "js"]
-
-//     // check if ANY slug word is present in techWords
-//     return slugWords.some((word) => techWords.includes(word));
-//   });
-// }
 
 
 

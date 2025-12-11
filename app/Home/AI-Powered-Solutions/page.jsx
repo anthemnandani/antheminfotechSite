@@ -16,10 +16,10 @@ const AIMLDevelopment = () => {
   return (
     <>
       <SEO
-        title="Anthem Infotech - AI-Powered Solutions"
-        description="Transform your business with Anthem Infotech's AI-powered solutions. Elevate creativity, streamline processes, and boost customer engagement with cutting-edge artificial intelligence technologies."
-        ogtitle="Anthem Infotech - AI-Powered Solutions"
-        ogdescription="Transform your business with Anthem Infotech's AI-powered solutions. Elevate creativity, streamline processes, and boost customer engagement with cutting-edge artificial intelligence technologies."
+        title="AI Development & AI App Solutions Company in Chandigarh | Anthem Infotech"
+        description="Transform your business with AI-powered solutions, AI app development, and intelligent software. Our AI experts provide predictive analytics, content automation, and machine learning solutions for enterprises."
+        ogtitle="AI Development & AI App Solutions Company in Chandigarh | Anthem Infotech"
+        ogdescription="Transform your business with AI-powered solutions, AI app development, and intelligent software. Our AI experts provide predictive analytics, content automation, and machine learning solutions for enterprises."
       />
 
   

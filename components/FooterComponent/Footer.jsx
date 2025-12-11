@@ -68,28 +68,33 @@ const Footer = () => {
         "id": 3,
         "title": "About Us",
         "list": [
-            {
+           {
             "id": 1,
+            "text": "Gallery",
+            "url": "/gallery"
+            },
+            {
+            "id": 2,
             "text": "Contact Us",
             "url": "/contact-us"
             },
             {
-            "id": 2,
+            "id": 3,
             "text": "FAQs",
             "url": "/faqs"
             },
             {
-            "id": 3,
+            "id": 4,
             "text": "Our Clients",
             "url": "/our-clients"
             },
             {
-            "id": 4,
+            "id": 5,
             "text": "Testimonials",
             "url": "/testimonials"
             },
             {
-            "id": 5,
+            "id": 6,
             "text": "Technologies",
             "url": "/technologies"
             }
@@ -172,12 +177,13 @@ const Footer = () => {
           <div className="col">
             <div className="row copyright d-flex justify-content-between">
               <div className="col-sm-6 text-sm-start text-center">
-                <p>
-                  &copy; {new Date().getFullYear()}{" "}
-                  <strong>
-                    Anthem Infotech Private Limited. All rights reserved.
-                  </strong>
-                </p>
+               <p>
+  &copy; {new Date().getFullYear()}-2026{" "}
+  <strong>
+    Anthem Infotech Private Limited. All rights reserved.
+  </strong>
+</p>
+
               </div>
               <div className="col-sm-6 text-sm-end text-center">
                 Powered by <strong>Anthem Infotech Pvt. Ltd.</strong>

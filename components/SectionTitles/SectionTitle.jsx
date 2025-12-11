@@ -24,7 +24,7 @@ const SectionTitleComponent = ({ title,
                 containIntrinsicSize: '0 100px'
             }}
         >
-            <h2
+            {/* <h2
                 className={`title ${headingOption}`}
                 dangerouslySetInnerHTML={titleContent}
                 style={{
@@ -35,7 +35,12 @@ const SectionTitleComponent = ({ title,
                     backfaceVisibility: 'hidden',
                     WebkitFontSmoothing: 'antialiased'
                 }}
-            />
+            /> */}
+            <h2
+  className={`title ${headingOption} leading-normal pb-2 overflow-visible`}
+  dangerouslySetInnerHTML={titleContent}
+/>
+
             {subTitle && (
                 <p
                     className="mt-2"
@@ -66,3 +71,5 @@ const SectionTitle = memo(SectionTitleComponent);
 SectionTitle.displayName = 'SectionTitle';
 
 export default SectionTitle;
+
+

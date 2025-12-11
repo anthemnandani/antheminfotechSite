@@ -15,10 +15,10 @@ const WebMobileApps = () => {
   return (
     <>
       <SEO
-        title="Anthem Infotech - Web & Mobile Apps"
-        description="Anthem Infotech offers cutting-edge web and mobile app development services. We build scalable, user-friendly apps to help businesses succeed in the digital world."
-        ogtitle="Anthem Infotech - Web & Mobile Apps"
-        ogdescription="Anthem Infotech offers cutting-edge web and mobile app development services. We build scalable, user-friendly apps to help businesses succeed in the digital world."
+        title="Web & Mobile App Development Company in Chandigarh | Anthem Infotech"
+        description="Build high-performance web and mobile applications with Anthem Infotech. Our team specializes in cross-platform app development, AI-powered apps, and user-focused interfaces to enhance business growth."
+        ogtitle="Web & Mobile App Development Company in Chandigarh | Anthem Infotech"
+        ogdescription="Build high-performance web and mobile applications with Anthem Infotech. Our team specializes in cross-platform app development, AI-powered apps, and user-focused interfaces to enhance business growth."
       />
 
  

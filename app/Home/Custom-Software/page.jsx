@@ -16,10 +16,10 @@ const CustomSoftware = () => {
   return (
     <>
       <SEO
-        title="Anthem Infotech - Custom Software Development"
-        description="Optimize your operations with Anthem Infotech’s bespoke software development solutions. We design custom software for efficiency, scalability, and seamless web and mobile app integration."
-        ogtitle="Anthem Infotech - Custom Software Development"
-        ogdescription="Optimize your operations with Anthem Infotech’s bespoke software development solutions. We design custom software for efficiency, scalability, and seamless web and mobile app integration."
+        title="Custom Software Development Company in Chandigarh | Anthem Infotech"
+        description="Delivering custom software solutions to meet your business needs. Our experts in AI development, full-stack, and web development create scalable and efficient software for enterprises and startups."
+        ogtitle="Custom Software Development Company in Chandigarh | Anthem Infotech"
+        ogdescription="Delivering custom software solutions to meet your business needs. Our experts in AI development, full-stack, and web development create scalable and efficient software for enterprises and startups."
       />
 
       <Breadcrumb

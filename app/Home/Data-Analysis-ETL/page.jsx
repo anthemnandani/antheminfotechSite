@@ -16,10 +16,12 @@ const DataAnalysisETL = () => {
   return (
     <React.Fragment>
       <SEO
-        title="Anthem Infotech - Data Analysis & ETL"
-        description="Unlock the power of data with Anthem Infotech’s Data Analysis & ETL services. We provide comprehensive data solutions and custom dashboards to enhance decision-making and business insights."
-        ogtitle="Anthem Infotech - Data Analysis & ETL"
-        ogdescription="Unlock the power of data with Anthem Infotech’s Data Analysis & ETL services. We provide comprehensive data solutions and custom dashboards to enhance decision-making and business insights."
+        title="Data Analysis & ETL Solutions Company in Chandigarh | Anthem Infotech"
+        description=" Unlock the power of your data with data analysis, ETL pipelines, and custom dashboards. Make smarter, data-driven decisions with our AI-enabled analytics solutions.
+"
+        ogtitle="Data Analysis & ETL Solutions Company in Chandigarh | Anthem InfotechL"
+        ogdescription=" Unlock the power of your data with data analysis, ETL pipelines, and custom dashboards. Make smarter, data-driven decisions with our AI-enabled analytics solutions.
+"
       />
 
   

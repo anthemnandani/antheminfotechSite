@@ -15,10 +15,12 @@ const OnDemandDedicatedTalent = () => {
   return (
     <React.Fragment>
       <SEO
-        title="Anthem Infotech - On-Demand Dedicated Talent"
-        description="Access top-tier designers, developers, and other skilled professionals on a fixed or hourly basis. Anthem provides flexible on-demand talent to meet your business needs."
-        ogtitle="Anthem Infotech - On-Demand Dedicated Talent"
-        ogdescription="Access top-tier designers, developers, and other skilled professionals on a fixed or hourly basis. Anthem provides flexible on-demand talent to meet your business needs."
+        title="Hire Dedicated AI & Web Developers in Chandigarh | Anthem Infotech"
+        description=" Access flexible, skilled on-demand developers for your projects. Our dedicated AI, web, and full-stack talent ensures fast delivery, high-quality solutions, and scalable support for your business.
+"
+        ogtitle="Hire Dedicated AI & Web Developers in Chandigarh | Anthem Infotech"
+        ogdescription=" Access flexible, skilled on-demand developers for your projects. Our dedicated AI, web, and full-stack talent ensures fast delivery, high-quality solutions, and scalable support for your business.
+"
       />
 
  

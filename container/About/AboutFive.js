@@ -82,16 +82,11 @@ useEffect(() => {
             <div className="about-content-area">
               <SectionTitleTwo
                 subTitle="Our Company at a Glance"
-                title="Offering innovative digital solutions and expanding our services across diverse industries."
+                title="Providing cutting-edge digital solutions and expanding our expertise across multiple industries."
               />
 
               <p className="justify-content">
-                Since 2011, we’ve been dedicated to delivering innovative
-                digital solutions across various industries. Specialising in
-                custom software, web development, and AI technologies, we blend
-                creativity with technical expertise to transform businesses. Our
-                commitment to brilliance and client success drives us to elevate
-                enterprise standards continually.
+                Since 2011, we have been committed to delivering innovative software, web development, and AI-powered solutions. By combining creativity with technical expertise, we help businesses transform and grow. Our focus on excellence and client success ensures we continually raise industry standards.
               </p>
 
               <Link

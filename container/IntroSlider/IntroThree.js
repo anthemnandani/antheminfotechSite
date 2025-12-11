@@ -41,13 +41,11 @@ const IntroThree = () => {
                     }}
                   />
                 </span>
-                For Your Brands & Businesses
+               Tailored to Your Brand & Business
               </h1>
               <div className="desc">
                 <p>
-                  We are an IT company based in India. We think strategy, craft
-                  design, develop digital, and create software to grow your
-                  brand and business.
+                 We are a professional IT company based in India, helping brands strategise, design, develop digital solutions, and build custom software to accelerate business growth.
                 </p>
               </div>
               <Link

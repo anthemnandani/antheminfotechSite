@@ -11,8 +11,8 @@ const ServiceIconBox = ({ classOption}) => {
     <section className={`section section-padding-t90-b100 ${classOption}`}>
       <div className="container">
         <SectionTitle
-          title="From smooth collaborations to secure, innovative outcomes"
-          subTitle="<span class='text-white'>With 13+ years of experience, we specialise in custom software, AI/ML integration, and mobile app development. Our team develops innovative web applications and custom technology solutions to meet your business needs. We focus on aligning our services with your goals to drive growth and efficiency, providing scalable solutions for long-term success.</span>"
+          title="Crafting seamless partnerships that deliver intelligent, future-ready solutions"
+          subTitle="<span class='text-white'>With over 13 years of proven expertise, we excel in AI-powered software development, ML-based automation, and modern mobile app engineering. Our team builds scalable web applications and advanced digital solutions tailored to your business goals. We ensure every solution is aligned for measurable growth, operational efficiency, and long-term digital success.</span>"
         />
 <div className="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6">
           {IconBoxData &&
