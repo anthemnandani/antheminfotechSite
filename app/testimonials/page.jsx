@@ -69,7 +69,7 @@ const Testimonial = () => {
       />
 
       <Breadcrumb
-        image="images/bg/testimonials.jpg"
+        image="images/bg/testimonials.webp"
         title="What Our Clients Say About Their Experience with Us"
         content="Home"
         contentTwo="Testimonials"

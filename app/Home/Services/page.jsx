@@ -34,7 +34,7 @@ const ServicePage = () => {
 
       {/* Breadcrumb */}
       <Breadcrumb
-        image="/assets/images/bg/breadcrumb-bg-four.jpg"
+        image="/assets/images/bg/breadcrumb-bg-four.webp"
         title="End-to-End Partner in <span class='text-color-span'>Developing, Scaling</span>, and <span class='text-color-span'>Transforming</span> Businesses with Technology"
         content="Home"
         contentTwo="Services"

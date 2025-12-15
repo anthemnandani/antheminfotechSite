@@ -6,43 +6,43 @@ import "./Industries.css";
 export const Services = () => {
   const [animate, setAnimate] = useState(false);
   const [animated, setAnimated] = useState({});
-  const images = ["/img/ourServicesTopImage.jpg"];
+  const images = ["/img/ourServicesTopImage.webp"];
   const servicesData = [
     {
       gif: "/img/coding.gif",
       name: "Website Design & Development",
       text: "ASP.NET is a unified Web development model that includes the services necessary for you to build enterprise-class Web applications with a minimum of coding. .NET is a developer platform made up of tools, programming languages, and libraries for building many different types of applications.The base platform provides components that apply to all different types of apps. Additional frameworks, such as ASP.NET, extend .NET with components for building specific types of apps.",
-      image: "/img/WebsiteDesignDevelopment.jpg",
+      image: "/img/WebsiteDesignDevelopment.webp",
     },
     {
       gif: "/img/computer.gif",
       name: "Custom Software & Development",
       text: "Anthem Infotech Pvt. Ltd. with its experienced staff offers solutions and not just code or pages. We believe in the thoughtful processes, one of our core strategies is to think and do and not do and think.Software development is the process of conceiving, specifying, designing, programming, documenting, testing, and bug fixing involved in creating and maintaining applications, frameworks, or other software components. Software development is a process of writing and maintaining the source code, but in a broader sense, it includes all that is involved between the conception of the desired software through to the final manifestation of the software, sometimes in a planned and structured process.[1] Therefore, software development may include research, new development,prototyping, modification, reuse, re-engineering, maintenance, or any other activities that result in software products.",
-      image: "/img/custom_Software_1110x400.jpg",
+      image: "/img/custom_Software_1110x400.webp",
     },
     {
       gif: "/img/management.gif",
       name: "Web Software Maintenance",
       text: "We offer a team that will work towards minimizing your Software Maintenance cost, workout schedules and plan of action for short term and long term goals. Quite simply we are the best that team you never had.Software maintenance and evolution of systems was first addressed by Meir M. Lehman in 1969. Over a period of twenty years, his research led to the formulation of Lehman's Laws (Lehman 1997). Key findings of his research conclude that maintenance is really evolutionary development and that maintenance decisions are aided by understanding what happens to systems (and software) over time. Lehman demonstrated that systems continue to evolve over time. As they evolve, they grow more complex unless some action such as code refactoring is taken to reduce the complexity. In the late 1970s, a famous and widely cited survey study by Lientz and Swanson, exposed the very high fraction of life-cycle costs that were being expended on maintenance. The survey showed that around 75% of the maintenance effort was on the first two types, and error correction consumed about 21%. Many subsequent studies suggest a similar problem magnitude. Studies show that contribution of end users is crucial during the new requirement data gathering and analysis. This is the main cause of any problem during software evolution and maintenance. Software maintenance is important because it consumes a large part of the overall lifecycle costs and also the inability to change software quickly and reliably means that business opportunities are lost.",
-      image: "/img/Maintenance_1110x400.png",
+      image: "/img/Maintenance_1110x400.webp",
     },
     {
       gif: "/img/lightbulb.gif",
       name: "Digital Marketing (SEO)",
       text: 'Search engine optimization (SEO) is the process of improving the visibility of a website in search engines via the "natural" or un-paid ("organic" or "algorithmic") search results. You might think of a search engine as a website you visit to type (or speak) a question into a box and Google, Yahoo!, Bing, or whatever search engine you\'re using magically replies with a long list of links to webpages that could potentially answer your question. That\'s true. But have you ever stopped to consider what\'s behind those magical lists of links? Here\'s how it works: Google (or any search engine you\'re using) has a crawler that goes out and gathers information about all the content they can find on the Internet. The crawlers bring all those 1s and 0s back.',
-      image: "/img/SEO_1100x400.png",
+      image: "/img/SEO_1100x400.webp",
     },
     {
       gif: "/img/idea.gif",
       name: "Mobile App & Development",
       text: "We are a Mobile application Development company which develops smart, interesting and intelligent solutions. We deliver iOS (iPhone & iPad), Android and Windows Mobile Apps in both Native and hybrid code. here are two dominant platforms in the modern smartphone market. One is the iOS platform from Apple Inc. The iOS platform is the operating system that powers Apple's popular line of iPhone smartphones. The second is Android from Google. The Android operating system is used not only by Google devices but also by many other OEMs to built their own smartphones and other smart devices. Although there are some similarities between these two platforms when building applications, developing for iOS vs. developing for Android involves using different software development kits (SDKs) and different development toolchain. While Apple uses iOS exclusively for its own devices, Google makes Android available to other companies provided they meet specific requirements such as including certain Google applications on the devices they ship. Developers can build apps for hundreds of millions of devices by targeting both of these platforms. Alternatives for Building Mobile Apps There are four major development approaches when building mobile applications Native Mobile Applications Cross-Platform Native Mobile Applications Hybrid Mobile Applications Progressive Web Applications",
-      image: "/img/Mobile_1110x400.jpg",
+      image: "/img/Mobile_1110x400.webp",
     },
     {
       gif: "/img/ux-design.gif",
       name: "UI/UX Designing",
       text: "Anthem Infotech offer Web Designing Service either as part of a big picture solution or as standalone services, if you wish. You can either ask us to design your website for you as per your needs. Web Design with your customer in mind. Modern web design is more involved than creating an attractive website. Consideration of user experience, search engine optimization, ease of use, and technical details are just a few elements that are involved in developing a website that is designed to perform in today’s competitive marketplace. Our web design & development team has established a host of effective services to facilitate the growth of your business. These include WordPress websites and eCommerce solutions focused on usability and responsive design, creative branding solutions that inject personality into your business, and custom programming for ideas that you need help bringing to fruition. Whether you’re in need of a simple WordPress website to get your business online, or a more complicated eCommerce website, our web development team will help bring your vision to life.",
-      image: "/img/UIUX_1110x400.png",
+      image: "/img/UIUX_1110x400.webp",
     },
   ];
 

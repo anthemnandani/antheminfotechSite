@@ -69,7 +69,7 @@ const HomeSkillWithVideo = () => {
               <div className="skill-video">
                 <img
                   className="image"
-                  src={process.env.PUBLIC_URL + "/images/video/skill-video.jpg"}
+                  src={process.env.PUBLIC_URL + "/images/video/skill-video.webp"}
                   alt="video popup"
                 />
                 <button className="icon" onClick={() => setOpen(true)}>

@@ -31,7 +31,7 @@ const HomeSuccess = ({ classOption }) => {
                             <div className="about-image js-tilt">
                                 <Tilt scale={scale} transitionSpeed={4000}>
                                     <img
-                                        src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/images/skill/skill-1.jpg`}
+                                        src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/images/skill/skill-1.webp`}
                                         alt="skill-1"
                                         loading="lazy"
                                     />
@@ -40,7 +40,7 @@ const HomeSuccess = ({ classOption }) => {
                             <div className="about-image js-tilt">
                                 <Tilt scale={scale} transitionSpeed={4000}>
                                     <img
-                                        src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/images/skill/skill-2.jpg`}
+                                        src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/images/skill/skill-2.webp`}
                                         alt="skill-2"
                                         loading="lazy"
                                     />

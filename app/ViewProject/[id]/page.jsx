@@ -52,7 +52,7 @@ const WorkDetails = () => {
     
    
       <Breadcrumb
-        image="images/bg/breadcrumb-bg-two.jpg"
+        image="images/bg/breadcrumb-bg-two.webp"
         title={projects.data?.projectName}
         content="Home"
         contentTwo="OurWork"

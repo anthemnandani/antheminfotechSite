@@ -32,7 +32,7 @@ const AboutSix = ({ classOption }) => {
               <div className="about-image">
                 <Tilt scale={scale} transitionSpeed={4000}>
                   <img
-                    src="/images/about/about-5.jpg"
+                    src="/images/about/about-5.webp"
                     alt="About 5"
                     loading="lazy"
                   />
@@ -41,7 +41,7 @@ const AboutSix = ({ classOption }) => {
               <div className="about-image">
                 <Tilt scale={scale} transitionSpeed={4000}>
                   <img
-                    src="/images/about/about-6.jpg"
+                    src="/images/about/about-6.webp"
                     alt="About 6"
                     loading="lazy"
                   />

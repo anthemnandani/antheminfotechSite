@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "image": "images/blog/370/blog-1.jpg",
-        "largeImage": "images/blog/770/blog-2.jpg",
+        "image": "images/blog/370/blog-1.webp",
+        "largeImage": "images/blog/770/blog-2.webp",
         "author": "Written by Admin",
         "date": "10 Oct 2020",
         "view": "70 views",
@@ -14,8 +14,8 @@
     },
     {
         "id": 2,
-        "image": "images/blog/370/blog-2.jpg",
-        "largeImage": "images/blog/770/blog-1.jpg",
+        "image": "images/blog/370/blog-2.webp",
+        "largeImage": "images/blog/770/blog-1.webp",
         "author": "Written by Admin",
         "date": "10 Oct 2020",
         "view": "70 views",
@@ -27,8 +27,8 @@
     },
     {
         "id": 3,
-        "image": "images/blog/370/blog-3.jpg",
-        "largeImage": "images/blog/770/blog-3.jpg",
+        "image": "images/blog/370/blog-3.webp",
+        "largeImage": "images/blog/770/blog-3.webp",
         "author": "Written by Admin",
         "date": "10 Oct 2020",
         "view": "70 views",
@@ -40,8 +40,8 @@
     },
     {
         "id": 4,
-        "image": "images/blog/370/blog-4.jpg",
-        "largeImage": "images/blog/770/blog-3.jpg",
+        "image": "images/blog/370/blog-4.webp",
+        "largeImage": "images/blog/770/blog-3.webp",
         "author": "Written by Admin",
         "date": "10 Oct 2020",
         "view": "70 views",
@@ -53,8 +53,8 @@
     },
     {
         "id": 5,
-        "image": "images/blog/370/blog-5.jpg",
-        "largeImage": "images/blog/770/blog-3.jpg",
+        "image": "images/blog/370/blog-5.webp",
+        "largeImage": "images/blog/770/blog-3.webp",
         "author": "Written by Admin",
         "date": "10 Oct 2020",
         "view": "70 views",
@@ -66,8 +66,8 @@
     },
     {
         "id": 6,
-        "image": "images/blog/370/blog-6.jpg",
-        "largeImage": "images/blog/770/blog-3.jpg",
+        "image": "images/blog/370/blog-6.webp",
+        "largeImage": "images/blog/770/blog-3.webp",
         "author": "Written by Admin",
         "date": "10 Oct 2020",
         "view": "70 views",

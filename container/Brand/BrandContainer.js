@@ -34,6 +34,7 @@ const BrandContainer = ({ classOption }) => {
       setLoading(true);
       try {
         const data = await getClients();
+        console.log("Fetched clients data:", data);
         const modifiedClients = data.map((client) => ({
           ...client,
           logo1: `${process.env.NEXT_PUBLIC_URL_CONTENT}/ClientImages/${client.logo1}`,

@@ -55,7 +55,7 @@ const BlogDetailsContainer = ({ data }) => {
                         <div
                           className="hover-bg has-thumbnail"
                           style={{
-                            backgroundImage: `url(${process.env.PUBLIC_URL}/images/pagination/blog-pagination.jpg)`,
+                            backgroundImage: `url(${process.env.PUBLIC_URL}/images/pagination/blog-pagination.webp)`,
                           }}
                         ></div>
                         <span className="cate">Marketing</span>
@@ -75,7 +75,7 @@ const BlogDetailsContainer = ({ data }) => {
                         <div
                           className="hover-bg has-thumbnail"
                           style={{
-                            backgroundImage: `url(${process.env.PUBLIC_URL}/images/pagination/blog-pagination-2.jpg)`,
+                            backgroundImage: `url(${process.env.PUBLIC_URL}/images/pagination/blog-pagination-2.webp)`,
                           }}
                         ></div>
                         <span className="cate">Startup</span>

@@ -94,7 +94,7 @@ function Industries(props) {
           </div>
         </>
       ),
-      image: "/img/Food.jpg",
+      image: "/img/Food.webp",
       additionalInfo: [
         "Google Places API",
         "Assign Driver",
@@ -129,7 +129,7 @@ function Industries(props) {
           </div>
         </>
       ),
-      image: "/img/hoa.jpg",
+      image: "/img/hoa.webp",
       additionalInfo: [
         "Bulk Email Sending",
         "PDF Reading",
@@ -171,7 +171,7 @@ function Industries(props) {
           </div>
         </>
       ),
-      image: "/img/financial.jpg",
+      image: "/img/financial.webp",
       additionalInfo: [
         "High Charts",
         "Email Sending",
@@ -208,7 +208,7 @@ function Industries(props) {
         </>
       ),
 
-      image: "/img/tourism.jpg",
+      image: "/img/tourism.webp",
       additionalInfo: [
         "Choose Destination",
         "Place API",
@@ -248,7 +248,7 @@ function Industries(props) {
           </div>
         </>
       ),
-      image: "/img/travel.jpg",
+      image: "/img/travel.webp",
       additionalInfo: [
         "Telrik",
         "Rad controls",
@@ -285,7 +285,7 @@ function Industries(props) {
           </div>
         </>
       ),
-      image: "/img/construction.jpg",
+      image: "/img/construction.webp",
       additionalInfo: [
         "Google Maps",
         "PayPal",
@@ -322,7 +322,7 @@ function Industries(props) {
           </div>
         </>
       ),
-      image: "/img/business.jpg",
+      image: "/img/business.webp",
       additionalInfo: [
         "SMS Sending",
         "Generate Pdf",
@@ -359,7 +359,7 @@ function Industries(props) {
           </div>
         </>
       ),
-      image: "/img/logistics.jpg",
+      image: "/img/logistics.webp",
       additionalInfo: [
         "Google Maps",
         "Email Sending",
@@ -395,7 +395,7 @@ function Industries(props) {
           </div>
         </>
       ),
-      image: "/img/medical.jpg",
+      image: "/img/medical.webp",
       additionalInfo: [
         "Generate Membership",
         "Membership Enquiry",
@@ -430,7 +430,7 @@ function Industries(props) {
           </div>
         </>
       ),
-      image: "/img/4_2560x1170.jpg",
+      image: "/img/4_2560x1170.webp",
       additionalInfo: [
         "Portfolio",
         "Job Form",
@@ -454,7 +454,7 @@ function Industries(props) {
         </div>
         <div className="parallax-image" id="parallax-image">
           <img
-            src="/img/backgroundchatgptimage.jpg"
+            src="/img/backgroundchatgptimage.webp"
             alt="Header"
             style={{ width: "100%" }}
           />

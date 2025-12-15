@@ -20,7 +20,7 @@ export default function RequestQuote() {
 
     
       <Breadcrumb
-        image="/images/bg/breadcrumb-bg-three.jpg"
+        image="/images/bg/breadcrumb-bg-three.webp"
         title="Request A Quote"
         content="Home"
         contentTwo="Request A Quote"

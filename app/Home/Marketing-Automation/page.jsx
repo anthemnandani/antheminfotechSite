@@ -22,7 +22,7 @@ const MarketingAutomation = () => {
 
   
       <Breadcrumb
-        image="images/bg/Marketing-Automation.jpg"
+        image="images/bg/Marketing-Automation.webp"
         title="Enhance <span class='text-color-span'>Lead Generation</span> and <span class='text-color-span'>Customer Engagement</span> with Streamlined <span class='text-color-span'>Marketing Workflows</span>"
         content="Home"
         contentTwo="Services"

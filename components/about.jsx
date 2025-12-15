@@ -22,7 +22,7 @@ export const About = (props) => {
   const teamRef = useRef(null);
   const [apiData, setApiData] = useState(null); // State to store API data
   const [logoUrls, setLogoUrls] = useState([]); // State to store logo URLs
-  const images = ["/img/slide1.jpg", "/img/slide2.jpg", "/img/slide3.jpg"];
+  const images = ["/img/slide1.webp", "/img/slide2.webp", "/img/slide3.webp"];
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [animatedStyles, setAnimatedStyles] = useSpring(() => ({

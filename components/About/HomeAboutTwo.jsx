@@ -77,12 +77,12 @@ const HomeAboutTwo = () => {
                         <div className="about-image-area about-shape-animation right-0 me-0">
                             <div className="about-image js-tilt">
                                 <Tilt scale={scale} transitionSpeed={4000}>
-                                    <img src={process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL + "/images/about/about-1.jpg"} alt="/about-1" loading="lazy" />
+                                    <img src={process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL + "/images/about/about-1.webp"} alt="/about-1" loading="lazy" />
                                 </Tilt>
                             </div>
                             <div className="about-image js-tilt">
                                 <Tilt scale={scale} transitionSpeed={4000}>
-                                    <img src={process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL + "/images/about/about-2.jpg"} alt="about-2" loading="lazy" />
+                                    <img src={process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL + "/images/about/about-2.webp"} alt="about-2" loading="lazy" />
                                 </Tilt>
                             </div>
                             <div className="shape shape-1" id="scene" ref={sceneEl}>

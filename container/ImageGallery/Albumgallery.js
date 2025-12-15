@@ -14,21 +14,70 @@ const AlbumGallery = ({ classOption }) => {
   const [loading, setLoading] = useState(true);
   const [visibleData, setVisibleData] = useState([]);
   const [hasMore, setHasMore] = useState(true);
-
   const [modalOpen, setModalOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+ const CLOUD = process.env.NEXT_PUBLIC_CLOUDINARY_GalleryIMAGE_BASE_URL;
 
-  const allImages = [
-    { image: "/images/gallery/gallery-2.jpg", title: "Project Alpha" },
-    { image: "/images/gallery/gallery-2.jpg", title: "Project Alpha" },
-    { image: "/images/gallery/gallery-1.jpg", title: "Project Alpha" },
-    { image: "/images/gallery/gallery-1.jpg", title: "Project Alpha" },
-    { image: "/images/gallery/gallery-1.jpg", title: "Project Alpha" },
-    { image: "/images/gallery/gallery-1.jpg", title: "Project Alpha" },
-    { image: "/images/gallery/gallery-1.jpg", title: "Project Alpha" },
-    { image: "/images/gallery/gallery-1.jpg", title: "Project Alpha" },
-  ];
+//   const allImages = [
+//     {
+//       image: "/images/congrats.webp",
+//       title: "Positive Upwork feedback praising Hemant for delivering great work on time."
+//     },
+//     {
+//       image: "/images/netupwork.webp",
+//       title: "Upwork client confirming that all assigned work was completed perfectly."
+//     },
+//     {
+//       image: "/images/15hr.webp",
+//       title: "Celebration of completing 15,000 successful working hours on Upwork."
+//     },
+//     {
+//       image: "/images/ceo.webp",
+//       title: "CEO of Anthem Infotech Pvt. Ltd."
+//     },
+//   { image: "/images/clients.webp", title: "Our Clients" },
+// { image: "/images/15thaug.webp", title: "15th August Celebration" },
+// { image: "/images/trip.webp", title: "Team Trip" },
+// { image: "/images/snow.webp", title: "Snow Trip Moments" },
+// { image: "/images/diwali-1.webp", title: "Diwali Celebration" },
+// { image: "/images/diwali-2.webp", title: "Diwali Office Decor" },
+// { image: "/images/old-ofc.webp", title: "Old Office View" },
+// { image: "/images/oldofc-1.webp", title: "Old Office Memories" },
+// { image: "/images/memories.webp", title: "Team Memories" },
+// { image: "/images/techstack.webp", title: "Our Tech Stack" },
+// { image: "/images/Services.webp", title: "Our Services" },
+// { image: "/images/ai.webp", title: "AI Solutions" },
+// { image: "/images/dev-services.webp", title: "Development Services" },
+// { image: "/images/chatbot.webp", title: "Chatbot Development" },
+// { image: "/images/meet.webp", title: "Meeting Requirements" },
+// { image: "/images/need.webp", title: "Client Requirements Discussion" }
+//   ];
 
+const allImages = [
+  {image: `${CLOUD}/
+congrats_ogoaxl.webp
+
+`,title: "Positive Upwork feedback praising Hemant for delivering great work on time."},
+  {image: `${CLOUD}/netupwork_un8iet.webp`,title: "Upwork client confirming that all assigned work was completed perfectly."},
+  {image: `${CLOUD}/15hr_awxsrc.webp`,title: "Celebration of completing 15,000 successful working hours on Upwork."},
+  {image: `${CLOUD}/ceo_vy6k3x.webp`,title: "CEO of Anthem Infotech Pvt. Ltd."},
+  { image: `${CLOUD}/clients_upsiw0.webp`, title: "Our Clients" },
+  { image: `${CLOUD}/15thaug_nuv6ar.webp`, title: "15th August Celebration" },
+  { image: `${CLOUD}/trip_tygdqy.webp`, title: "Team Trip" },
+  { image: `${CLOUD}/snow_iytvs4.webp`, title: "Snow Trip Moments" },
+  { image: `${CLOUD}/diwali-1_ydzphw.webp`, title: "Diwali Celebration 2025" },
+  { image: `${CLOUD}/diwali-2_p1irwo.webp`, title: "Diwali Celebration 2025" },
+  { image: `${CLOUD}/old-ofc_eiqp2o.webp`, title: "Old Office View" },
+  { image: `${CLOUD}/oldofc-1_mf55z1.webp`, title: "Old Office Memories" },
+  { image: `${CLOUD}/memories_uptfv6.webp`, title: "Team Memories" },
+  { image: `${CLOUD}/techstack_kx5fli.webp`, title: "Our Tech Stack" },
+  { image: `${CLOUD}/Services_ocoayu.webp`, title: "Our Services" },
+  { image: `${CLOUD}/ai_wovtey.webp`, title: "AI Solutions" },
+  { image: `${CLOUD}/dev-services_aq2ldz.webp`, title: "Development Services" },
+  { image: `${CLOUD}/chatbot_lrx3st.webp`, title: "Chatbot Development" },
+  { image: `${CLOUD}/meet_tpuytd.webp`, title: "Meeting Requirements" },
+  { image: `${CLOUD}/need_gkfexm.webp`, title: "Client Requirements Discussion" },
+];
   useEffect(() => {
     AOS.init({ duration: 900, easing: "ease-in-out", once: true });
 
@@ -64,7 +113,6 @@ const AlbumGallery = ({ classOption }) => {
       prev === 0 ? visibleData.length - 1 : prev - 1
     );
   };
-
   useEffect(() => {
     const handleKey = (e) => {
       if (!modalOpen) return;
@@ -77,6 +125,11 @@ const AlbumGallery = ({ classOption }) => {
     return () => window.removeEventListener("keydown", handleKey);
   }, [modalOpen]);
 
+useEffect(()=>{
+ console.log("here is the env var",CLOUD);
+ console.log("Full image URL:", `${CLOUD}/v1765517753/trip_tygdqy.webp`);
+},[]);
+  
   return (
     <div className={`section section-padding-t90-b100 ${classOption}`}>
       <div className="container">

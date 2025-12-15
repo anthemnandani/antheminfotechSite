@@ -87,7 +87,7 @@ useEffect(() => {
                     <img
                       src={
                        process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL+
-                        "/images/about/home-one-about/home_agency_about_2.jpg"
+                        "/images/about/home-one-about/home_agency_about_2.webp"
                       }
                       alt="home_agency_about"
                     />

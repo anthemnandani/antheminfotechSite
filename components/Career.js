@@ -189,7 +189,7 @@ function Career(props) {
         </div>
         <div className="parallax-image" id="parallax-image">
           <img
-            src="/img/backgroundchatgptimage.jpg"
+            src="/img/backgroundchatgptimage.webp"
             alt="Header"
             style={{ width: "100%" }}
           />
