@@ -54,13 +54,10 @@ const AlbumGallery = ({ classOption }) => {
 //   ];
 
 const allImages = [
-  {image: `${CLOUD}/
-congrats_ogoaxl.webp
-
-`,title: "Positive Upwork feedback praising Hemant for delivering great work on time."},
+  {image: `${CLOUD}/congrats_ogoaxl.webp`,title: "Positive Upwork feedback praising Hemant for delivering great work on time."},
   {image: `${CLOUD}/netupwork_un8iet.webp`,title: "Upwork client confirming that all assigned work was completed perfectly."},
   {image: `${CLOUD}/15hr_awxsrc.webp`,title: "Celebration of completing 15,000 successful working hours on Upwork."},
-  {image: `${CLOUD}/ceo_vy6k3x.webp`,title: "CEO of Anthem Infotech Pvt. Ltd."},
+  {image: `${CLOUD}/ceo_vy6k3x.webp`,title: "Mr. Hemant Gupta, Chief Executive Officer, Anthem Infotech Pvt. Ltd."},
   { image: `${CLOUD}/clients_upsiw0.webp`, title: "Our Clients" },
   { image: `${CLOUD}/15thaug_nuv6ar.webp`, title: "15th August Celebration" },
   { image: `${CLOUD}/trip_tygdqy.webp`, title: "Team Trip" },
@@ -258,18 +255,15 @@ useEffect(()=>{
           column-count: 3;
           column-gap: 20px;
         }
-
         .masonry-item {
           break-inside: avoid;
           margin-bottom: 20px;
         }
-
         @media (max-width: 992px) {
           .masonry {
             column-count: 2;
           }
         }
-
         @media (max-width: 576px) {
           .masonry {
             column-count: 1;
