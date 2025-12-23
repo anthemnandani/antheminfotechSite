@@ -12,7 +12,7 @@ const MarketingAutomation = () => {
     ? servicesData.filter((data) => data.title === filterservices)
     : [];
   return (
-    <React.Fragment>
+    <>
       <SEO
         title="Marketing Automation Services in Chandigarh | Anthem Infotech"
         description="Automate and optimise your marketing campaigns with AI-driven tools. Enhance engagement, increase ROI, and streamline marketing strategies with Anthem Infotech’s digital marketing and automation expertise."
@@ -31,7 +31,7 @@ const MarketingAutomation = () => {
       <ServiceGrid service={filteredServices} classOption="bg-white" />
       <ServiceDesign service={filteredServices} classOption="bg-white" />
      
-    </React.Fragment>
+    </>
   );
 };
 

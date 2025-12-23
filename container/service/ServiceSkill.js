@@ -32,67 +32,7 @@ const ServiceSkill = ({ classOption }) => {
                 subTitle="<span class='text-white'>Brand-first creative services</span>"
                 title="Bringing unique and engaging experiences to your brand"
               />
-              {/* <div className="progress-bar--one">
-                <div className="progress-charts">
-                  <h6 className="heading ">UX Design</h6>
-                  <div className="single-progress">
-                    <ProgressBar
-                      data-aos="fade-right"
-                      aria-label="UX Design"
-                      data-aos-delay="100"
-                      data-aos-duration="450"
-                      className="gradient-1"
-                      now="81"
-                      label={<span>81%</span>}
-                    />
-                  </div>
-                </div>
-
-                <div className="progress-charts ">
-                  <h6 className="heading ">Marketing</h6>
-                  <div className="single-progress">
-                    <ProgressBar
-                      data-aos="fade-right"
-                      aria-label="Marketing"
-                      data-aos-delay="100"
-                      data-aos-duration="450"
-                      className="gradient-2"
-                      now="72"
-                      label={<span>72%</span>}
-                    />
-                  </div>
-                </div>
-
-                <div className="progress-charts ">
-                  <h6 className="heading ">Web Design</h6>
-                  <div className="single-progress">
-                    <ProgressBar
-                      data-aos="fade-right"
-                      aria-label="Web Design"
-                      data-aos-delay="100"
-                      data-aos-duration="450"
-                      className="gradient-3"
-                      now="81"
-                      label={<span>81%</span>}
-                    />
-                  </div>
-                </div>
-
-                <div className="progress-charts ">
-                  <h6 className="heading ">Development</h6>
-                  <div className="single-progress">
-                    <ProgressBar
-                      data-aos="fade-right"
-                      aria-label="Development"
-                      data-aos-delay="100"
-                      data-aos-duration="450"
-                      className="gradient-4"
-                      now="81"
-                      label={<span>81%</span>}
-                    />
-                  </div>
-                </div>
-              </div> */}
+             
               <div className="progress-bar--one">
                 <div className="progress-charts">
                   <h2 className="heading">UX Design</h2>

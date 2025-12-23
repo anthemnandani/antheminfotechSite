@@ -47,7 +47,7 @@ export const metadata = {
 
 const Testimonial = () => {
   return (
-    <React.Fragment>
+    <>
       {/* Structured Data - Review */}
       <Script
         id="testimonials-page-schema"
@@ -75,7 +75,7 @@ const Testimonial = () => {
         contentTwo="Testimonials"
       />
       <TestimonialContainer classOption="bg-white" />
-    </React.Fragment>
+    </>
   );
 };
 

@@ -14,7 +14,7 @@ const UIUXDesign = () => {
     : [];
 
   return (
-    <React.Fragment>
+    <>
       <SEO
         title="UI/UX Design Company in Chandigarh | Anthem Infotech
 "
@@ -26,7 +26,7 @@ const UIUXDesign = () => {
 
    
 
-      {/* ✅ SEO-Friendly H1 Tag */}
+
       <h1 className="text-3xl font-bold text-center mt-6 mb-4">
         UI/UX Design Services | Anthem Infotech
       </h1>
@@ -41,7 +41,7 @@ const UIUXDesign = () => {
       <ServiceGrid service={filteredServices} classOption="bg-white" />
       <ServiceDesign service={filteredServices} classOption="bg-white" />
      
-    </React.Fragment>
+    </>
   );
 };
 

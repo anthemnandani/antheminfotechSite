@@ -24,18 +24,7 @@ const SectionTitleComponent = ({ title,
                 containIntrinsicSize: '0 100px'
             }}
         >
-            {/* <h2
-                className={`title ${headingOption}`}
-                dangerouslySetInnerHTML={titleContent}
-                style={{
-                    contentVisibility: 'auto',
-                    containIntrinsicSize: '0 42px',
-                    willChange: 'transform',
-                    transform: 'translateZ(0)',
-                    backfaceVisibility: 'hidden',
-                    WebkitFontSmoothing: 'antialiased'
-                }}
-            /> */}
+            
             <h2
   className={`title ${headingOption} leading-normal pb-2 overflow-visible`}
   dangerouslySetInnerHTML={titleContent}

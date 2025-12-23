@@ -26,15 +26,7 @@ useEffect(() => {
   require("aos").init();
 }, []);
 
-  // useEffect(() => {
-  //   const parallaxInstance = new Parallax(sceneEl.current, {
-  //     relativeInput: true,
-  //   });
 
-  //   parallaxInstance.enable();
-
-  //   return () => parallaxInstance.disable();
-  // }, []);
   return (
     <div
       className={`section section-padding-top section-padding-bottom-180 ${classOption}`}

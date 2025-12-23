@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState, useCallback } from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import SectionTitle from "../../components/SectionTitles/SectionTitle";
 import WorkItemTwo from "../../components/Work/WorkItemTwo";
@@ -13,7 +12,7 @@ import { getToken } from "../../services/tokenservice";
 import { getProjects } from "../../services/projectsservices";
 import Loader from "../Loader/Loader";
 import { useParams } from "next/navigation";
-import { normalize } from "path";
+
 
 const WorkContainer = ({ classOption }) => {
   const [token, setToken] = useState(null);
@@ -40,14 +39,6 @@ const WorkContainer = ({ classOption }) => {
       once: true,
     });
   }, []);
-
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 1000,
-  //     easing: "ease-in-out",
-  //     once: true,
-  //   });
-  // }, []);
 
   useEffect(() => {
     const fetchToken = async () => {
@@ -124,7 +115,7 @@ if (slug) {
     }
   }, [token, slug, itemsToShow]);
 
-  // ✅ DEBUG: Check which projects match the slug
+  // DEBUG: Check which projects match the slug
   useEffect(() => {
     if (!projects.length || !slug) return;
 
@@ -232,9 +223,7 @@ const cleanSlug = slug?.replace(/-/g, " ");
   View All Projects
 </a>
 
-            {/* <a href="/OurWork" className="btn btn-primary mt-3 text-black">
-              View All Projects
-            </a> */}
+           
           </div>
         ) : (
           <InfiniteScroll

@@ -1,4 +1,3 @@
-
 import React, { Fragment } from 'react';
 import { useForm } from "react-hook-form";
 
@@ -9,7 +8,7 @@ const ProjectForm = () => {
     const onSubmit = data => console.log(data);
 
     return (
-        <Fragment>
+        <>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="row mb-n4">
                     <div className="col-md-12 col-12 mb-4">
@@ -59,7 +58,7 @@ const ProjectForm = () => {
                 </div>
             </form>
             <p className="form-messege"></p>
-        </Fragment>
+        </>
     )
 }
 

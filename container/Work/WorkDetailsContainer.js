@@ -1,7 +1,7 @@
 "use client";
 import "aos/dist/aos.css"; 
 import PropTypes from "prop-types";
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import Link from "next/link";
 import ImageCarousel from "../../components/swiper/ImageCarousel";
 import Loader from "../Loader/Loader";
@@ -39,14 +39,9 @@ const WorkDetailsContainer = ({ projects, loading, classOption }) => {
                   <h6 data-aos="fade-up">ABOUT THE PROJECT</h6>
                   <div className="work-details-list mt-2">
                     <div className="details-list">
-                      {/* <label>
-                      <i
-                        className="far fa-calendar text-primary"
-                        title="Project Start Date"
-                      ></i>
-                    </label> */}
+                     
                       {
-                        /* <span>{projects.data?.dateofProject.split("T")[0]}</span> */
+                      
                         <span title="Project Start Date">
                           <i className="far fa-calendar text-primary"></i>{" "}
                           {new Date(
@@ -79,32 +74,13 @@ const WorkDetailsContainer = ({ projects, loading, classOption }) => {
                       </span>
                     </div>
 
-                    {/* 
-                  not in use
-                  <ul className="meta mb-0 mt-12">
-                    <li><i className="fa fa-pencil-alt"></i>{data.author}</li>
-                    <li><i className="far fa-calendar"></i>{data.date}</li>
-                    <li><i className="fas fa-tags text-primary"></i>{cate}</li>
-                    <li><i className="fas fa-comments"></i>4 Comments</li>
-                    <li className="media"><Link to={process.env.PUBLIC_URL + "/"}><i className="fas fa-share-alt"></i>Share this post</Link>
-                        <div className="list">
-                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                            <a href="#"><i className="fab fa-twitter"></i></a>
-                            <a href="#"><i className="fab fa-linkedin"></i></a>
-                            <a href="#"><i className="fab fa-tumblr-square"></i></a>
-                        </div>
-                    </li>
-                </ul> */}
+                  
                   </div>
                   <div
                     className="details-list d-flex"
                     style={{ margin: "5px 0px" }}
                   >
-                    {/* <label>Technologies</label> */}
-                    {/* <i
-                      className="fas fa-tags text-primary mt-4 me-1"
-                      title="Technologies"
-                    ></i>{" "} */}
+                   
                     <div className="tagcloud mt-1">
                       {(projects.data?.technolgies || "")
                         .split(",")
@@ -116,12 +92,7 @@ const WorkDetailsContainer = ({ projects, loading, classOption }) => {
                           </Link>
                         ))}
                     </div>
-                    {/* <Link
-                      className="btn btn-primary btn-hover-secondary"
-                      to={process.env.PUBLIC_URL + projects.data.url}
-                    >
-                      {`View Live`}
-                    </Link> */}
+                   
                   </div>
                   <div className="my-2">
                     {projects?.data?.url && (
@@ -152,33 +123,13 @@ const WorkDetailsContainer = ({ projects, loading, classOption }) => {
                     </h3>
 
                     <div className="desc">
-                      {/* {data.body.map((value, i) => {
-                      return (
-                        <div
-                          key={i}
-                          className="content mb-5"
-                          data-aos="fade-up"
-                          dangerouslySetInnerHTML={{ __html: value }}
-                        />
-                      );
-                    })} */}
+                      
                       <div
                         dangerouslySetInnerHTML={{
                           __html: projects.data?.description,
                         }}
                       />
-                      {/* {projects?.data?.url && (
-                      <div className="work-btn">
-                        <a
-                          className="btn btn-primary btn-hover-secondary"
-                          href={projects?.data?.url}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          Live Preview
-                        </a>
-                      </div>
-                    )} */}
+                     
                     </div>
                   </div>
                 </div>
@@ -186,18 +137,7 @@ const WorkDetailsContainer = ({ projects, loading, classOption }) => {
             </div>
           </div>
 
-          {/* <div className="row">
-          <div className="col-lg-12">
-            <div className="custom-column-thumbnail mt-1" data-aos="fade-up">
-              <img
-                className="w-100"
-                src={`${process.env.REACT_APP_PUBLIC_URL_CONTENT}/PortfolioImages/${projects.data?.projectImage}`}
-                alt="Agency"
-              />
-            </div>
-          </div>
-        </div> */}
-
+        
           <div className="row">
             <div className="col-lg-4 col-md-12 col-12">
               <div className="digital-marketing" data-aos="fade-up">
@@ -216,22 +156,7 @@ const WorkDetailsContainer = ({ projects, loading, classOption }) => {
             </div>
           </div>
 
-          {/* <div className="custom-layout-gallery mt-12">
-          <div className="row">
-            {projects &&
-              projects.img?.map((item, index) => (
-                <div className="col-lg-6 col-md-6 col-12 p-3" key={index}>
-                  <div className="thumbnail" data-aos="fade-up">
-                    <img
-                      className="w-100"
-                      src={`${process.env.REACT_APP_PUBLIC_URL_CONTENT}/PortfolioImages/${item?.imageURL}`}
-                      alt={`Gallery Image ${index + 1}`}
-                    />
-                  </div>
-                </div>
-              ))}
-          </div>
-        </div> */}
+         
           {projects && <ImageCarousel imageUrls={projects.img} />}
         </div>
       )}

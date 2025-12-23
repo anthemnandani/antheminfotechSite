@@ -69,8 +69,17 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: "https://antheminfotech.com",
+  canonical: "https://antheminfotech.com",
+  languages: {
+    "en-in": "https://antheminfotech.com/",
+    "en-us": "https://antheminfotech.com/usa",
+    "en-au": "https://antheminfotech.com/australia",
+    "en-ca": "https://antheminfotech.com/canada",
+    "en-nz": "https://antheminfotech.com/new-zealand",
+    "x-default": "https://antheminfotech.com/",
   },
+},
+
   category: "Technology",
   classification: "Software Development Company",
   themeColor: "#000000",
@@ -136,6 +145,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-bs-theme="dark">
       <head>
+      
+  {/* existing head content */}
+
         {/* Preconnect to critical domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

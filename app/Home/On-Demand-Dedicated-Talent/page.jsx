@@ -13,7 +13,7 @@ const OnDemandDedicatedTalent = () => {
     ? servicesData.filter((data) => data.title === filterservices)
     : [];
   return (
-    <React.Fragment>
+    <>
       <SEO
         title="Hire Dedicated AI & Web Developers in Chandigarh | Anthem Infotech"
         description=" Access flexible, skilled on-demand developers for your projects. Our dedicated AI, web, and full-stack talent ensures fast delivery, high-quality solutions, and scalable support for your business.
@@ -34,7 +34,7 @@ const OnDemandDedicatedTalent = () => {
       <ServiceGrid service={filteredServices} classOption="bg-white" />
       <ServiceDesign service={filteredServices} classOption="bg-white" />
      
-    </React.Fragment>
+    </>
   );
 };
 

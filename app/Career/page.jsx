@@ -1,6 +1,4 @@
 // app/career/page.jsx
-// "use client";
-
 import React from "react";
 import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
 import CareerFromContainer from "../../container/CareerFromContainer/CareerFromContainer";

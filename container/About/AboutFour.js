@@ -3,13 +3,11 @@
 import { useState, useEffect, useRef } from "react";
 import SectionTitleTwo from "@/components/SectionTitles/SectionTitleTwo";
 import Tilt from "react-parallax-tilt";
-import Parallax from "parallax-js";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 const AboutFour = ({ classOption }) => {
   const [scale] = useState(1.04);
-  const [mounted, setMounted] = useState(false); // ✅ track client mount
   const sceneEl = useRef(null);
 
   const [refClients, inViewClients] = useInView({ triggerOnce: true, threshold: 0.3 });
@@ -36,22 +34,6 @@ useEffect(() => {
   
   
   
-  
-  // useEffect(() => {
-  //   setMounted(true); // component is mounted on client
-
-  //   if (!sceneEl.current) return;
-
-  //   const parallaxInstance = new Parallax(sceneEl.current, {
-  //     relativeInput: true,
-  //   });
-  //   parallaxInstance.enable();
-
-  //   return () => parallaxInstance.disable();
-  // }, []);
-
-  // if (!mounted) return null; // ✅ prevent SSR render
-
   return (
     <div className={`section section-padding-top about-section-padding-bottom-200 ${classOption}`}>
       <div className="container">
