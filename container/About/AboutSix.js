@@ -32,7 +32,7 @@ const AboutSix = ({ classOption }) => {
               <div className="about-image">
                 <Tilt scale={scale} transitionSpeed={4000}>
                   <img
-                    src="/images/about/about-5.webp"
+                   src={`${cloudBase}/images/about/about-5.webp`}
                     alt="About 5"
                     loading="lazy"
                   />
@@ -41,7 +41,7 @@ const AboutSix = ({ classOption }) => {
               <div className="about-image">
                 <Tilt scale={scale} transitionSpeed={4000}>
                   <img
-                    src="/images/about/about-6.webp"
+                    src={`${cloudBase}/images/about/about-6.webp`}
                     alt="About 6"
                     loading="lazy"
                   />
@@ -76,13 +76,17 @@ const AboutSix = ({ classOption }) => {
                 goals and boosting yourself next.
               </p>
 
-              <Link
-                href="/contact-us"
-                className="btn btn-bottom mt-xl-12 mt-lg-8 mt-md-6 mt-4"
-                style={{ background: "#0e6497" }}
-              >
-                Get Started
-              </Link>
+
+               <Link href="/contact-us" passHref>
+            <button
+              type="button"
+              className="btn btn-bottom"
+              data-hover="Get Started"
+              style={{ background: "#0e6497", margin: "0px auto" }}
+            >
+             Get Started
+            </button>
+          </Link>
             </div>
           </div>
         </div>

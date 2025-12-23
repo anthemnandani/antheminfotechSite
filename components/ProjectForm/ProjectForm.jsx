@@ -53,8 +53,9 @@ const ProjectForm = () => {
                         </span>
                     </div>
                     <div className="col-12 text-center mb-4">
-                        <button type="submit" className="btn btn-secondary btn-hover-primary">Get a free consultation</button>
+                        <button type="submit" className="btn btn btn-bottom" data-hover="Get a free consultation" style={{ background: "#0e6497" }}>Get a free consultation</button>
                     </div>
+                    
                 </div>
             </form>
             <p className="form-messege"></p>
