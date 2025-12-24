@@ -62,6 +62,13 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    // Add Gallery page here
+    {
+      url: `${baseUrl}/gallery`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     // Service pages
     {
       url: `${baseUrl}/Home/Services`,
@@ -133,4 +140,3 @@ export default function sitemap() {
 
   return routes;
 }
-
