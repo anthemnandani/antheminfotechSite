@@ -19,15 +19,12 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata = {
   metadataBase: new URL("https://antheminfotech.com"),
-
   title: {
     default: "Anthem Infotech - SOFTWARE PRODUCT DEVELOPMENT AND MAINTENANCE COMPANY",
     template: "%s | Anthem Infotech",
   },
-
   description:
     "Anthem Infotech specializes in end-to-end software product development, IT consulting, and digital solutions for businesses worldwide. Leading Web Development Company in Chandigarh, India since 2011.",
-
   alternates: {
     canonical: "https://antheminfotech.com",
     languages: {
@@ -39,17 +36,14 @@ export const metadata = {
       "x-default": "https://antheminfotech.com/",
     },
   },
-
   robots: {
     index: true,
     follow: true,
   },
-
   icons: {
     icon: "/images/logo/logo.webp",
     shortcut: "/images/favicon.png",
   },
-
   openGraph: {
     type: "website",
     url: "https://antheminfotech.com",
@@ -64,35 +58,37 @@ export const metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     site: "@AnthemInfotech",
   },
-
-  /** ✅ Fonts + Preconnect moved here */
   other: {
-    // Preconnect
     "link:preconnect:fonts-google": "https://fonts.googleapis.com",
     "link:preconnect:fonts-gstatic": "https://fonts.gstatic.com",
-
-    // Google Fonts
     "link:rubik":
       "https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap",
     "link:muli":
       "https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700&display=swap",
-
-    // Geo
     "geo.region": "IN-PB",
     "geo.placename": "Chandigarh",
     "geo.position": "30.7333;76.7794",
     ICBM: "30.7333, 76.7794",
+  },
+  verification: {
+    google: "r4ta9ktAXRU_E8ih-j4M2QuAbdsU1Y3ku3rkJoY62rs", // ✅ Updated Google verification code
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-bs-theme="dark">
+      <head>
+        {/* Google Search Console Verification */}
+        <meta
+          name="google-site-verification"
+          content="r4ta9ktAXRU_E8ih-j4M2QuAbdsU1Y3ku3rkJoY62rs"
+        />
+      </head>
       <body className="antialiased">
         <noscript>You need to enable JavaScript to run this app.</noscript>
 

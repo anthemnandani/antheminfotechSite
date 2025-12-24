@@ -1,5 +1,1 @@
-# Allow Google verification file to be served as-is
-/google08a262c6fb8ee3c2.html   /google08a262c6fb8ee3c2.html   200
-
-# Catch-all for SPA routing
-/*                             /index.html                    200
+/*    /index.html   200
