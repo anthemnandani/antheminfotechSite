@@ -93,20 +93,44 @@ export default function RootLayout({ children }) {
         <noscript>You need to enable JavaScript to run this app.</noscript>
 
         {/* Organization Schema */}
-        <Script
-          id="organization-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Anthem Infotech Private Limited",
-              url: "https://antheminfotech.com",
-              logo:
-                "https://res.cloudinary.com/dzmfvr3dm/image/upload/images/logo/logo.webp",
-            }),
-          }}
-        />
+      <Script
+  id="organization-schema"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Anthem Infotech Pvt. Ltd.",
+      url: "https://antheminfotech.com",
+      logo: "https://res.cloudinary.com/dzmfvr3dm/image/upload/images/logo/logo.webp",
+      sameAs: [
+        "https://www.linkedin.com/company/antheminfotech",
+        "https://www.facebook.com/antheminfotech",
+        "https://twitter.com/AnthemInfotech"
+      ]
+    })
+  }}
+/>
+
+<Script
+  id="website-schema"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Anthem Infotech Pvt. Ltd.",
+      url: "https://antheminfotech.com",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://antheminfotech.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    })
+  }}
+/>
 
         {/* Google Analytics */}
         <Script
@@ -132,7 +156,7 @@ export default function RootLayout({ children }) {
             function loadScript(a){
               var b=document.getElementsByTagName("head")[0],
                   c=document.createElement("script");
-              c.type="text/javascript;
+              c.type="text/javascript";
               c.src="https://tracker.metricool.com/resources/be.js";
               c.onreadystatechange=a;
               c.onload=a;
