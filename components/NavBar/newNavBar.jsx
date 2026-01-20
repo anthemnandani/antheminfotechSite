@@ -23,7 +23,7 @@ function NewNavBar() {
                         </li>
 
                         <li className="ruby-menu-mega-blog">
-                            <Link href="/Home/Services">
+                            <Link href="/services">
                                 <span className="menu-text">Services</span>
                             </Link>
 
@@ -31,7 +31,7 @@ function NewNavBar() {
                                 <ul className="ruby-menu-mega-blog-nav">
                                     {/* Custom Software Section */}
                                     <li className="ruby-active-menu-item">
-                                        <Link href="/Home/Custom-Software">
+                                        <Link href="/services/Custom-Software">
                                             <span className="menu-text">Custom Software</span>
                                         </Link>
 
@@ -98,7 +98,7 @@ function NewNavBar() {
 
                                     {/* Web & Mobile Apps Section */}
                                     <li className="hidden-md">
-                                        <Link href="/Home/Web-Mobile-Apps">
+                                        <Link href="/services/Web-Mobile-Apps">
                                             <span className="menu-text">Web & Mobile Apps</span>
                                         </Link>
                                         <div className="ruby-grid ruby-grid-lined mega-height">
@@ -249,7 +249,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                               "/Home/AI-Powered-Solutions"
+                                               "/services/AI-Powered-Solutions"
                                             }
                                         >
                                             <span className="menu-text">AI-Powered Solutions</span>
@@ -385,7 +385,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                               "/Home/Marketing-Automation"
+                                               "/services/Marketing-Automation"
                                             }
                                         >
                                             <span className="menu-text">Marketing Automation</span>
@@ -537,7 +537,7 @@ function NewNavBar() {
                                     </li>
                                     <li className="hidden-md">
                                         <Link
-                                            href={"/Home/MVP-Development"}
+                                            href={"/services/MVP-Development"}
                                         >
                                             <span className="menu-text">MVP Development</span>
                                         </Link>
@@ -689,7 +689,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                               "/Home/Enterprise-Software"
+                                               "/services/Enterprise-Software"
                                             }
                                         >
                                             <span className="menu-text">Enterprise Software</span>
@@ -806,7 +806,7 @@ function NewNavBar() {
                                     </li>
                                     <li className="hidden-md">
                                         <Link
-                                            href={"/Home/Data-Analysis-ETL"}
+                                            href={"/services/Data-Analysis-ETL"}
                                         >
                                             <span className="menu-text">Data Analysis & ETL</span>
                                         </Link>
@@ -939,7 +939,7 @@ function NewNavBar() {
                                         <span className="ruby-dropdown-toggle"></span>
                                     </li>
                                     <li className="hidden-md">
-                                        <Link href={"/Home/UI-UX-Design"}>
+                                        <Link href={"/services/UI-UX-Design"}>
                                             <span className="menu-text">UI/UX Design </span>
                                         </Link>
                                         <div className="ruby-grid ruby-grid-lined mega-height">
@@ -1039,7 +1039,7 @@ function NewNavBar() {
                                         <Link
                                             href={
                                                 
-                                                "/Home/On-Demand-Dedicated-Talent"
+                                                "/services/On-Demand-Dedicated-Talent"
                                             }
                                         >
                                             <span className="menu-text">
@@ -2473,7 +2473,7 @@ function NewNavBar() {
                         </li>
 
                         <li>
-                            <Link href="/Career">
+                            <Link href="/careers">
                                 <span className="menu-text">Career</span>
                             </Link>
                         </li>

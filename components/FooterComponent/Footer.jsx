@@ -5,102 +5,157 @@ import React from "react";
 import FooterLinkItem from "./FooterLinkItem";
 
 const Footer = () => {
- const footerData = [
-    {
-        "id": 1,
-        "title": "Services",
-        "list": [
-            {
-            "id": 1,
-            "text": "Custom Software",
-            "url": "/Home/Custom-Software"
-            },
-            {
-            "id": 2,
-            "text": "Web & Mobile Apps",
-            "url": "/Home/Web-Mobile-Apps"
-            },
-            {
-            "id": 3,
-            "text": "AI-Powered Solutions",
-            "url": "/Home/AI-Powered-Solutions"
-            },
-            {
-            "id": 4,
-            "text": "Marketing Automation",
-            "url": "/Home/Marketing-Automation"
-            },     
-            {
-            "id": 5,
-            "text": "MVP Development",
-            "url": "/Home/MVP-Development"
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "title": "\u00A0",
-        "list": [
-            {
-            "id": 6,
-            "text": "Enterprise Software",
-            "badge": "",
-            "url": "/Home/Enterprise-Software"
-            },
-            {
-            "id": 7,
-            "text": "Data Analysis & ETL",
-            "url": "/Home/Data-Analysis-ETL"
-            },
-            {
-            "id": 8,
-            "text": "UI/UX Design",
-            "url": "/Home/UI-UX-Design"
-            },
-            {
-            "id": 9,
-            "text": "On-Demand Dedicated Talent",
-            "url": "/Home/On-Demand-Dedicated-Talent"
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "title": "About Us",
-        "list": [
-           {
-            "id": 1,
-            "text": "Gallery",
-            "url": "/gallery"
-            },
-            {
-            "id": 2,
-            "text": "Contact Us",
-            "url": "/contact-us"
-            },
-            {
-            "id": 3,
-            "text": "FAQs",
-            "url": "/faqs"
-            },
-            {
-            "id": 4,
-            "text": "Our Clients",
-            "url": "/our-clients"
-            },
-            {
-            "id": 5,
-            "text": "Testimonials",
-            "url": "/testimonials"
-            },
-            {
-            "id": 6,
-            "text": "Technologies",
-            "url": "/technologies"
-            }
-        ]
-    }
-]
+const footerData = [
+  {
+    id: 1,
+    title: "Quick Links",
+    list: [
+      {
+        id: 1,
+        text: "Home",
+        url: "/",
+      },
+      {
+        id: 2,
+        text: "About Us",
+        url: "/about-us",
+      },
+      {
+        id: 3,
+        text: "Services",
+        url: "/services",
+      },
+      {
+        id: 4,
+        text: "Industries",
+        url: "Home/Industries",
+      },
+      {
+        id: 5,
+        text: "Portfolio",
+        url: "/OurWork",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "\u00A0",
+    list: [
+      {
+        id: 6,
+        text: "Career",
+        url: "/careers",
+      },
+      {
+        id: 7,
+        text: "Contact Us",
+        url: "/contact-us",
+      },
+      {
+        id: 8,
+        text: "Request a Quote",
+        url: "/request-a-quote",
+      },
+    ],
+  },
+];
+
+//  const footerData = [
+//     {
+//         "id": 1,
+//         "title": "Services",
+//         "list": [
+//             {
+//             "id": 1,
+//             "text": "Custom Software",
+//             "url": "/Home/Custom-Software"
+//             },
+//             {
+//             "id": 2,
+//             "text": "Web & Mobile Apps",
+//             "url": "/Home/Web-Mobile-Apps"
+//             },
+//             {
+//             "id": 3,
+//             "text": "AI-Powered Solutions",
+//             "url": "/Home/AI-Powered-Solutions"
+//             },
+//             {
+//             "id": 4,
+//             "text": "Marketing Automation",
+//             "url": "/Home/Marketing-Automation"
+//             },     
+//             {
+//             "id": 5,
+//             "text": "MVP Development",
+//             "url": "/Home/MVP-Development"
+//             }
+//         ]
+//     },
+//     {
+//         "id": 2,
+//         "title": "\u00A0",
+//         "list": [
+//             {
+//             "id": 6,
+//             "text": "Enterprise Software",
+//             "badge": "",
+//             "url": "/Home/Enterprise-Software"
+//             },
+//             {
+//             "id": 7,
+//             "text": "Data Analysis & ETL",
+//             "url": "/Home/Data-Analysis-ETL"
+//             },
+//             {
+//             "id": 8,
+//             "text": "UI/UX Design",
+//             "url": "/Home/UI-UX-Design"
+//             },
+//             {
+//             "id": 9,
+//             "text": "On-Demand Dedicated Talent",
+//             "url": "/Home/On-Demand-Dedicated-Talent"
+//             }
+//         ]
+//     },
+//     {
+//         "id": 3,
+//         "title": "About Us",
+//         "list": [
+//            {
+//             "id": 1,
+//             "text": "Gallery",
+//             "url": "/gallery"
+//             },
+//             {
+//             "id": 2,
+//             "text": "Contact Us",
+//             "url": "/contact-us"
+//             },
+//             {
+//             "id": 3,
+//             "text": "FAQs",
+//             "url": "/faqs"
+//             },
+//             {
+//             "id": 4,
+//             "text": "Our Clients",
+//             "url": "/our-clients"
+//             },
+//             {
+//             "id": 5,
+//             "text": "Testimonials",
+//             "url": "/testimonials"
+//             },
+//             {
+//             "id": 6,
+//             "text": "Technologies",
+//             "url": "/technologies"
+//             }
+//         ]
+//     }
+// ]
   return (
     <div className="footer-section section footer-bg-color">
       <div className="container">

@@ -30,7 +30,7 @@ const IntroTwo = () => {
                 Get Started
               </Link>
               <Link
-                href="/Home/Services"
+                href="/Home/services"
                 className="btn btn btn-bottom"
                 data-hover="Learn More"
               >
@@ -103,7 +103,7 @@ export default IntroTwo;
 //                 Get Started
 //               </Link>
 
-//               <Link href="/Home/Services" className="btn btn btn-bottom" data-hover="Learn More">
+//               <Link href="/Home/services" className="btn btn btn-bottom" data-hover="Learn More">
 //                 Learn More
 //               </Link>
 

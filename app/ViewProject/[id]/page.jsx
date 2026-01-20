@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Breadcrumb from "../../../container/Breadcrumb/Breadcrumb";
+import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import WorkDetailsContainer from "../../../container/Work/WorkDetailsContainer";
 import WorkData from "../../../data/work/workDetails.json";
 import { getProjectByID } from "../../../services/projectsservices.js";
@@ -48,7 +49,18 @@ const WorkDetails = () => {
 
   return (
     <>
-    
+    <BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "ViewProject",
+        url: `https://antheminfotech.com/ViewProject/${projectid}`,
+      },
+    ]}
+  /> 
    
       <Breadcrumb
         image="images/bg/breadcrumb-bg-two.webp"

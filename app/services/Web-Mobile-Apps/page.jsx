@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Breadcrumb from "../../../container/Breadcrumb/Breadcrumb";
+import BreadcrumbSchema from "../../../components/BreadCrumbSchema";
 import ServiceDesign from "../../../container/service/serviceDesign";
 import ServiceGrid from "../../../components/Services/ServiceGrid";
 import servicesData from "../../../data/services/services.json";
@@ -22,7 +23,18 @@ const WebMobileApps = () => {
       />
 
  
-
+<BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Services/Web-Mobile-Apps",
+        url: "https://antheminfotech.com/services/Web-Mobile-Apps",
+      },
+    ]}
+  /> 
       <Breadcrumb
         image="images/bg/Web-Mobile-Apps.webp"
         title="Deliver <span class='text-color-span'>Seamless User Experiences</span> with Our <span class='text-color-span'>Responsive</span> and <span class='text-color-span'>Cross-Platform</span> Solutions"

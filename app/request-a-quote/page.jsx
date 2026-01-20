@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
+import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import RequestQuoteContainer from "../../container/RequestQuoteContainer/RequestQuoteContainer";
 
 export default function RequestQuote() {
@@ -18,7 +19,18 @@ export default function RequestQuote() {
         />
       </Head>
 
-    
+    <BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Request A Quote",
+        url: "https://antheminfotech.com/request-a-quote",
+      },
+    ]}
+  /> 
       <Breadcrumb
         image="/images/bg/breadcrumb-bg-three.webp"
         title="Request A Quote"

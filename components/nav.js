@@ -74,7 +74,7 @@ export const Nav = (props) => {
               </Link>
             </li>
             <li>
-              <Link to="/Career" className="page-scroll">
+              <Link to="/careers" className="page-scroll">
                 Career
               </Link>
             </li>

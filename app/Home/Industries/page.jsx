@@ -1,5 +1,6 @@
 
 import Breadcrumb from "@/container/Breadcrumb/Breadcrumb";
+import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import ReactTabs from "@/components/Tabs/Tab";
 
 // Dynamic page props for SEO
@@ -41,7 +42,18 @@ const IndustriesPage = ({ searchParams }) => {
 
   return (
     <>
-    
+     <BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Industries",
+        url: "https://antheminfotech.com/Home/Industries",
+      },
+    ]}
+  /> 
       <Breadcrumb
         image="/images/Industries/industryHeader.webp"
         title={`We Work With <span class='text-color-span'>Bold Brands</span> That We <span class='text-color-span'>Believe</span> in <span class='text-color-span'>${

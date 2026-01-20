@@ -3,6 +3,7 @@
 import React from "react";
 import SEO from "../../../components/SEO.jsx";
 import Breadcrumb from "../../../container/Breadcrumb/Breadcrumb.js";
+import BreadcrumbSchema from "../../../components/BreadCrumbSchema.jsx";
 import ServiceDesign from "../../../container/service/serviceDesign.js";
 import servicesData from "../../../data/services/services.json";
 import ServiceGrid from "../../../components/Services/ServiceGrid.jsx";
@@ -23,7 +24,18 @@ const OnDemandDedicatedTalent = () => {
 "
       />
 
- 
+ <BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Services/On-Demand-Dedicated-Talent",
+        url: "https://antheminfotech.com/services/On-Demand-Dedicated-Talent",
+      },
+    ]}
+  /> 
       <Breadcrumb
         image="images/bg/OnDemand-1.webp"
         title="Expert Professional <span class='text-color-span'>Designers, Developers</span>, and Other <span class='text-color-span'>Resources</span> Are Available on Fixed or Hourly Basis"

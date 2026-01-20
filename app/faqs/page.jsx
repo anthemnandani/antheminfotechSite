@@ -1,5 +1,6 @@
 import React from "react";
 import Breadcrumb from "@/container/Breadcrumb/Breadcrumb";
+import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import Faq from "@/container/Faq/Faq";
 import Script from "next/script";
 
@@ -86,7 +87,19 @@ const FaqsPage = () => {
           }),
         }}
       />
-
+ {/* BreadcrumbList Schema */}
+  <BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "FAQs",
+        url: "https://antheminfotech.com/faqs",
+      },
+    ]}
+  />
       <Breadcrumb
         image="/images/bg/faq.webp"
         title="Everything You Need to Know About Our Services and Solutions"

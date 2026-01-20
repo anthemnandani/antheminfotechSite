@@ -2,6 +2,7 @@
 import React from "react";
 import SEO from "../../../components/SEO.jsx";
 import Breadcrumb from "../../../container/Breadcrumb/Breadcrumb.js";
+import BreadcrumbSchema from "../../../components/BreadCrumbSchema.jsx";
 import ServiceDesign from "../../../container/service/serviceDesign.js";
 import servicesData from "../../../data/services/services.json";
 import ServiceGrid from "../../../components/Services/ServiceGrid.jsx";
@@ -23,7 +24,18 @@ const EnterpriseSoftware = () => {
 "
       />
 
-  
+  <BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Services/Enterprise-Software",
+        url: "https://antheminfotech.com/services/Enterprise-Software",
+      },
+    ]}
+  /> 
       <Breadcrumb
         image="images/bg/Enterprise-Software.webp"
         title="Drive Business Growth with <span class='text-color-span'>Secure Software</span> for Large-Scale <span class='text-color-span'>Data Management</span> and <span class='text-color-span'>Integration</span>"

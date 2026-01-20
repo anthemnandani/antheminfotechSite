@@ -2,6 +2,7 @@
 import React from "react";
 import SEO from "../../../components/SEO.jsx";
 import Breadcrumb from "../../../container/Breadcrumb/Breadcrumb.js";
+import BreadcrumbSchema from "../../../components/BreadCrumbSchema.jsx";
 import ServiceDesign from "../../../container/service/serviceDesign.js";
 import servicesData from "../../../data/services/services.json";
 import ServiceGrid from "../../../components/Services/ServiceGrid.jsx";
@@ -23,7 +24,18 @@ const DataAnalysisETL = () => {
 "
       />
 
-  
+  <BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Services/Data-Analysis-ETL",
+        url: "https://antheminfotech.com/services/Data-Analysis-ETL",
+      },
+    ]}
+  /> 
       <Breadcrumb
         image="images/bg/Data-Analysis-ETL.webp"
         title="<span class='text-color-span'>Empower</span> Your Decision-Making with Comprehensive <span class='text-color-span'>Data Solutions</span> and <span class='text-color-span'>Custom Dashboards</span>"

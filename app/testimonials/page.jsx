@@ -1,5 +1,6 @@
 import React from "react";
 import Breadcrumb from "../../container/Breadcrumb/Breadcrumb.js";
+import BreadcrumbSchema from "@/components/BreadCrumbSchema.jsx";
 import TestimonialContainer from "../../container/Testimonial/TestimonialContainer.js";
 import Script from "next/script";
 
@@ -67,7 +68,18 @@ const Testimonial = () => {
           }),
         }}
       />
-
+<BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Testimonials",
+        url: "https://antheminfotech.com/testimonials",
+      },
+    ]}
+  /> 
       <Breadcrumb
         image="images/bg/testimonials.webp"
         title="What Our Clients Say About Their Experience with Us"

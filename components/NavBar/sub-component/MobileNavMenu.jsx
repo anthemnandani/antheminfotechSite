@@ -42,7 +42,7 @@ const MobileNavMenu = () => {
                     <Link href="/"><span className="menu-text">Home</span></Link>
                 </li>
                 <li className="has-children">
-                    <Link href="/Home/Services"><span className="menu-text">Services</span></Link>
+                    <Link href="/Home/services"><span className="menu-text">Services</span></Link>
                     <span className="menu-toggle" onClick={onClickHandler}>
                         <i className="icon fa fa-angle-down"></i>
                     </span>
@@ -77,7 +77,7 @@ const MobileNavMenu = () => {
                         <li><Link href="/Home/Industries?Industrytype=Tourism-and-Travel-Solutions"><span className="menu-text">Tourism & Travel Solutions</span></Link></li>
                     </ul>
                 </li>
-                <li><Link href="/Career"><span className="menu-text">Career</span></Link></li>
+                <li><Link href="/careers"><span className="menu-text">Career</span></Link></li>
                 <li className="has-children">
                     <Link href="/OurWork"><span className="menu-text">Portfolio</span></Link>
                     <span className="menu-toggle" onClick={onClickHandler}><i className="icon fa fa-angle-down"></i></span>

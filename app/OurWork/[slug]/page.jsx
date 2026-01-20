@@ -39,7 +39,19 @@ export default function WorkSlugPage({ params }) {
           }),
         }}
       />
-
+<BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Portfolio",
+        url: `https://antheminfotech.com/OurWork${slug ? "/" + slug : ""}`,
+      },
+    ]}
+  /> 
+      
       <Breadcrumb
         image="/images/bg/portfoliobg.webp"
         title={`A Glimpse Into Our Recent <span class='text-color-span'>Success Stories</span> and <span class='text-color-span'>Innovative Solutions</span>`}

@@ -2,6 +2,7 @@
 import React from "react";
 import SEO from "../../../components/SEO.jsx";
 import Breadcrumb from "../../../container/Breadcrumb/Breadcrumb.js";
+import BreadcrumbSchema from "../../../components/BreadCrumbSchema.jsx";
 import ServiceDesign from "../../../container/service/serviceDesign.js";
 import servicesData from "../../../data/services/services.json";
 import ServiceGrid from "../../../components/Services/ServiceGrid.jsx";
@@ -19,7 +20,18 @@ const MarketingAutomation = () => {
         ogtitle="Marketing Automation Services in Chandigarh | Anthem Infotech"
         ogdescription="Automate and optimise your marketing campaigns with AI-driven tools. Enhance engagement, increase ROI, and streamline marketing strategies with Anthem Infotech’s digital marketing and automation expertise."
       />
-
+<BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Services/Marketing-Automation",
+        url: "https://antheminfotech.com/services/Marketing-Automation",
+      },
+    ]}
+  /> 
   
       <Breadcrumb
         image="images/bg/Marketing-Automation.webp"

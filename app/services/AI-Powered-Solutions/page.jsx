@@ -3,6 +3,7 @@
 import React from "react";
 import SEO from "@/components/SEO";
 import Breadcrumb from "@/container/Breadcrumb/Breadcrumb";
+import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import ServiceDesign from "@/container/service/serviceDesign";
 import ServiceGrid from "@/components/Services/ServiceGrid";
 import servicesData from "@/data/services/services.json";
@@ -23,7 +24,18 @@ const AIMLDevelopment = () => {
       />
 
   
-
+<BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Services/AI-Powered-Solutions",
+        url: "https://antheminfotech.com/services/AI-Powered-Solutions",
+      },
+    ]}
+  /> 
       <Breadcrumb
         image="images/bg/AI-ML-Development.webp"
         title="<span class='text-color-span'>AI-Powered</span> Solutions to <span class='text-color-span'>Elevate Creativity</span>, Streamline Processes, and <span class='text-color-span'>Boost Customer Engagement</span>"

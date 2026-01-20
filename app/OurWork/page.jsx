@@ -1,5 +1,6 @@
 
 import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
+import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import WorkContainer from "../../container/Work/WorkContainer";
 import Script from "next/script";
 
@@ -76,7 +77,18 @@ export default function Portfolio() {
           }),
         }}
       />
-      
+       <BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Our Work",
+        url: "https://antheminfotech.com/OurWork",
+      },
+    ]}
+  /> 
       <Breadcrumb
         image="/images/bg/portfoliobg.webp"
         title={`A Glimpse Into Our Recent <span class='text-color-span'>Success Stories</span> and <span class='text-color-span'>Innovative Solutions</span>`}

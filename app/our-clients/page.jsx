@@ -1,5 +1,6 @@
 import React from "react";
 import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
+import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import BrandContainer from "../../container/Brand/BrandContainer";
 import Script from "next/script";
 
@@ -62,7 +63,18 @@ const OurClients = () => {
           }),
         }}
       />
-
+ <BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Our Clients",
+        url: "https://antheminfotech.com/our-clients",
+      },
+    ]}
+  /> 
       <Breadcrumb
         image="images/bg/clients.webp"
         title="Trusted by Leading Brands Across Industries"

@@ -2,6 +2,7 @@
 import React from "react";
 import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
 import CareerFromContainer from "../../container/CareerFromContainer/CareerFromContainer";
+import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import Script from "next/script";
 
 // Dynamic/Static metadata for SEO
@@ -25,7 +26,7 @@ export async function generateMetadata() {
     openGraph: {
       title,
       description,
-      url: "https://antheminfotech.com/Career",
+      url: "https://antheminfotech.com/careers",
       siteName: "Anthem Infotech",
       type: "website",
       locale: "en_IN",
@@ -45,7 +46,7 @@ export async function generateMetadata() {
       images: ["/images/og-image.png"],
     },
     alternates: {
-      canonical: "https://antheminfotech.com/Career",
+      canonical: "https://antheminfotech.com/careers",
     },
     robots: {
       index: true,
@@ -101,7 +102,19 @@ const Career = () => {
           }),
         }}
       />
-    
+     {/* BreadcrumbList Schema */}
+  <BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Career",
+        url: "https://antheminfotech.com/careers",
+      },
+    ]}
+  />
       {/* Breadcrumb */}
       <Breadcrumb
         image="/images/bg/breadcrumb-bg.webp"

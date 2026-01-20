@@ -2,15 +2,16 @@
 "use client";
 
 import React from "react";
-import SEO from "../../../components/SEO";
-import Breadcrumb from "../../../container/Breadcrumb/Breadcrumb";
-import ServiceIconBoxTwo from "../../../container/service/ServiceIconBoxTwo";
-import ServiceSkill from "../../../container/service/ServiceSkill";
-import AboutSix from "../../../container/About/AboutSix";
-import FunfactTwo from "../../../container/Funfact/FunfactTwo";
-import ContactInformationThree from "../../../container/ContactInformation/ContactInformationThree";
-import ScrollToTop from "../../../components/ScrollToTop";
-import servicesData from "../../../data/services/services.json";
+import SEO from "../../components/SEO";
+import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
+import ServiceIconBoxTwo from "../../container/service/ServiceIconBoxTwo";
+import ServiceSkill from "../../container/service/ServiceSkill";
+import AboutSix from "../../container/About/AboutSix";
+import FunfactTwo from "../../container/Funfact/FunfactTwo";
+import ContactInformationThree from "../../container/ContactInformation/ContactInformationThree";
+import ScrollToTop from "../../components/ScrollToTop";
+import servicesData from "../../data/services/services.json";
+import BreadcrumbSchema from "../../components/BreadCrumbSchema";
 
 
 const ServicePage = () => {
@@ -29,7 +30,19 @@ const ServicePage = () => {
   ogdescription="We are a leading Web Development Company and expert provider of Custom Software Development Services in India. Explore our expertise in AI Coding, Full Stack, and enterprise solutions."
 />
 
-
+ {/* BreadcrumbList Schema */}
+  <BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Services",
+        url: "https://antheminfotech.com/services",
+      },
+    ]}
+  />
      
 
       {/* Breadcrumb */}

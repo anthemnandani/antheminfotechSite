@@ -1,6 +1,7 @@
 import React from "react";
 import WordCloud from "../../container/WordCloud/WordCloud";
 import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
+import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import Script from "next/script";
 
 export const metadata = {
@@ -69,7 +70,18 @@ const Technologies = () => {
           }),
         }}
       />
-
+<BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Technologies",
+        url: "https://antheminfotech.com/technologies",
+      },
+    ]}
+  /> 
       <Breadcrumb
         image="/images/bg/portfoliobg.webp"
         title="Technologies Powering Our Innovative Solutions"

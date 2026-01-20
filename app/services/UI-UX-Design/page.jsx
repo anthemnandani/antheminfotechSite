@@ -3,6 +3,7 @@
 import React from "react";
 import SEO from "../../../components/SEO.jsx";
 import Breadcrumb from "../../../container/Breadcrumb/Breadcrumb.js";
+import BreadcrumbSchema from "../../../components/BreadCrumbSchema.jsx";
 import ServiceDesign from "../../../container/service/serviceDesign.js";
 import servicesData from "../../../data/services/services.json";
 import ServiceGrid from "../../../components/Services/ServiceGrid.jsx";
@@ -23,7 +24,18 @@ const UIUXDesign = () => {
 "
         ogdescription=" Design intuitive and engaging user interfaces for web and mobile apps. Our user-centred UI/UX design services enhance usability, increase engagement, and deliver a seamless digital experience."
       />
-
+<BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Services/UI-UX-Design",
+        url: "https://antheminfotech.com/services/UI-UX-Design",
+      },
+    ]}
+  /> 
    
 
 

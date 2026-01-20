@@ -84,7 +84,7 @@ const Intro = ({ data }) => {
                 Get Started
               </Link>
 
-              <Link href="/Home/Services" className="btn btn-bottom" data-hover="Learn More">
+              <Link href="/Home/services" className="btn btn-bottom" data-hover="Learn More">
                 Learn More
                 <span className="sr-only"> about our services</span>
               </Link>
