@@ -20,25 +20,34 @@ const Video = () => {
 
   return (
     <div
-      className="video-section section section-padding overlay-two"
+      className="section section-padding overlay-two"
       style={{
         backgroundImage: `url(${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/images/bg/video-bg.webp)`,
       }}
     >
       <div className="container text-center">
-        <div className="section-title color-light text-center">
-          <h2 className="title"></h2>
-        </div>
         <SectionTitle
           titleOption="color-light text-center"
           title="As a software service creative agency, we are dedicated to setting the standard of excellence in our industry."
         />
 
-        <Link href="/request-a-quote">
+        {/* <Link href="/request-a-quote">
           <button className="play-btn icon video-popup">
             <i className="fas fa-play"></i>
           </button>
-        </Link>
+        </Link> */}
+         <Link href="/request-a-quote" passHref className="btn btn-bottom mt-6"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  data-hover="Get Started"
+                
+                            style={{ background: "#0e6497" }}
+                  
+                  >
+               
+                  Get Started
+                
+              </Link>
       </div>
 
       <div className="shape shape-1" id="scene" ref={sceneEl}>

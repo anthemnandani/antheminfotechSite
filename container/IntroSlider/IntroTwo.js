@@ -26,6 +26,7 @@ const IntroTwo = () => {
                 href="/request-a-quote"
                 className="btn btn btn-bottom"
                 data-hover="Get Started"
+                style={{ background: "#0e6497" }}
               >
                 Get Started
               </Link>
@@ -33,6 +34,7 @@ const IntroTwo = () => {
                 href="/services"
                 className="btn btn btn-bottom"
                 data-hover="Learn More"
+                style={{ background: "#0e6497" }}
               >
                 Learn More
               </Link>

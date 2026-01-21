@@ -86,216 +86,464 @@ const RequestQuote = () => {
 
 
   return (
-    <div className="contact-form" data-aos="fade-up" data-aos-delay="300">
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="row mb-n6">
-          <div className="col-md-6 col-12 mb-6">
-            <input
-              type="text"
-              placeholder="Enter Name *"
-              name="name"
-              className="textbox-border"
-              {...register("name", {
-                required: "Name is required.",
-                validate: (value) => {
-                  return (
-                    (value.length >= 3 && value.length <= 50) ||
-                    "Name must be between 3 and 50 characters."
-                  );
-                },
-              })}
-            />
-            <span className="text-danger">
-              {errors?.name && <p>{errors.name?.message}</p>}
-            </span>
-          </div>
-          <div className="col-md-6 col-12 mb-6">
-            <input
-              type="email"
-              placeholder="Enter Email *"
-              name="email"
-              className="textbox-border"
-              {...register("email", {
-                required: "Email is required.",
-                pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                  message: "invalid email address.",
-                },
-                validate: (value) => {
-                  return (
-                    (value.length >= 3 && value.length <= 50) ||
-                    "Email must be between 3 and 50 characters."
-                  );
-                },
-              })}
-            />
-            <span className="text-danger">
-              {errors?.email && <p>{errors.email?.message}</p>}
-            </span>
-          </div>
-          <div className="col-md-6 col-12 mb-6">
-            <input
-              type="text"
-              placeholder="Contact Number *"
-              name="contactnumber"
-              className="textbox-border"
-              {...register("contactnumber", {
-                required: "Contact Number is required.",
-                pattern: {
-                  value: /^[0-9]+$/i,
-                  message: "invalid contact number.",
-                },
-                validate: (value) => {
-                  return (
-                    (value.length >= 10 && value.length <= 13) ||
-                    "Contact Number must be between 10 and 13 digits."
-                  );
-                },
-              })}
-            />
-            <span className="text-danger">
-              {errors?.contactnumber && <p>{errors.contactnumber?.message}</p>}
-            </span>
-          </div>
-          <div className="col-md-6 col-12 mb-6">
-            <input
-              type="text"
-              placeholder="Enter Website *"
-              name="website"
-              className="textbox-border"
-              {...register("website", {
-                required: "Website is required.",
-                validate: (value) => {
-                  return (
-                    (value.length >= 3 && value.length <= 50) ||
-                    "Website must be between 3 and 50 characters."
-                  );
-                },
-              })}
-            />
-            <span className="text-danger">
-              {errors?.website && <p>{errors.website?.message}</p>}
-            </span>
-          </div>
-          <div className="col-12 mb-6">
-            <textarea
-              name="message"
-              placeholder="How can we help you *"
-              className="textbox-border"
-              {...register("message", {
-                required: "Message is required.",
-              })}
-            ></textarea>
-            <span className="text-danger">
-              {errors?.message && <p>{errors.message?.message}</p>}
-            </span>
-          </div>
+    // <div className="contact-form" data-aos="fade-up" data-aos-delay="300">
+    //   <form onSubmit={handleSubmit(onSubmit)}>
+    //     <div className="row mb-n6">
+    //       <div className="col-md-6 col-12 mb-6">
+    //         <input
+    //           type="text"
+    //           placeholder="Enter Name *"
+    //           name="name"
+    //           className="textbox-border"
+    //           {...register("name", {
+    //             required: "Name is required.",
+    //             validate: (value) => {
+    //               return (
+    //                 (value.length >= 3 && value.length <= 50) ||
+    //                 "Name must be between 3 and 50 characters."
+    //               );
+    //             },
+    //           })}
+    //         />
+    //         <span className="text-danger">
+    //           {errors?.name && <p>{errors.name?.message}</p>}
+    //         </span>
+    //       </div>
+    //       <div className="col-md-6 col-12 mb-6">
+    //         <input
+    //           type="email"
+    //           placeholder="Enter Email *"
+    //           name="email"
+    //           className="textbox-border"
+    //           {...register("email", {
+    //             required: "Email is required.",
+    //             pattern: {
+    //               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+    //               message: "invalid email address.",
+    //             },
+    //             validate: (value) => {
+    //               return (
+    //                 (value.length >= 3 && value.length <= 50) ||
+    //                 "Email must be between 3 and 50 characters."
+    //               );
+    //             },
+    //           })}
+    //         />
+    //         <span className="text-danger">
+    //           {errors?.email && <p>{errors.email?.message}</p>}
+    //         </span>
+    //       </div>
+    //       <div className="col-md-6 col-12 mb-6">
+    //         <input
+    //           type="text"
+    //           placeholder="Contact Number *"
+    //           name="contactnumber"
+    //           className="textbox-border"
+    //           {...register("contactnumber", {
+    //             required: "Contact Number is required.",
+    //             pattern: {
+    //               value: /^[0-9]+$/i,
+    //               message: "invalid contact number.",
+    //             },
+    //             validate: (value) => {
+    //               return (
+    //                 (value.length >= 10 && value.length <= 13) ||
+    //                 "Contact Number must be between 10 and 13 digits."
+    //               );
+    //             },
+    //           })}
+    //         />
+    //         <span className="text-danger">
+    //           {errors?.contactnumber && <p>{errors.contactnumber?.message}</p>}
+    //         </span>
+    //       </div>
+    //       <div className="col-md-6 col-12 mb-6">
+    //         <input
+    //           type="text"
+    //           placeholder="Enter Website *"
+    //           name="website"
+    //           className="textbox-border"
+    //           {...register("website", {
+    //             required: "Website is required.",
+    //             validate: (value) => {
+    //               return (
+    //                 (value.length >= 3 && value.length <= 50) ||
+    //                 "Website must be between 3 and 50 characters."
+    //               );
+    //             },
+    //           })}
+    //         />
+    //         <span className="text-danger">
+    //           {errors?.website && <p>{errors.website?.message}</p>}
+    //         </span>
+    //       </div>
+    //       <div className="col-12 mb-6">
+    //         <textarea
+    //           name="message"
+    //           placeholder="How can we help you *"
+    //           className="textbox-border"
+    //           {...register("message", {
+    //             required: "Message is required.",
+    //           })}
+    //         ></textarea>
+    //         <span className="text-danger">
+    //           {errors?.message && <p>{errors.message?.message}</p>}
+    //         </span>
+    //       </div>
 
-          {/* New Checkbox Section for Goals */}
-          <div className="col-12 mb-6">
-            <label className="mb-2">What is your goal? *</label>
-            <div className="row">
-              {/* Left Column (6) */}
-              <div className="col-md-7">
-                <div>
-                  <label>
-                    <input
-                      type="checkbox"
-                      value="Web Development"
-                      {...register("goal")}
-                    />
-                    &nbsp;Web Development
-                  </label>
-                </div>
-                <div>
-                  <label>
-                    <input
-                      type="checkbox"
-                      value="Web Applications"
-                      {...register("goal")}
-                    />
-                    &nbsp; Web Applications
-                  </label>
-                </div>
-                <div>
-                  <label>
-                    <input
-                      type="checkbox"
-                      value="Mobile App Development"
-                      {...register("goal")}
-                    />
-                    &nbsp; Mobile App Development
-                  </label>
-                </div>
-                <div>
-                  <label>
-                    <input
-                      type="checkbox"
-                      value="On-Demand Dedicated Talent"
-                      {...register("goal")}
-                    />
-                    &nbsp; On-Demand Dedicated Talent
-                  </label>
-                </div>
-              </div>
+    //       {/* New Checkbox Section for Goals */}
+    //       <div className="col-12 mb-6">
+    //         <label className="mb-2">What is your goal? *</label>
+    //         <div className="row">
+    //           {/* Left Column (6) */}
+    //           <div className="col-md-7">
+    //             <div>
+    //               <label>
+    //                 <input
+    //                   type="checkbox"
+    //                   value="Web Development"
+    //                   {...register("goal")}
+    //                 />
+    //                 &nbsp;Web Development
+    //               </label>
+    //             </div>
+    //             <div>
+    //               <label>
+    //                 <input
+    //                   type="checkbox"
+    //                   value="Web Applications"
+    //                   {...register("goal")}
+    //                 />
+    //                 &nbsp; Web Applications
+    //               </label>
+    //             </div>
+    //             <div>
+    //               <label>
+    //                 <input
+    //                   type="checkbox"
+    //                   value="Mobile App Development"
+    //                   {...register("goal")}
+    //                 />
+    //                 &nbsp; Mobile App Development
+    //               </label>
+    //             </div>
+    //             <div>
+    //               <label>
+    //                 <input
+    //                   type="checkbox"
+    //                   value="On-Demand Dedicated Talent"
+    //                   {...register("goal")}
+    //                 />
+    //                 &nbsp; On-Demand Dedicated Talent
+    //               </label>
+    //             </div>
+    //           </div>
 
-              {/* Right Column (6) */}
-              <div className="col-md-5">
-                <div>
-                  <label>
-                    <input
-                      type="checkbox"
-                      value="Design"
-                      {...register("goal")}
-                    />
-                    &nbsp; Design
-                  </label>
-                </div>
-                <div>
-                  <label>
-                    <input
-                      type="checkbox"
-                      value="Digital Marketing"
-                      {...register("goal")}
-                    />
-                    &nbsp; Digital Marketing
-                  </label>
-                </div>
-                <div>
-                  <label>
-                    <input
-                      type="checkbox"
-                      value="QA and Testing"
-                      {...register("goal")}
-                    />
-                    &nbsp; QA and Testing
-                  </label>
-                </div>
-              </div>
+    //           {/* Right Column (6) */}
+    //           <div className="col-md-5">
+    //             <div>
+    //               <label>
+    //                 <input
+    //                   type="checkbox"
+    //                   value="Design"
+    //                   {...register("goal")}
+    //                 />
+    //                 &nbsp; Design
+    //               </label>
+    //             </div>
+    //             <div>
+    //               <label>
+    //                 <input
+    //                   type="checkbox"
+    //                   value="Digital Marketing"
+    //                   {...register("goal")}
+    //                 />
+    //                 &nbsp; Digital Marketing
+    //               </label>
+    //             </div>
+    //             <div>
+    //               <label>
+    //                 <input
+    //                   type="checkbox"
+    //                   value="QA and Testing"
+    //                   {...register("goal")}
+    //                 />
+    //                 &nbsp; QA and Testing
+    //               </label>
+    //             </div>
+    //               <div>
+    //               <label>
+    //                 <input
+    //                   type="checkbox"
+    //                   value="Not sure"
+    //                   {...register("goal")}
+    //                 />
+    //                 &nbsp; Not sure
+    //               </label>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>
+
+    //       <div className="col-12 mb-6">
+    //         <ReCAPTCHA
+    //           ref={recaptchaRef}
+    //           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA}
+    //           onChange={onRecaptchaChange}
+    //         />
+    //       </div>
+
+    //       <div className="col-12 mb-6">
+    //         <button
+    //           type="submit"
+    //           className="btn btn btn-bottom"
+    //           data-hover="Request A Quote"
+    //           disabled={isSubmitting}
+    //            style={{ background: "#0e6497" }}
+    //         >
+              
+    //           {isSubmitting ? "Submitting..." : "Request A Quote"}
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </form>
+    // </div>
+<div className="contact-form" data-aos="fade-up" data-aos-delay="300">
+  <form onSubmit={handleSubmit(onSubmit)}>
+    <div className="row mb-n6">
+      <div className="col-md-6 col-12 mb-6">
+        <label htmlFor="name">Name *</label>
+        <input
+          id="name"
+          type="text"
+          placeholder="Enter Name *"
+          name="name"
+          className="textbox-border"
+          {...register("name", {
+            required: "Name is required.",
+            validate: (value) => {
+              return (
+                (value.length >= 3 && value.length <= 50) ||
+                "Name must be between 3 and 50 characters."
+              );
+            },
+          })}
+        />
+        <span className="text-danger">
+          {errors?.name && <p>{errors.name?.message}</p>}
+        </span>
+      </div>
+
+      <div className="col-md-6 col-12 mb-6">
+        <label htmlFor="email">Email *</label>
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter Email *"
+          name="email"
+          className="textbox-border"
+          {...register("email", {
+            required: "Email is required.",
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+              message: "invalid email address.",
+            },
+            validate: (value) => {
+              return (
+                (value.length >= 3 && value.length <= 50) ||
+                "Email must be between 3 and 50 characters."
+              );
+            },
+          })}
+        />
+        <span className="text-danger">
+          {errors?.email && <p>{errors.email?.message}</p>}
+        </span>
+      </div>
+
+      <div className="col-md-6 col-12 mb-6">
+        <label htmlFor="contactnumber">Contact Number *</label>
+        <input
+          id="contactnumber"
+          type="text"
+          placeholder="Contact Number *"
+          name="contactnumber"
+          className="textbox-border"
+          {...register("contactnumber", {
+            required: "Contact Number is required.",
+            pattern: {
+              value: /^[0-9]+$/i,
+              message: "invalid contact number.",
+            },
+            validate: (value) => {
+              return (
+                (value.length >= 10 && value.length <= 13) ||
+                "Contact Number must be between 10 and 13 digits."
+              );
+            },
+          })}
+        />
+        <span className="text-danger">
+          {errors?.contactnumber && <p>{errors.contactnumber?.message}</p>}
+        </span>
+      </div>
+
+      <div className="col-md-6 col-12 mb-6">
+        <label htmlFor="website">Website{"(Optional)"}</label>
+        <input
+          id="website"
+          type="text"
+          placeholder="Enter Website"
+          name="website"
+          className="textbox-border"
+          {...register("website", {
+            validate: (value) => {
+              return (
+                (value.length >= 3 && value.length <= 50) ||
+                "Website must be between 3 and 50 characters."
+              );
+            },
+          })}
+        />
+        <span className="text-danger">
+          {errors?.website && <p>{errors.website?.message}</p>}
+        </span>
+      </div>
+
+      <div className="col-12 mb-6">
+        <label htmlFor="message">How can we help you *</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="How can we help you *"
+          className="textbox-border"
+          {...register("message", {
+            required: "Message is required.",
+          })}
+        ></textarea>
+        <span className="text-danger">
+          {errors?.message && <p>{errors.message?.message}</p>}
+        </span>
+      </div>
+
+      {/* New Checkbox Section for Goals */}
+      <div className="col-12 mb-6">
+        <label className="mb-2">What is your goal? *</label>
+        <div className="row">
+          {/* Left Column (6) */}
+          <div className="col-md-7">
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  value="Web Development"
+                  {...register("goal")}
+                />
+                &nbsp;Web Development
+              </label>
+            </div>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  value="Web Applications"
+                  {...register("goal")}
+                />
+                &nbsp; Web Applications
+              </label>
+            </div>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  value="Mobile App Development"
+                  {...register("goal")}
+                />
+                &nbsp; Mobile App Development
+              </label>
+            </div>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  value="On-Demand Dedicated Talent"
+                  {...register("goal")}
+                />
+                &nbsp; On-Demand Dedicated Talent
+              </label>
             </div>
           </div>
 
-          <div className="col-12 mb-6">
-            <ReCAPTCHA
-              ref={recaptchaRef}
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA}
-              onChange={onRecaptchaChange}
-            />
-          </div>
-
-          <div className="col-12 mb-6">
-            <button
-              type="submit"
-              className="btn btn btn-bottom"
-              data-hover="Request A Quote"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Submitting..." : "Request A Quote"}
-            </button>
+          {/* Right Column (6) */}
+          <div className="col-md-5">
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  value="Design"
+                  {...register("goal")}
+                />
+                &nbsp; Design
+              </label>
+            </div>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  value="Digital Marketing"
+                  {...register("goal")}
+                />
+                &nbsp; Digital Marketing
+              </label>
+            </div>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  value="QA and Testing"
+                  {...register("goal")}
+                />
+                &nbsp; QA and Testing
+              </label>
+            </div>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  value="Not sure"
+                  {...register("goal")}
+                />
+                &nbsp; Not sure
+              </label>
+            </div>
           </div>
         </div>
-      </form>
+      </div>
+
+      <div className="col-12 mb-6">
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA}
+          onChange={onRecaptchaChange}
+        />
+      </div>
+
+      <div className="col-12 mb-6">
+        <button
+          type="submit"
+          className="btn btn btn-bottom"
+          data-hover="Request A Quote"
+          disabled={isSubmitting}
+          style={{ background: "#0e6497" }}
+        >
+          {isSubmitting ? "Submitting..." : "Request A Quote"}
+        </button>
+      </div>
     </div>
+  </form>
+</div>
+
+
   );
 };
 

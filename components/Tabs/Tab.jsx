@@ -147,6 +147,15 @@ const ReactTabs = () => {
     setLoading(false);
   }, [relatedProductsID, projects]);
 
+const MAX_DESC_LENGTH = 580;
+
+const truncateText = (text, limit) => {
+  if (!text) return "";
+  return text.length > limit
+    ? text.substring(0, limit) + "..."
+    : text;
+};
+
   return (
     <div className="section section-padding-top brand-section section-padding-bottom background-1">
       <Container className="new-custom-tabs mb-6">
@@ -194,7 +203,18 @@ const ReactTabs = () => {
                         </div>
                       </div>
                     </div>
-                    <p className="justify-content">{solution.description}</p>
+                    {/* <p className="justify-content">{solution.description}</p> */}
+                    <p
+  className="justify-content"
+  title={
+    solution.description.length > MAX_DESC_LENGTH
+      ? solution.description
+      : ""
+  }
+>
+  {truncateText(solution.description, MAX_DESC_LENGTH)}
+</p>
+
                   </div>
                 </div>
               </div>

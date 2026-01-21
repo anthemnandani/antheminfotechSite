@@ -47,7 +47,7 @@ function NewNavBar() {
                                                             alt="Customer Relationship Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Customer Relationship Management</a>
+                                                            <a href="/services/Custom-Software">Customer Relationship Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -61,7 +61,7 @@ function NewNavBar() {
                                                             alt="Content Management System"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Content Management System</a>
+                                                            <a href="/services/Custom-Software">Content Management System</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -74,7 +74,7 @@ function NewNavBar() {
                                                             alt="Business Process Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Business Process Management</a>
+                                                            <a href="/services/Custom-Software">Business Process Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -87,7 +87,7 @@ function NewNavBar() {
                                                             alt="Human Resource Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Human Resource Management</a>
+                                                            <a href="/services/Custom-Software">Human Resource Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -116,7 +116,7 @@ function NewNavBar() {
                                                             alt="WordPress Websites"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">WordPress Websites</a>
+                                                            <a href="/services/Web-Mobile-Apps">WordPress Websites</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -133,7 +133,7 @@ function NewNavBar() {
                                                             alt="iOS App Development"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">iOS App Development</a>
+                                                            <a href="/services/Web-Mobile-Apps">iOS App Development</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -150,7 +150,7 @@ function NewNavBar() {
                                                             alt="Android App Development"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Android App Development</a>
+                                                            <a href="/services/Web-Mobile-Apps">Android App Development</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -167,7 +167,7 @@ function NewNavBar() {
                                                             alt="Progressive Web Apps"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Progressive Web Apps</a>
+                                                            <a href="/services/Web-Mobile-Apps">Progressive Web Apps</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -186,7 +186,7 @@ function NewNavBar() {
                                                             alt="Hybrid App Development"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Hybrid App Development</a>
+                                                            <a href="/services/Web-Mobile-Apps">Hybrid App Development</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -203,7 +203,7 @@ function NewNavBar() {
                                                             alt="Performance Optimisation"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Performance Optimisation</a>
+                                                            <a href="/services/Web-Mobile-Apps">Performance Optimisation</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -220,7 +220,7 @@ function NewNavBar() {
                                                             alt="Web API Development"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Web API Development</a>
+                                                            <a href="/services/Web-Mobile-Apps">Web API Development</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -237,7 +237,7 @@ function NewNavBar() {
                                                             alt="App Integration"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">App Integration</a>
+                                                            <a href="/services/Web-Mobile-Apps">App Integration</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -269,7 +269,7 @@ function NewNavBar() {
                                                             alt="Predictive Analytics"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Generative AI </a>
+                                                            <a href="/services/AI-Powered-Solutions">Generative AI </a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -287,7 +287,7 @@ function NewNavBar() {
                                                             alt="Natural Language Processing"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Chat GPT Integration</a>
+                                                            <a href="/services/AI-Powered-Solutions">Chat GPT Integration</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -304,7 +304,7 @@ function NewNavBar() {
                                                             alt="Recommendation Systems"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Predictive Analytics</a>
+                                                            <a href="/services/AI-Powered-Solutions">Predictive Analytics</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -321,7 +321,7 @@ function NewNavBar() {
                                                             alt="Deep Learning Models"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Computer Vision </a>
+                                                            <a href="/services/AI-Powered-Solutions">Computer Vision </a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -340,7 +340,7 @@ function NewNavBar() {
                                                             alt="Classification Algorithms"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#"> Natural Language Processing</a>
+                                                            <a href="/services/AI-Powered-Solutions">Natural Language Processing</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -357,7 +357,7 @@ function NewNavBar() {
                                                             alt="Clustering Techniques"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Machine Learning</a>
+                                                            <a href="/services/AI-Powered-Solutions">Machine Learning</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -374,7 +374,7 @@ function NewNavBar() {
                                                             alt="Optimisation Algorithms"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Deep Learning Models</a>
+                                                            <a href="/services/AI-Powered-Solutions">Deep Learning Models</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -405,7 +405,7 @@ function NewNavBar() {
                                                             alt="Email Campaigns"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Email Campaigns</a>
+                                                            <a href="/services/Marketing-Automation">Email Campaigns</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -422,7 +422,7 @@ function NewNavBar() {
                                                             alt="Social Media Automation"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Social Media Automation</a>
+                                                            <a href="/services/Marketing-Automation">Social Media Automation</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -439,7 +439,7 @@ function NewNavBar() {
                                                             alt="Search Engine Optimisation"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Search Engine Optimisation</a>
+                                                            <a href="/services/Marketing-Automation">Search Engine Optimisation</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -456,7 +456,7 @@ function NewNavBar() {
                                                             alt="Pay-Per-Click Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Pay-Per-Click Management</a>
+                                                            <a href="/services/Marketing-Automation">Pay-Per-Click Management</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -476,7 +476,7 @@ function NewNavBar() {
                                                             alt="Content Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Content Management</a>
+                                                            <a href="/services/Marketing-Automation">Content Management</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -493,7 +493,7 @@ function NewNavBar() {
                                                             alt="Analytics & Reporting"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Analytics & Reporting</a>
+                                                            <a href="/services/Marketing-Automation">Analytics & Reporting</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -510,7 +510,7 @@ function NewNavBar() {
                                                             alt="SMS Marketing"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">SMS Marketing</a>
+                                                            <a href="/services/Marketing-Automation">SMS Marketing</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -527,7 +527,7 @@ function NewNavBar() {
                                                             alt="CRM Integration"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">CRM Integration</a>
+                                                            <a href="/services/Marketing-Automation">CRM Integration</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -556,7 +556,7 @@ function NewNavBar() {
                                                             alt="Prototyping"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Prototyping</a>
+                                                            <a href="/services/MVP-Development">Prototyping</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -573,7 +573,7 @@ function NewNavBar() {
                                                             alt="UX/UI Design"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">UX/UI Design</a>
+                                                            <a href="/services/MVP-Development">UX/UI Design</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -590,7 +590,7 @@ function NewNavBar() {
                                                             alt="User Feedback Integration"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">User Feedback Integration</a>
+                                                            <a href="/services/MVP-Development">User Feedback Integration</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -607,7 +607,7 @@ function NewNavBar() {
                                                             alt="Iterative Development"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Iterative Development</a>
+                                                            <a href="/services/MVP-Development">Iterative Development</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -626,7 +626,7 @@ function NewNavBar() {
                                                             alt="Agile Development"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Agile Development</a>
+                                                            <a href="/services/MVP-Development">Agile Development</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -644,7 +644,7 @@ function NewNavBar() {
                                                             alt="Testing & QA"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Testing & QA</a>
+                                                            <a href="/services/MVP-Development">Testing & QA</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -661,7 +661,7 @@ function NewNavBar() {
                                                             alt="Launch Strategy"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Launch Strategy</a>
+                                                            <a href="/services/MVP-Development">Launch Strategy</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -678,7 +678,7 @@ function NewNavBar() {
                                                             alt="Performance Analytics"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Performance Analytics</a>
+                                                            <a href="/services/MVP-Development">Performance Analytics</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -709,7 +709,7 @@ function NewNavBar() {
                                                             alt="Security Solutions"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Security Solutions</a>
+                                                            <a href="/services/Enterprise-Software">Security Solutions</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -726,7 +726,7 @@ function NewNavBar() {
                                                             alt="Database Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Database Management</a>
+                                                            <a href="/services/Enterprise-Software">Database Management</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -743,7 +743,7 @@ function NewNavBar() {
                                                             alt="System Integration"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">System Integration</a>
+                                                            <a href="/services/Enterprise-Software">System Integration</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -760,7 +760,7 @@ function NewNavBar() {
                                                             alt="Analytics Platforms"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Analytics Platforms</a>
+                                                            <a href="/services/Enterprise-Software">Analytics Platforms</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -779,7 +779,7 @@ function NewNavBar() {
                                                             alt="Compliance Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Compliance Management</a>
+                                                            <a href="/services/Enterprise-Software">Compliance Management</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -796,7 +796,7 @@ function NewNavBar() {
                                                             alt="Workflow Automation"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Workflow Automation</a>
+                                                            <a href="/services/Enterprise-Software">Workflow Automation</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -825,7 +825,7 @@ function NewNavBar() {
                                                             alt="Data Extraction"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Data Extraction</a>
+                                                            <a href="/services/Data-Analysis-ETL">Data Extraction</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -842,7 +842,7 @@ function NewNavBar() {
                                                             alt="Data Transformation"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Data Transformation</a>
+                                                            <a href="/services/Data-Analysis-ETL">Data Transformation</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -859,7 +859,7 @@ function NewNavBar() {
                                                             alt="Data Loading"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Data Loading</a>
+                                                            <a href="/services/Data-Analysis-ETL">Data Loading</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -876,7 +876,7 @@ function NewNavBar() {
                                                             alt="Custom Dashboards"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Custom Dashboards</a>
+                                                            <a href="/services/Data-Analysis-ETL">Custom Dashboards</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -895,7 +895,7 @@ function NewNavBar() {
                                                             alt="Business Intelligence"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Business Intelligence</a>
+                                                            <a href="/services/Data-Analysis-ETL">Business Intelligence</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -912,7 +912,7 @@ function NewNavBar() {
                                                             alt="Big Data Solutions"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Big Data Solutions</a>
+                                                            <a href="/services/Data-Analysis-ETL">Big Data Solutions</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -930,7 +930,7 @@ function NewNavBar() {
                                                             alt="Data Cleaning"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Data Cleaning</a>
+                                                            <a href="/services/Data-Analysis-ETL">Data Cleaning</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -957,7 +957,7 @@ function NewNavBar() {
                                                             alt="Web Design"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Web Design</a>
+                                                            <a href="/services/UI-UX-Design">Web Design</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -974,7 +974,7 @@ function NewNavBar() {
                                                             alt="obile UI Design"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Mobile UI Design</a>
+                                                            <a href="/services/UI-UX-Design">Mobile UI Design</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -991,7 +991,7 @@ function NewNavBar() {
                                                             alt="Prototyping"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Prototyping</a>
+                                                            <a href="/services/UI-UX-Design">Prototyping</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1008,7 +1008,7 @@ function NewNavBar() {
                                                             alt="Brand Design"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Brand Design</a>
+                                                            <a href="/services/UI-UX-Design">Brand Design</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1027,7 +1027,7 @@ function NewNavBar() {
                                                             alt="Responsive Design"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Responsive Design</a>
+                                                            <a href="/services/UI-UX-Design">Responsive Design</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1061,7 +1061,7 @@ function NewNavBar() {
                                                             alt="Dedicated Professionals"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Dedicated Professionals</a>
+                                                            <a href="/services/On-Demand-Dedicated-Talent">Dedicated Professionals</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1078,7 +1078,7 @@ function NewNavBar() {
                                                             alt="Remote Developers"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Remote Developers</a>
+                                                            <a href="/services/On-Demand-Dedicated-Talent">Remote Developers</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1095,7 +1095,7 @@ function NewNavBar() {
                                                             alt="Rapid Hiring"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Rapid Hiring</a>
+                                                            <a href="/services/On-Demand-Dedicated-Talent">Rapid Hiring</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1112,7 +1112,7 @@ function NewNavBar() {
                                                             alt="Project-Specific Developers"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Project-Specific Developers</a>
+                                                            <a href="/services/On-Demand-Dedicated-Talent">Project-Specific Developers</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1131,7 +1131,7 @@ function NewNavBar() {
                                                             alt="Long-Term Partnerships"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Long-Term Partnerships</a>
+                                                            <a href="/services/On-Demand-Dedicated-Talent">Long-Term Partnerships</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1148,7 +1148,7 @@ function NewNavBar() {
                                                             alt="End-to-End Support"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">End-to-End Support</a>
+                                                            <a href="/services/On-Demand-Dedicated-Talent">End-to-End Support</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1193,7 +1193,7 @@ function NewNavBar() {
                                                             alt="Compliance Tracking"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Compliance Tracking</a>
+                                                            <a href={"/Home/Industries?Industrytype="+ "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Compliance Tracking</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1210,7 +1210,7 @@ function NewNavBar() {
                                                             alt="Real-Time Reporting"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Real-Time Reporting</a>
+                                                            <a href={"/Home/Industries?Industrytype="+ "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Real-Time Reporting</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1227,7 +1227,7 @@ function NewNavBar() {
                                                             alt="Wage Verification"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Wage Verification</a>
+                                                            <a href={"/Home/Industries?Industrytype="+ "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Wage Verification</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1244,7 +1244,7 @@ function NewNavBar() {
                                                             alt="Training Modules"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Training Modules</a>
+                                                            <a href={"/Home/Industries?Industrytype="+ "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Training Modules</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1263,7 +1263,7 @@ function NewNavBar() {
                                                             alt="Risk Assessment"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Risk Assessment</a>
+                                                            <a href={"/Home/Industries?Industrytype="+ "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Risk Assessment</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1280,7 +1280,7 @@ function NewNavBar() {
                                                             alt="Financial Audit"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Financial Audit</a>
+                                                            <a href={"/Home/Industries?Industrytype="+ "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Financial Audit</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1317,7 +1317,8 @@ function NewNavBar() {
                                                             alt="Digital Rights Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Digital Rights Management</a>
+                                                            <a href={ "/Home/Industries?Industrytype=" +
+                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Digital Rights Management</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1334,7 +1335,8 @@ function NewNavBar() {
                                                             alt="Global Search"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Global Search</a>
+                                                            <a href={ "/Home/Industries?Industrytype=" +
+                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Global Search</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1351,7 +1353,8 @@ function NewNavBar() {
                                                             alt="Content Protection"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Content Protection</a>
+                                                            <a href={ "/Home/Industries?Industrytype=" +
+                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Content Protection</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1368,7 +1371,8 @@ function NewNavBar() {
                                                             alt="Content Extraction"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Content Extraction</a>
+                                                            <a href={ "/Home/Industries?Industrytype=" +
+                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Content Extraction</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1387,7 +1391,8 @@ function NewNavBar() {
                                                             alt="Web Scraping"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Web Scraping</a>
+                                                            <a href={ "/Home/Industries?Industrytype=" +
+                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Web Scraping</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1404,7 +1409,8 @@ function NewNavBar() {
                                                             alt="Real-Time Reportingh"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Real-Time Reportingh</a>
+                                                            <a href={ "/Home/Industries?Industrytype=" +
+                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Real-Time Reporting</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1440,7 +1446,11 @@ function NewNavBar() {
                                                             alt="Real-Time Analytics"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Real-Time Analytics</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Financial Audit Compliance".replace(/\s+/g, "-")
+                                            }>Real-Time Analytics</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1457,7 +1467,11 @@ function NewNavBar() {
                                                             alt="AI Market Predictions"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">AI Market Predictions</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Financial Audit Compliance".replace(/\s+/g, "-")
+                                            }>AI Market Predictions</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1474,7 +1488,11 @@ function NewNavBar() {
                                                             alt="Portfolio Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Portfolio Management</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Financial Audit Compliance".replace(/\s+/g, "-")
+                                            }>Portfolio Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1491,7 +1509,11 @@ function NewNavBar() {
                                                             alt="Risk Assessment"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Risk Assessment</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Financial Audit Compliance".replace(/\s+/g, "-")
+                                            }>Risk Assessment</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1510,7 +1532,11 @@ function NewNavBar() {
                                                             alt="Regulatory Compliance"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Regulatory Compliance</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Financial Audit Compliance".replace(/\s+/g, "-")
+                                            }>Regulatory Compliance</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1527,7 +1553,11 @@ function NewNavBar() {
                                                             alt="Controls management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Controls management</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Financial Audit Compliance".replace(/\s+/g, "-")
+                                            }>Controls management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1561,7 +1591,11 @@ function NewNavBar() {
                                                             alt="Google Places API"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Google Places API</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Food Ordering Solutions".replace(/\s+/g, "-")
+                                            }>Google Places API</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1578,7 +1612,11 @@ function NewNavBar() {
                                                             alt="Cart Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Cart Management</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Food Ordering Solutions".replace(/\s+/g, "-")
+                                            }>Cart Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1595,7 +1633,11 @@ function NewNavBar() {
                                                             alt="Payment Gateway Integration"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Payment Gateway Integration</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Food Ordering Solutions".replace(/\s+/g, "-")
+                                            }>Payment Gateway Integration</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1612,7 +1654,11 @@ function NewNavBar() {
                                                             alt="Assign Driver"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Assign Driver</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Food Ordering Solutions".replace(/\s+/g, "-")
+                                            }>Assign Driver</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1631,7 +1677,11 @@ function NewNavBar() {
                                                             alt="Food Delivery"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Food Delivery</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Food Ordering Solutions".replace(/\s+/g, "-")
+                                            }>Food Delivery</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1667,7 +1717,11 @@ function NewNavBar() {
                                                             alt="Custom Software"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Custom Software</a>
+                                                            <a href={
+                                                
+                                                "/Home/Industries?Industrytype=" +
+                                                "Information Technology Solutions".replace(/\s+/g, "-")
+                                            }>Custom Software</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1684,7 +1738,11 @@ function NewNavBar() {
                                                             alt="Cloud Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Cloud Management</a>
+                                                            <a href={
+                                                
+                                                "/Home/Industries?Industrytype=" +
+                                                "Information Technology Solutions".replace(/\s+/g, "-")
+                                            }>Cloud Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1701,7 +1759,11 @@ function NewNavBar() {
                                                             alt="Cybersecurity"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Cybersecurity</a>
+                                                            <a href={
+                                                
+                                                "/Home/Industries?Industrytype=" +
+                                                "Information Technology Solutions".replace(/\s+/g, "-")
+                                            }>Cybersecurity</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1718,7 +1780,11 @@ function NewNavBar() {
                                                             alt="IT Infrastructure"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">IT Infrastructure</a>
+                                                            <a href={
+                                                
+                                                "/Home/Industries?Industrytype=" +
+                                                "Information Technology Solutions".replace(/\s+/g, "-")
+                                            }>IT Infrastructure</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1737,7 +1803,11 @@ function NewNavBar() {
                                                             alt="Digital Transformation"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Digital Transformation</a>
+                                                            <a href={
+                                                
+                                                "/Home/Industries?Industrytype=" +
+                                                "Information Technology Solutions".replace(/\s+/g, "-")
+                                            }>Digital Transformation</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1773,7 +1843,11 @@ function NewNavBar() {
                                                             alt="Explainer Video"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Explainer Video</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Business Promotion Solutions".replace(/\s+/g, "-")
+                                            }>Explainer Video</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1790,7 +1864,11 @@ function NewNavBar() {
                                                             alt="Product Demo Content"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Product Demo Content</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Business Promotion Solutions".replace(/\s+/g, "-")
+                                            }>Product Demo Content</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1807,7 +1885,11 @@ function NewNavBar() {
                                                             alt="SMS Campaigns"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">SMS Campaigns</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Business Promotion Solutions".replace(/\s+/g, "-")
+                                            }>SMS Campaigns</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1824,7 +1906,11 @@ function NewNavBar() {
                                                             alt="PDF Generation"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">PDF Generation</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Business Promotion Solutions".replace(/\s+/g, "-")
+                                            }>PDF Generation</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1843,7 +1929,11 @@ function NewNavBar() {
                                                             alt="Social Wall"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Social Wall</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Business Promotion Solutions".replace(/\s+/g, "-")
+                                            }>Social Wall</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1860,7 +1950,11 @@ function NewNavBar() {
                                                             alt="Web Site Content"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Web Site Content</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Business Promotion Solutions".replace(/\s+/g, "-")
+                                            }>Web Site Content</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1877,7 +1971,11 @@ function NewNavBar() {
                                                             alt="Reviews & Ratings"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Reviews & Ratings</a>
+                                                            <a href={
+                                               
+                                                "/Home/Industries?Industrytype=" +
+                                                "Business Promotion Solutions".replace(/\s+/g, "-")
+                                            }>Reviews & Ratings</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1912,7 +2010,11 @@ function NewNavBar() {
                                                             alt="Bulk Email"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Bulk Email</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "HOA Automation Solutions".replace(/\s+/g, "-")
+                                            }>Bulk Email</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1929,7 +2031,11 @@ function NewNavBar() {
                                                             alt="E-Voting System"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">E-Voting System</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "HOA Automation Solutions".replace(/\s+/g, "-")
+                                            }>E-Voting System</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1946,7 +2052,11 @@ function NewNavBar() {
                                                             alt="Document Scanning"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Document Scanning</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "HOA Automation Solutions".replace(/\s+/g, "-")
+                                            }>Document Scanning</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1963,7 +2073,11 @@ function NewNavBar() {
                                                             alt="MICR Reading"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">MICR Reading</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "HOA Automation Solutions".replace(/\s+/g, "-")
+                                            }>MICR Reading</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1982,7 +2096,11 @@ function NewNavBar() {
                                                             alt="Automated Notifications"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Automated Notifications</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "HOA Automation Solutions".replace(/\s+/g, "-")
+                                            }>Automated Notifications</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2022,7 +2140,14 @@ function NewNavBar() {
                                                             alt="Fleet Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Fleet Management</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "Logistics and Supply Chain Management".replace(
+                                                    /\s+/g,
+                                                    "-"
+                                                )
+                                            }>Fleet Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2039,7 +2164,14 @@ function NewNavBar() {
                                                             alt="Route Optimization"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Route Optimization</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "Logistics and Supply Chain Management".replace(
+                                                    /\s+/g,
+                                                    "-"
+                                                )
+                                            }>Route Optimization</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2056,7 +2188,14 @@ function NewNavBar() {
                                                             alt="Real-Time Tracking"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Real-Time Tracking</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "Logistics and Supply Chain Management".replace(
+                                                    /\s+/g,
+                                                    "-"
+                                                )
+                                            }>Real-Time Tracking</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2073,7 +2212,14 @@ function NewNavBar() {
                                                             alt="Predictive Analytics"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Predictive Analytics</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "Logistics and Supply Chain Management".replace(
+                                                    /\s+/g,
+                                                    "-"
+                                                )
+                                            }>Predictive Analytics</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2092,7 +2238,14 @@ function NewNavBar() {
                                                             alt="AI-Driven Automation"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">AI-Driven Automation</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "Logistics and Supply Chain Management".replace(
+                                                    /\s+/g,
+                                                    "-"
+                                                )
+                                            }>AI-Driven Automation</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2127,7 +2280,11 @@ function NewNavBar() {
                                                             alt="Project Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Project Management</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "Construction Industry Software".replace(/\s+/g, "-")
+                                            }>Project Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2161,7 +2318,11 @@ function NewNavBar() {
                                                             alt="Real-Time Updates"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Real-Time Updates</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "Construction Industry Software".replace(/\s+/g, "-")
+                                            }>Real-Time Updates</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2178,7 +2339,11 @@ function NewNavBar() {
                                                             alt="Risk Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Risk Management</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "Construction Industry Software".replace(/\s+/g, "-")
+                                            }>Risk Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2197,7 +2362,11 @@ function NewNavBar() {
                                                             alt="AI-Powered Insights"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">AI-Powered Insights</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "Construction Industry Software".replace(/\s+/g, "-")
+                                            }>AI-Powered Insights</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2233,7 +2402,11 @@ function NewNavBar() {
                                                             alt="Telemedicine"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Telemedicine</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
+                                            }>Telemedicine</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2250,7 +2423,11 @@ function NewNavBar() {
                                                             alt="Appointment Scheduling"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Appointment Scheduling</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
+                                            }>Appointment Scheduling</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2267,7 +2444,11 @@ function NewNavBar() {
                                                             alt="EHR Integration"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">EHR Integration</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
+                                            }>EHR Integration</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2284,7 +2465,11 @@ function NewNavBar() {
                                                             alt="AI Diagnostics"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">AI Diagnostics</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
+                                            }>AI Diagnostics</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2303,7 +2488,11 @@ function NewNavBar() {
                                                             alt="Remote Patient Monitoring"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Remote Patient Monitoring</a>
+                                                            <a href={
+                                              
+                                                "/Home/Industries?Industrytype=" +
+                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
+                                            }>Remote Patient Monitoring</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2339,7 +2528,11 @@ function NewNavBar() {
                                                             alt="Online Bookings"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Online Bookings</a>
+                                                            <a href={
+                                                
+                                                "/Home/Industries?Industrytype=" +
+                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                            }>Online Bookings</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2356,7 +2549,11 @@ function NewNavBar() {
                                                             alt="Virtual Tours"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Virtual Tours</a>
+                                                            <a href={
+                                                
+                                                "/Home/Industries?Industrytype=" +
+                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                            }>Virtual Tours</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2373,7 +2570,11 @@ function NewNavBar() {
                                                             alt="AI Recommendations"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">AI Recommendations</a>
+                                                            <a href={
+                                                
+                                                "/Home/Industries?Industrytype=" +
+                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                            }>AI Recommendations</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2390,7 +2591,11 @@ function NewNavBar() {
                                                             alt="AI Diagnostics"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">AI Diagnostics</a>
+                                                            <a href={
+                                                
+                                                "/Home/Industries?Industrytype=" +
+                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                            }>AI Diagnostics</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2409,7 +2614,11 @@ function NewNavBar() {
                                                             alt="Multilingual Support"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Multilingual Support</a>
+                                                            <a href={
+                                                
+                                                "/Home/Industries?Industrytype=" +
+                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                            }>Multilingual Support</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2426,7 +2635,11 @@ function NewNavBar() {
                                                             alt="Real-Time Updates"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Real-Time Updates</a>
+                                                            <a href={
+                                                
+                                                "/Home/Industries?Industrytype=" +
+                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                            }>Real-Time Updates</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2443,7 +2656,11 @@ function NewNavBar() {
                                                             alt="Reservation Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">Reservation Management</a>
+                                                            <a href={
+                                                
+                                                "/Home/Industries?Industrytype=" +
+                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                            }>Reservation Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2460,7 +2677,11 @@ function NewNavBar() {
                                                             alt="API Integration"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="#">API Integration</a>
+                                                            <a href={
+                                                
+                                                "/Home/Industries?Industrytype=" +
+                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                            }>API Integration</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2491,6 +2712,11 @@ function NewNavBar() {
                                 <li>
                                     <Link href="/technologies">
                                         <span className="menu-text">Technologies</span>
+                                    </Link>
+                                </li>
+                                 <li>
+                                    <Link href="/gallery">
+                                        <span className="menu-text">Gallery</span>
                                     </Link>
                                 </li>
                             </ul>
@@ -2525,10 +2751,11 @@ function NewNavBar() {
                         </li>
 
                         <li>
-                            <Link href="/gallery">
-                                <span className="menu-text">Gallery</span>
+                            <Link href="/request-a-quote">
+                                <span className="menu-text">Get a Quote</span>
                             </Link>
                         </li>
+                        
                         <li>
                             <Link href="/contact-us">
                                 <span className="menu-text">Contact Us</span>

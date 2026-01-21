@@ -29,7 +29,7 @@ useEffect(() => {
 
   return (
     <div
-      className={`section section-padding-top section-padding-bottom-180 ${classOption}`}
+      className={`section section-padding-top section-padding-bottom-150 ${classOption}`}
     >
       <div className="container">
         <div className="row">

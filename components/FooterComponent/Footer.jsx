@@ -53,7 +53,7 @@ const footerData = [
       },
       {
         id: 8,
-        text: "Request a Quote",
+        text: " Get a Quote",
         url: "/request-a-quote",
       },
     ],
@@ -232,12 +232,13 @@ const footerData = [
           <div className="col">
             <div className="row copyright d-flex justify-content-between">
               <div className="col-sm-6 text-sm-start text-center">
-               <p>
-  &copy; {new Date().getFullYear()}-2026{" "}
+              <p>
+  &copy; {new Date().getFullYear()}–{new Date().getFullYear() + 1}{" "}
   <strong>
     Anthem Infotech Private Limited. All rights reserved.
   </strong>
 </p>
+
 
               </div>
               <div className="col-sm-6 text-sm-end text-center">

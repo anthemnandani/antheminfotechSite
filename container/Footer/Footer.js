@@ -92,12 +92,13 @@ const Footer = () => {
           <div className="col ">
             <div className="row copyright d-flex justify-content-between">
               <div className="col-sm-6 text-sm-start text-center">
-                <p>
-                  &copy; {new Date().getFullYear()}{" "}
-                  <strong>
-                    Anthem Infotech Private Limited. All rights reserved.
-                  </strong>
-                </p>
+              <p>
+  &copy; {new Date().getFullYear()}–{new Date().getFullYear() + 1}{" "}
+  <strong>
+    Anthem Infotech Private Limited. All rights reserved.
+  </strong>
+</p>
+
               </div>
               <div className="col-sm-6 text-sm-end text-center">
                 Powered by <strong>Anthem Infotech Pvt. Ltd.</strong>

@@ -35,7 +35,7 @@ useEffect(() => {
   
   
   return (
-    <div className={`section section-padding-top about-section-padding-bottom-200 ${classOption}`}>
+    <div className={`section section-padding-top about-section-padding-bottom-100 ${classOption}`}>
       <div className="container">
         <div className="row">
           {/* Text content */}

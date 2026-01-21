@@ -24,13 +24,12 @@ const TestimonialContainer = ({ classOption }) => {
   };
   return (
     <div
-      className={`testimonial-section section section-padding-t90 section-padding-bottom ${classOption}`}
-    >
+      className={`testimonial-section section section-padding-t90 section-padding-bottom  ${classOption}`}>
       <div className="container-fluid ps-xl-16 ps-lg-3 ps-md-3 ps-sm-3 ps-3 pe-xl-16 pe-lg-3 pe-md-3 pe-sm-3 pe-3">
         <SectionTitle
           headingOption="title fz-28"
           title="Our Clients Speak for Us"
-          subTitle="<span class='text-white'>Feedback with Images.</span>"
+          subTitle="<span class='text-black'>Feedback with Images.</span>"
         />
 
         <Swiper

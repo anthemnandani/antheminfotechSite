@@ -46,7 +46,7 @@ export const metadata = {
   },
 };
 
-const Testimonial = () => {
+const Testimonial = ({ classOption }) => {
   return (
     <>
       {/* Structured Data - Review */}
@@ -86,7 +86,8 @@ const Testimonial = () => {
         content="Home"
         contentTwo="Testimonials"
       />
-      <TestimonialContainer classOption="bg-white" />
+
+      <TestimonialContainer classOption="bg-white"  />
     </>
   );
 };

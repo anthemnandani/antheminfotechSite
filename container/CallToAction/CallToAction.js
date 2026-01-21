@@ -35,7 +35,11 @@ const CallToAction = ({ classOption }) => {
               <Link href="/request-a-quote" passHref className="btn btn-bottom mt-6"
                   data-aos="fade-up"
                   data-aos-delay="300"
-                  data-hover="Get Started">
+                  data-hover="Get Started"
+                
+                            style={{ background: "#0e6497" }}
+                  
+                  >
                
                   Get Started
                 

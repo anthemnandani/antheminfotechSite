@@ -62,32 +62,74 @@ const WorkContainer = ({ classOption }) => {
           setProjects(allProjects);
 
           let filtered = allProjects;
+// if (slug) {
+//   const normalize = (str) =>
+//     str
+//       ?.toLowerCase()
+//       .trim()
+//       .replace(/[.\-_#+]/g, " ")  // convert . - _ # + → spaces
+//       .replace(/\s+/g, " ");       // collapse multiple spaces
+//   const slugTerm = normalize(slug);
+//   const slugWords = slugTerm.split(" "); // ["node","js"]
+
+//   filtered = allProjects.filter((project) => {
+//     // normalize all fields before searching
+//     const name = normalize(project.projectName || "");
+//     const category = normalize(project.projectCategory || "");
+//     const tech = normalize(project.technolgies || "");
+//     const desc = normalize(project.description || "");
+//     const subCat = normalize(project.projectSubCategory || "");
+//     const smallDesc = normalize(project.smallDesciption || "");
+
+//     const fullString = `${name} ${category} ${tech} ${desc} ${subCat} ${smallDesc}`;
+
+//     // Check every slug word inside fullString
+//     return slugWords.every((w) => fullString.includes(w));
+//   });
+// }
+
 if (slug) {
-  const normalize = (str) =>
-    str
-      ?.toLowerCase()
-      .trim()
-      .replace(/[.\-_#+]/g, " ")  // convert . - _ # + → spaces
-      .replace(/\s+/g, " ");       // collapse multiple spaces
+  // const normalize = (str) =>
+  //   str
+  //     ?.toLowerCase()
+  //     .trim()
+  //     .replace(/[.\-_#+]/g, " ")
+  //     .replace(/\s+/g, " ");
+const normalize = (str) =>
+  str
+    ?.toLowerCase()
+    .trim()
+    //  split camelCase / PascalCase
+    .replace(/([a-z])([A-Z])/g, "$1 $2")
+    //  split js suffix (nodejs → node js)
+    .replace(/(\w+)js\b/g, "$1 js")
+    //  normalize separators
+    .replace(/[.\-_#+]/g, " ")
+    // collapse spaces
+    .replace(/\s+/g, " ");
+
   const slugTerm = normalize(slug);
-  const slugWords = slugTerm.split(" "); // ["node","js"]
+  const slugWords = slugTerm.split(" ");
 
   filtered = allProjects.filter((project) => {
-    // normalize all fields before searching
-    const name = normalize(project.projectName || "");
-    const category = normalize(project.projectCategory || "");
-    const tech = normalize(project.technolgies || "");
-    const desc = normalize(project.description || "");
-    const subCat = normalize(project.projectSubCategory || "");
-    const smallDesc = normalize(project.smallDesciption || "");
+    const combinedText = normalize(`
+      ${project.projectName || ""}
+      ${project.projectCategory || ""}
+      ${project.technolgies || ""}
+      ${project.description || ""}
+      ${project.projectSubCategory || ""}
+      ${project.smallDesciption || ""}
+    `);
 
-    const fullString = `${name} ${category} ${tech} ${desc} ${subCat} ${smallDesc}`;
+    //  split project text into words
+    const projectWords = combinedText.split(" ");
 
-    // Check every slug word inside fullString
-    return slugWords.every((w) => fullString.includes(w));
+    //  match FULL words only
+    return slugWords.every((word) =>
+      projectWords.includes(word)
+    );
   });
 }
-
 
 
 
