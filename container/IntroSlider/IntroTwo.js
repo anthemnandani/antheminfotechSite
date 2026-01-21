@@ -30,7 +30,7 @@ const IntroTwo = () => {
                 Get Started
               </Link>
               <Link
-                href="/Home/services"
+                href="/services"
                 className="btn btn btn-bottom"
                 data-hover="Learn More"
               >

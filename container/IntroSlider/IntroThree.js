@@ -51,7 +51,7 @@ const IntroThree = () => {
                 Get Started
               </Link>
               <Link
-                href={process.env.NEXT_PUBLIC_URL + "/Home/services"}
+                href={process.env.NEXT_PUBLIC_URL + "/services"}
                 className="btn btn btn-bottom"
                 data-hover="Learn More"
               >
