@@ -47,6 +47,7 @@ const IntroThree = () => {
                 href={process.env.NEXT_PUBLIC_URL + "/request-a-quote"}
                 className="btn btn btn-bottom"
                 data-hover="Get Started"
+                  style={{ background: "#0e6497" }}
               >
                 Get Started
               </Link>
@@ -54,6 +55,7 @@ const IntroThree = () => {
                 href={process.env.NEXT_PUBLIC_URL + "/services"}
                 className="btn btn btn-bottom"
                 data-hover="Learn More"
+                  style={{ background: "#0e6497" }}
               >
                 Learn More
               </Link>

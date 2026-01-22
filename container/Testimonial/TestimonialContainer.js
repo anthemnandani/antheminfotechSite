@@ -6,22 +6,66 @@ import SectionTitle from "../../components/SectionTitles/SectionTitle";
 import Swiper, { SwiperSlide } from "../../components/swiper";
 
 const TestimonialContainer = ({ classOption }) => {
+  // const sliderOptions = {
+  //   spaceBetween: 50,
+  //   slidesPerView: 3,
+  //   loop: true,
+  //   centeredSlides: true,
+  //   autoplay: true,
+  //   pagination: true,
+  //   breakpoints: {
+  //     991: {
+  //       slidesPerView: 2,
+  //     },
+  //     1499: {
+  //       slidesPerView: 3,
+  //     },
+  //   },
+  // };
   const sliderOptions = {
-    spaceBetween: 50,
-    slidesPerView: 3,
-    loop: true,
-    centeredSlides: true,
-    autoplay: true,
-    pagination: true,
-    breakpoints: {
-      991: {
-        slidesPerView: 2,
-      },
-      1499: {
-        slidesPerView: 3,
-      },
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    clickable: true,
+  },
+  spaceBetween: 30,
+  slidesPerView: 3,
+  centeredSlides: true,
+
+  breakpoints: {
+    // Mobile
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+      centeredSlides: false,
     },
-  };
+
+    // Tablets
+    576: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      centeredSlides: false,
+    },
+
+    // Small laptops
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      centeredSlides: false,
+    },
+
+    // Desktops
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+      centeredSlides: true,
+    },
+  },
+};
+
   return (
     <div
       className={`testimonial-section section section-padding-t90 section-padding-bottom  ${classOption}`}>

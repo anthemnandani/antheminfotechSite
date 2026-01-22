@@ -38,7 +38,7 @@ const MVPDevelopment = () => {
         image="images/bg/MVP-Development.webp"
         title="Validate Your Market Idea with a <span class='text-color-span'>Minimum Viable Product</span> and <span class='text-color-span'>Agile Iterative</span> Process"
         content="Home"
-        contentTwo="Services"
+        contentTwo="services"
         contentThree="MVP Development"
       />
       <ServiceGrid service={filteredServices} classOption="bg-white" />

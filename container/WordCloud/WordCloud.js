@@ -120,11 +120,21 @@ const WordCloud = ({ classOption }) => {
             .duration(200)
             .style("font-size", (d) => `${d.size}px`)
             .style("fill", () => d3.schemeCategory10[Math.floor(Math.random() * 10)]);
-        })
-        .on("click", (event, d) => {
-          const slug = d.text.toLowerCase().replace(/\s+/g, "-");
-          router.push(`/OurWork/${slug}`);
-        });
+        }).on("click", (event, d) => {
+  const slug = d.text
+    .toLowerCase()
+    .replace(/\.js\b/g, "-js")
+    .replace(/[\/\s_]+/g, "-")   
+    .replace(/-+/g, "-")         
+    .replace(/^-|-$/g, "");    
+
+  router.push(`/OurWork/${slug}`);
+});
+
+        // .on("click", (event, d) => {
+        //   const slug = d.text.toLowerCase().replace(/\s+/g, "-");
+        //   router.push(`/OurWork/${slug}`);
+        // });
     }
   }, [projects, loading]);
 

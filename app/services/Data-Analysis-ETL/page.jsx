@@ -40,7 +40,7 @@ const DataAnalysisETL = () => {
         image="images/bg/Data-Analysis-ETL.webp"
         title="<span class='text-color-span'>Empower</span> Your Decision-Making with Comprehensive <span class='text-color-span'>Data Solutions</span> and <span class='text-color-span'>Custom Dashboards</span>"
         content="Home"
-        contentTwo="Services"
+        contentTwo="services"
         contentThree="Data Analysis & ETL"
       />
       <ServiceGrid service={filteredServices} classOption="bg-white" />

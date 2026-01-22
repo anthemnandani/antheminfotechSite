@@ -41,7 +41,7 @@ const Breadcrumb = ({ title, content, contentTwo, contentThree, image }) => {
                 {contentTwo === "OurWork" ? (
                   <Link href={`/${contentTwo}`}>{contentTwo}</Link>
                 ) : (
-                  <Link href={`/Home/${contentTwo}`}>{contentTwo}</Link>
+                  <Link href={`/${contentTwo}`}>{contentTwo}</Link>
                 )}
               </li>
             )}

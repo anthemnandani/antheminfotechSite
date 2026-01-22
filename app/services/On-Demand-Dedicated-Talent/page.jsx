@@ -40,7 +40,7 @@ const OnDemandDedicatedTalent = () => {
         image="images/bg/OnDemand-1.webp"
         title="Expert Professional <span class='text-color-span'>Designers, Developers</span>, and Other <span class='text-color-span'>Resources</span> Are Available on Fixed or Hourly Basis"
         content="Home"
-        contentTwo="Services"
+        contentTwo="services"
         contentThree="On-Demand Dedicated Talent"
       />
       <ServiceGrid service={filteredServices} classOption="bg-white" />

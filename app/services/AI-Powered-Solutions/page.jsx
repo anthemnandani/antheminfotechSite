@@ -40,7 +40,7 @@ const AIMLDevelopment = () => {
         image="images/bg/AI-ML-Development.webp"
         title="<span class='text-color-span'>AI-Powered</span> Solutions to <span class='text-color-span'>Elevate Creativity</span>, Streamline Processes, and <span class='text-color-span'>Boost Customer Engagement</span>"
         content="Home"
-        contentTwo="Services"
+        contentTwo="services"
         contentThree="AI-Powered Solutions"
       />
 

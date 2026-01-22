@@ -127,25 +127,33 @@ const WorkItemTwo = ({ data }) => {
           {/* Technologies Tags */}
           <div className="tagcloud mt-1line-clamp">
             {(data?.technolgies || "")
-              .split(",")
-              .map((highlight) => highlight.trim())
-              .filter(Boolean)
-              .sort((a, b) => a.length - b.length)
-              .slice(0, 7)
-              .map((highlight, index) => (
+  .split(",")
+  .map(t => t.trim())
+  .filter(Boolean)
+  .filter(t => {
+    const wordCount = t.split(" ").length;
+    return (
+      !t.includes(",") &&        // 🚫 sentence
+      wordCount <= 4 &&          // 🚫 too many words
+      t.length <= 30             // 🚫 very long text
+    );
+  })
+  .sort((a, b) => a.length - b.length)
+  .slice(0, 7)
+  .map((highlight, index) => (
                 <Link
                   key={index}
                   href={`/OurWork/${highlight
                     .replace(/\.js\b/gi, "-js")
-                    .replace(/[\s_]+/g, "-")
+                    .replace(/[\/\s_]+/g, "-")  
                     .toLowerCase()}`}
                   style={{ textDecoration: "none" }}
                 >
                   <span className="line-clamp">{toTitleCase(highlight)}</span>
                 </Link>
               ))}
-          </div>
-        </div>
+                </div>
+               </div>
 
         {/* View More Button */}
         <div className="card-footer d-flex justify-content-end">

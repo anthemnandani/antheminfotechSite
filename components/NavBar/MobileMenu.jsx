@@ -30,7 +30,7 @@ const MobileMenu = ({ show, onClose }) => {
                     </div>
                 </div>
                 <div className="mobile-menu-content">
-                    <MobileNavMenu />
+                    <MobileNavMenu onClose={onClose}  />
                 </div>
             </div>
         </div>

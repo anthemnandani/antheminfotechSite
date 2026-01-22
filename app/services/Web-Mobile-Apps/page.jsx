@@ -39,7 +39,7 @@ const WebMobileApps = () => {
         image="images/bg/Web-Mobile-Apps.webp"
         title="Deliver <span class='text-color-span'>Seamless User Experiences</span> with Our <span class='text-color-span'>Responsive</span> and <span class='text-color-span'>Cross-Platform</span> Solutions"
         content="Home"
-        contentTwo="Services"
+        contentTwo="services"
         contentThree="Web & Mobile Apps"
       />
 

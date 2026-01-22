@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState , useRef } from "react";
 import axios from "axios";
 import { baseApiUrl } from "./baseApiUrl";
 import Nav from "./nav";
@@ -34,12 +34,28 @@ function Career(props) {
   const [resumeError, setResumeError] = useState("");
   const [selectedIndustry, setSelectedIndustry] = useState(null);
   const [animated, setAnimated] = useState({});
-
-  const [apiResponseMsg, setApiResponseMsg] = useState("");
+const [apiResponseMsg, setApiResponseMsg] = useState("");
+const sceneRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+useEffect(() => {
+  if (!sceneRef.current) return;
+
+  const Parallax = require("parallax-js");
+
+  const parallaxInstance = new Parallax(sceneRef.current, {
+    relativeInput: true,
+  });
+
+  return () => {
+    parallaxInstance.disable();
+  };
+}, []);
+
+
   useEffect(() => {
     const handleScroll1 = () => {
       const ids = ["careerpage"]; // Array of IDs
@@ -64,19 +80,19 @@ function Career(props) {
     };
   }, [animated]);
 
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    const parallaxImage = document.getElementById("parallax-image");
-    parallaxImage.style.transform = `translateY(${scrollPosition * 0.9}px)`;
-  };
+  // const handleScroll = () => {
+  //   const scrollPosition = window.scrollY;
+  //   const parallaxImage = document.getElementById("parallax-image");
+  //   parallaxImage.style.transform = `translateY(${scrollPosition * 0.9}px)`;
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -179,11 +195,19 @@ function Career(props) {
     }
   };
   const indianPhoneNumberRegex = /^[6-9]\d{9}$/;
+const parallaxInstance = new Parallax(sceneRef.current, {
+  relativeInput: true,
+  pointerEvents: true,
+});
+
+if (window.innerWidth < 768) {
+  parallaxInstance.disable();
+}
 
   return (
     <div>
       <Nav />
-      <div id="parallax-container">
+      {/* <div id="parallax-container">
         <div className="parallax-header">
           <h2 style={{ color: "white" }}>CAREER</h2>
         </div>
@@ -194,7 +218,22 @@ function Career(props) {
             style={{ width: "100%" }}
           />
         </div>
-      </div>
+
+      </div> */}
+<div id="parallax-container" ref={sceneRef}>
+  <div className="parallax-header" data-depth="0.2">
+    <h2 style={{ color: "white" }}>CAREER</h2>
+  </div>
+
+  <div className="parallax-image" data-depth="0.6">
+    <img
+      src="/img/backgroundchatgptimage.webp"
+      alt="Header"
+      style={{ width: "100%" }}
+    />
+  </div>
+</div>
+
       <div id="contact">
         <div className="container" id="careerpage">
           <div className="col-md-8">

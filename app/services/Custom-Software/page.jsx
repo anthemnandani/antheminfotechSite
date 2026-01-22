@@ -29,7 +29,7 @@ const CustomSoftware = () => {
         url: "https://antheminfotech.com/",
       },
       {
-        name: "Services/Custom-Software",
+        name: "Custom-Software",
         url: "https://antheminfotech.com/services/Custom-Software",
       },
     ]}
@@ -38,7 +38,7 @@ const CustomSoftware = () => {
         image="/images/bg/Custom-Software.webp"
         title="<span class='text-color-span'>Optimise</span> Your Operations with <span class='text-color-span'>Bespoke Software</span> Designed for <span class='text-color-span'>Efficiency</span> and <span class='text-color-span'>Scalability</span> Web & Mobile Apps"
         content="Home"
-        contentTwo="Services"
+        contentTwo="services"
         contentThree="Custom Software Development"
       />
 

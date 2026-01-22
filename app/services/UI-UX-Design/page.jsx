@@ -47,7 +47,7 @@ const UIUXDesign = () => {
         image="images/bg/ui-ux.webp"
         title="<span class='text-color-span'>Craft Engaging</span> User Experiences with <span class='text-color-span'>Intuitive</span> and Visually Appealing <span class='text-color-span'>Digital Interfaces</span>"
         content="Home"
-        contentTwo="Services"
+        contentTwo="services"
         contentThree="UI/UX Design"
       />
       <ServiceGrid service={filteredServices} classOption="bg-white" />

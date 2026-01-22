@@ -40,7 +40,7 @@ const EnterpriseSoftware = () => {
         image="images/bg/Enterprise-Software.webp"
         title="Drive Business Growth with <span class='text-color-span'>Secure Software</span> for Large-Scale <span class='text-color-span'>Data Management</span> and <span class='text-color-span'>Integration</span>"
         content="Home"
-        contentTwo="Services"
+        contentTwo="services"
         contentThree="Enterprise Software"
       />
       <ServiceGrid service={filteredServices} classOption="bg-white" />

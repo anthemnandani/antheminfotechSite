@@ -88,49 +88,42 @@ const WorkContainer = ({ classOption }) => {
 //   });
 // }
 
-if (slug) {
-  // const normalize = (str) =>
-  //   str
-  //     ?.toLowerCase()
-  //     .trim()
-  //     .replace(/[.\-_#+]/g, " ")
-  //     .replace(/\s+/g, " ");
-const normalize = (str) =>
-  str
-    ?.toLowerCase()
-    .trim()
-    //  split camelCase / PascalCase
-    .replace(/([a-z])([A-Z])/g, "$1 $2")
-    //  split js suffix (nodejs → node js)
-    .replace(/(\w+)js\b/g, "$1 js")
-    //  normalize separators
-    .replace(/[.\-_#+]/g, " ")
-    // collapse spaces
-    .replace(/\s+/g, " ");
 
-  const slugTerm = normalize(slug);
-  const slugWords = slugTerm.split(" ");
+ 
+const normalize = (str = "") =>
+  str
+    .toLowerCase()
+    .replace(/<[^>]*>/g, " ")    
+    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()+]/g, " ") 
+    .replace(/\s+/g, " ")
+    
+    .trim();
+
+if (slug) {
+
+
+  const slugWords = normalize(slug).split(" ");
 
   filtered = allProjects.filter((project) => {
-    const combinedText = normalize(`
-      ${project.projectName || ""}
-      ${project.projectCategory || ""}
-      ${project.technolgies || ""}
-      ${project.description || ""}
-      ${project.projectSubCategory || ""}
-      ${project.smallDesciption || ""}
+    const searchableText = normalize(`
+      ${project.projectName}
+      ${project.projectCategory}
+      ${project.projectSubCategory}
+      ${project.smallDesciption}
+      ${project.description}
     `);
 
-    //  split project text into words
-    const projectWords = combinedText.split(" ");
+    const technologies = (project.technolgies || "")
+      .split(",")
+      .map(t => normalize(t));
 
-    //  match FULL words only
-    return slugWords.every((word) =>
-      projectWords.includes(word)
+    // ✅ loose + accurate match
+    return slugWords.some(word =>
+      searchableText.includes(word) ||
+      technologies.some(tech => tech.includes(word))
     );
   });
 }
-
 
 
           setFilterProjects(filtered);
