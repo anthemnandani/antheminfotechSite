@@ -14,8 +14,8 @@ const Breadcrumb = ({ title, content, contentTwo, contentThree, image }) => {
         backgroundImage: `url(${publicUrl}/${image})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
-       height: "320px",
-       paddingTop: "20px",
+       height: "280px",
+       
       }}
       
     >
@@ -24,16 +24,15 @@ const Breadcrumb = ({ title, content, contentTwo, contentThree, image }) => {
 
        {/* ✅ Mobile styles */}
       <style>
-        {`
-         /* Mobile only */
-  @media (max-width: 768px) {
-    .intro-section {
-    padding: 40px 0 40px;  /* reduce top & bottom padding */
-      height: auto;      /* optional: reduces extra space */
-      min-height: 70vh;  /* keeps hero visible */
-    }
-  }
-        `}
+       {`
+      @media (max-width: 768px) {
+        .page-title-section {
+          min-height: 70vh;     /* more height on mobile */
+          padding-top: 20px;  /* pushes content below header */
+         
+        }
+      }
+    `}
       </style>
       <div className="absolute inset-0 bg-black/50 z-0" />
 
