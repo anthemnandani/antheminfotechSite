@@ -35,7 +35,8 @@ useEffect(() => {
   
   
   return (
-    <div className={`section section-padding-top about-section-padding-bottom-100 ${classOption}`}>
+    <div className={`section section-padding-top  ${classOption}`} style={{ paddingTop: "20px" }}>
+
       <div className="container">
         <div className="row">
           {/* Text content */}
@@ -73,7 +74,7 @@ useEffect(() => {
           </div>
 
           {/* Image content */}
-          <div className="col-xl-6 col-lg-6 col-12" data-aos="fade-up" data-aos-delay="300">
+          <div className="col-xl-6 col-lg-6 col-12 pb-24 md:pb-0" data-aos="fade-up" data-aos-delay="300">
             <div className="about-image-area about-shape-animation right-0 me-0">
               <div className="about-image js-tilt">
                 <Tilt scale={scale} transitionSpeed={4000}>

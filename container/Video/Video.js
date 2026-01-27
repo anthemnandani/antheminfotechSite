@@ -22,8 +22,9 @@ const Video = () => {
     <div
       className="section section-padding overlay-two"
       style={{
-        backgroundImage: `url(${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/images/bg/video-bg.webp)`,
+        backgroundImage: `url(${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/images/bg/video-bg.webp)`,paddingTop:"20px",paddingBottom:"0px"
       }}
+      
     >
       <div className="container text-center">
         <SectionTitle

@@ -3,11 +3,13 @@
 import React from "react";
 import SectionTitle from "../../components/SectionTitles/SectionTitle";
 import CareerFrom from "../../components/CareerFrom/CareerFrom";
+import { style } from "d3-selection";
 
 const CareerFromContainer = ({ classOption }) => {
   return (
     <div
       className={`contact-form-section section section-padding-t90-b100 ${classOption}`}
+      style={{ paddingTop: "20px",paddingBottom: "10px" }}
     >
       <div className="container">
         <div className="row">

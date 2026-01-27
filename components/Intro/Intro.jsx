@@ -57,6 +57,15 @@ const Intro = ({ data }) => {
             white-space: nowrap;
             border: 0;
           }
+
+           /* Mobile only */
+  @media (max-width: 768px) {
+    .intro-section {
+    padding: 60px 0 20px;  /* reduce top & bottom padding */
+      height: auto;      /* optional: reduces extra space */
+      min-height: 70vh;  /* keeps hero visible */
+    }
+  }
         `}
       </style>
 

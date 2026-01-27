@@ -1,9 +1,11 @@
+import { style } from "d3-selection";
 import React from "react";
 
 const GoogleMap = ({ classOption }) => {
   return (
     <div
-      className={`google-map-area section text-center section-padding-bottom ${classOption}`}
+      className={`google-map-area section text-center  ${classOption}`}
+     
     >
       <div className="container">
         <div className="contact-map-area" data-aos="fade-up">

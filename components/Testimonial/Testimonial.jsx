@@ -16,7 +16,13 @@ const Testimonial = ({ data }) => {
         />
       </div>
       <div className="testimonial-content">
-        <p>{data.desc}</p>
+        {/* <p>{data.desc}</p> */}
+        <p title={data.desc}>
+  {data.desc.length > 140
+    ? data.desc.slice(0, 140) + "..."
+    : data.desc}
+</p>
+
       </div>
       <div className="author-info">
         <div className="cite">

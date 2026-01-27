@@ -35,18 +35,13 @@ const HomeAbout = ({ classOption }) => {
   const aboutShape = `${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/images/shape-animation/about-shape-1.png`;
 
   return (
-    <div className={`section section-padding-t90 section-padding-bottom ${classOption}`}>
+    <div className={`section section-padding-t90 section-padding-bottom ${classOption}`}style={{ paddingTop: "30px" }}>
       <div className="container">
-        {/* <SectionTitle
-          title="We provide custom software solutions that drive business growth through innovation"
-          subTitle="Delivering innovative, custom software technology solutions that empower businesses to thrive
-                                and stay ahead in a rapidly evolving digital landscape."
-                  
-        /> */}
+       
 <SectionTitle
   title="We deliver custom software solutions and AI-powered development services that fuel business growth through smart innovation."
   subTitle="Providing advanced web, AI, and custom software technologies that help businesses thrive, improve efficiency, and stay ahead in today’s fast-moving digital landscape."
-  className="!leading-normal !pb-1 !overflow-visible"
+  className="!leading-normal !pb-1 !overflow-visible   text-[18px] md:text-[28px]"
 />
 
 
@@ -106,6 +101,7 @@ const HomeAbout = ({ classOption }) => {
           </div>
         </div>
       </div>
+       
     </div>
   );
 };

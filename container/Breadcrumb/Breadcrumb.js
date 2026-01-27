@@ -14,8 +14,27 @@ const Breadcrumb = ({ title, content, contentTwo, contentThree, image }) => {
         backgroundImage: `url(${publicUrl}/${image})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
+       height: "320px",
+       paddingTop: "20px",
       }}
+      
     >
+
+
+
+       {/* ✅ Mobile styles */}
+      <style>
+        {`
+         /* Mobile only */
+  @media (max-width: 768px) {
+    .intro-section {
+    padding: 40px 0 40px;  /* reduce top & bottom padding */
+      height: auto;      /* optional: reduces extra space */
+      min-height: 70vh;  /* keeps hero visible */
+    }
+  }
+        `}
+      </style>
       <div className="absolute inset-0 bg-black/50 z-0" />
 
       <div className="relative page-title">

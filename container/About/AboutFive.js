@@ -4,6 +4,7 @@ import SectionTitleTwo from "../../components/SectionTitles/SectionTitleTwo";
 import Link  from "next/link";
 import Tilt from "react-parallax-tilt";
 import Parallax from "parallax-js";
+import { style } from "d3-selection";
 
 const AboutFive = ({ classOption }) => {
   const [scale] = useState(1.04);
@@ -30,6 +31,7 @@ useEffect(() => {
   return (
     <div
       className={`section section-padding-top section-padding-bottom-150 ${classOption}`}
+      style={{ paddingTop: "20px",paddingBottom:"20px"}}
     >
       <div className="container">
         <div className="row">

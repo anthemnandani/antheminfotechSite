@@ -45,27 +45,27 @@
 import React, { useEffect, useState } from "react";
 
 function BackgroundVideo({ videoSrc, overlayColor, children, className }) {
-  const [height, setHeight] = useState("100svh");
+  // const [height, setHeight] = useState("100svh");
 
-  useEffect(() => {
-    const updateHeight = () => {
-      if (window.innerWidth <= 768) {
-        setHeight("70svh"); // MOBILE HEIGHT
-      } else {
-        setHeight("100svh"); // DESKTOP HEIGHT
-      }
-    };
+  // useEffect(() => {
+  //   const updateHeight = () => {
+  //     if (window.innerWidth <= 768) {
+  //       setHeight("70vh"); // MOBILE HEIGHT
+  //     } else {
+  //       setHeight("100svh"); // DESKTOP HEIGHT
+  //     }
+  //   };
 
-    updateHeight();
-    window.addEventListener("resize", updateHeight);
+  //   updateHeight();
+  //   window.addEventListener("resize", updateHeight);
 
-    return () => window.removeEventListener("resize", updateHeight);
-  }, []);
+  //   return () => window.removeEventListener("resize", updateHeight);
+  // }, []);
 
   return (
     <div
       className={`position-relative overflow-hidden w-100 ${className}`}
-      style={{ height }}
+     
     >
       <video
         className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"

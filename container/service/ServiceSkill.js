@@ -18,8 +18,9 @@ const ServiceSkill = ({ classOption }) => {
   }, []);
   return (
     <div
-      className={`section section-padding-top skill-section-padding-bottom ${classOption}`}
+      className={`section  skill-section-padding-bottom ${classOption}`}
       data-bg-color="#f8faff"
+      style={{ paddingTop: "10px"}}
     >
       <div className="container">
         <div className="row">

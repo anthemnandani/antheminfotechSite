@@ -19,7 +19,7 @@ const ContactInformationThree = () => {
     return () => parallaxInstance.disable();
   }, []);
   return (
-    <div className="section section-padding contact-section overlay-two">
+    <div className="section section-padding contact-section " style={{ paddingTop: "0px", paddingBottom: "0px", backgroundColor:"white"}}>
       <div className="container">
         <div
           className="col mt-lg-0 mt-md-10 mt-8"
@@ -33,12 +33,10 @@ const ContactInformationThree = () => {
               title="Let's discuss the Project"
               subTitle="Ready for a Conversation?"
             />
-
-            <ProjectForm />
+            <ProjectForm classOption="background-1" />
           </div>
         </div>
       </div>
-
       <div className="shape shape-1" id="scene" ref={sceneEl}>
         <span data-depth="1">
           <img

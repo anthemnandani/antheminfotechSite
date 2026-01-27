@@ -74,7 +74,7 @@ const WorkItemTwo = ({ data }) => {
 
   return (
     <Tilt scale={scale} transitionSpeed={4000}>
-      <div className="card mb-4 ViewProjectclass custom-background-2">
+      <div className="card mb-4 ViewProjectclass custom-background-2 " >
         {/* Project Image & Title */}
         <Link
           href={`/ViewProject/${data.projectID}`}

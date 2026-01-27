@@ -8,7 +8,7 @@ import Link from 'next/link';
 const IconBoxService = ({ data, classOption, index }) => {
     return (
         <div className={`icon-box text-center ${classOption}`} style={{ height: "350px" }}>
-            <Link href="#" className="link">
+         
                 <div className="icon">
                     <ReactVivus
                         id={`ser-${index}`}
@@ -26,7 +26,7 @@ const IconBoxService = ({ data, classOption, index }) => {
                         <p>{data.description}</p>
                     </div>
                 </div>
-            </Link>
+          
         </div>
     )
 }

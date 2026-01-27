@@ -8,7 +8,7 @@ import SectionTitle from "../../components/SectionTitles/SectionTitle";
 
 const ServiceIconBox = ({ classOption}) => {
   return (
-    <section className={`section section-padding-t90-b100 ${classOption}`}>
+    <section className={`section section-padding-t90-b100 ${classOption}`} style={{ paddingTop: "30px", paddingBottom: "30px" }}>
       <div className="container">
         <SectionTitle
           title="Crafting seamless partnerships that deliver intelligent, future-ready solutions"
@@ -24,14 +24,7 @@ const ServiceIconBox = ({ classOption}) => {
               );
             })}
         </div>
-        {/* <div className="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6">
-          {IconBoxData &&
-            IconBoxData.slice(0, 8).map((single, key) => (
-              <div key={key} className="col mb-6" data-aos="fade-up">
-                <IconBox classOption="box-border" data={single} />
-              </div>
-            ))}
-        </div> */}
+        
       </div>
     </section>
   );

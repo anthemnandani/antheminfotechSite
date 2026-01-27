@@ -40,144 +40,225 @@ const ContactForm = () => {
     function onRecaptchaChange(token) {
         setRecaptchaToken(token);
     }
+const onSubmit = async (data) => {
+  if (isSubmitting) return;
+  setIsSubmitting(true);
 
-    const onSubmit = async (data) => {
-        if (isSubmitting) return;
+  try {
+    if (!recaptchaToken) {
+      Swal.fire({
+        title: "Please complete the ReCAPTCHA",
+        icon: "error",
+      });
+      return;
+    }
 
-        setIsSubmitting(true);
-        try {
-            if (!recaptchaToken) {
-                Swal.fire({
-                    title: "Please complete the ReCAPTCHA",
-                    icon: "error",
-                });
-                setIsSubmitting(false);
-                return;
-            }
+    const formData = new FormData();
+    formData.append("Name", data.name);
+    formData.append("Email", data.email);
+    formData.append("Number", data.contactnumber);
+    formData.append("Message", data.message);
 
-            const formData = new FormData();
-            formData.append("Name", data.name);
-            formData.append("Email", data.email);
-            formData.append("Number", data.contactnumber);
-            formData.append("Message", data.message);
-
-            if (token && recaptchaToken) {
-                const response = await axios.post(
-                    `${process.env.NEXT_PUBLIC_API_URL}/api/ContactUs/ContactUs`,
-                    formData,
-                    {
-                        headers: {
-                            "Content-Type": "application/json",
-                            Authorization: `Bearer ${token}`,
-                        },
-                    }
-                );
-
-                if (response.status === 200) {
-                    Swal.fire({
-                        title: response.data.msg,
-                        icon: "success",
-                    });
-                    setRecaptchaToken(null);
-                    recaptchaRef.current.reset();
-                    reset();
-                }
-            } else {
-                console.error("Token is not available");
-            }
-        } catch (error) {
-            console.error("Error in onSubmit: ", error);
-        } finally {
-            setIsSubmitting(false);
+    if (token && recaptchaToken) {
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/ContactUs/ContactUs`,
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // ✅ no Content-Type here
+          },
         }
-    };
+      );
+
+      if (response.status === 200) {
+        Swal.fire({
+          title: response.data.msg || "Submitted successfully",
+          icon: "success",
+        });
+        setRecaptchaToken(null);
+        recaptchaRef.current.reset();
+        reset();
+      }
+    } else {
+      Swal.fire({
+        title: "Authentication error",
+        text: "Token is not available.",
+        icon: "error",
+      });
+    }
+  } catch (error) {
+    console.error("Error in onSubmit:", error);
+
+    let errorMessage = "Something went wrong. Please try again.";
+
+    if (error.response) {
+      errorMessage =
+        error.response.data?.msg ||
+        error.response.data?.message ||
+        "Submission failed.";
+    } else if (error.request) {
+      errorMessage = "Network error. Please check your internet connection.";
+    }
+
+    Swal.fire({
+      title: "Submission Failed",
+      text: errorMessage,
+      icon: "error",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
+    // const onSubmit = async (data) => {
+    //     if (isSubmitting) return;
+
+    //     setIsSubmitting(true);
+    //     try {
+    //         if (!recaptchaToken) {
+    //             Swal.fire({
+    //                 title: "Please complete the ReCAPTCHA",
+    //                 icon: "error",
+    //             });
+    //             setIsSubmitting(false);
+    //             return;
+    //         }
+
+    //         const formData = new FormData();
+    //         formData.append("Name", data.name);
+    //         formData.append("Email", data.email);
+    //         formData.append("Number", data.contactnumber);
+    //         formData.append("Message", data.message);
+
+    //         if (token && recaptchaToken) {
+    //             const response = await axios.post(
+    //                 `${process.env.NEXT_PUBLIC_API_URL}/api/ContactUs/ContactUs`,
+    //                 formData,
+    //                 {
+    //                     headers: {
+    //                         "Content-Type": "application/json",
+    //                         Authorization: `Bearer ${token}`,
+    //                     },
+    //                 }
+    //             );
+
+    //             if (response.status === 200) {
+    //                 Swal.fire({
+    //                     title: response.data.msg,
+    //                     icon: "success",
+    //                 });
+    //                 setRecaptchaToken(null);
+    //                 recaptchaRef.current.reset();
+    //                 reset();
+    //             }
+    //         } else {
+    //             console.error("Token is not available");
+    //         }
+    //     } catch (error) {
+    //         console.error("Error in onSubmit: ", error);
+    //     } finally {
+    //         setIsSubmitting(false);
+    //     }
+    // };
 
     return (
-        <div className="contact-form" data-aos="fade-up" data-aos-delay="300">
+        <div className="contact-form" data-aos="fade-up" data-aos-delay="300" >
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="row mb-n6">
                     <div className="col-md-6 col-12 mb-6">
-                        <input
-                            type="text"
-                            placeholder="Enter Name *"
-                            name="name"
-                            className="textbox-border"
-                            {...register("name", {
-                                required: "Name is required.",
-                                validate: (value) =>
-                                    (value.length >= 3 && value.length <= 50) ||
-                                    "Name must be between 3 and 50 characters."
-                            })}
-                        />
-                        <span className="text-danger">
-                            {errors?.name && <p>{errors.name?.message}</p>}
-                        </span>
-                    </div>
+  <label className="form-label">
+    Name <span className="text-danger">*</span>
+  </label>
+  <input
+    type="text"
+    className="textbox-border"
+    placeholder="Enter Name"
+    {...register("name", {
+      required: "Name is required.",
+      minLength: {
+        value: 3,
+        message: "Name must be at least 3 characters.",
+      },
+      maxLength: {
+        value: 50,
+        message: "Name cannot exceed 50 characters.",
+      },
+    })}
+  />
+  {errors?.name && <p className="text-danger">{errors.name.message}</p>}
+</div>
 
-                    <div className="col-md-6 col-12 mb-6">
-                        <input
-                            type="email"
-                            placeholder="Enter Email *"
-                            name="email"
-                            className="textbox-border"
-                            {...register("email", {
-                                required: "Email is required.",
-                                pattern: {
-                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                    message: "invalid email address.",
-                                },
-                                validate: (value) =>
-                                    (value.length >= 3 && value.length <= 50) ||
-                                    "Email must be between 3 and 50 characters."
-                            })}
-                        />
-                        <span className="text-danger">
-                            {errors?.email && <p>{errors.email?.message}</p>}
-                        </span>
-                    </div>
 
-                    <div className="col-md-12 col-12 mb-6">
-                        <input
-                            type="text"
-                            placeholder="Contact Number *"
-                            name="contactnumber"
-                            className="textbox-border"
-                            {...register("contactnumber", {
-                                required: "Contact Number is required.",
-                                pattern: {
-                                    value: /^[0-9]+$/i,
-                                    message: "invalid contact number.",
-                                },
-                                validate: (value) =>
-                                    (value.length >= 10 && value.length <= 13) ||
-                                    "Contact Number must be between 10 and 13 digits."
-                            })}
-                        />
-                        <span className="text-danger">
-                            {errors?.contactnumber && <p>{errors.contactnumber?.message}</p>}
-                        </span>
-                    </div>
+                   <div className="col-md-6 col-12 mb-6">
+  <label className="form-label">
+    Email <span className="text-danger">*</span>
+  </label>
+  <input
+    type="email"
+    className="textbox-border"
+    placeholder="Enter Email"
+    {...register("email", {
+      required: "Email is required.",
+      pattern: {
+        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        message: "Please enter a valid email address.",
+      },
+    })}
+    style={{ backgroundColor: '#fff' }}
+  />
+  {errors?.email && <p className="text-danger">{errors.email.message}</p>}
+</div>
 
-                    <div className="col-12 mb-6">
-                        <textarea
-                            name="message"
-                            className="textbox-border"
-                            placeholder="Message *"
-                            {...register("message", { required: "Message is required." })}
-                        ></textarea>
-                        <span className="text-danger">
-                            {errors?.message && <p>{errors.message?.message}</p>}
-                        </span>
-                    </div>
+                   <div className="col-md-12 col-12 mb-6">
+  <label className="form-label">
+    Contact Number <span className="text-danger">*</span>
+  </label>
+  <input
+    type="tel"
+    className="textbox-border"
+    placeholder="Enter 10-digit phone number"
+    maxLength={13}
+    {...register("contactnumber", {
+      required: "Contact number is required.",
+       pattern: {
+        value: /^[0-9]{10,13}$/,
+        message: "Contact number must contain 10 to 13 digits.",
+      },
+    })}
+    onInput={(e) => {
+      e.target.value = e.target.value.replace(/[^0-9]/g, "");
+    }}
+  />
+  {errors?.contactnumber && (
+    <p className="text-danger">{errors.contactnumber.message}</p>
+  )}
+</div>
 
-                    <div className="col-12 mb-6">
-                        <ReCAPTCHA
-                            ref={recaptchaRef}
-                            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA}
-                            onChange={onRecaptchaChange}
-                        />
-                    </div>
+                 <div className="col-12 mb-6">
+  <label className="form-label">
+    Message <span className="text-danger">*</span>
+  </label>
+  <textarea
+    className="textbox-border"
+    placeholder="Enter your message"
+    {...register("message", {
+      required: "Message is required.",
+      minLength: {
+        value: 10,
+        message: "Message must be at least 10 characters.",
+      },
+    })}
+  />
+  {errors?.message && <p className="text-danger">{errors.message.message}</p>}
+</div>
 
+     <div className="col-12 mb-6">
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA}
+          onChange={onRecaptchaChange}
+        />
+      </div>
                     <div className="col-12 text-center mb-6">
                         <button
                             type="submit"

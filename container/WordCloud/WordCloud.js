@@ -141,7 +141,7 @@ const WordCloud = ({ classOption }) => {
   return (
     <div
       className={`section section-padding-t90-b100 svg-height-500 ${classOption}`}
-      style={{ margin: "0 auto" }}
+      style={{ margin: "0 auto" ,paddingTop:"10px",paddingBottom:"20px"}}
     >
       <div className="container">
        <SectionTitle

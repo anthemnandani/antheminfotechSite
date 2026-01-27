@@ -27,15 +27,15 @@ const ContactInformation = ({ classOption }) => {
   
   const cloudBase = process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL
   return (
-    <div className={`section section-padding-t90-b100 ${classOption}`}>
-      <div className="container shape-animate">
+    <div className={`section section-padding-t90-b100 ${classOption}`} style={{ paddingTop: "10px", paddingBottom: "30px" }}>
+      <div className="container shape-animate" >
         <SectionTitle
-          titleOption="section-title text-center mb-lg-12 mb-sm-8 mb-xs-8"
+          titleOption="section-title text-center mb-lg-2 mb-sm-8 mb-xs-8"
           title="Get in Touch with Us"
-          subTitle="<span class='text-white'>Contact us for expert solutions and personalised support—call, email, or visit our office to start your project today.</span>"
+          subTitle="<span class='text-black'>Contact us for expert solutions and personalised support—call, email, or visit our office to start your project today.</span>"
         />
 
-        <div className="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6">
+        <div className="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6" style={{paddingTop:"0px"}}>
           {contactData &&
             contactData.map((single, key) => {
               return (

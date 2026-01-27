@@ -287,7 +287,7 @@ function NewNavBar() {
                                                             alt="Natural Language Processing"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="/services/AI-Powered-Solutions">Chat GPT Integration</a>
+                                                            <a href="/services/AI-Powered-Solutions">AI Chat Integration</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -321,7 +321,7 @@ function NewNavBar() {
                                                             alt="Deep Learning Models"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href="/services/AI-Powered-Solutions">Computer Vision </a>
+                                                            <a href="/services/AI-Powered-Solutions">AI Analytics </a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>

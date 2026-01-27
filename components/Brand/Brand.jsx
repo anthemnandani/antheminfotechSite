@@ -39,7 +39,7 @@ const Brand = ({ data }) => {
 
     return (
         <div className="brand-item">
-            <a href={data?.websiteAddress || "#"} target="_blank" rel="noreferrer">
+          
                 <div className="image-container position-relative" style={{ width: 200, height: 100 }}>
                     {(!data || !data.logo1 || imageStatus === "loading") && (
                         <Skeleton
@@ -83,7 +83,7 @@ const Brand = ({ data }) => {
                         />
                     )}
                 </div>
-            </a>
+         
         </div>
     );
 };

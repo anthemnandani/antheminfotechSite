@@ -157,7 +157,7 @@ const truncateText = (text, limit) => {
 };
 
   return (
-    <div className="section section-padding-top brand-section section-padding-bottom background-1">
+    <div className="section section-padding-top brand-section section-padding-bottom background-1"style={{paddingTop:"20px"}}>
       <Container className="new-custom-tabs mb-6">
         <div className="custom-tabs">
           {industrySolutions.map((solution, index) => (

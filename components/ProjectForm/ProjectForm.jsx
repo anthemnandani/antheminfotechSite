@@ -9,55 +9,94 @@ const ProjectForm = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="row mb-n4">
-                    <div className="col-md-12 col-12 mb-4">
-                        <input
-                            type="text"
-                            placeholder="Your Name *"
-                            name="name"
-                            {...register("name", {
-                                required: "Name is required.",
-                            })}
-                        />
-                        <span className='text-danger'> {errors?.name && <p>{errors.name?.message}</p>}</span>
-                    </div>
-                    <div className="col-md-12 col-12 mb-4">
-                        <input
-                            type="email"
-                            placeholder="Email *"
-                            name="email"
-                            {...register("email", {
-                                required: "Email is required.",
-                                pattern: {
-                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                    message: "invalid email address.",
-                                },
-                            })}
-                        />
-                        <span className='text-danger'>
-                            {errors?.email && <p>{errors.email?.message}</p>}
-                        </span>
-                    </div>
-                    <div className="col-12 mb-6">
-                        <textarea
-                            name="message"
-                            placeholder="Message"
-                            {...register("message", {
-                                required: "Message is required.",
-                            })}
-                        ></textarea>
-                        <span className='text-danger'>
-                            {errors?.message && <p>{errors.message?.message}</p>}
-                        </span>
-                    </div>
-                    <div className="col-12 text-center mb-4">
-                        <button type="submit" className="btn btn btn-bottom" data-hover="Get a free consultation" style={{ background: "#0e6497" }}>Get a free consultation</button>
-                    </div>
-                    
-                </div>
-            </form>
-            <p className="form-messege"></p>
+     <form onSubmit={handleSubmit(onSubmit)}>
+  <div className="row mb-n4" >
+
+    {/* Name */}
+    <div className="col-md-12 col-12 mb-4">
+      <label htmlFor="name">
+        Your Name <span className="text-danger">*</span>
+      </label>
+      <input
+        id="name"
+        type="text"
+        placeholder="Your Name"
+        maxLength={40}
+        style={{ backgroundColor: "#fff", color: "#000" }}
+        onFocus={(e) => (e.target.style.backgroundColor = "#fff")}
+        onBlur={(e) => (e.target.style.backgroundColor = "#fff")}
+        {...register("name", {
+          required: "Name is required.",
+        })}
+      />
+      {errors?.name && (
+        <p className="text-danger">{errors.name.message}</p>
+      )}
+    </div>
+
+    {/* Email */}
+   <div className="col-md-12 col-12 mb-4">
+  <label htmlFor="email">
+    Email <span className="text-danger">*</span>
+  </label>
+  <input
+    id="email"
+    type="email"
+    placeholder="Email"
+    style={{ backgroundColor: "#fff", color: "#000" }}
+    onFocus={(e) => (e.target.style.backgroundColor = "#fff")}
+    onBlur={(e) => (e.target.style.backgroundColor = "#fff")}
+    {...register("email", {
+      required: "Email is required.",
+      pattern: {
+        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+        message: "Please enter a valid email address.",
+      },
+    })}
+  />
+  {errors?.email && (
+    <p className="text-danger">{errors.email.message}</p>
+  )}
+</div>
+
+    {/* Message */}
+    <div className="col-12 mb-6">
+      <label htmlFor="message">
+        Message <span className="text-danger">*</span>
+      </label>
+      <textarea
+        id="message"
+        placeholder="Message"
+        style={{ backgroundColor: "#fff", color: "#000" }}
+        onFocus={(e) => (e.target.style.backgroundColor = "#fff")}
+        onBlur={(e) => (e.target.style.backgroundColor = "#fff")}
+        {...register("message", {
+          required: "Message is required.",
+        })}
+      />
+      {errors?.message && (
+        <p className="text-danger">{errors.message.message}</p>
+      )}
+    </div>
+
+    {/* Submit */}
+    <div className="col-12 text-center mb-4">
+      <button
+        type="submit"
+        className="btn btn-bottom"
+        data-hover="Get a free consultation"
+        style={{ background: "#0e6497" }}
+      >
+        Get a free consultation
+      </button>
+    </div>
+
+  </div>
+</form>
+
+
+<p className="form-messege"></p>
+
         </>
     )
 }

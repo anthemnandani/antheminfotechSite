@@ -12,7 +12,8 @@ const IntroTwo = () => {
       <div className="container">
         <div className="row row-cols-lg-1 row-cols-1">
           <div className="col align-self-center">
-            <div className="intro-content-two mt-xl-12 mt-lg-12 mt-md-12 mt-sm-12 mt-xs-12">
+            {/* <div className="intro-content-two mt-xl-12 mt-lg-12 mt-md-12 mt-sm-12 mt-xs-12"> */}
+        <div className="intro-content-two mt-4">
               <h2 className="title">
                 <span className="text-color-span">About</span> Us
               </h2>

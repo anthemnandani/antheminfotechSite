@@ -59,8 +59,6 @@ const ServicePage = () => {
       <AboutSix classOption="bg-white" />
       <FunfactTwo classOption="background-1" />
       <ContactInformationThree classOption="bg-white" />
-
-
       {/* Scroll to Top */}
       <ScrollToTop />
     </>

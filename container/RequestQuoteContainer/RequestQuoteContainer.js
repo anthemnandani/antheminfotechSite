@@ -1,102 +1,38 @@
+
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+
+import React, { useEffect } from "react";
 import SectionTitle from "../../components/SectionTitles/SectionTitle";
 import RequestQuote from "../../components/RequestQuote/RequestQuote";
-import Tilt from "react-parallax-tilt";
-import Parallax from "parallax-js";
-import TestimonialContainer from "../../container/Testimonial/TestimonialContainer.js";
+import TestimonialQuote from "../../container/Testimonial/TestimonialQuote";
 
 const RequestQuoteContainer = ({ classOption }) => {
-  const [scale] = useState(1.04);
-  const sceneEl = useRef(null);
-
   useEffect(() => {
-  if (!sceneEl.current) return;
+    require("aos").init();
+  }, []);
 
-  const Parallax = require("parallax-js");
-  const parallaxInstance = new Parallax(sceneEl.current, {
-    relativeInput: true,
-  });
-
-  return () => parallaxInstance.disable();
-}, []);
-
-useEffect(() => {
-  require("aos").init();
-}, []);
-  // useEffect(() => {
-  //   const parallaxInstance = new Parallax(sceneEl.current, {
-  //     relativeInput: true,
-  //   });
-
-  //   parallaxInstance.enable();
-
-  //   return () => parallaxInstance.disable();
-  // }, []);
   return (
-    <div className={`contact-form-section section  ${classOption}`}>
-      <div className="container ">
-        <div className="row ">
-         
-         <div
-            className="col-lg-6 d-flex justify-content-center align-items-center"
-            style={{ height: "100vh" }}
-          >
-            <div className="col-xl-12 col-lg-12 col-12" data-aos="fade-up">
-              <div className="about-image-area d-flex justify-content-center align-items-center flex-column">
-                <div className="about-image mb-4">
-                  <Tilt scale={scale} transitionSpeed={4000}>
-                    <img
-                      src={
-                       process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL+
-                        "/images/about/home-one-about/home_agency_about_2.webp"
-                      }
-                      alt="home_agency_about"
-                    />
-                  </Tilt>
-                </div>
+    <div className={`contact-form-section section ${classOption}`}>
+      <div className="container">
+        <div className="row">
 
-                <div className="about-image">
-                  <Tilt scale={scale} transitionSpeed={4000}>
-                    <img
-                      src={
-                        process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL +
-                        "/images/about/home-one-about/home_agency_about_1.webp"
-                      }
-                      alt="home_agency_about"
-                    />
-                  </Tilt>
-                </div>
+          {/* Left Column - Testimonial */}
+          <div className="col-lg-6">
+            <TestimonialQuote classOption="bg-white" />
+          </div>
 
-                <div className="shape shape-1" id="scene" ref={sceneEl}>
-                  <span data-depth="1">
-                    <img
-                      src={
-                        process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL +
-                        "/images/shape-animation/about-shape-1.png"
-                      }
-                      alt="about-shape"
-                    />
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div> 
- 
-          <div className="col-lg-6 contact-form-area background-1 my-2 ">
+          {/* Right Column - Request Quote Form */}
+          <div className="col-lg-6 contact-form-area background-1 my-2">
             <SectionTitle
               headingOption="fz-32"
               title="Request a Free Quote"
-              // subTitle="Complete the Form to Receive a Free Consultation. We Will Revert Back Within One Business Day!"
-              subTitle="Get a tailored quote within 24 hours.Our experts deliver efficient, scalable, and cost-effective solutions for your business."
-              
+              subTitle="Get a tailored quote within 24 hours. Our experts deliver efficient, scalable, and cost-effective solutions for your business."
             />
             <RequestQuote />
-            
           </div>
+
         </div>
       </div>
-       <TestimonialContainer classOption="bg-white" />
     </div>
   );
 };

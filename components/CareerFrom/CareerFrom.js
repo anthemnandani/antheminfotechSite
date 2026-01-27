@@ -18,10 +18,28 @@ const CareerForm = () => {
   }, []);
 
   const handleFileClick = () => fileInputRef.current?.click();
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (file) setFileName(file.name);
-  };
+ const handleFileChange = (e) => {
+  const file = e.target.files[0];
+  const allowedTypes = [
+    "application/pdf",
+    "application/msword",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  ];
+
+  if (file && allowedTypes.includes(file.type)) {
+    setFileName(file.name);
+  } else {
+    setFileName("");
+    Swal.fire({
+      title: "Invalid file type!",
+      text: "Only PDF, DOC or DOCX allowed.",
+      icon: "error",
+    });
+    e.target.value = ""; // reset invalid file
+  }
+};
+
+
 
   const [recaptchaToken, setRecaptchaToken] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -30,275 +48,440 @@ const CareerForm = () => {
   const onRecaptchaChange = (token) => setRecaptchaToken(token);
 
   const { register, handleSubmit, reset, formState: { errors } } = useForm({ mode: "onBlur" });
+const onSubmit = async (data) => {
+  if (isSubmitting) return;
+  setIsSubmitting(true);
 
-  const onSubmit = async (data) => {
-    if (isSubmitting) return;
-    setIsSubmitting(true);
+  if (!recaptchaToken) {
+    Swal.fire({ title: "Please complete the ReCAPTCHA", icon: "error" });
+    setIsSubmitting(false);
+    return;
+  }
 
-    if (!recaptchaToken) {
-      Swal.fire({ title: "Please complete the ReCAPTCHA", icon: "error" });
-      setIsSubmitting(false);
-      return;
-    }
+  const expText = data.experienceyear || "";
 
-    const formData = new FormData();
-    formData.append("file", fileInputRef.current?.files[0]);
-    formData.append("Name", data.name);
-    formData.append("Email", data.email);
-    formData.append("Number", data.contactnumber);
-    formData.append("ExpYears", data.experienceyear);
-    formData.append("ExpMonth", data.experiencemonths);
-    formData.append("TextArea", data.message);
-    formData.append("LastEmployedAt", data.lastemployedat);
-    formData.append("uploadresume", data.uploadresume);
-    formData.append("SelectJoining", data.selectjoining);
-    formData.append("PostApply", data.postapply);
+  const yearsMatch = expText.match(/(\d{1,2})\s*(year|years|yr|yrs)/i);
+  const monthsMatch = expText.match(/(\d{1,2})\s*(month|months|mo|mos)/i);
 
-    try {
-      if (token && recaptchaToken) {
-        const res = await axios.post(
-          `${process.env.NEXT_PUBLIC_API_URl}/api/Career/ApplyforJobCareer`,
-          formData,
-          { headers: { "Content-Type": "multipart/form-data", Authorization: `Bearer ${token}` } }
-        );
+  const experienceYear = yearsMatch ? Number(yearsMatch[1]) : 0;
+  const experienceMonth = monthsMatch ? Number(monthsMatch[1]) : 0;
 
-        if (res.status === 200) {
-          Swal.fire({ title: res.data.msg, icon: "success" });
-          reset();
-          recaptchaRef.current.reset();
-          fileInputRef.current.value = "";
-          setFileName("");
-          setRecaptchaToken(null);
+  const formData = new FormData();
+  formData.append("file", fileInputRef.current?.files[0]);
+  formData.append("Name", data.name);
+  formData.append("Email", data.email);
+  formData.append("Number", data.contactnumber);
+  formData.append("ExpYears", experienceYear);
+  formData.append("ExpMonth", experienceMonth);
+  formData.append("TextArea", data.message);
+  formData.append("LastEmployedAt", data.lastemployedat);
+  formData.append("uploadresume", data.uploadresume);
+  formData.append("SelectJoining", data.selectjoining);
+  formData.append("PostApply", data.postapply);
+
+  try {
+    if (token && recaptchaToken) {
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URl}/api/Career/ApplyforJobCareer`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${token}`,
+          },
         }
+      );
+
+      if (res.status === 200) {
+        Swal.fire({ title: res.data.msg, icon: "success" });
+        reset();
+        recaptchaRef.current.reset();
+        fileInputRef.current.value = "";
+        setFileName("");
+        setRecaptchaToken(null);
       }
-    } catch (err) {
-      console.error("Error submitting form:", err);
-      Swal.fire({ title: "Submission failed", icon: "error" });
-    } finally {
-      setIsSubmitting(false);
     }
-  };
+  } catch (err) {
+    console.error("Error submitting form:", err);
+
+    let errorMessage = "Something went wrong. Please try again later.";
+
+    if (err.response) {
+      errorMessage =
+        err.response.data?.msg ||
+        err.response.data?.message ||
+        "Failed to submit the application.";
+    } else if (err.request) {
+      errorMessage = "Network error. Please check your internet connection.";
+    }
+
+    Swal.fire({
+      title: "Submission Failed",
+      text: errorMessage,
+      icon: "error",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
+//   const onSubmit = async (data) => {
+//     if (isSubmitting) return;
+//     setIsSubmitting(true);
+
+//     if (!recaptchaToken) {
+//       Swal.fire({ title: "Please complete the ReCAPTCHA", icon: "error" });
+//       setIsSubmitting(false);
+//       return;
+//     }
+// const expText = data.experienceyear || "";
+
+// const yearsMatch = expText.match(/(\d{1,2})\s*(year|years|yr|yrs)/i);
+// const monthsMatch = expText.match(/(\d{1,2})\s*(month|months|mo|mos)/i);
+
+// const experienceYear = yearsMatch ? Number(yearsMatch[1]) : 0;
+// const experienceMonth = monthsMatch ? Number(monthsMatch[1]) : 0;
+
+// const formData = new FormData();
+// formData.append("file", fileInputRef.current?.files[0]);
+// formData.append("Name", data.name);
+// formData.append("Email", data.email);
+// formData.append("Number", data.contactnumber);
+// formData.append("ExpYears", experienceYear);
+// formData.append("ExpMonth", experienceMonth);
+// formData.append("TextArea", data.message);
+// formData.append("LastEmployedAt", data.lastemployedat);
+// formData.append("uploadresume", data.uploadresume);
+// formData.append("SelectJoining", data.selectjoining);
+// formData.append("PostApply", data.postapply);
+
+   
+//     try {
+//       if (token && recaptchaToken) {
+//         const res = await axios.post(
+//           `${process.env.NEXT_PUBLIC_API_URl}/api/Career/ApplyforJobCareer`,
+//           formData,
+//           { headers: { "Content-Type": "multipart/form-data", Authorization: `Bearer ${token}` } }
+//         );
+
+//         if (res.status === 200) {
+//           Swal.fire({ title: res.data.msg, icon: "success" });
+//           reset();
+//           recaptchaRef.current.reset();
+//           fileInputRef.current.value = "";
+//           setFileName("");
+//           setRecaptchaToken(null);
+//         }
+//       }
+//     } catch (err) {
+//       console.error("Error submitting form:", err);
+//       Swal.fire({ title: "Submission failed", icon: "error" });
+//     } finally {
+//       setIsSubmitting(false);
+//     }
+//   };
   return (
     <div className="contact-form" data-aos="fade-up" data-aos-delay="300">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="row mb-n6">
           <div className="col-md-6 col-12 mb-6">
-            <input
-              type="text"
-              placeholder="Enter Name *"
-              name="name"
-              className="textbox-border"
-              {...register("name", {
-                required: "Name is required.",
-                validate: (value) => {
-                  return (
-                    (value.length >= 3 && value.length <= 50) ||
-                    "Name must be between 3 and 50 characters."
-                  );
-                },
-              })}
-            />
-            <span className="text-danger">
-              {errors?.name && <p>{errors.name?.message}</p>}
-            </span>
-          </div>
-          <div className="col-md-6 col-12 mb-6">
-            <input
-              type="email"
-              placeholder="Enter Email *"
-              name="email"
-              className="textbox-border"
-              {...register("email", {
-                required: "Email is required.",
-                pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                  message: "invalid email address.",
-                },
-                validate: (value) => {
-                  return (
-                    (value.length >= 3 && value.length <= 50) ||
-                    "Email must be between 3 and 50 characters."
-                  );
-                },
-              })}
-            />
-            <span className="text-danger">
-              {errors?.email && <p>{errors.email?.message}</p>}
-            </span>
-          </div>
-          <div className="col-md-6 col-12 mb-6">
-            <input
-              type="text"
-              placeholder="Contact Number *"
-              name="contactnumber"
-              className="textbox-border"
-              {...register("contactnumber", {
-                required: "Contact Number is required.",
-                pattern: {
-                  value: /^[0-9]+$/i,
-                  message: "invalid contact number.",
-                },
-                validate: (value) => {
-                  return (
-                    (value.length >= 10 && value.length <= 13) ||
-                    "Contact Number must be between 10 and 13 digits."
-                  );
-                },
-              })}
-            />
-            <span className="text-danger">
-              {errors?.contactnumber && <p>{errors.contactnumber?.message}</p>}
-            </span>
-          </div>
-          <div className="col-md-6 col-12 mb-6">
-            <input
-              type="text"
-              placeholder="Last Employed At (Optional)"
-              name="lastemployedat"
-              className="textbox-border"
-              {...register("lastemployedat")}
-            />
-            <span className="text-danger">
-              {errors?.lastemployedat && (
-                <p>{errors.lastemployedat?.message}</p>
-              )}
-            </span>
-          </div>
-          <div className="col-md-6 col-12 mb-6">
-            <input
-              type="text"
-              placeholder="Experience Year *"
-              name="experienceyear"
-              className="textbox-border"
-              {...register("experienceyear", {
-                required: "Experience Year is required.",
-                pattern: {
-                  value: /^[0-9]+$/i,
-                  message: "invalid experience year.",
-                },
-                validate: (value) => {
-                  const num = parseInt(value, 10);
-                  return (
-                    (num >= 0 && num <= 20) ||
-                    "Experience Year must be between 0 to 20."
-                  );
-                },
-              })}
-            />
-            <span className="text-danger">
-              {errors?.experienceyear && (
-                <p>{errors.experienceyear?.message}</p>
-              )}
-            </span>
-          </div>
-          <div className="col-md-6 col-12 mb-6">
-            <input
-              type="text"
-              placeholder="Experience Months *"
-              name="experiencemonths"
-              className="textbox-border"
-              {...register("experiencemonths", {
-                required: "Experience Months is required.",
-                pattern: {
-                  value: /^[0-9]+$/i,
-                  message: "invalid experience months.",
-                },
-                validate: (value) => {
-                  const num = parseInt(value, 10);
-                  return (
-                    (num >= 0 && num <= 12) ||
-                    "Experience Months must be between 0 to 12."
-                  );
-                },
-              })}
-            />
-            <span className="text-danger">
-              {errors?.experiencemonths && (
-                <p>{errors.experiencemonths?.message}</p>
-              )}
-            </span>
-          </div>
-          {/*  */}
-          <div className="col-md-6 col-12 mb-6">
-            <input
-              type="text"
-              placeholder="Apply for? *"
-              name="postapply"
-              className="textbox-border"
-              {...register("postapply", {
-                required: "Apply for is required.",
-                validate: (value) => {
-                  return (
-                    (value.length >= 3 && value.length <= 50) ||
-                    "Apply for must be between 3 and 50 characters."
-                  );
-                },
-              })}
-            />
-            <span className="text-danger">
-              {errors?.postapply && <p>{errors.postapply?.message}</p>}
-            </span>
-          </div>
-          <div className="col-md-6 col-12 mb-6">
-            <input
-              type="text"
-              placeholder="Your joining *"
-              name="selectjoining"
-              className="textbox-border"
-              {...register("selectjoining", {
-                required: "Your joining is required.",
-                pattern: {
-                  value: /^[0-9]+$/i,
-                  message: "invalid Your joining",
-                },
-                validate: (value) => {
-                  const num = parseInt(value, 10);
-                  return (
-                    (num >= 0 && num <= 20) ||
-                    "joining day must be between 0 to 20."
-                  );
-                },
-              })}
-            />
-            <span className="text-danger">
-              {errors?.selectjoining && <p>{errors.selectjoining?.message}</p>}
-            </span>
-          </div>
-          <div className="col-md-12 col-12 mb-6">
-            <input
-              type="text"
-              placeholder="Upload Resume *"
-              className="textbox-border"
-              value={fileName}
-              onClick={handleFileClick}
-              readOnly // Make the text input read-only to prevent user editing
-              {...register("uploadresume", {
-                required: "Upload Resume is required.",
-              })}
-            />
-            <input
-              type="file"
-              ref={fileInputRef}
-              onChange={handleFileChange}
-              style={{ display: "none" }} // Hide the file input
-            />
-            <span className="text-danger">
-              {errors?.uploadresume && <p>{errors.uploadresume?.message}</p>}
-            </span>
-          </div>
-          <div className="col-12 mb-6">
-            <textarea
-              name="message"
-              placeholder="Message *"
-              className="textbox-border"
-              {...register("message", {
-                required: "Message is required.",
-              })}
-            ></textarea>
-            <span className="text-danger">
-              {errors?.message && <p>{errors.message?.message}</p>}
-            </span>
-          </div>
+    <label htmlFor="name">Full Name *</label>
+    <input
+      id="name"
+      type="text"
+      placeholder="Enter Name"
+      maxLength={50}
+      className="textbox-border"
+      {...register("name", {
+        required: "Name is required.",
+        pattern: {
+          value: /^[A-Za-z\s]+$/,
+          message: "Name should contain only letters and spaces.",
+        },
+        minLength: {
+          value: 3,
+          message: "Name must be at least 3 characters.",
+        },
+        maxLength: {
+          value: 50,
+          message: "Name must not exceed 50 characters.",
+        },
+      })}
+    />
+    {errors?.name && <p className="text-danger">{errors.name.message}</p>}
+  </div>
+         {/* Email */}
+  <div className="col-md-6 col-12 mb-6">
+    <label htmlFor="email">Email Address *</label>
+    <input
+      id="email"
+      type="email"
+      placeholder="Enter Email"
+      className="textbox-border"
+      {...register("email", {
+        required: "Email is required.",
+        minLength: {
+          value: 3,
+          message: "Email must be at least 3 characters.",
+        },
+        maxLength: {
+          value: 100,
+          message: "Email must not exceed 100 characters.",
+        },
+        // ❌ No regex restriction → allows all domains
+      })}
+    />
+    {errors?.email && <p className="text-danger">{errors.email.message}</p>}
+  </div>
+ <div className="col-md-6 col-12 mb-6">
+  <label htmlFor="contactnumber">Contact Number *</label>
+  <input
+    id="contactnumber"
+    type="text"
+    placeholder="Enter Contact Number"
+    className="textbox-border"
+    maxLength={13}  // stop typing more than 13 digits
+    onInput={(e) => {
+      // Allow only digits
+      e.target.value = e.target.value.replace(/[^0-9]/g, "");
+    }}
+    {...register("contactnumber", {
+      required: "Contact Number is required.",
+      pattern: {
+        value: /^[0-9]{10,13}$/,
+        message: "Contact Number must be between 10 to 13 digits.",
+      },
+    })}
+  />
+
+  {errors?.contactnumber && (
+    <p className="text-danger">{errors.contactnumber.message}</p>
+  )}
+</div>
+
+<div className="col-md-6 col-12 mb-6">
+    <label htmlFor="lastemployedat">Last Employed At (Optional)</label>
+    <input
+      id="lastemployedat"
+      type="text"
+      placeholder="Last Employed At (Optional)"
+      className="textbox-border"
+      {...register("lastemployedat")}
+    />
+  </div>
+   <div className="col-md-6 col-12 mb-6">
+  <label htmlFor="experienceyear">Total Experience *</label>
+  <input
+    id="experienceyear"
+    type="text"
+    placeholder="e.g., 1 Year 2 Months"
+    className="textbox-border"
+    maxLength={20}
+    onInput={(e) => {
+      // Convert value to lowercase and remove invalid characters
+      let value = e.target.value.toLowerCase();
+
+      // Allow only digits, spaces, and letters
+      value = value.replace(/[^0-9a-z\s]/g, "");
+
+      // Replace multiple spaces with one
+      value = value.replace(/\s+/g, " ");
+
+      // Remove invalid repeated numbers like 000000 or 99999
+      if (/(\d)\1{3,}/.test(value)) {
+        value = value.replace(/(\d)\1{3,}/g, "$1");
+      }
+
+      e.target.value = value;
+    }}
+    {...register("experienceyear", {
+      required: "Total Experience is required.",
+      pattern: {
+        value: /^(\d{1,2}\s*(year|years|yr|yrs))?\s*(\d{1,2}\s*(month|months|mo|mos))?$/i,
+        message: "Invalid format. Example: 1 Year 2 Months",
+      },
+      validate: (value) => {
+        const years = value.match(/(\d{1,2})\s*(year|years|yr|yrs)/i);
+        const months = value.match(/(\d{1,2})\s*(month|months|mo|mos)/i);
+
+        const y = years ? parseInt(years[1], 10) : 0;
+        const m = months ? parseInt(months[1], 10) : 0;
+
+        if (y === 0 && m === 0) {
+          return "Please enter valid experience.";
+        }
+        if (y < 0 || y > 20) {
+          return "Years must be between 0 to 20.";
+        }
+        if (m < 0 || m > 11) {
+          return "Months must be between 0 to 11.";
+        }
+        return true;
+      },
+    })}
+  />
+
+  {errors?.experienceyear && (
+    <span className="text-danger">{errors.experienceyear.message}</span>
+  )}
+</div>
+
+
+         {/* <div className="col-md-6 col-12 mb-6">
+  <label htmlFor="experiencemonths">Experience Months (Optional)</label>
+  <input
+    id="experiencemonths"
+    type="text"
+    placeholder="Experience Months (Optional)"
+    className="textbox-border"
+    {...register("experiencemonths", {
+      pattern: {
+        value: /^[0-9]*$/,
+        message: "Invalid experience months.",
+      },
+      validate: (value) => {
+        if (!value) return true; // allow empty
+        const num = parseInt(value, 10);
+        return (
+          (num >= 0 && num <= 12) ||
+          "Experience Months must be between 0 to 12."
+        );
+      },
+    })}
+  />
+  <span className="text-danger">
+    {errors?.experiencemonths && (
+      <p>{errors.experiencemonths?.message}</p>
+    )}
+  </span>
+</div> */}
+
+        <div className="col-md-6 col-12 mb-6">
+  <label htmlFor="postapply">Apply for? *</label>
+ <input
+  id="postapply"
+  type="text"
+  placeholder="e.g., Software Engineer"
+  className="textbox-border"
+  onInput={(e) => {
+    // Remove any characters that are not letters or spaces
+    e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+  }}
+  {...register("postapply", {
+    required: "Apply for is required.",
+    minLength: {
+      value: 3,
+      message: "Minimum 3 characters",
+    },
+    maxLength: {
+      value: 50,
+      message: "Maximum 50 characters",
+    },
+  })}
+/>
+
+  <span className="text-danger">
+    {errors?.postapply && <p>{errors.postapply?.message}</p>}
+  </span>
+</div>
+
+        {/* <div className="col-md-6 col-12 mb-6">
+  <label htmlFor="selectjoining">Your joining *</label>
+  <input
+    id="selectjoining"
+    type="text"
+    placeholder="Your joining *"
+    className="textbox-border"
+    {...register("selectjoining", {
+      required: "Your joining is required.",
+      pattern: {
+        value: /^[0-9]+$/,
+        message: "Invalid joining value.",
+      },
+      validate: (value) => {
+        const num = parseInt(value, 10);
+        return (
+          (num >= 0 && num <= 20) ||
+          "Joining day must be between 0 to 20."
+        );
+      },
+    })}
+  />
+  <span className="text-danger">
+    {errors?.selectjoining && <p>{errors.selectjoining?.message}</p>}
+  </span>
+</div> */}
+
+       <div className="col-md-12 col-12 mb-6">
+  <label htmlFor="uploadresume">Upload Resume (PDF / DOC / DOCX) *</label>
+
+  <input
+    type="text"
+    placeholder="Upload Resume *"
+    className="textbox-border"
+    value={fileName}
+    onClick={handleFileClick}
+    readOnly
+    {...register("uploadresume", {
+      required: "Upload Resume is required.",
+      validate: {
+        isValidFile: () => {
+          const file = fileInputRef.current?.files?.[0];
+          if (!file) return "Upload Resume is required.";
+
+          const allowedTypes = [
+            "application/pdf",
+            "application/msword",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          ];
+
+          return (
+            allowedTypes.includes(file.type) ||
+            "Only PDF, DOC or DOCX files are allowed."
+          );
+        },
+      },
+    })}
+  />
+
+  <input
+    type="file"
+    ref={fileInputRef}
+    onChange={handleFileChange}
+    accept=".pdf,.doc,.docx"
+    style={{ display: "none" }}
+  />
+
+  <span className="text-danger">
+    {errors?.uploadresume && <p>{errors.uploadresume?.message}</p>}
+  </span>
+</div>
+
+<div className="col-12 mb-6">
+  <label htmlFor="message">Message *</label>
+  <textarea
+    id="message"
+    name="message"
+    placeholder="Message *"
+    className="textbox-border"
+    {...register("message", {
+      required: "Message is required.",
+      minLength: {
+        value: 10,
+        message: "Message must be at least 10 characters.",
+      },
+      maxLength: {
+        value: 500,
+        message: "Message cannot exceed 500 characters.",
+      },
+    })}
+  ></textarea>
+
+  <span className="text-danger">
+    {errors?.message && <p>{errors.message?.message}</p>}
+  </span>
+</div>
+
 
           <div className="col-12 mb-6">
             <ReCAPTCHA

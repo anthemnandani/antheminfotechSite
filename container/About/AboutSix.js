@@ -24,6 +24,7 @@ const AboutSix = ({ classOption }) => {
   return (
     <div
       className={`section section-padding-top technology-section-padding-bottom-180 ${classOption}`}
+      style={{ paddingTop: "20px" }}
     >
       <div className="container">
         <div className="row">

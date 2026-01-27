@@ -28,7 +28,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className={`section section-padding-top ${classOption}`}>
+    <div className={`section section-padding-top ${classOption}`} style={{paddingTop:"10px"}}>
       <div className="container">
         <div className="row">
           <div className="col-xl-7 col-lg-6 col-12" data-aos="fade-up">

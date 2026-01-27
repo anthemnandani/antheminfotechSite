@@ -22,7 +22,7 @@ const HomeSuccess = ({ classOption }) => {
     }, []);
 
     return (
-        <div className={`section section-padding-top success-section-padding-bottom-180 ${classOption}`}>
+        <div className={`section section-padding-top success-section-padding-bottom-180 ${classOption}`}style={{paddingBottom:"10px",paddingTop:"30px"}}>
             <div className="container">
                 <div className="row">
 

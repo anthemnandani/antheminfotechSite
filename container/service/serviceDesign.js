@@ -4,6 +4,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import IconBoxService from "../../components/IconBox/IconBoxService";
+import { style } from "d3-selection";
 
 const ServiceDesign = ({ service, classOption }) => {
   if (!service?.length || !service[0]?.key_services) {
@@ -12,7 +13,8 @@ const ServiceDesign = ({ service, classOption }) => {
 
   return (
     <div
-      className={`section section-padding-top section-padding-bottom ${classOption}`}
+      className={`section section-padding-top section-padding-bottom ${classOption}` }
+      style={{ paddingTop: "10px"}}
     >
       <Container>
         <Row>

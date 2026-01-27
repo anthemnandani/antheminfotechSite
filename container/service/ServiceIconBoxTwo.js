@@ -23,7 +23,12 @@ const ServiceIconBoxTwo = ({ classOption }) => {
 
   return (
     <div
-      className={`section section-padding-t90 section-padding-bottom ${classOption}`}
+      className={`section section-padding-t90 section-padding-b90 ${classOption}`}
+      style={{
+    paddingTop: "30px",
+    paddingBottom: "10px",
+ 
+  }}
     >
       <div className="container">
         <SectionTitle
@@ -57,7 +62,7 @@ const ServiceIconBoxTwo = ({ classOption }) => {
           </div>
         </div>
 
-        <div className="col-12 d-flex justify-content-center mt-16">
+        <div className="col-12 d-flex justify-content-center mt-10 ">
           <Link href="/technologies" passHref>
             <button
               type="button"
