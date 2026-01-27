@@ -65,6 +65,7 @@ const onSubmit = async (data) => {
         formData,
         {
           headers: {
+             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`, // ✅ no Content-Type here
           },
         }

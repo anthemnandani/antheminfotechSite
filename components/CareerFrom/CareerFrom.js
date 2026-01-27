@@ -82,7 +82,7 @@ const onSubmit = async (data) => {
   try {
     if (token && recaptchaToken) {
       const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URl}/api/Career/ApplyforJobCareer`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/Career/ApplyforJobCareer`,
         formData,
         {
           headers: {

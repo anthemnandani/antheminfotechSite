@@ -50,7 +50,7 @@ const RequestQuote = () => {
           email: data.email,
           number: data.contactnumber,
           // website: data.website,
-          website: data.website?.trim() || null,
+        website: data.website?.trim() || "",
           message: data.message,
           goal: data.goal.join(","),
         };
@@ -64,7 +64,7 @@ const RequestQuote = () => {
             },
           }
         );
-
+       console.log("Response from API:", response);
         if (response.status === 200) {
           Swal.fire({
             title: response.data.msg,
