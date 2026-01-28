@@ -78,7 +78,6 @@ const onSubmit = async (data) => {
   formData.append("uploadresume", data.uploadresume);
   formData.append("SelectJoining", data.selectjoining);
   formData.append("PostApply", data.postapply);
-
   try {
     if (token && recaptchaToken) {
       const res = await axios.post(
@@ -91,7 +90,6 @@ const onSubmit = async (data) => {
           },
         }
       );
-
       if (res.status === 200) {
         Swal.fire({ title: res.data.msg, icon: "success" });
         reset();
@@ -385,13 +383,15 @@ const onSubmit = async (data) => {
   </span>
 </div>
 
-        {/* <div className="col-md-6 col-12 mb-6">
-  <label htmlFor="selectjoining">Your joining *</label>
+        <div className="col-md-12 col-12 mb-6">
+  <label htmlFor="selectjoining"> In how many days can you join?*</label>
   <input
     id="selectjoining"
-    type="text"
-    placeholder="Your joining *"
+    type="number"
+    placeholder="0 – 99 days"
     className="textbox-border"
+      min={0}
+    max={99}
     {...register("selectjoining", {
       required: "Your joining is required.",
       pattern: {
@@ -410,7 +410,7 @@ const onSubmit = async (data) => {
   <span className="text-danger">
     {errors?.selectjoining && <p>{errors.selectjoining?.message}</p>}
   </span>
-</div> */}
+</div>
 
        <div className="col-md-12 col-12 mb-6">
   <label htmlFor="uploadresume">Upload Resume (PDF / DOC / DOCX) *</label>

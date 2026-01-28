@@ -27,8 +27,10 @@ const Breadcrumb = ({ title, content, contentTwo, contentThree, image }) => {
        {`
       @media (max-width: 768px) {
         .page-title-section {
-          min-height: 70vh;     /* more height on mobile */
-          padding-top: 20px;  /* pushes content below header */
+          min-height:50vh;     /* more height on mobile */
+          padding-top:100px;
+           padding-bottom:10px;
+          /* pushes content below header */
          
         }
       }

@@ -36,10 +36,18 @@ const Brand = ({ data }) => {
             img.onerror = null;
         };
     }, [data]);
-
+  const Wrapper = data?.websiteAddress ? "a" : "div";
     return (
         <div className="brand-item">
-          
+            <Wrapper
+        href={data?.websiteAddress}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "inline-block",
+          cursor: data?.websiteAddress ? "pointer" : "default",
+        }}
+      >
                 <div className="image-container position-relative" style={{ width: 200, height: 100 }}>
                     {(!data || !data.logo1 || imageStatus === "loading") && (
                         <Skeleton
@@ -83,7 +91,7 @@ const Brand = ({ data }) => {
                         />
                     )}
                 </div>
-         
+         </Wrapper>
         </div>
     );
 };
