@@ -9,7 +9,7 @@ const Faq = ({ classOption }) => {
   const sceneEl = useRef(null);
 
   return (
-    <div className={`faq-section section section-padding-top ${classOption}`}style={{paddingTop:"20px", paddingBottom:"20px"}}>
+    <div className={`faq-section section section-padding-top ${classOption}`}style={{paddingTop:"25px", paddingBottom:"0px"}}>
       <div className="container">
         <div className="row row-cols-lg-1 row-cols-1 mb-n6">
           {/* FAQ Content */}

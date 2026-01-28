@@ -2727,11 +2727,11 @@ function NewNavBar() {
                                 <span className="menu-text">About Us</span>
                             </Link>
                             <ul className="sub-menu">
-                                <li>
+                                {/* <li>
                                     <Link href="/about-us">
                                         <span className="menu-text">About Us</span>
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li>
                                     <Link href="/faqs">
                                         <span className="menu-text">FAQs</span>

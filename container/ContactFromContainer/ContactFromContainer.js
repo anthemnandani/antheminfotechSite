@@ -6,7 +6,7 @@ const ContactFromContainer = ({ classOption }) => {
   return (
     <div
       className={`contact-form-section section section-padding-t90-b100 ${classOption}`}
-      style={{ paddingTop: "10px", marginTop:"0px",paddingBottom:"10px" }}
+      style={{ paddingTop: "20px", marginTop:"0px",paddingBottom:"30px" }}
     >
       <div className="container">
         <div className="row">

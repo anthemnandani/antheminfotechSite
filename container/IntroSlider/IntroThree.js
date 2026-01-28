@@ -12,11 +12,12 @@ const IntroThree = () => {
       overlayColor="rgba(0,0,0,0.4)"
       className="intro-section bg-video"
     >
-      <div className="container">
+      <div className="container h-65 mt-0">
         <div className="row row-cols-lg-1 row-cols-1">
           <div className="col align-self-center">
-            <div className="intro-content-two headline-active text-center mt-xl-8 mt-lg-8 mt-md-8 mt-sm-8 mt-xs-8">
-              <h1 className="title ah-headline">
+            {/* <div className="intro-content-two headline-active text-center mt-md-8 mt-sm-8 mt-xs-8"> */}
+                 <div className="intro-content-two headline-active text-center">
+              <h1 className="title ah-headline pt-0">
                 Contact Us For{" "}
                 <span className="text-color-span">
                   <Typewriter

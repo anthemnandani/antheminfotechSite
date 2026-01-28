@@ -10,7 +10,7 @@ const TestimonialContainer = ({ classOption }) => {
   const sliderOptions = {
   loop: true,
   autoplay: {
-    delay: 3000,
+    delay: 15000,
     disableOnInteraction: false,
   },
   pagination: {
@@ -53,8 +53,10 @@ const TestimonialContainer = ({ classOption }) => {
 
   return (
     <div
-      className={`testimonial-section section section-padding-t90 section-padding-bottom  ${classOption}`}>
-      <div className="container-fluid ps-xl-16 ps-lg-3 ps-md-3 ps-sm-3 ps-3 pe-xl-16 pe-lg-3 pe-md-3 pe-sm-3 pe-3">
+      className={`testimonial-section section section-padding-t90 section-padding-bottom  ${classOption}`} style={{paddingTop:"0px"}}>
+      {/* <div className="container-fluid ps-xl-16 ps-lg-3 ps-md-3 ps-sm-3 ps-3 pe-xl-16 pe-lg-3 pe-md-3 pe-sm-3 pe-3"> */}
+      <div className="container-fluid ps-xl-0 ps-lg-2 ps-md-3 ps-sm-3 ps-3 pe-xl-16 pe-lg-3 pe-md-3 pe-sm-3 pe-3">
+
         <SectionTitle
           headingOption="title fz-28"
           title="Our Clients Speak for Us"

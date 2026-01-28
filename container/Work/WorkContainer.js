@@ -218,7 +218,7 @@ if (slug) {
       .join(" ");
 const cleanSlug = slug?.replace(/-/g, " ");
   return (
-    <div className={`section section-padding-t90-b100 ${classOption}`} style={{paddingTop:"10px"}}>
+    <div className={`section section-padding-t90-b100 ${classOption}`} style={{paddingTop:"20px"}}>
       <div className="container">
         <SectionTitle
           headingOption="title fz-32"

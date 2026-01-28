@@ -42,6 +42,7 @@
 
 
 "use client";
+import { style } from "d3-selection";
 import React, { useEffect, useState } from "react";
 
 function BackgroundVideo({ videoSrc, overlayColor, children, className }) {
@@ -64,8 +65,8 @@ function BackgroundVideo({ videoSrc, overlayColor, children, className }) {
 
   return (
     <div
-      className={`position-relative overflow-hidden w-100 ${className}`}
-     
+      className={`position-relative overflow-hidden  w-100 ${className}` }
+
     >
       <video
         className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
@@ -88,7 +89,7 @@ function BackgroundVideo({ videoSrc, overlayColor, children, className }) {
         />
       )}
 
-      <div className="position-relative z-index-1">{children}</div>
+      <div className="position-relative z-index-1 h-100">{children}</div>
     </div>
   );
 }

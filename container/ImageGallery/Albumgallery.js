@@ -94,7 +94,7 @@ useEffect(()=>{
 },[]);
   
   return (
-    <div className={`section section-padding-t90-b100 ${classOption}`}style={{paddingTop:"10px",paddingBottom:"10px"}}>
+    <div className={`section section-padding-t90-b100 ${classOption}`}style={{paddingTop:"20px",paddingBottom:"10px"}}>
       <div className="container">
         <SectionTitle
           headingOption="title fz-32"

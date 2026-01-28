@@ -1,4 +1,6 @@
 import React from "react";
+import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
+import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import IntroThree from "@/container/IntroSlider/IntroThree";
 import ContactInformation from "../../container/ContactInformation/ContactInformation";
 import GoogleMap from "../../container/Map/GoogleMap";
@@ -82,11 +84,36 @@ const ContactUs = () => {
           __html: JSON.stringify(structuredData),
         }}
       />
+         {/* BreadcrumbList Schema */}
+  <BreadcrumbSchema
+    items={[
+      {
+        name: "Home",
+        url: "https://antheminfotech.com/",
+      },
+      {
+        name: "Contact Us",
+        url: "https://antheminfotech.com/contact-us",
+      },
+    ]}
+  />
+      {/* Breadcrumb */}
+      <Breadcrumb
+        image="/images/bg/breadcrumb-bg.webp"
+        title="Get in Touch with Anthem Infotech"
+        content="Home"
+        contentTwo="Contact Us"
+      />
       
+        <ContactInformation classOption="bg-white" />
+         <ContactFromContainer classOption="background-1" />
       <IntroThree />
+       <GoogleMap classOption="bg-white" />
+      
+      {/* <IntroThree />
       <ContactInformation classOption="bg-white" />
       <GoogleMap classOption="bg-white" />
-      <ContactFromContainer classOption="background-1" />
+      <ContactFromContainer classOption="background-1" /> */}
     </>
   );
 };

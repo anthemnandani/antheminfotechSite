@@ -5,7 +5,7 @@ const GoogleMap = ({ classOption }) => {
   return (
     <div
       className={`google-map-area section text-center  ${classOption}`}
-     
+     style={{paddingTop:"30px",paddingBottom:"20px"}}
     >
       <div className="container">
         <div className="contact-map-area" data-aos="fade-up">

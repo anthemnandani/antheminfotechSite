@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Testimonial = ({ data }) => {
   return (
-    <div className="static-testimonial mb-6">
+    <div className="static-testimonial mb-6" >
       <div className="testimonial-image">
         <Image
           src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}${data.image}`}
@@ -16,12 +16,8 @@ const Testimonial = ({ data }) => {
         />
       </div>
       <div className="testimonial-content">
-        {/* <p>{data.desc}</p> */}
-        <p title={data.desc}>
-  {data.desc.length > 140
-    ? data.desc.slice(0, 140) + "..."
-    : data.desc}
-</p>
+        <p  style={{ fontSize: "16px", fontWeight: "500",textAlign: "justify" }}>{data.desc}</p>
+
 
       </div>
       <div className="author-info">

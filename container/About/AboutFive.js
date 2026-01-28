@@ -31,7 +31,7 @@ useEffect(() => {
   return (
     <div
       className={`section section-padding-top section-padding-bottom-150 ${classOption}`}
-      style={{ paddingTop: "20px",paddingBottom:"20px"}}
+      style={{ paddingTop: "30px",paddingBottom:"20px"}}
     >
       <div className="container">
         <div className="row">

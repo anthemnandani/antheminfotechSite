@@ -157,7 +157,7 @@ const truncateText = (text, limit) => {
 };
 
   return (
-    <div className="section section-padding-top brand-section section-padding-bottom background-1"style={{paddingTop:"20px"}}>
+    <div className="section section-padding-top brand-section section-padding-bottom background-1"style={{paddingTop:"30px" , paddingBottom:"30px"}}>
       <Container className="new-custom-tabs mb-6">
         <div className="custom-tabs">
           {industrySolutions.map((solution, index) => (
@@ -222,7 +222,7 @@ const truncateText = (text, limit) => {
           ))}
         </div>
 
-        <div className="mt-4 ind-project-pattion">
+        <div className="mt-0 ind-project-pattion">
           <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 mb-n6">
             {loading ? (
               <Loader />

@@ -5,6 +5,7 @@ import CounterUpData from '../../data/counter/counterText.json';
 import CounterUpItem from '../../components/CounterUp/CounterUpItem.jsx';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { style } from "d3-selection";
 
 const Funfact = ({ classOption }) => {
   useEffect(() => {
@@ -12,7 +13,8 @@ const Funfact = ({ classOption }) => {
   }, []);
 
   return (
-    <div className={`section section-padding-bottom ${classOption}`}>
+    // <div className={`section section-padding-bottom ${classOption}`} style={{ paddingTop: "20px"}}>
+    <div className={`section  ${classOption}`} style={{ paddingTop: "20px"}}>
       <div className="container">
         <div className="row">
           <div className="col-lg-12 mx-auto">

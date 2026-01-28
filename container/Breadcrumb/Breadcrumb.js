@@ -14,7 +14,7 @@ const Breadcrumb = ({ title, content, contentTwo, contentThree, image }) => {
         backgroundImage: `url(${publicUrl}/${image})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
-       height: "280px",
+       height: "220px",
        
       }}
       

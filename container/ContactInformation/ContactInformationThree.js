@@ -19,16 +19,16 @@ const ContactInformationThree = () => {
     return () => parallaxInstance.disable();
   }, []);
   return (
-    <div className="section section-padding contact-section " style={{ paddingTop: "0px", paddingBottom: "0px", backgroundColor:"white"}}>
-      <div className="container">
+    <div className="section section-padding contact-section" style={{ paddingTop: "0px", paddingBottom: "0px", backgroundColor:"white"}}>
+      <div className="container ">
         <div
           className="col mt-lg-0 mt-md-10 mt-8"
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <div className="contact-form-area">
+          <div className="contact-form-area" style={{paddingTop:"10px",paddingBottom:"20px"}}>
             <SectionTitle
-              titleOption="section-title text-center mb-7"
+              titleOption="section-title text-center mb-1"
               headingOption="title fz-28"
               title="Let's discuss the Project"
               subTitle="Ready for a Conversation?"

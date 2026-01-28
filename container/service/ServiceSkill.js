@@ -20,7 +20,7 @@ const ServiceSkill = ({ classOption }) => {
     <div
       className={`section  skill-section-padding-bottom ${classOption}`}
       data-bg-color="#f8faff"
-      style={{ paddingTop: "10px"}}
+      style={{ paddingTop: "20px"}}
     >
       <div className="container">
         <div className="row">

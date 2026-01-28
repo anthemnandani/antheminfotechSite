@@ -102,24 +102,24 @@ const footerData = [
               className="footer-social-inline"
               style={{ display: "flex", gap: "10px" }}
             >
-              <a href="https://x.com/antheminfotech" aria-label="Twitter">
+              <a href="https://x.com/antheminfotech" aria-label="Twitter" target="_blank">
                 <i className="fa-brands fa-square-x-twitter" />
               </a>
               <a
                 href="https://www.facebook.com/AnthemInfotech"
-                aria-label="Facebook"
+                aria-label="Facebook"  target="_blank"
               >
                 <i className="fab fa-facebook-square" />
               </a>
               <a
                 href="https://www.instagram.com/antheminfotech"
-                aria-label="Instagram"
+                aria-label="Instagram" target="_blank"
               >
                 <i className="fab fa-instagram" />
               </a>
               <a
                 href="https://in.linkedin.com/company/anthem-infotech-pvt-ltd-"
-                aria-label="LinkedIn"
+                aria-label="LinkedIn" target="_blank"
               >
                 <i className="fa-brands fa-linkedin" />
               </a>

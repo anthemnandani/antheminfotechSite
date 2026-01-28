@@ -69,12 +69,12 @@ const BrandContainer = ({ classOption }) => {
   if (!brandData.length) return null; // Don't render empty Swiper
 
   return (
-    <section className={`brand-section  ${classOption}`}style={{ paddingBottom: "30px" }}>
+    <section className={`brand-section  ${classOption}`}style={{ paddingBottom:"20px" }}>
       <div className="container">
         <div className="row">
           <div className="col-lg-12" data-aos="fade-up">
             <div className="brand-wrapper">
-              <div className="brand-list">
+              <div className="brand-list " style={{marginTop:"20px"}}>
                 <Swiper
                   key={brandData.length} // Re-initialize Swiper if data changes
                   className="brand-carousel"
