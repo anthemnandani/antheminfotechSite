@@ -27,7 +27,7 @@ const WorkDetailsContainer = ({ projects, loading, classOption }) => {
       .join(" ");
 
   return (
-    <div className={`section section-padding ${classOption}`}>
+    <div className={`section section-padding ${classOption}`} style={{paddingTop:"20px"}}>
       {loading ? (
         <Loader />
       ) : (
@@ -87,7 +87,11 @@ const WorkDetailsContainer = ({ projects, loading, classOption }) => {
                         .map((highlight) => highlight.trim())
                         .filter((highlight) => highlight)
                         .map((highlight, index) => (
-                          <Link key={index} href={`#`}>
+                          <Link key={index} href={`#`} style={{
+          cursor: "default",
+          textDecoration: "none",
+          pointerEvents: "none", 
+        }}>
                             {toTitleCase(highlight)}
                           </Link>
                         ))}
