@@ -260,11 +260,12 @@ const onSubmit = async (data) => {
 </div>
 
 <div className="col-md-6 col-12 mb-6">
-    <label htmlFor="lastemployedat">Last Employed At (Optional)</label>
+    <label htmlFor="lastemployedat">Last Employed At *</label>
     <input
       id="lastemployedat"
       type="text"
-      placeholder="Last Employed At (Optional)"
+        placeholder="e.g. Company Name or Fresher"
+        required
       className="textbox-border"
       {...register("lastemployedat")}
     />
@@ -385,7 +386,7 @@ const onSubmit = async (data) => {
   </span>
 </div>
 
-      <div className="col-md-12 col-12 mb-6">
+      <div className="col-md-6 col-12 mb-6">
   <label htmlFor="selectjoining">
     In how many days can you join? <span className="text-danger">*</span>
   </label>
@@ -422,7 +423,7 @@ const onSubmit = async (data) => {
 </div>
 
 
-       <div className="col-md-12 col-12 mb-6">
+       <div className="col-md-6 col-12 mb-6">
   <label htmlFor="uploadresume">Upload Resume (PDF / DOC / DOCX) *</label>
 
   <input
