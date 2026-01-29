@@ -1,5 +1,6 @@
 
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 import contactDataTwo from "../../data/contactInfo/contactInfoTwo.json";
 import ContactInfoItem from "../../components/ContactInfo/ContactInfoItemTwo.jsx";
 import SectionTitle from "../../components/SectionTitles/SectionTitle";
@@ -31,9 +32,25 @@ const ContactInformationThree = () => {
               titleOption="section-title text-center mb-1"
               headingOption="title fz-28"
               title="Let's discuss the Project"
-              subTitle="Ready for a Conversation?"
+              subTitle="Ready For a Conversation?"
             />
-            <ProjectForm classOption="background-1" />
+          
+             <div className="col-12 text-center">
+
+              <Link href="/request-a-quote">
+              
+                <button
+        type="submit"
+        className="btn btn-bottom"
+        data-hover="Get a Free Consultation"
+        style={{ background: "#0e6497" }}
+      >
+        Get a Free Consultation
+      </button>
+              </Link>
+    
+    </div>
+            {/* <ProjectForm classOption="background-1" /> */}
           </div>
         </div>
       </div>

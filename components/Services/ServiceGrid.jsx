@@ -76,10 +76,10 @@ useEffect(() => {
             <p className="justify-content">{service.at(0).why_choose_us}</p>
 
             <Link href="/request-a-quote" className="btn btn btn-bottom mt-xl-12 mt-lg-8 mt-md-6 mt-4"
-                data-hover="Get A Quote"
+                data-hover="Get a Quote"
                 style={{ background: "#0e6497" }} passHref>
            
-                Get A Quote
+                Get a Quote
              
             </Link>
           </div>

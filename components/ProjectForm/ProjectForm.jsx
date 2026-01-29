@@ -84,7 +84,7 @@ const ProjectForm = () => {
       <button
         type="submit"
         className="btn btn-bottom"
-        data-hover="Get a free consultation"
+        data-hover="Get a Free Consultation"
         style={{ background: "#0e6497" }}
       >
         Get a free consultation

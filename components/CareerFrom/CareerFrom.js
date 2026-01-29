@@ -65,7 +65,9 @@ const onSubmit = async (data) => {
 
   const experienceYear = yearsMatch ? Number(yearsMatch[1]) : 0;
   const experienceMonth = monthsMatch ? Number(monthsMatch[1]) : 0;
-
+  const joiningDays = data.selectjoining
+  ? `${parseInt(data.selectjoining, 10)} days`
+  : "";
   const formData = new FormData();
   formData.append("file", fileInputRef.current?.files[0]);
   formData.append("Name", data.name);
@@ -76,7 +78,7 @@ const onSubmit = async (data) => {
   formData.append("TextArea", data.message);
   formData.append("LastEmployedAt", data.lastemployedat);
   formData.append("uploadresume", data.uploadresume);
-  formData.append("SelectJoining", data.selectjoining);
+  formData.append("SelectJoining", joiningDays);
   formData.append("PostApply", data.postapply);
   try {
     if (token && recaptchaToken) {
@@ -383,34 +385,42 @@ const onSubmit = async (data) => {
   </span>
 </div>
 
-        <div className="col-md-12 col-12 mb-6">
-  <label htmlFor="selectjoining"> In how many days can you join?*</label>
+      <div className="col-md-12 col-12 mb-6">
+  <label htmlFor="selectjoining">
+    In how many days can you join? <span className="text-danger">*</span>
+  </label>
+
   <input
     id="selectjoining"
-    type="number"
-    placeholder="0 – 99 days"
+    type="text"
+    placeholder="0 – 99"
     className="textbox-border"
-      min={0}
-    max={99}
+    maxLength={2}
+    inputMode="numeric"     // mobile numeric keyboard
+    onInput={(e) => {
+      // Allow only digits
+      e.target.value = e.target.value.replace(/\D/g, "");
+    }}
     {...register("selectjoining", {
-      required: "Your joining is required.",
-      pattern: {
-        value: /^[0-9]+$/,
-        message: "Invalid joining value.",
-      },
+      required: "Joining availability is required.",
       validate: (value) => {
-        const num = parseInt(value, 10);
-        return (
-          (num >= 0 && num <= 20) ||
-          "Joining day must be between 0 to 20."
-        );
+        const num = Number(value);
+
+        if (isNaN(num)) return "Please enter a number.";
+        if (value.length > 2) return "Maximum 2 digits allowed.";
+        if (num < 0 || num > 99)
+          return "Joining days must be between 0 and 99.";
+
+        return true;
       },
     })}
   />
-  <span className="text-danger">
-    {errors?.selectjoining && <p>{errors.selectjoining?.message}</p>}
-  </span>
+
+  {errors?.selectjoining && (
+    <p className="text-danger">{errors.selectjoining.message}</p>
+  )}
 </div>
+
 
        <div className="col-md-12 col-12 mb-6">
   <label htmlFor="uploadresume">Upload Resume (PDF / DOC / DOCX) *</label>

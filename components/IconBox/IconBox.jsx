@@ -41,8 +41,8 @@ const IconBox = ({ data, classOption }) => {
 
     return (
         <div className={`icon-box equal-height text-center ${classOption}`}>
-          
-                <div className="icon">
+          <Link href={data.link}>
+          <div className="icon">
                     <ReactVivus
                         id={`servicesvg-${data.id}`}
                         option={{
@@ -59,6 +59,8 @@ const IconBox = ({ data, classOption }) => {
                         <p>{data.desc}</p>
                     </div>
                 </div>
+          </Link>
+                
           
         </div>
     );
