@@ -217,7 +217,7 @@ const onSubmit = async (data) => {
   <input
     type="tel"
     className="textbox-border"
-    placeholder="Enter 10-digit phone number"
+    placeholder="Enter contact number"
     maxLength={13}
     {...register("contactnumber", {
       required: "Contact number is required.",

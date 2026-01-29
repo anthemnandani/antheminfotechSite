@@ -265,9 +265,10 @@ const onSubmit = async (data) => {
       id="lastemployedat"
       type="text"
         placeholder="e.g. Company Name or Fresher"
-        required
       className="textbox-border"
-      {...register("lastemployedat")}
+    {...register("lastemployedat", {
+      required: "Last employed field is required. Enter company name or Fresher.",
+    })}
     />
   </div>
    <div className="col-md-6 col-12 mb-6">
