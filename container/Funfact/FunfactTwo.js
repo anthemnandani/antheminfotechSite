@@ -6,7 +6,7 @@ import CounterUpItem from "../../components/CounterUp/CounterUpItem.jsx";
 
 const FunfactTwo = ({ classOption = "" }) => {
   return (
-    <section className={`section section-padding-t90 ${classOption}`} style={{ paddingTop: "20px",height: "280px"}}>
+    <section className={`section section-padding-t90 ${classOption}`} style={{ paddingTop: "20px",paddingBottom: "40px",}}>
       <div className="container">
         <div className="section-title text-center">
           <h2 className="title fz-32">

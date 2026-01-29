@@ -23,7 +23,7 @@ const ContactInformationThree = () => {
     <div className="section section-padding contact-section" style={{ paddingTop: "0px", paddingBottom: "0px", backgroundColor:"white"}}>
       <div className="container ">
         <div
-          className="col mt-lg-0 mt-md-10 mt-8"
+          className="col mt-lg-0 mt-md-10"
           data-aos="fade-up"
           data-aos-delay="300"
         >
@@ -34,11 +34,8 @@ const ContactInformationThree = () => {
               title="Let's discuss the Project"
               subTitle="Ready For a Conversation?"
             />
-          
              <div className="col-12 text-center">
-
               <Link href="/request-a-quote">
-              
                 <button
         type="submit"
         className="btn btn-bottom"
@@ -48,7 +45,6 @@ const ContactInformationThree = () => {
         Get a Free Consultation
       </button>
               </Link>
-    
     </div>
             {/* <ProjectForm classOption="background-1" /> */}
           </div>
