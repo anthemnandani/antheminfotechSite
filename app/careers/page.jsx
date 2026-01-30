@@ -118,7 +118,7 @@ const Career = () => {
       {/* Breadcrumb */}
       <Breadcrumb
         image="/images/bg/breadcrumb-bg.webp"
-        title="Explore Career Opportunities with Anthem Infotech"
+        title="Explore <span class='text-color-span'>Career Opportunities</span> with Anthem Infotech"
         content="Home"
         contentTwo="Career"
       />

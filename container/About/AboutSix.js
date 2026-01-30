@@ -68,7 +68,7 @@ const AboutSix = ({ classOption }) => {
           >
             <div className="about-content-area">
               <SectionTitleTwo
-                subTitle="Innovative &amp; cutting-edge technology"
+                // subTitle="Innovative &amp; cutting-edge technology"
                 title="Have a Project in Mind? Let's Bring It to Life!"
               />
 
@@ -81,9 +81,9 @@ const AboutSix = ({ classOption }) => {
                <Link href="/contact-us" passHref>
             <button
               type="button"
-              className="btn btn-bottom"
+              className="btn btn-bottom mt-4"
               data-hover="Get Started"
-              style={{ background: "#0e6497", margin: "0px auto" }}
+              style={{ background: "#0e6497", margin: "0px auto"}}
             >
              Get Started
             </button>

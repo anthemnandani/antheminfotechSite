@@ -84,7 +84,7 @@ const Technologies = () => {
   /> 
       <Breadcrumb
         image="/images/bg/portfoliobg.webp"
-        title="Technologies Powering Our Innovative Solutions"
+        title="<span  class='text-color-span'>Technologies</span> Powering Our  <span  class='text-color-span'>Innovative Solutions</span>"
         content="Home"
         contentTwo="Technologies"
       />

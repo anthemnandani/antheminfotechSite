@@ -257,12 +257,31 @@ const RequestQuote = () => {
           <div className="col-md-7">
             <div>
               <label>
-                <input
-                  type="checkbox"
-                  value="Web Development"
-                  {...register("goal")}
-                  required
-                />
+              <input
+  type="checkbox"
+  value="Web Development"
+  {...register("goal")}
+  required
+  style={{
+    appearance: "none",
+    WebkitAppearance: "none",
+    width: "16px",
+    height: "16px",
+    backgroundColor: "#fff",
+    border: "2px solid #000",
+    cursor: "pointer",
+    display: "inline-block",
+    verticalAlign: "middle",
+  }}
+  onChange={(e) => {
+    e.target.style.backgroundImage = e.target.checked
+      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
+      : "none";
+    e.target.style.backgroundRepeat = "no-repeat";
+    e.target.style.backgroundPosition = "center";
+  }}
+/>
+
                 &nbsp;Web Development
               </label>
             </div>
@@ -272,6 +291,24 @@ const RequestQuote = () => {
                   type="checkbox"
                   value="Web Applications"
                   {...register("goal")}
+                  style={{
+    appearance: "none",
+    WebkitAppearance: "none",
+    width: "16px",
+    height: "16px",
+    backgroundColor: "#fff",
+    border: "2px solid #000",
+    cursor: "pointer",
+    display: "inline-block",
+    verticalAlign: "middle",
+  }}
+  onChange={(e) => {
+    e.target.style.backgroundImage = e.target.checked
+      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
+      : "none";
+    e.target.style.backgroundRepeat = "no-repeat";
+    e.target.style.backgroundPosition = "center";
+  }}
                 />
                 &nbsp; Web Applications
               </label>
@@ -281,7 +318,24 @@ const RequestQuote = () => {
                 <input
                   type="checkbox"
                   value="Mobile App Development"
-                  {...register("goal")}
+                  {...register("goal")}style={{
+    appearance: "none",
+    WebkitAppearance: "none",
+    width: "16px",
+    height: "16px",
+    backgroundColor: "#fff",
+    border: "2px solid #000",
+    cursor: "pointer",
+    display: "inline-block",
+    verticalAlign: "middle",
+  }}
+  onChange={(e) => {
+    e.target.style.backgroundImage = e.target.checked
+      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
+      : "none";
+    e.target.style.backgroundRepeat = "no-repeat";
+    e.target.style.backgroundPosition = "center";
+  }}
                 />
                 &nbsp; Mobile App Development
               </label>
@@ -291,7 +345,24 @@ const RequestQuote = () => {
                 <input
                   type="checkbox"
                   value="On-Demand Dedicated Talent"
-                  {...register("goal")}
+                  {...register("goal")}style={{
+    appearance: "none",
+    WebkitAppearance: "none",
+    width: "16px",
+    height: "16px",
+    backgroundColor: "#fff",
+    border: "2px solid #000",
+    cursor: "pointer",
+    display: "inline-block",
+    verticalAlign: "middle",
+  }}
+  onChange={(e) => {
+    e.target.style.backgroundImage = e.target.checked
+      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
+      : "none";
+    e.target.style.backgroundRepeat = "no-repeat";
+    e.target.style.backgroundPosition = "center";
+  }}
                 />
                 &nbsp; On-Demand Dedicated Talent
               </label>
@@ -305,7 +376,24 @@ const RequestQuote = () => {
                 <input
                   type="checkbox"
                   value="Design"
-                  {...register("goal")}
+                  {...register("goal")}style={{
+    appearance: "none",
+    WebkitAppearance: "none",
+    width: "16px",
+    height: "16px",
+    backgroundColor: "#fff",
+    border: "2px solid #000",
+    cursor: "pointer",
+    display: "inline-block",
+    verticalAlign: "middle",
+  }}
+  onChange={(e) => {
+    e.target.style.backgroundImage = e.target.checked
+      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
+      : "none";
+    e.target.style.backgroundRepeat = "no-repeat";
+    e.target.style.backgroundPosition = "center";
+  }}
                 />
                 &nbsp; Design
               </label>
@@ -315,7 +403,24 @@ const RequestQuote = () => {
                 <input
                   type="checkbox"
                   value="Digital Marketing"
-                  {...register("goal")}
+                  {...register("goal")}style={{
+    appearance: "none",
+    WebkitAppearance: "none",
+    width: "16px",
+    height: "16px",
+    backgroundColor: "#fff",
+    border: "2px solid #000",
+    cursor: "pointer",
+    display: "inline-block",
+    verticalAlign: "middle",
+  }}
+  onChange={(e) => {
+    e.target.style.backgroundImage = e.target.checked
+      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
+      : "none";
+    e.target.style.backgroundRepeat = "no-repeat";
+    e.target.style.backgroundPosition = "center";
+  }}
                 />
                 &nbsp; Digital Marketing
               </label>
@@ -325,7 +430,24 @@ const RequestQuote = () => {
                 <input
                   type="checkbox"
                   value="QA and Testing"
-                  {...register("goal")}
+                  {...register("goal")}style={{
+    appearance: "none",
+    WebkitAppearance: "none",
+    width: "16px",
+    height: "16px",
+    backgroundColor: "#fff",
+    border: "2px solid #000",
+    cursor: "pointer",
+    display: "inline-block",
+    verticalAlign: "middle",
+  }}
+  onChange={(e) => {
+    e.target.style.backgroundImage = e.target.checked
+      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
+      : "none";
+    e.target.style.backgroundRepeat = "no-repeat";
+    e.target.style.backgroundPosition = "center";
+  }}
                 />
                 &nbsp; QA and Testing
               </label>
@@ -335,7 +457,24 @@ const RequestQuote = () => {
                 <input
                   type="checkbox"
                   value="Not sure"
-                  {...register("goal")}
+                  {...register("goal")}style={{
+    appearance: "none",
+    WebkitAppearance: "none",
+    width: "16px",
+    height: "16px",
+    backgroundColor: "#fff",
+    border: "2px solid #000",
+    cursor: "pointer",
+    display: "inline-block",
+    verticalAlign: "middle",
+  }}
+  onChange={(e) => {
+    e.target.style.backgroundImage = e.target.checked
+      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
+      : "none";
+    e.target.style.backgroundRepeat = "no-repeat";
+    e.target.style.backgroundPosition = "center";
+  }}
                 />
                 &nbsp; Not sure
               </label>

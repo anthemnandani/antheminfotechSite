@@ -56,7 +56,7 @@ const AboutUs = ({classOption}) => {
       {/* Breadcrumb */}
       <Breadcrumb
         image="/images/bg/breadcrumb-bg.webp"
-        title="Powering Web & AI Innovation"
+        title="Powering  <span class='text-color-span'>Web</span> &  <span class='text-color-span'> AI Innovation</span>"
         content="Home"
         contentTwo="About Us"
       />

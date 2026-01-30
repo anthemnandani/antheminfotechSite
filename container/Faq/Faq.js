@@ -15,10 +15,10 @@ const Faq = ({ classOption }) => {
           {/* FAQ Content */}
           <div className="col mb-6" data-aos="fade-up">
             <div className="faq-content">
-              <SectionTitleTwo
+              {/* <SectionTitleTwo
                 subTitle="Frequently Asked Questions (FAQ)"
                 // title can be added here if needed
-              />
+              /> */}
 
               <AccordionWrap />
             </div>

@@ -37,24 +37,10 @@ function NewNavBar() {
 
                                         <div className="ruby-grid ruby-grid-lined mega-height">
                                             <div className="ruby-row">
+                                               
                                                 <div className="ruby-col-3 text-center">
                                                     <Tilt scale={scale} transitionSpeed={4000}>
-                                                        <img
-                                                            src={imgUrl(
-                                                                "/images/mega-menu/Custom-Software/customer-service-agent-thin.svg"
-                                                            )}
-                                                            className="custom-svg"
-                                                            alt="Customer Relationship Management"
-                                                        />
-                                                        <span className="menu-text">
-                                                            <a href="/services/Custom-Software">Customer Relationship Management</a>
-                                                        </span>
-                                                    </Tilt>
-                                                </div>
-
-                                                <div className="ruby-col-3 text-center">
-                                                    <Tilt scale={scale} transitionSpeed={4000}>
-                                                        {" "}
+                                                      
                                                         <img
                                                             src={imgUrl("/images/mega-menu/Custom-Software/Content.svg")}
                                                             className="custom-svg"
@@ -80,7 +66,7 @@ function NewNavBar() {
                                                 </div>
                                                 <div className="ruby-col-3 text-center">
                                                     <Tilt scale={scale} transitionSpeed={4000}>
-                                                        {" "}
+                                                    
                                                         <img
                                                             src={imgUrl("/images/mega-menu/Custom-Software/HumanResourceManagement.svg")}
                                                             className="custom-svg"
@@ -91,6 +77,81 @@ function NewNavBar() {
                                                         </span>
                                                     </Tilt>
                                                 </div>
+                                                <div className="ruby-col-3 text-center">
+                                                    <Tilt scale={scale} transitionSpeed={4000}>
+                                                        <img
+                                                            src={imgUrl(
+                                                                "/images/mega-menu/Custom-Software/inventory.svg"
+                                                            )}
+                                                            className="custom-svg"
+                                                            alt="Inventory Management"
+                                                        />
+                                                        <span className="menu-text">
+                                                            <a href="/services/Custom-Software">Inventory Management</a>
+                                                        </span>
+                                                    </Tilt>
+                                                </div>
+                                                 <div className="ruby-col-3 text-center">
+                                                    <Tilt scale={scale} transitionSpeed={4000}>
+                                                        <img
+                                                            src={imgUrl(
+                                                                "/images/mega-menu/Custom-Software/customer-service-agent-thin.svg"
+                                                            )}
+                                                            className="custom-svg"
+                                                            alt="Customer Relationship Management"
+                                                        />
+                                                        <span className="menu-text">
+                                                            <a href="/services/Custom-Software">Customer Relationship Management</a>
+                                                        </span>
+                                                    </Tilt>
+                                                </div>
+
+                                                <div className="ruby-col-3 text-center">
+                                                    <Tilt scale={scale} transitionSpeed={4000}>
+                                                        <img
+                                                            src={imgUrl(
+                                                                "/images/mega-menu/Custom-Software/financial-gain.svg"
+                                                            )}
+                                                            className="custom-svg"
+                                                            alt="Financial Systems"
+                                                        />
+                                                        <span className="menu-text">
+                                                            <a href="/services/Custom-Software">Financial Systems</a>
+                                                        </span>
+                                                    </Tilt>
+                                                </div>
+                                                <div className="ruby-col-3 text-center">
+                                                    <Tilt scale={scale} transitionSpeed={4000}>
+                                                        <img
+                                                            src={imgUrl(
+                                                                "/images/mega-menu/Custom-Software/truck.svg"
+                                                            )}
+                                                            className="custom-svg"
+                                                            alt="Logistics Management"
+                                                        />
+                                                        <span className="menu-text">
+                                                            <a href="/services/Custom-Software">Logistics Management</a>
+                                                        </span>
+                                                    </Tilt>
+                                                </div>
+                                                <div className="ruby-col-3 text-center">
+                                                    <Tilt scale={scale} transitionSpeed={4000}>
+                                                        <img
+                                                            src={imgUrl(
+                                                                "/images/mega-menu/Custom-Software/supply-chain-optimization-02.svg"
+                                                            )}
+                                                            className="custom-svg"
+                                                            alt="Supply Chain Management (SCM)"
+                                                        />
+                                                        <span className="menu-text">
+                                                            <a href="/services/Custom-Software">Supply Chain Management (SCM)</a>
+                                                        </span>
+                                                    </Tilt>
+                                                </div>
+
+
+
+                                                
                                             </div>
                                         </div>
                                         <span className="ruby-dropdown-toggle"></span>
@@ -249,7 +310,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                               "/services/AI-Powered-Solutions"
+                                                "/services/AI-Powered-Solutions"
                                             }
                                         >
                                             <span className="menu-text">AI-Powered Solutions</span>
@@ -261,8 +322,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                               imgUrl(
-                                                                "/images/mega-menu/AI-Powered-Solutions/file-ai.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/AI-Powered-Solutions/file-ai.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -279,8 +340,8 @@ function NewNavBar() {
                                                         <img
                                                             src={
                                                                 imgUrl(
-                                                                
-                                                                "/images/mega-menu/AI-Powered-Solutions/discussion.svg")
+
+                                                                    "/images/mega-menu/AI-Powered-Solutions/discussion.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -296,8 +357,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                               imgUrl(
-                                                                "/images/mega-menu/AI-Powered-Solutions/chart-multi-type.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/AI-Powered-Solutions/chart-multi-type.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -313,8 +374,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                               imgUrl(
-                                                                "/images/mega-menu/AI-Powered-Solutions/technologist.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/AI-Powered-Solutions/technologist.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -385,7 +446,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                               "/services/Marketing-Automation"
+                                                "/services/Marketing-Automation"
                                             }
                                         >
                                             <span className="menu-text">Marketing Automation</span>
@@ -689,7 +750,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                               "/services/Enterprise-Software"
+                                                "/services/Enterprise-Software"
                                             }
                                         >
                                             <span className="menu-text">Enterprise Software</span>
@@ -1038,7 +1099,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                                
+
                                                 "/services/On-Demand-Dedicated-Talent"
                                             }
                                         >
@@ -1087,8 +1148,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                               imgUrl(
-                                                                "/images/mega-menu/On-Demand-Dedicated-Talent/connection-thin.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/On-Demand-Dedicated-Talent/connection-thin.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -1169,7 +1230,7 @@ function NewNavBar() {
                                     <li className="ruby-active-menu-item">
                                         <Link
                                             href={
-                                               
+
                                                 "/Home/Industries?Industrytype=" +
                                                 "Workforce Compliance Solutions".replace(/\s+/g, "-")
                                             }
@@ -1193,7 +1254,7 @@ function NewNavBar() {
                                                             alt="Compliance Tracking"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href={"/Home/Industries?Industrytype="+ "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Compliance Tracking</a>
+                                                            <a href={"/Home/Industries?Industrytype=" + "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Compliance Tracking</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1210,7 +1271,7 @@ function NewNavBar() {
                                                             alt="Real-Time Reporting"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href={"/Home/Industries?Industrytype="+ "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Real-Time Reporting</a>
+                                                            <a href={"/Home/Industries?Industrytype=" + "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Real-Time Reporting</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1227,7 +1288,7 @@ function NewNavBar() {
                                                             alt="Wage Verification"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href={"/Home/Industries?Industrytype="+ "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Wage Verification</a>
+                                                            <a href={"/Home/Industries?Industrytype=" + "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Wage Verification</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1244,7 +1305,7 @@ function NewNavBar() {
                                                             alt="Training Modules"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href={"/Home/Industries?Industrytype="+ "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Training Modules</a>
+                                                            <a href={"/Home/Industries?Industrytype=" + "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Training Modules</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1263,7 +1324,7 @@ function NewNavBar() {
                                                             alt="Risk Assessment"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href={"/Home/Industries?Industrytype="+ "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Risk Assessment</a>
+                                                            <a href={"/Home/Industries?Industrytype=" + "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Risk Assessment</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1280,7 +1341,7 @@ function NewNavBar() {
                                                             alt="Financial Audit"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href={"/Home/Industries?Industrytype="+ "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Financial Audit</a>
+                                                            <a href={"/Home/Industries?Industrytype=" + "Workforce Compliance Solutions".replace(/\s+/g, "-")}>Financial Audit</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1292,7 +1353,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                              
+
                                                 "/Home/Industries?Industrytype=" +
                                                 "Publishing Rights Management".replace(/\s+/g, "-")
                                             }
@@ -1317,8 +1378,8 @@ function NewNavBar() {
                                                             alt="Digital Rights Management"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href={ "/Home/Industries?Industrytype=" +
-                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Digital Rights Management</a>
+                                                            <a href={"/Home/Industries?Industrytype=" +
+                                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Digital Rights Management</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1335,8 +1396,8 @@ function NewNavBar() {
                                                             alt="Global Search"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href={ "/Home/Industries?Industrytype=" +
-                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Global Search</a>
+                                                            <a href={"/Home/Industries?Industrytype=" +
+                                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Global Search</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1353,8 +1414,8 @@ function NewNavBar() {
                                                             alt="Content Protection"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href={ "/Home/Industries?Industrytype=" +
-                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Content Protection</a>
+                                                            <a href={"/Home/Industries?Industrytype=" +
+                                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Content Protection</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1371,8 +1432,8 @@ function NewNavBar() {
                                                             alt="Content Extraction"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href={ "/Home/Industries?Industrytype=" +
-                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Content Extraction</a>
+                                                            <a href={"/Home/Industries?Industrytype=" +
+                                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Content Extraction</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1391,8 +1452,8 @@ function NewNavBar() {
                                                             alt="Web Scraping"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href={ "/Home/Industries?Industrytype=" +
-                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Web Scraping</a>
+                                                            <a href={"/Home/Industries?Industrytype=" +
+                                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Web Scraping</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1409,8 +1470,8 @@ function NewNavBar() {
                                                             alt="Real-Time Reportingh"
                                                         />
                                                         <span className="menu-text">
-                                                            <a href={ "/Home/Industries?Industrytype=" +
-                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Real-Time Reporting</a>
+                                                            <a href={"/Home/Industries?Industrytype=" +
+                                                                "Publishing Rights Management".replace(/\s+/g, "-")}>Real-Time Reporting</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1421,7 +1482,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                               
+
                                                 "/Home/Industries?Industrytype=" +
                                                 "Financial Audit Compliance".replace(/\s+/g, "-")
                                             }
@@ -1447,10 +1508,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Financial Audit Compliance".replace(/\s+/g, "-")
-                                            }>Real-Time Analytics</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Financial Audit Compliance".replace(/\s+/g, "-")
+                                                            }>Real-Time Analytics</a>
                                                         </span>{" "}
                                                     </Tilt>
                                                 </div>
@@ -1468,10 +1529,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Financial Audit Compliance".replace(/\s+/g, "-")
-                                            }>AI Market Predictions</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Financial Audit Compliance".replace(/\s+/g, "-")
+                                                            }>AI Market Predictions</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1489,10 +1550,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Financial Audit Compliance".replace(/\s+/g, "-")
-                                            }>Portfolio Management</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Financial Audit Compliance".replace(/\s+/g, "-")
+                                                            }>Portfolio Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1510,10 +1571,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Financial Audit Compliance".replace(/\s+/g, "-")
-                                            }>Risk Assessment</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Financial Audit Compliance".replace(/\s+/g, "-")
+                                                            }>Risk Assessment</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1533,10 +1594,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Financial Audit Compliance".replace(/\s+/g, "-")
-                                            }>Regulatory Compliance</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Financial Audit Compliance".replace(/\s+/g, "-")
+                                                            }>Regulatory Compliance</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1554,10 +1615,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Financial Audit Compliance".replace(/\s+/g, "-")
-                                            }>Controls management</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Financial Audit Compliance".replace(/\s+/g, "-")
+                                                            }>Controls management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1568,7 +1629,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                               
+
                                                 "/Home/Industries?Industrytype=" +
                                                 "Food Ordering Solutions".replace(/\s+/g, "-")
                                             }
@@ -1592,10 +1653,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Food Ordering Solutions".replace(/\s+/g, "-")
-                                            }>Google Places API</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Food Ordering Solutions".replace(/\s+/g, "-")
+                                                            }>Google Places API</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1613,10 +1674,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Food Ordering Solutions".replace(/\s+/g, "-")
-                                            }>Cart Management</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Food Ordering Solutions".replace(/\s+/g, "-")
+                                                            }>Cart Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1634,10 +1695,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Food Ordering Solutions".replace(/\s+/g, "-")
-                                            }>Payment Gateway Integration</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Food Ordering Solutions".replace(/\s+/g, "-")
+                                                            }>Payment Gateway Integration</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1655,10 +1716,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Food Ordering Solutions".replace(/\s+/g, "-")
-                                            }>Assign Driver</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Food Ordering Solutions".replace(/\s+/g, "-")
+                                                            }>Assign Driver</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1678,10 +1739,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Food Ordering Solutions".replace(/\s+/g, "-")
-                                            }>Food Delivery</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Food Ordering Solutions".replace(/\s+/g, "-")
+                                                            }>Food Delivery</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1692,7 +1753,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                                
+
                                                 "/Home/Industries?Industrytype=" +
                                                 "Information Technology Solutions".replace(/\s+/g, "-")
                                             }
@@ -1718,10 +1779,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                                
-                                                "/Home/Industries?Industrytype=" +
-                                                "Information Technology Solutions".replace(/\s+/g, "-")
-                                            }>Custom Software</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Information Technology Solutions".replace(/\s+/g, "-")
+                                                            }>Custom Software</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1739,10 +1800,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                                
-                                                "/Home/Industries?Industrytype=" +
-                                                "Information Technology Solutions".replace(/\s+/g, "-")
-                                            }>Cloud Management</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Information Technology Solutions".replace(/\s+/g, "-")
+                                                            }>Cloud Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1760,10 +1821,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                                
-                                                "/Home/Industries?Industrytype=" +
-                                                "Information Technology Solutions".replace(/\s+/g, "-")
-                                            }>Cybersecurity</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Information Technology Solutions".replace(/\s+/g, "-")
+                                                            }>Cybersecurity</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1781,10 +1842,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                                
-                                                "/Home/Industries?Industrytype=" +
-                                                "Information Technology Solutions".replace(/\s+/g, "-")
-                                            }>IT Infrastructure</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Information Technology Solutions".replace(/\s+/g, "-")
+                                                            }>IT Infrastructure</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1804,10 +1865,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                                
-                                                "/Home/Industries?Industrytype=" +
-                                                "Information Technology Solutions".replace(/\s+/g, "-")
-                                            }>Digital Transformation</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Information Technology Solutions".replace(/\s+/g, "-")
+                                                            }>Digital Transformation</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1818,7 +1879,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                               
+
                                                 "/Home/Industries?Industrytype=" +
                                                 "Business Promotion Solutions".replace(/\s+/g, "-")
                                             }
@@ -1844,10 +1905,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Business Promotion Solutions".replace(/\s+/g, "-")
-                                            }>Explainer Video</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Business Promotion Solutions".replace(/\s+/g, "-")
+                                                            }>Explainer Video</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1865,10 +1926,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Business Promotion Solutions".replace(/\s+/g, "-")
-                                            }>Product Demo Content</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Business Promotion Solutions".replace(/\s+/g, "-")
+                                                            }>Product Demo Content</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1886,10 +1947,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Business Promotion Solutions".replace(/\s+/g, "-")
-                                            }>SMS Campaigns</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Business Promotion Solutions".replace(/\s+/g, "-")
+                                                            }>SMS Campaigns</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1907,10 +1968,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Business Promotion Solutions".replace(/\s+/g, "-")
-                                            }>PDF Generation</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Business Promotion Solutions".replace(/\s+/g, "-")
+                                                            }>PDF Generation</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1930,10 +1991,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Business Promotion Solutions".replace(/\s+/g, "-")
-                                            }>Social Wall</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Business Promotion Solutions".replace(/\s+/g, "-")
+                                                            }>Social Wall</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1951,10 +2012,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Business Promotion Solutions".replace(/\s+/g, "-")
-                                            }>Web Site Content</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Business Promotion Solutions".replace(/\s+/g, "-")
+                                                            }>Web Site Content</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1972,10 +2033,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                               
-                                                "/Home/Industries?Industrytype=" +
-                                                "Business Promotion Solutions".replace(/\s+/g, "-")
-                                            }>Reviews & Ratings</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Business Promotion Solutions".replace(/\s+/g, "-")
+                                                            }>Reviews & Ratings</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -1986,7 +2047,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                              
+
                                                 "/Home/Industries?Industrytype=" +
                                                 "HOA Automation Solutions".replace(/\s+/g, "-")
                                             }
@@ -2011,10 +2072,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "HOA Automation Solutions".replace(/\s+/g, "-")
-                                            }>Bulk Email</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "HOA Automation Solutions".replace(/\s+/g, "-")
+                                                            }>Bulk Email</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2032,10 +2093,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "HOA Automation Solutions".replace(/\s+/g, "-")
-                                            }>E-Voting System</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "HOA Automation Solutions".replace(/\s+/g, "-")
+                                                            }>E-Voting System</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2053,10 +2114,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "HOA Automation Solutions".replace(/\s+/g, "-")
-                                            }>Document Scanning</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "HOA Automation Solutions".replace(/\s+/g, "-")
+                                                            }>Document Scanning</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2074,10 +2135,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "HOA Automation Solutions".replace(/\s+/g, "-")
-                                            }>MICR Reading</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "HOA Automation Solutions".replace(/\s+/g, "-")
+                                                            }>MICR Reading</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2097,10 +2158,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "HOA Automation Solutions".replace(/\s+/g, "-")
-                                            }>Automated Notifications</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "HOA Automation Solutions".replace(/\s+/g, "-")
+                                                            }>Automated Notifications</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2112,7 +2173,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                              
+
                                                 "/Home/Industries?Industrytype=" +
                                                 "Logistics and Supply Chain Management".replace(
                                                     /\s+/g,
@@ -2141,13 +2202,13 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "Logistics and Supply Chain Management".replace(
-                                                    /\s+/g,
-                                                    "-"
-                                                )
-                                            }>Fleet Management</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Logistics and Supply Chain Management".replace(
+                                                                    /\s+/g,
+                                                                    "-"
+                                                                )
+                                                            }>Fleet Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2165,13 +2226,13 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "Logistics and Supply Chain Management".replace(
-                                                    /\s+/g,
-                                                    "-"
-                                                )
-                                            }>Route Optimization</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Logistics and Supply Chain Management".replace(
+                                                                    /\s+/g,
+                                                                    "-"
+                                                                )
+                                                            }>Route Optimization</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2189,13 +2250,13 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "Logistics and Supply Chain Management".replace(
-                                                    /\s+/g,
-                                                    "-"
-                                                )
-                                            }>Real-Time Tracking</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Logistics and Supply Chain Management".replace(
+                                                                    /\s+/g,
+                                                                    "-"
+                                                                )
+                                                            }>Real-Time Tracking</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2213,13 +2274,13 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "Logistics and Supply Chain Management".replace(
-                                                    /\s+/g,
-                                                    "-"
-                                                )
-                                            }>Predictive Analytics</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Logistics and Supply Chain Management".replace(
+                                                                    /\s+/g,
+                                                                    "-"
+                                                                )
+                                                            }>Predictive Analytics</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2239,13 +2300,13 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "Logistics and Supply Chain Management".replace(
-                                                    /\s+/g,
-                                                    "-"
-                                                )
-                                            }>AI-Driven Automation</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Logistics and Supply Chain Management".replace(
+                                                                    /\s+/g,
+                                                                    "-"
+                                                                )
+                                                            }>AI-Driven Automation</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2256,7 +2317,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                              
+
                                                 "/Home/Industries?Industrytype=" +
                                                 "Construction Industry Software".replace(/\s+/g, "-")
                                             }
@@ -2281,10 +2342,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "Construction Industry Software".replace(/\s+/g, "-")
-                                            }>Project Management</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Construction Industry Software".replace(/\s+/g, "-")
+                                                            }>Project Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2294,7 +2355,7 @@ function NewNavBar() {
                                                         <img
                                                             src={
                                                                 imgUrl(
-                                                                "/images/mega-menu/Construction-Industry-Software/Cost-Estimation.svg")
+                                                                    "/images/mega-menu/Construction-Industry-Software/Cost-Estimation.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2310,8 +2371,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                               imgUrl(
-                                                                "/images/mega-menu/Construction-Industry-Software/Real-Time-Updates.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/Construction-Industry-Software/Real-Time-Updates.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2319,10 +2380,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "Construction Industry Software".replace(/\s+/g, "-")
-                                            }>Real-Time Updates</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Construction Industry Software".replace(/\s+/g, "-")
+                                                            }>Real-Time Updates</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2331,8 +2392,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                               imgUrl(
-                                                                "/images/mega-menu/Construction-Industry-Software/Risk-Management.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/Construction-Industry-Software/Risk-Management.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2340,10 +2401,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "Construction Industry Software".replace(/\s+/g, "-")
-                                            }>Risk Management</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Construction Industry Software".replace(/\s+/g, "-")
+                                                            }>Risk Management</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2354,8 +2415,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                              imgUrl(
-                                                                "/images/mega-menu/Construction-Industry-Software/AI-Powered-Insights.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/Construction-Industry-Software/AI-Powered-Insights.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2363,10 +2424,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "Construction Industry Software".replace(/\s+/g, "-")
-                                            }>AI-Powered Insights</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Construction Industry Software".replace(/\s+/g, "-")
+                                                            }>AI-Powered Insights</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2377,7 +2438,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                              
+
                                                 "/Home/Industries?Industrytype=" +
                                                 "Healthcare and Medical Solutions".replace(/\s+/g, "-")
                                             }
@@ -2394,8 +2455,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                              imgUrl(
-                                                                "/images/mega-menu/Healthcare-and-Medical-Solutions/Telemedicine.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/Healthcare-and-Medical-Solutions/Telemedicine.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2403,10 +2464,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
-                                            }>Telemedicine</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
+                                                            }>Telemedicine</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2415,8 +2476,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                               imgUrl(
-                                                                "/images/mega-menu/Healthcare-and-Medical-Solutions/Appointment-Scheduling.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/Healthcare-and-Medical-Solutions/Appointment-Scheduling.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2424,10 +2485,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
-                                            }>Appointment Scheduling</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
+                                                            }>Appointment Scheduling</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2436,8 +2497,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                              imgUrl(
-                                                                "/images/mega-menu/Healthcare-and-Medical-Solutions/EHR-Integration.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/Healthcare-and-Medical-Solutions/EHR-Integration.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2445,10 +2506,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
-                                            }>EHR Integration</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
+                                                            }>EHR Integration</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2457,8 +2518,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                               imgUrl(
-                                                                "/images/mega-menu/Healthcare-and-Medical-Solutions/AI-Diagnostics.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/Healthcare-and-Medical-Solutions/AI-Diagnostics.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2466,10 +2527,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
-                                            }>AI Diagnostics</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
+                                                            }>AI Diagnostics</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2480,8 +2541,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                               imgUrl(
-                                                                "/images/mega-menu/Healthcare-and-Medical-Solutions/Remote-Patient-Monitoring.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/Healthcare-and-Medical-Solutions/Remote-Patient-Monitoring.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2489,10 +2550,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                              
-                                                "/Home/Industries?Industrytype=" +
-                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
-                                            }>Remote Patient Monitoring</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Healthcare and Medical Solutions".replace(/\s+/g, "-")
+                                                            }>Remote Patient Monitoring</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2503,7 +2564,7 @@ function NewNavBar() {
                                     <li className="hidden-md">
                                         <Link
                                             href={
-                                                
+
                                                 "/Home/Industries?Industrytype=" +
                                                 "Tourism and Travel Solutions".replace(/\s+/g, "-")
                                             }
@@ -2520,8 +2581,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                              imgUrl(
-                                                                "/images/mega-menu/Tourism-and-Travel-Solutions/Online-Bookings.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/Tourism-and-Travel-Solutions/Online-Bookings.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2529,10 +2590,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                                
-                                                "/Home/Industries?Industrytype=" +
-                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
-                                            }>Online Bookings</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                                            }>Online Bookings</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2542,7 +2603,7 @@ function NewNavBar() {
                                                         <img
                                                             src={
                                                                 imgUrl(
-                                                                "/images/mega-menu/Tourism-and-Travel-Solutions/Virtual-Tours.svg")
+                                                                    "/images/mega-menu/Tourism-and-Travel-Solutions/Virtual-Tours.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2550,10 +2611,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                                
-                                                "/Home/Industries?Industrytype=" +
-                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
-                                            }>Virtual Tours</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                                            }>Virtual Tours</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2563,7 +2624,7 @@ function NewNavBar() {
                                                         <img
                                                             src={
                                                                 imgUrl(
-                                                                "/images/mega-menu/Tourism-and-Travel-Solutions/AI-Recommendations.svg")
+                                                                    "/images/mega-menu/Tourism-and-Travel-Solutions/AI-Recommendations.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2571,10 +2632,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                                
-                                                "/Home/Industries?Industrytype=" +
-                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
-                                            }>AI Recommendations</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                                            }>AI Recommendations</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2583,8 +2644,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                             imgUrl(
-                                                                "/images/mega-menu/Tourism-and-Travel-Solutions/AI-Diagnostics.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/Tourism-and-Travel-Solutions/AI-Diagnostics.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2592,10 +2653,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                                
-                                                "/Home/Industries?Industrytype=" +
-                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
-                                            }>AI Diagnostics</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                                            }>AI Diagnostics</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2606,8 +2667,8 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                               imgUrl(
-                                                                "/images/mega-menu/Tourism-and-Travel-Solutions/Multilingual-Support.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/Tourism-and-Travel-Solutions/Multilingual-Support.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2615,31 +2676,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                                
-                                                "/Home/Industries?Industrytype=" +
-                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
-                                            }>Multilingual Support</a>
-                                                        </span>
-                                                    </Tilt>
-                                                </div>
-                                                <div className="ruby-col-3 text-center">
-                                                    <Tilt scale={scale} transitionSpeed={4000}>
-                                                        {" "}
-                                                        <img
-                                                            src={
-                                                           imgUrl(
-                                                                "/images/mega-menu/Tourism-and-Travel-Solutions/Real-Time-Updates.svg")
-                                                            }
-                                                            className="custom-svg"
-                                                            loading="lazy"
-                                                            alt="Real-Time Updates"
-                                                        />
-                                                        <span className="menu-text">
-                                                            <a href={
-                                                
-                                                "/Home/Industries?Industrytype=" +
-                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
-                                            }>Real-Time Updates</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                                            }>Multilingual Support</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2649,18 +2689,18 @@ function NewNavBar() {
                                                         <img
                                                             src={
                                                                 imgUrl(
-                                                                "/images/mega-menu/Tourism-and-Travel-Solutions/Reservation-Management.svg")
+                                                                    "/images/mega-menu/Tourism-and-Travel-Solutions/Real-Time-Updates.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
-                                                            alt="Reservation Management"
+                                                            alt="Real-Time Updates"
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                                
-                                                "/Home/Industries?Industrytype=" +
-                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
-                                            }>Reservation Management</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                                            }>Real-Time Updates</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2669,8 +2709,29 @@ function NewNavBar() {
                                                         {" "}
                                                         <img
                                                             src={
-                                                             imgUrl(
-                                                                "/images/mega-menu/Tourism-and-Travel-Solutions/API-Integration.svg")
+                                                                imgUrl(
+                                                                    "/images/mega-menu/Tourism-and-Travel-Solutions/Reservation-Management.svg")
+                                                            }
+                                                            className="custom-svg"
+                                                            loading="lazy"
+                                                            alt="Reservation Management"
+                                                        />
+                                                        <span className="menu-text">
+                                                            <a href={
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                                            }>Reservation Management</a>
+                                                        </span>
+                                                    </Tilt>
+                                                </div>
+                                                <div className="ruby-col-3 text-center">
+                                                    <Tilt scale={scale} transitionSpeed={4000}>
+                                                        {" "}
+                                                        <img
+                                                            src={
+                                                                imgUrl(
+                                                                    "/images/mega-menu/Tourism-and-Travel-Solutions/API-Integration.svg")
                                                             }
                                                             className="custom-svg"
                                                             loading="lazy"
@@ -2678,10 +2739,10 @@ function NewNavBar() {
                                                         />
                                                         <span className="menu-text">
                                                             <a href={
-                                                
-                                                "/Home/Industries?Industrytype=" +
-                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
-                                            }>API Integration</a>
+
+                                                                "/Home/Industries?Industrytype=" +
+                                                                "Tourism and Travel Solutions".replace(/\s+/g, "-")
+                                                            }>API Integration</a>
                                                         </span>
                                                     </Tilt>
                                                 </div>
@@ -2714,7 +2775,7 @@ function NewNavBar() {
                                         <span className="menu-text">Technologies</span>
                                     </Link>
                                 </li>
-                                 <li>
+                                <li>
                                     <Link href="/gallery">
                                         <span className="menu-text">Gallery</span>
                                     </Link>
@@ -2755,7 +2816,7 @@ function NewNavBar() {
                                 <span className="menu-text">Get a Quote</span>
                             </Link>
                         </li>
-                        
+
                         <li>
                             <Link href="/contact-us">
                                 <span className="menu-text">Contact Us</span>

@@ -102,7 +102,7 @@ const FaqsPage = () => {
   />
       <Breadcrumb
         image="/images/bg/faq.webp"
-        title="Everything You Need to Know About Our Services and Solutions"
+        title="Everything You Need to Know About Our <span class='text-color-span'>Services</span> and <span class='text-color-span'>Solutions</span>"
         content="Home"
         contentTwo="FAQs"
       />

@@ -6,8 +6,13 @@ import React from "react";
 
 const Breadcrumb = ({ title, content, contentTwo, contentThree, image }) => {
   const publicUrl = process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL;
-
+const capitalize = (text) =>
+  text.charAt(0).toUpperCase() + text.slice(1);
   return (
+
+
+
+    
     <div
       className="relative page-title-section section section-padding-top overlay-two"
       style={{
@@ -17,17 +22,13 @@ const Breadcrumb = ({ title, content, contentTwo, contentThree, image }) => {
        height: "220px",
        
       }}
-      
     >
-
-
-
        {/* ✅ Mobile styles */}
       <style>
        {`
       @media (max-width: 768px) {
         .page-title-section {
-          min-height:50vh;     /* more height on mobile */
+          min-height:58vh;     /* more height on mobile */
           padding-top:100px;
            padding-bottom:10px;
           /* pushes content below header */
@@ -36,9 +37,9 @@ const Breadcrumb = ({ title, content, contentTwo, contentThree, image }) => {
       }
     `}
       </style>
-      <div className="absolute inset-0 bg-black/50 z-0" />
+      <div className="absolute inset-0 bg-black/50 z-0 " />
 
-      <div className="relative page-title">
+      <div className="relative page-title pt-4">
         <div className="container">
           <h1
             className="title"
@@ -47,9 +48,9 @@ const Breadcrumb = ({ title, content, contentTwo, contentThree, image }) => {
         </div>
       </div>
 
-      <div className="relative page-breadcrumb position-static">
+      <div className="relative page-breadcrumb position-static " >
         <div className="container">
-          <ul className="breadcrumb justify-content-center text-white">
+          <ul className="breadcrumb justify-content-center text-white" >
             <li>
               <Link href="/">{content}</Link>
             </li>
@@ -59,9 +60,9 @@ const Breadcrumb = ({ title, content, contentTwo, contentThree, image }) => {
             ) : (
               <li>
                 {contentTwo === "OurWork" ? (
-                  <Link href={`/${contentTwo}`}>{contentTwo}</Link>
+                  <Link href={`/${contentTwo}`}>{capitalize(contentTwo)}</Link>
                 ) : (
-                  <Link href={`/${contentTwo}`}>{contentTwo}</Link>
+                  <Link href={`/${contentTwo}`}>{capitalize(contentTwo)}</Link>
                 )}
               </li>
             )}
@@ -73,7 +74,7 @@ const Breadcrumb = ({ title, content, contentTwo, contentThree, image }) => {
     </div>
   );
 };
-
+  
 Breadcrumb.propTypes = {
   title: PropTypes.string,
   content: PropTypes.string,

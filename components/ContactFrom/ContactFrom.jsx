@@ -253,14 +253,14 @@ const onSubmit = async (data) => {
   {errors?.message && <p className="text-danger">{errors.message.message}</p>}
 </div>
 
-     <div className="col-12 mb-6">
+     {/* <div className="col-12 col-md-6 mb-6">
         <ReCAPTCHA
           ref={recaptchaRef}
           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA}
           onChange={onRecaptchaChange}
         />
       </div>
-                    <div className="col-12 text-center mb-6">
+                    <div className="col-12 col-md-6 text-center  ">
                         <button
                             type="submit"
                             disabled={isSubmitting}
@@ -270,7 +270,32 @@ const onSubmit = async (data) => {
                         >
                             {isSubmitting ? "Submitting..." : "Contact Us"}
                         </button>
-                    </div>
+                    </div> */}
+
+                    <div className="row align-items-center mb-6">
+  {/* Captcha – left aligned */}
+  <div className="col-12 col-md-6 d-flex justify-content-start">
+    <ReCAPTCHA
+      ref={recaptchaRef}
+      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA}
+      onChange={onRecaptchaChange}
+    />
+  </div>
+
+  {/* Button – right aligned */}
+  <div className="col-12 col-md-6 d-flex justify-content-md-end justify-content-start mt-3 mt-md-0 pe-0">
+    <button
+      type="submit"
+      disabled={isSubmitting}
+      className="btn btn-bottom"
+      data-hover="Contact Us"
+      style={{ background: "#0e6497" }}
+    >
+      {isSubmitting ? "Submitting..." : "Contact Us"}
+    </button>
+  </div>
+</div>
+
                 </div>
             </form>
         </div>

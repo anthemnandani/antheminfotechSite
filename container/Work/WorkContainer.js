@@ -227,11 +227,11 @@ const cleanSlug = slug?.replace(/-/g, " ");
 
         <div className="row align-items-center">
           <div className="col-lg-5">
-            <SectionTitleTwo
-              subTitle={`Portfolio ${slug ? `<span class='fw-bold'>(${toTitleCase(cleanSlug)})</span>` : ""
+            {/* <SectionTitleTwo
+              subTitle={`${slug ? `<span class='fw-bold'>(${toTitleCase(cleanSlug)})</span>` : ""
                 }`}
               title="Our Work"
-            />
+            /> */}
           </div>
           <div className="col-lg-7" data-aos="fade-up">
             <WorkFilter

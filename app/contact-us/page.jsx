@@ -100,7 +100,7 @@ const ContactUs = () => {
       {/* Breadcrumb */}
       <Breadcrumb
         image="/images/bg/breadcrumb-bg.webp"
-        title="Get in Touch with Anthem Infotech"
+        title=" <span class='text-color-span'>Get in Touch </span> with Anthem Infotech"
         content="Home"
         contentTwo="Contact Us"
       />

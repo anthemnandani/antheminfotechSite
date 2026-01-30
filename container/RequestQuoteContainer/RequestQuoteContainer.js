@@ -13,17 +13,12 @@ const RequestQuoteContainer = ({ classOption }) => {
   }, []);
 
   return (
+    <>
     <div className={`contact-form-section section section-padding-t90 ${classOption}`} style={{paddingTop:"20px", paddingBottom:"20px"}}>
       <div className="container">
-        <div className="row">
-
-          {/* Left Column - Testimonial */}
-          <div className="col-lg-6 " >
-            <TestimonialQuote classOption="bg-white" />
-          </div>
-
-          {/* Right Column - Request Quote Form */}
-          <div className="col-lg-6 contact-form-area background-1 " style={{paddingTop:"10px"}}>
+     
+  {/* Leftt Column - Request Quote Form */}
+          <div className="contact-form-area background-1 " style={{paddingTop:"10px",paddingBottom:"20px"}}>
             <SectionTitle
               headingOption="fz-32"
               title="Request a Free Quote"
@@ -31,10 +26,28 @@ const RequestQuoteContainer = ({ classOption }) => {
             />
             <RequestQuote />
           </div>
+       
+         
+            {/* <TestimonialQuote classOption="bg-white" /> */}
+          
 
-        </div>
       </div>
     </div>
+    
+      <div className={`contact-form-section ${classOption}`} style={{paddingTop:"30px",marginTop:"0px"}}>
+         
+        
+     <TestimonialQuote classOption="bg-white" />
+             
+            
+                
+              
+             
+           
+      
+        </div>
+    </>
+    
   );
 };
 

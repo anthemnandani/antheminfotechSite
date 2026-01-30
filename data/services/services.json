@@ -4,11 +4,7 @@
     "title": "Custom Software Development",
     "introduction": "We build customised digital platforms crafted to match your specific business goals, helping you improve workflows and enhance operational efficiency.",
     "key_services": [
-      {
-        "name": "Customer Relationship Management (CRM)",
-        "description": "We develop CRM systems that streamline customer interactions, helping you build strong relationships and drive growth.",
-        "icon": "images/mega-menu/custom-software/customer-service-agent-thin.svg"
-      },
+
       {
         "name": "Content Management System (CMS)",
         "description": "Our CMS solutions provide seamless content management, enabling you to create, edit, and publish content effortlessly across platforms.",
@@ -28,6 +24,11 @@
         "name": "Inventory Management",
         "description": "Our inventory management solutions ensure real-time tracking and seamless control over stock levels and supply chains.",
         "icon": "images/mega-menu/custom-software/inventory.svg"
+      },
+            {
+        "name": "Customer Relationship Management (CRM)",
+        "description": "We develop CRM systems that streamline customer interactions, helping you build strong relationships and drive growth.",
+        "icon": "images/mega-menu/custom-software/customer-service-agent-thin.svg"
       },
       {
         "name": "Financial Systems",

@@ -39,10 +39,6 @@ const UIUXDesign = () => {
    
 
 
-      <h1 className="text-3xl font-bold text-center mt-6 mb-4">
-        UI/UX Design Services | Anthem Infotech
-      </h1>
-
       <Breadcrumb
         image="images/bg/ui-ux.webp"
         title="<span class='text-color-span'>Craft Engaging</span> User Experiences with <span class='text-color-span'>Intuitive</span> and Visually Appealing <span class='text-color-span'>Digital Interfaces</span>"

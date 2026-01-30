@@ -77,7 +77,7 @@ const OurClients = () => {
   /> 
       <Breadcrumb
         image="images/bg/clients.webp"
-        title="Trusted by Leading Brands Across Industries"
+        title="<span class='text-color-span'>Trusted</span> by <span class='text-color-span'>Leading Brands</span> Across Industries"
         content="Home"
         contentTwo="Our Clients"
       />

@@ -43,7 +43,7 @@ useEffect(() => {
           <div className="col-xl-6 col-lg-6 col-12" data-aos="fade-up">
             <div className="about-content-area mt-0 mb-md-10 mb-10">
               <SectionTitleTwo
-                subTitle="Web Design, Digital Marketing & Software Solutions"
+                // subTitle="Web Design, Digital Marketing & Software Solutions"
                 title="We combine strategic planning, UI/UX design, and advanced software development to deliver impactful digital solutions"
               />
               <div className="row row-cols-sm-2 row-cols-auto mb-n6">

@@ -68,14 +68,14 @@ useEffect(() => {
             data-aos-delay="300"
           >
             <SectionTitleTwo
-              subTitle="Our Core Services"
+              // subTitle="Our Core Services"
               title={service.at(0).title}
             />
 
             <p className="justify-content">{service.at(0).introduction}</p>
             <p className="justify-content">{service.at(0).why_choose_us}</p>
 
-            <Link href="/request-a-quote" className="btn btn btn-bottom mt-xl-12 mt-lg-8 mt-md-6 mt-4"
+            <Link href="/request-a-quote" className="btn btn btn-bottom "
                 data-hover="Get a Quote"
                 style={{ background: "#0e6497" }} passHref>
            

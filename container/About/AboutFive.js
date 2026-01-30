@@ -75,7 +75,7 @@ useEffect(() => {
           >
             <div className="about-content-area">
               <SectionTitleTwo
-                subTitle="Our Company at a Glance"
+                // subTitle="Our Company at a Glance"
                 title="Providing cutting-edge digital solutions and expanding our expertise across multiple industries."
               />
 

@@ -101,11 +101,11 @@ useEffect(()=>{
           title="Crafting Effective Digital Marketing, Web Development, <br> Video Content and Communication Design"
         />
 
-        <div className="row align-items-center">
+        {/* <div className="row align-items-center">
           <div className="col-lg-5">
-            <SectionTitleTwo subTitle="Gallery" title="Our Gallery" />
+            <SectionTitleTwo title="Our Gallery" />
           </div>
-        </div>
+        </div> */}
 
         {loading ? (
           <Loader />
