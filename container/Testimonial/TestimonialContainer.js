@@ -70,7 +70,7 @@ const TestimonialContainer = ({ classOption }) => {
           {TestimonialData &&
             TestimonialData.map((single, key) => {
               return (
-                <SwiperSlide key={key}>
+                <SwiperSlide  key={key}>
                   <Testimonial data={single} key={key} />
                 </SwiperSlide>
               );

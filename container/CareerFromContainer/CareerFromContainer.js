@@ -9,7 +9,7 @@ const CareerFromContainer = ({ classOption }) => {
   return (
     <div
       className={`contact-form-section section section-padding-t90-b100 ${classOption}`}
-      style={{ paddingTop: "20px",paddingBottom: "10px" }}
+      style={{ paddingTop: "20px",paddingBottom: "20px" }}
     >
       <div className="container">
         <div className="row">

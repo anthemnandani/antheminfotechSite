@@ -29,11 +29,11 @@ const ContactInformation = ({ classOption }) => {
   return (
     <div className={`section section-padding-t90-b100 ${classOption}`} style={{paddingTop:"20px",paddingBottom:"30px"}}>
       <div className="container shape-animate" >
-        <SectionTitle
+        {/* <SectionTitle
           titleOption="section-title text-center mb-lg-2 mb-sm-8 mb-xs-8"
           title="Get in Touch with Us"
           subTitle="<span class='text-black'>Contact us for expert solutions and personalised support—call, email, or visit our office to start your project today.</span>"
-        />
+        /> */}
 
         <div className="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6">
           {contactData &&

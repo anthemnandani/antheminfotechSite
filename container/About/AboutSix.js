@@ -10,14 +10,14 @@ const AboutSix = ({ classOption }) => {
   const [scale] = useState(1.04);
   const sceneEl = useRef(null);
 
-  useEffect(() => {
-    const parallaxInstance = new Parallax(sceneEl.current, {
-      relativeInput: true,
-    });
+  // useEffect(() => {
+  //   const parallaxInstance = new Parallax(sceneEl.current, {
+  //     relativeInput: true,
+  //   });
 
-    parallaxInstance.enable();
-    return () => parallaxInstance.disable();
-  }, []);
+  //   parallaxInstance.enable();
+  //   return () => parallaxInstance.disable();
+  // }, []);
 
   const cloudBase = process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL;
 
@@ -49,7 +49,7 @@ const AboutSix = ({ classOption }) => {
                 </Tilt>
               </div>
 
-              <div className="shape shape-1" id="scene" ref={sceneEl}>
+              {/* <div className="shape shape-1" id="scene" ref={sceneEl}>
                 <span data-depth="1">
                   <img
                     src={`${cloudBase}/images/shape-animation/about-shape-1.png`}
@@ -57,7 +57,7 @@ const AboutSix = ({ classOption }) => {
                     loading="lazy"
                   />
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
 

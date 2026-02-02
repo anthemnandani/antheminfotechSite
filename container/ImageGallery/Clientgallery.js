@@ -45,117 +45,133 @@ const ClientGallery = ({ classOption }) => {
   if (loading) return <Loader />;
 
   return (
-    <section className={`section ${classOption}`}>
-      <div className="container">
-        <div className="masonry">
-          {clients.map((item, index) => (
-            <div key={index} className="masonry-item" data-aos="fade-up">
-              <div className="client-card">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  loading="lazy"
-                />
+ 
+    <section
+  className={`section ${classOption} honeycomb-bg`}
+  style={{ paddingBottom: "30px", paddingTop: "30px" }}
+>
+  <div className="container">
+    <div className="masonry">
+      {clients.map((item, index) => (
+        <div key={index} className="masonry-item" data-aos="fade-up">
+          <div className="client-card">
+            <img src={item.image} alt={item.name} loading="lazy" />
 
-                {/* Hover content */}
-                <div className="hover-content">
-                  <h6>{item.name}</h6>
-                  {item.website && (
-                    <a
-                      href={item.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="visit-btn"
-                    >
-                      Visit Website
-                    </a>
-                  )}
-                </div>
-              </div>
+            {/* Hover content */}
+            <div className="hover-content">
+              <h6>{item.name}</h6>
+              {item.website && (
+                <a
+                  href={item.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="visit-btn"
+                >
+                  Visit Website
+                </a>
+              )}
             </div>
-          ))}
+          </div>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
 
-      {/* 🎨 Styles */}
-      <style>{`
-        .masonry {
-          column-count: 4;
-          column-gap: 20px;
-        }
+  {/* 🎨 Styles */}
+ <style>{`
+  .honeycomb-bg {
+    background-color: #fafafa;
+    background-image: url("/images/about/honeycomb.avif");
+    background-repeat: repeat;
+    background-size: 200px 200px; /* adjust size as needed */
+  }
 
-        .masonry-item {
-          break-inside: avoid;
-          margin-bottom: 20px;
-        }
+  /* ✅ GRID LAYOUT: auto-fit based on screen width */
+  .masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
 
-        .client-card {
-          position: relative;
-          background: #fff;
-          padding: 20px;
-          border-radius: 14px;
-          box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-          overflow: hidden;
-        }
+  .masonry-item {
+    margin-bottom: 20px;
+  }
 
-        .client-card img {
-          width: 100%;
-          height: 140px;
-          object-fit: contain;
-        }
+  .client-card {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
 
-        /* 👇 NO BLUR BACKGROUND */
-        .hover-content {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          padding: 14px;
-          background: #ffffff;
-          text-align: center;
-          transform: translateY(100%);
-          transition: 0.3s ease;
-          border-top: 1px solid #eee;
-        }
+  .client-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+  }
 
-        .client-card:hover .hover-content {
-          transform: translateY(0);
-        }
+  .hover-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px;
+    background: #ffffff;
+    text-align: center;
+    transform: translateY(100%);
+    transition: 0.3s ease;
+    border-top: 1px solid #eee;
+  }
 
-        .hover-content h6 {
-          margin-bottom: 8px;
-          font-size: 14px;
-          font-weight: 600;
-          color: #0a507a;
-        }
+  .client-card:hover .hover-content {
+    transform: translateY(0);
+  }
 
-        .visit-btn {
-          font-size: 13px;
-          padding: 6px 14px;
-          border-radius: 20px;
-          background: #0a507a;
-          color: #fff;
-          text-decoration: none;
-          display: inline-block;
-        }
+  .hover-content h6 {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0a507a;
+  }
 
-        .visit-btn:hover {
-          background: #083f60;
-        }
+  .visit-btn {
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #0a507a;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+  }
 
-        @media (max-width: 992px) {
-          .masonry { column-count: 3; }
-        }
+  .visit-btn:hover {
+    background: #083f60;
+  }
 
-        @media (max-width: 768px) {
-          .masonry { column-count: 2; }
-        }
+  /* ADJUST GRID AT BREAKPOINTS */
+  @media (max-width: 992px) {
+    .masonry {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+  }
 
-        @media (max-width: 576px) {
-          .masonry { column-count: 1; }
-        }
-      `}</style>
-    </section>
+  @media (max-width: 768px) {
+    .masonry {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+
+  @media (max-width: 576px) {
+    .masonry {
+      grid-template-columns: 1fr;
+    }
+  }
+`}</style>
+
+</section>
+
   );
 };
 

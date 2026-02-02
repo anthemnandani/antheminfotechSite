@@ -13,7 +13,7 @@ const IntroThree = () => {
   @media (max-width: 768px) {
 
     .intro-section.bg-video {
-      height: 75vh;          /* 🔥 reduce overall hero height */
+      height: 65vh;          /* 🔥 reduce overall hero height */
       min-height: unset;
       padding-top: 16px;
       padding-bottom: 16px;

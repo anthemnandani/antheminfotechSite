@@ -37,30 +37,30 @@ const WorkItemTwo = ({ data }) => {
     168
   );
 
-  useEffect(() => {
-    const equalizeHeights = () => {
-      const divs = document.querySelectorAll(".ViewProjectclass");
-      if (window.innerWidth < 768) {
-        divs.forEach((div) => (div.style.height = "auto"));
-        return;
-      }
+  // useEffect(() => {
+  //   const equalizeHeights = () => {
+  //     const divs = document.querySelectorAll(".ViewProjectclass");
+  //     if (window.innerWidth < 768) {
+  //       divs.forEach((div) => (div.style.height = "auto"));
+  //       return;
+  //     }
 
-      let maxHeight = 0;
-      divs.forEach((div) => {
-        div.style.height = "auto";
-        const height = div.offsetHeight;
-        if (height > maxHeight) maxHeight = height;
-      });
+  //     let maxHeight = 0;
+  //     divs.forEach((div) => {
+  //       div.style.height = "auto";
+  //       const height = div.offsetHeight;
+  //       if (height > maxHeight) maxHeight = height;
+  //     });
 
-      divs.forEach((div) => {
-        div.style.height = `${maxHeight}px`;
-      });
-    };
+  //     divs.forEach((div) => {
+  //       div.style.height = `${maxHeight}px`;
+  //     });
+  //   };
 
-    equalizeHeights();
-    window.addEventListener("resize", equalizeHeights);
-    return () => window.removeEventListener("resize", equalizeHeights);
-  }, []);
+  //   equalizeHeights();
+  //   window.addEventListener("resize", equalizeHeights);
+  //   return () => window.removeEventListener("resize", equalizeHeights);
+  // }, []);
 
   const toTitleCase = (str) =>
     str
@@ -74,7 +74,7 @@ const WorkItemTwo = ({ data }) => {
 
   return (
     <Tilt scale={scale} transitionSpeed={4000}>
-      <div className="card mb-4 ViewProjectclass custom-background-2 " >
+      <div className="card mb-4  custom-background-2 " >
         {/* Project Image & Title */}
         <Link
           href={`/ViewProject/${data.projectID}`}

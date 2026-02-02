@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Testimonial = ({ data }) => {
   return (
-    <div className="static-testimonial mb-6">
+    <div className="static-testimonial mb-6  ">
       <div className="testimonial-image">
         <Image
           src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}${data.image}`}

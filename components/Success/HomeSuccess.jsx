@@ -236,7 +236,7 @@ const HomeSuccess = ({ classOption }) => {
 
       {/* Right Side - Content & Progress Bars */}
       <div className="offset-lg-1 col-lg-5" data-aos="fade-up" data-aos-delay="300">
-        <div className="success-content mt-lg-0 mt-md-50 mt-sm-50 mt-40">
+        <div className="success-content mt-lg-0 mt-md-50 mt-sm-50 mt-5">
           <SectionTitleTwo
             title="Web Development, Generative AI, Data ETL, &amp; Presentation are our strengths"
           />
