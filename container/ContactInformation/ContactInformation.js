@@ -46,7 +46,7 @@ const ContactInformation = ({ classOption }) => {
             })}
         </div>
 
-        <div className="shape shape-1" id="scene" ref={sceneEl}>
+        {/* <div className="shape shape-1" id="scene" ref={sceneEl}>
           <span data-depth="1">
            <Image
              src={`${cloudBase}/images/shape-animation/video-shape-1.png`}
@@ -56,7 +56,7 @@ const ContactInformation = ({ classOption }) => {
               priority
             />
           </span>
-        </div>
+        </div> */}
       </div>
     </div>
   );

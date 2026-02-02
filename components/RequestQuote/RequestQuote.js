@@ -482,8 +482,7 @@ const RequestQuote = () => {
           </div>
         </div>
       </div>
-
-      <div className="col-12 mb-6">
+  <div className="row align-items-center mb-6"> <div className="col-12 col-md-6 d-flex justify-content-start">
         <ReCAPTCHA
           ref={recaptchaRef}
           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA}
@@ -491,7 +490,7 @@ const RequestQuote = () => {
         />
       </div>
 
-      <div className="col-12 mb-6">
+      <div className="col-12 col-md-6 d-flex justify-content-md-end justify-content-start mt-3 mt-md-0 pe-0">
         <button
           type="submit"
           className="btn btn btn-bottom"
@@ -501,7 +500,8 @@ const RequestQuote = () => {
         >
           {isSubmitting ? "Submitting..." : "Request A Quote"}
         </button>
-      </div>
+      </div></div>
+      
     </div>
   </form>
 </div>

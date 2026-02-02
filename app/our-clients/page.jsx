@@ -2,6 +2,7 @@ import React from "react";
 import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
 import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import BrandContainer from "../../container/Brand/BrandContainer";
+import ClientGallery from "../../container/ImageGallery/Clientgallery";
 import Script from "next/script";
 
 export const metadata = {
@@ -81,7 +82,8 @@ const OurClients = () => {
         content="Home"
         contentTwo="Our Clients"
       />
-      <BrandContainer classOption="section-padding bg-white" />
+      {/* <BrandContainer classOption="section-padding bg-white" /> */}
+      <ClientGallery classOption="bg-white" />
     </>
   );
 };

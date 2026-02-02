@@ -49,14 +49,14 @@ const CallToAction = ({ classOption }) => {
         </div>
       </div>
 
-      <div className="shape shape-1" id="scene" ref={sceneEl}>
+      {/* <div className="shape shape-1" id="scene" ref={sceneEl}>
         <span data-depth="1">
           <img
             src={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/images/shape-animation/newsletter-shape.png`}
             alt=""
           />
         </span>
-      </div>
+      </div> */}
     </div>
   );
 };

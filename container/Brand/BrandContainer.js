@@ -69,7 +69,9 @@ const BrandContainer = ({ classOption }) => {
   if (!brandData.length) return null; // Don't render empty Swiper
 
   return (
-    <section className={`brand-section  ${classOption}`}style={{ paddingBottom:"20px" }}>
+    <>
+     <div className={`section  ${classOption}`} style={{ paddingTop: "20px"}}></div>
+    <section className={`section section-padding-t90  ${classOption}`} style={{paddingTop:"20px" ,paddingBottom:"30px"}}>
       <div className="container">
         <div className="row">
           <div className="col-lg-12" data-aos="fade-up">
@@ -92,6 +94,9 @@ const BrandContainer = ({ classOption }) => {
         </div>
       </div>
     </section>
+    
+    </>
+    
   );
 };
 

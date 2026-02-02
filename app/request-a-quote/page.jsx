@@ -33,7 +33,7 @@ export default function RequestQuote() {
   /> 
       <Breadcrumb
         image="/images/bg/breadcrumb-bg-three.webp"
-        title="Request A <span class='text-color-span'> Quote</span>"
+        title="Request a<span class='text-color-span'> Free Quote</span>"
         content="Home"
         contentTwo="Request A Quote"
       />

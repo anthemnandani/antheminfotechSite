@@ -8,6 +8,7 @@ import AboutFour from "@/container/About/AboutFour";
 import Video from "@/container/Video/Video";
 import AboutFive from "@/container/About/AboutFive";
 import TestimonialContainer from "@/container/Testimonial/TestimonialContainer";
+import TestimonialQuote from "../../container/Testimonial/TestimonialQuote";
 import CallToActionTwo from "@/container/CallToAction/CallToActionTwo";
 import Script from "next/script";
 
@@ -78,8 +79,9 @@ const AboutUs = ({classOption}) => {
     
 
     
-        
-            <TestimonialContainer classOption="background-1" />
+{/*         
+            <TestimonialContainer classOption="background-1" /> */}
+            <TestimonialQuote classOption="background-1"/>
           
          
        

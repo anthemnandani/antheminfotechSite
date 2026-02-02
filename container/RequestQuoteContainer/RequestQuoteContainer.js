@@ -21,8 +21,8 @@ const RequestQuoteContainer = ({ classOption }) => {
           <div className="contact-form-area background-1 " style={{paddingTop:"10px",paddingBottom:"20px"}}>
             <SectionTitle
               headingOption="fz-32"
-              title="Request a Free Quote"
-              subTitle="Get a tailored quote within 24 hours. Our experts deliver efficient, scalable, and cost-effective solutions for your business."
+              // title="Request a Free Quote"
+              subTitle="<span class='text-black'>Get a tailored quote within 24 hours. Our experts deliver efficient, scalable, and cost-effective solutions for your business.</span>"
             />
             <RequestQuote />
           </div>

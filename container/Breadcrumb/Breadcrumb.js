@@ -66,7 +66,6 @@ const capitalize = (text) =>
                 )}
               </li>
             )}
-
             {contentThree && <li className="current">{contentThree}</li>}
           </ul>
         </div>
