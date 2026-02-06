@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React,{useEffect} from "react";
 import TestimonialData from "../../data/testimonial/testimonial.json";
 import Testimonial from "../../components/Testimonial/Testimonial.jsx";
 import SectionTitle from "../../components/SectionTitles/SectionTitle";
@@ -50,6 +50,34 @@ const TestimonialContainer = ({ classOption }) => {
     },
   },
 };
+  useEffect(() => {
+  const equalizeHeights = () => {
+    const cards = document.querySelectorAll(".static-testimonial");
+
+    // Mobile: reset height to auto
+    if (window.innerWidth < 768) {
+      cards.forEach(card => (card.style.height = "auto"));
+      return;
+    }
+
+    // Desktop: find max height
+    let maxHeight = 0;
+    cards.forEach(card => {
+      card.style.height = "auto"; // reset before calculating
+      if (card.offsetHeight > maxHeight) maxHeight = card.offsetHeight;
+    });
+
+    // Apply max height
+    cards.forEach(card => {
+      card.style.height = maxHeight + "px";
+    });
+  };
+
+  equalizeHeights(); // initial calculation
+  window.addEventListener("resize", equalizeHeights);
+
+  return () => window.removeEventListener("resize", equalizeHeights);
+}, []);
 
   return (
     <div

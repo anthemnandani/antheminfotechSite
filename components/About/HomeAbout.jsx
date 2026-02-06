@@ -40,7 +40,9 @@ const HomeAbout = ({ classOption }) => {
   const aboutShape = `${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/images/shape-animation/about-shape-1.png`;
 
   return (
-    <div className={`section section-padding-t90 section-padding-bottom ${classOption}`}style={{ paddingTop: "30px"}}>
+
+    <>
+     <div className={`section section-padding-t90 section-padding-bottom  ${classOption}`}style={{ paddingTop: "30px"}}>
       <div className="container">
        
 <SectionTitle
@@ -107,6 +109,8 @@ const HomeAbout = ({ classOption }) => {
        
     </div>
 
+    </>
+   
 
   );
 };

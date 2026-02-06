@@ -52,7 +52,7 @@ const Header = () => {
 
     return () => mediaQuery.removeEventListener("change", updateBackgroundColor);
   }, []);
-
+  
   // Fetch token
   useEffect(() => {
     const fetchToken = async () => {
@@ -83,7 +83,7 @@ const Header = () => {
         <div className="header-inner" style={{ backgroundColor: bgColor }}>
           <div className="container position-relative">
             <div className="row justify-content-between align-items-center position-static">
-              <div className="col-xl-4 col-sm-4 col-auto order-0">
+              <div className="col-xl-4 col-sm-4 col-auto order-0 flex-shrink-0">
                 <Logo
                   image={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/images/logo/logo.webp`}
                   alt="anthem infotech logo"
@@ -95,11 +95,17 @@ const Header = () => {
                   <NewNavBar />
                 </div>
 
-                <div
+                {/* <div
                   className={`header-mobile-menu-toggle d-xl-none ms-sm-2 ${
                     isDarkMode ? "dark-mode-logo" : "light-mode-logo"
                   }`}
-                >
+                > */}
+
+                <div
+  className={`header-mobile-menu-toggle d-xl-none ms-sm-2 ${
+    isDarkMode ? "header-dark" : "header-light"
+  }`}
+>
                   <button
                     type="button"
                     aria-label="Toggle menu"
@@ -119,8 +125,50 @@ const Header = () => {
 
       <MobileMenu show={offcanvasShow} onClose={() => setOffcanvasShow(false)} />
       <MainSearch show={searchbarShow} onClose={() => setSearchbarShow(false)} />
+
+
+        <style jsx>{`
+ .logo-container {
+    max-width: 180px; /* Adjust as needed */
+    width: 100%;
+  }
+
+  .logo-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  @media (max-width: 576px) {
+    .logo-container {
+      max-width: 140px; /* smaller screens */
+    }
+  }
+
+  @media (max-width: 400px) {
+    .logo-container {
+      max-width: 120px; /* very small screens */
+    }
+  }
+
+
+
+  /* Common hamburger styles */
+
+  /* 🌞 Light mode → dark hamburger */
+  .header-light .toggle i {
+    background-color: #000;
+  }
+
+  /* 🌙 Dark mode → white hamburger */
+  .header-dark .toggle i {
+    background-color: #fff;
+  }
+`}</style>
+
     </Fragment>
   );
 };
 
 export default Header;
+

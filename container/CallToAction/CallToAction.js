@@ -18,9 +18,9 @@ const CallToAction = ({ classOption }) => {
 
   return (
     <div
-      className={`section section-bg-image section-padding-t110-b120 newsletter-section overlay-two ${classOption}`}
+      className={`section section-bg-image section-padding-t90-b90 newsletter-section overlay-two ${classOption}`}
       style={{
-        backgroundImage: `url(${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/images/bg/newsletter.webp)`,
+        backgroundImage: `url(${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/images/bg/newsletter.webp)`,paddingTop:"10px",paddingBottom:"10px"
       }}
     >
       <div className="container">

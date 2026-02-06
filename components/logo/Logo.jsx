@@ -1,5 +1,4 @@
 "use client";
-
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -26,13 +25,15 @@ const Logo = ({ image }) => {
     <div className="header-logo">
       <Link href="/" aria-label="Anthem Infotech Home">
         <Image
-          className={isDarkMode ? "dark-mode-logo" : "light-mode-logo"}
+          className={appDarkMode? "dark-mode-logo" : "light-mode-logo"}
           src={image}
           alt="Anthem Infotech logo"
-          width={150}   // adjust as per your design
+          width={140}   // adjust as per your design
           height={50}   // adjust as per your design
           priority      // eager load like before
         />
+       
+
       </Link>
     </div>
   );

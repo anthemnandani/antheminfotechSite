@@ -139,11 +139,11 @@ export default function HomePage() {
         <IntroSlider />
         <HomeAbout classOption="bg-white" />
         {/* <Funfact classOption="bg-white" /> */}
-          <BrandContainer classOption=" bg-white" />
+          <BrandContainer classOption=" custom-background-2" />
         <ServiceIconBox classOption="background-1" />
+         <CallToAction />
         <HomeSuccess classOption="bg-white" />
-        <CallToAction />
-        <ContactInformation classOption="bg-white" />     
+        {/* <ContactInformation classOption="bg-white" />      */}
       </main>
       <ScrollToTop />                                   
     </>

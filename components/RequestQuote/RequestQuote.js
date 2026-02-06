@@ -107,7 +107,7 @@ const RequestQuote = () => {
 
 
   return (
-   
+   <>
 <div className="contact-form" data-aos="fade-up" data-aos-delay="300">
   <form onSubmit={handleSubmit(onSubmit)}>
     <div className="row mb-n6">
@@ -249,239 +249,95 @@ const RequestQuote = () => {
   )}
 </div>
 
-      {/* New Checkbox Section for Goals */}
-      <div className="col-12 mb-6">
-        <label className="mb-2">What is your goal? *</label>
-        <div className="row">
-          {/* Left Column (6) */}
-          <div className="col-md-7">
-            <div>
-              <label>
-              <input
-  type="checkbox"
-  value="Web Development"
-  {...register("goal")}
-  required
-  style={{
-    appearance: "none",
-    WebkitAppearance: "none",
-    width: "16px",
-    height: "16px",
-    backgroundColor: "#fff",
-    border: "2px solid #000",
-    cursor: "pointer",
-    display: "inline-block",
-    verticalAlign: "middle",
-  }}
-  onChange={(e) => {
-    e.target.style.backgroundImage = e.target.checked
-      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
-      : "none";
-    e.target.style.backgroundRepeat = "no-repeat";
-    e.target.style.backgroundPosition = "center";
-  }}
-/>
+     {/* New Checkbox Section for Goals */}
+<div className="col-12 mb-6">
+  <label className="mb-2 d-block">What is your goal? *</label>
 
-                &nbsp;Web Development
-              </label>
-            </div>
-            <div>
-              <label>
-                <input
-                  type="checkbox"
-                  value="Web Applications"
-                  {...register("goal")}
-                  style={{
-    appearance: "none",
-    WebkitAppearance: "none",
-    width: "16px",
-    height: "16px",
-    backgroundColor: "#fff",
-    border: "2px solid #000",
-    cursor: "pointer",
-    display: "inline-block",
-    verticalAlign: "middle",
-  }}
-  onChange={(e) => {
-    e.target.style.backgroundImage = e.target.checked
-      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
-      : "none";
-    e.target.style.backgroundRepeat = "no-repeat";
-    e.target.style.backgroundPosition = "center";
-  }}
-                />
-                &nbsp; Web Applications
-              </label>
-            </div>
-            <div>
-              <label>
-                <input
-                  type="checkbox"
-                  value="Mobile App Development"
-                  {...register("goal")}style={{
-    appearance: "none",
-    WebkitAppearance: "none",
-    width: "16px",
-    height: "16px",
-    backgroundColor: "#fff",
-    border: "2px solid #000",
-    cursor: "pointer",
-    display: "inline-block",
-    verticalAlign: "middle",
-  }}
-  onChange={(e) => {
-    e.target.style.backgroundImage = e.target.checked
-      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
-      : "none";
-    e.target.style.backgroundRepeat = "no-repeat";
-    e.target.style.backgroundPosition = "center";
-  }}
-                />
-                &nbsp; Mobile App Development
-              </label>
-            </div>
-            <div>
-              <label>
-                <input
-                  type="checkbox"
-                  value="On-Demand Dedicated Talent"
-                  {...register("goal")}style={{
-    appearance: "none",
-    WebkitAppearance: "none",
-    width: "16px",
-    height: "16px",
-    backgroundColor: "#fff",
-    border: "2px solid #000",
-    cursor: "pointer",
-    display: "inline-block",
-    verticalAlign: "middle",
-  }}
-  onChange={(e) => {
-    e.target.style.backgroundImage = e.target.checked
-      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
-      : "none";
-    e.target.style.backgroundRepeat = "no-repeat";
-    e.target.style.backgroundPosition = "center";
-  }}
-                />
-                &nbsp; On-Demand Dedicated Talent
-              </label>
-            </div>
-          </div>
+  <div className="goal-checkbox-grid">
+    {[
+      "Web Development",
+      "Web Applications",
+      "Mobile App Development",
+      "On-Demand Dedicated Talent",
+      "Design",
+      "Digital Marketing",
+      "QA and Testing",
+      "Not sure",
+    ].map((item) => (
+      <label key={item} className="goal-checkbox">
+        <input type="checkbox" value={item} {...register("goal")} />
+        <span className="custom-checkbox"></span>
+        <span className="label-text">{item}</span>
+      </label>
+    ))}
+  </div>
 
-          {/* Right Column (6) */}
-          <div className="col-md-5">
-            <div>
-              <label>
-                <input
-                  type="checkbox"
-                  value="Design"
-                  {...register("goal")}style={{
-    appearance: "none",
-    WebkitAppearance: "none",
-    width: "16px",
-    height: "16px",
-    backgroundColor: "#fff",
-    border: "2px solid #000",
-    cursor: "pointer",
-    display: "inline-block",
-    verticalAlign: "middle",
-  }}
-  onChange={(e) => {
-    e.target.style.backgroundImage = e.target.checked
-      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
-      : "none";
-    e.target.style.backgroundRepeat = "no-repeat";
-    e.target.style.backgroundPosition = "center";
-  }}
-                />
-                &nbsp; Design
-              </label>
-            </div>
-            <div>
-              <label>
-                <input
-                  type="checkbox"
-                  value="Digital Marketing"
-                  {...register("goal")}style={{
-    appearance: "none",
-    WebkitAppearance: "none",
-    width: "16px",
-    height: "16px",
-    backgroundColor: "#fff",
-    border: "2px solid #000",
-    cursor: "pointer",
-    display: "inline-block",
-    verticalAlign: "middle",
-  }}
-  onChange={(e) => {
-    e.target.style.backgroundImage = e.target.checked
-      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
-      : "none";
-    e.target.style.backgroundRepeat = "no-repeat";
-    e.target.style.backgroundPosition = "center";
-  }}
-                />
-                &nbsp; Digital Marketing
-              </label>
-            </div>
-            <div>
-              <label>
-                <input
-                  type="checkbox"
-                  value="QA and Testing"
-                  {...register("goal")}style={{
-    appearance: "none",
-    WebkitAppearance: "none",
-    width: "16px",
-    height: "16px",
-    backgroundColor: "#fff",
-    border: "2px solid #000",
-    cursor: "pointer",
-    display: "inline-block",
-    verticalAlign: "middle",
-  }}
-  onChange={(e) => {
-    e.target.style.backgroundImage = e.target.checked
-      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
-      : "none";
-    e.target.style.backgroundRepeat = "no-repeat";
-    e.target.style.backgroundPosition = "center";
-  }}
-                />
-                &nbsp; QA and Testing
-              </label>
-            </div>
-            <div>
-              <label>
-                <input
-                  type="checkbox"
-                  value="Not sure"
-                  {...register("goal")}style={{
-    appearance: "none",
-    WebkitAppearance: "none",
-    width: "16px",
-    height: "16px",
-    backgroundColor: "#fff",
-    border: "2px solid #000",
-    cursor: "pointer",
-    display: "inline-block",
-    verticalAlign: "middle",
-  }}
-  onChange={(e) => {
-    e.target.style.backgroundImage = e.target.checked
-      ? "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='black' d='M6.1 11.3L2.8 8l1.4-1.4 1.9 1.9 5-5 1.4 1.4z'/%3E%3C/svg%3E\")"
-      : "none";
-    e.target.style.backgroundRepeat = "no-repeat";
-    e.target.style.backgroundPosition = "center";
-  }}
-                />
-                &nbsp; Not sure
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
+  {/* ✅ Style JSX */}
+  <style jsx>{`
+    .goal-checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px 24px;
+    }
+
+    .goal-checkbox {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      font-size: 14px;
+      user-select: none;
+    }
+
+    .goal-checkbox input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    /* Checkbox box */
+    .custom-checkbox {
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border: 2px solid #000;
+      margin-right: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Tick */
+    .goal-checkbox input:checked + .custom-checkbox::after {
+      content: "";
+      width: 8px;
+      height: 4px;
+      border-left: 2px solid #000;
+      border-bottom: 2px solid #000;
+      transform: rotate(-45deg);
+      margin-bottom: 2px;
+    }
+
+    .label-text {
+      line-height: 1.3;
+    }
+
+    /* Tablet */
+    @media (max-width: 992px) {
+      .goal-checkbox-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 576px) {
+      .goal-checkbox-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  `}</style>
+</div>
+
   <div className="row align-items-center mb-6"> <div className="col-12 col-md-6 d-flex justify-content-start">
         <ReCAPTCHA
           ref={recaptchaRef}
@@ -505,7 +361,7 @@ const RequestQuote = () => {
     </div>
   </form>
 </div>
-
+</>
 
   );
 };

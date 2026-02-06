@@ -37066,25 +37066,72 @@ textarea:focus {
 }
 
 /* 05.04 Header Logo CSS */
-.header-logo a {
+/* .header-logo a {
   position: relative;
   max-width: 158px;
 }
+ 
+
 .header-logo a img {
   width: 100%;
   padding: 15px 0;
 }
+ 
 .header-logo a img.light-logo {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
 }
+.header-mobile-menu-toggle {
+  flex-shrink: 0;
+}
 
 @media only screen and (max-width: 479px) {
   .header-logo a {
     max-width: 120px;
   }
+} */
+
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header-logo a {
+  max-width: 158px;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header-logo a img {
+  max-height: 48px;
+  width: auto;
+  padding: 0;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .header-inner .row {
+    flex-wrap: nowrap;
+  }
+
+  .header-logo a img {
+    max-height: 36px;
+  }
+}
+
+@media (max-width: 479px) {
+  .header-logo a {
+    max-width: 120px;
+  }
+}
+
+.header-mobile-menu-toggle {
+  flex-shrink: 0;
 }
 
 .header-light .header-logo a img.light-logo {
@@ -37098,6 +37145,7 @@ textarea:focus {
 @media only screen and (max-width: 479px) {
   .header-logo {
     max-width: 120px;
+   
   }
 }
 
@@ -37108,6 +37156,9 @@ textarea:focus {
 .header-light .header-logo .dark-logo {
   opacity: 0;
 }
+
+
+
 /* header Search Area */
 .header-search-area {
   display: -webkit-box;
@@ -37830,14 +37881,14 @@ textarea:focus {
 .header-light .mobile-menu-close .toggle i::before,
 .header-light .header-mobile-menu-toggle .toggle i::after,
 .header-light .mobile-menu-close .toggle i::after {
-  background-color: #fff;
+  background-color: #000;
 }
 
 .header-light .header-mobile-menu-toggle .toggle:hover i::before,
 .header-light .mobile-menu-close .toggle:hover i::before,
 .header-light .header-mobile-menu-toggle .toggle:hover i::after,
 .header-light .mobile-menu-close .toggle:hover i::after {
-  background-color: #fff;
+  background-color: #000;
 }
 
 /* 05.03 Mobile Menu CSS */
@@ -38117,6 +38168,7 @@ textarea:focus {
 .site-mobile-menu .mega-menu .sub-menu {
   padding-left: 15px;
 }
+
 
 /*----------------------------------------*/
 /*  06. Intro CSS
@@ -38398,6 +38450,9 @@ textarea:focus {
 .static-testimonial .testimonial-content {
   margin-bottom: 25px;
 }
+
+
+
 .static-testimonial .testimonial-content p {
   font-size: 18px;
   font-weight: 500;
@@ -38423,6 +38478,8 @@ textarea:focus {
   font-size: 15px;
   color: #748494;
 }
+
+
 
 /*----------------------------------------*/
 /*  09. Pages CSS
@@ -40430,3 +40487,25 @@ textarea:focus {
   margin-bottom: 0;
 }
 
+/* ==================================================
+   CLICK ONLY DROPDOWN – FINAL OVERRIDE
+   ================================================== */
+
+.site-main-menu .sub-menu,
+.site-main-menu .mega-menu {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.site-main-menu > ul > li.open > .sub-menu,
+.site-main-menu > ul > li.open > .mega-menu {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.site-main-menu > ul > li:hover > .sub-menu,
+.site-main-menu > ul > li:hover > .mega-menu {
+  display: none !important;
+}

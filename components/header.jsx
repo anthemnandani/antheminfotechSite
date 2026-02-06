@@ -1,4 +1,4 @@
-"use client"; // required because we use useState, useEffect, and react-spring
+"use client"; 
 
 import { useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring";

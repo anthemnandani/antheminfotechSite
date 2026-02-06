@@ -13,8 +13,8 @@ const ServiceDesign = ({ service, classOption }) => {
 
   return (
     <div
-      className={`section section-padding-top section-padding-bottom ${classOption}` }
-      style={{ paddingTop: "10px"}}
+      className={`section section-padding-top ${classOption}` }
+      style={{ paddingTop: "10px",paddingBottom:"20px"}}
     >
       <Container>
         <Row>

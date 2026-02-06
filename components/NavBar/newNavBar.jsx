@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Link from "next/link";
 import Tilt from "react-parallax-tilt";
 
@@ -10,6 +10,77 @@ function NewNavBar() {
     // Helper to build full image URL from env variable
     const imgUrl = (path) =>
         `${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}${path}`;
+useEffect(() => {
+  const menuItems = document.querySelectorAll(
+    ".site-main-menu > ul > li.has-children"
+  );
+
+  const closeAll = () => {
+    menuItems.forEach((item) => {
+      item.classList.remove("open");
+      const submenu = item.querySelector(".sub-menu, .mega-menu");
+      if (submenu) {
+        submenu.style.visibility = "hidden";
+        submenu.style.opacity = "0";
+        submenu.style.pointerEvents = "none";
+        submenu.style.marginTop = "20px";
+      }
+    });
+  };
+
+  const handlers = [];
+
+  menuItems.forEach((item) => {
+    const link = item.querySelector("a");
+    const submenu = item.querySelector(".sub-menu, .mega-menu");
+    if (!link || !submenu) return;
+
+    /* 🚫 HARD BLOCK HOVER (CAPTURE PHASE) */
+    const killHover = (e) => {
+      if (!item.classList.contains("open")) {
+        e.stopImmediatePropagation();
+        submenu.style.visibility = "hidden";
+        submenu.style.opacity = "0";
+        submenu.style.pointerEvents = "none";
+      }
+    };
+
+    /* ✅ CLICK TO TOGGLE */
+    const onClick = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const isOpen = item.classList.contains("open");
+      closeAll();
+
+      if (!isOpen) {
+        item.classList.add("open");
+        submenu.style.visibility = "visible";
+        submenu.style.opacity = "1";
+        submenu.style.pointerEvents = "auto";
+        submenu.style.marginTop = "10px";
+      }
+    };
+
+    /* 🔥 capture=true is the magic */
+    item.addEventListener("mouseenter", killHover, true);
+    item.addEventListener("mouseover", killHover, true);
+    link.addEventListener("click", onClick);
+
+    handlers.push({ item, link, killHover, onClick });
+  });
+
+  document.addEventListener("click", closeAll);
+
+  return () => {
+    document.removeEventListener("click", closeAll);
+    handlers.forEach(({ item, link, killHover, onClick }) => {
+      item.removeEventListener("mouseenter", killHover, true);
+      item.removeEventListener("mouseover", killHover, true);
+      link.removeEventListener("click", onClick);
+    });
+  };
+}, []);
 
     return (
         <nav className="site-main-menu">
@@ -2760,13 +2831,14 @@ function NewNavBar() {
                             </Link>
                         </li>
 
-                        <li className="has-children dropdown">
+
+                        <li>
                             <Link href="/OurWork">
                                 <span className="menu-text">Portfolio</span>
                             </Link>
-                            <ul className="sub-menu">
+                            {/* <ul className="sub-menu">
                                 <li>
-                                    <Link href="/OurWork">
+                                    <Link href="/OurWork" target="_blank" rel="noopener noreferrer">
                                         <span className="menu-text">Our Work</span>
                                     </Link>
                                 </li>
@@ -2780,7 +2852,7 @@ function NewNavBar() {
                                         <span className="menu-text">Gallery</span>
                                     </Link>
                                 </li>
-                            </ul>
+                            </ul> */}
                         </li>
 
                         <li className="has-children dropdown">
@@ -2806,6 +2878,11 @@ function NewNavBar() {
                                 <li>
                                     <Link href="/testimonials">
                                         <span className="menu-text">Testimonials</span>
+                                    </Link>
+                                </li>
+                                 <li>
+                                    <Link href="/gallery">
+                                        <span className="menu-text">Gallery</span>
                                     </Link>
                                 </li>
                             </ul>

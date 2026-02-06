@@ -85,14 +85,9 @@ const MobileNavMenu = ({ onClose }) => {
                     </ul>
                 </li>
                 <li><Link href="/careers"><span className="menu-text" onClick={handleLinkClick}>Career</span></Link></li>
-                <li className="has-children">
+                <li >
                     <Link href="/OurWork"><span className="menu-text" onClick={handleLinkClick}>Portfolio</span></Link>
-                    <span className="menu-toggle" onClick={onClickHandler}><i className="icon fa fa-angle-down"></i></span>
-                    <ul className="sub-menu">
-                         <li><Link href="/OurWork"  onClick={handleLinkClick}><span className="menu-text">Our Work</span></Link></li>
-                        <li><Link href="/technologies"  onClick={handleLinkClick}><span className="menu-text">Technologies</span></Link></li>
-                         <li><Link href="/gallery"><span className="menu-text" onClick={handleLinkClick}>Gallery</span></Link></li>
-                    </ul>
+                  
                 </li>
                 <li className="has-children">
                     <Link href="/about-us"><span className="menu-text"  onClick={handleLinkClick}>About Us</span></Link>
@@ -101,6 +96,7 @@ const MobileNavMenu = ({ onClose }) => {
                         <li><Link href="/faqs"><span className="menu-text"  onClick={handleLinkClick}>FAQs</span></Link></li>
                         <li><Link href="/our-clients"><span className="menu-text" onClick={handleLinkClick}>Our Clients</span></Link></li>
                         <li><Link href="/testimonials"><span className="menu-text" onClick={handleLinkClick}>Testimonials</span></Link></li>
+                         <li><Link href="/gallery"><span className="menu-text" onClick={handleLinkClick}>Gallery</span></Link></li>
                     </ul>
                 </li>
                    <li><Link href="/request-a-quote"><span className="menu-text" onClick={handleLinkClick}>Get a Quote</span></Link></li>

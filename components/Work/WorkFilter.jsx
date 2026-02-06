@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { slugify } from "../../utils";
+import Link from "next/link";
 
 const WorkFilter = ({ categories, classOption, handleProjectWithCategory }) => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -30,7 +31,17 @@ const WorkFilter = ({ categories, classOption, handleProjectWithCategory }) => {
         >
           <span className="filter-text">{cat}</span>
         </button>
+        
       ))}
+     <Link href="/technologies" passHref>
+  <button
+   
+   
+    
+  >
+    <span className="filter-text">Skills</span>
+  </button>
+</Link>
     </div>
   );
 };

@@ -157,11 +157,11 @@ const truncateText = (text, limit) => {
 };
 
   return (
-    <div className="section section-padding-top brand-section  background-1"style={{paddingTop:"30px" }}>
+    <div className="section section-padding-top brand-section background-1"style={{paddingTop:"30px"}}>
       <Container className="new-custom-tabs">
         <div className="custom-tabs">
           {industrySolutions.map((solution, index) => (
-            <div key={index} className="custom-tab-container">
+            <div key={index} className="custom-tab-container bg-white">
               <input
                 type="radio"
                 name="custom-tabs"
@@ -222,15 +222,16 @@ const truncateText = (text, limit) => {
           ))}
         </div>
 
-        <div className="mt-20 mb-0 ind-project-pattion" >
-          <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 ">
+       
+        <div className="mt-5 ind-project-pattion">
+          <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1">
             {loading ? (
               <Loader />
             ) : (
               filteredProjects &&
               filteredProjects.map((single, index) => (
-                <div key={index} className="col mb-6" data-aos="fade-up">
-                  <WorkItemTwo classOption="box-border" data={single} />
+                <div key={index} className="col mb-4 d-flex" data-aos="fade-up">
+                  <WorkItemTwo  data={single} />
                 </div>
               ))
             )}

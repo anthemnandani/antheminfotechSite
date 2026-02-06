@@ -61,7 +61,9 @@ const footerData = [
 ];
 
   return (
-    <div
+
+    <>
+      <div
   className="footer-section section footer-bg-color"
   style={{ paddingTop: "30px", paddingBottom: "20px" }}
 >
@@ -86,14 +88,15 @@ const footerData = [
               <p className="mb-1">
                 <a href="tel:9815340123">
                   <i className="fas fa-phone me-2" />
-                  +91 9815-34-0123
-                </a>
+                 
+                </a> +91 9815-34-0123
               </p>
               <p className="mb-1">
                 <a href="mailto:info@antheminfotech.com">
                   <i className="fas fa-envelope me-2" />
-                  info@antheminfotech.com
+                  
                 </a>
+                info@antheminfotech.com
               </p>
             </div>
 
@@ -123,6 +126,25 @@ const footerData = [
               >
                 <i className="fa-brands fa-linkedin" />
               </a>
+               {/* WhatsApp */}
+  <a
+    href="https://wa.me/919815340123"
+    aria-label="WhatsApp"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i className="fa-brands fa-whatsapp" />
+  </a>
+
+  {/* Google Map */}
+  <a
+    href="https://www.google.com/maps/place/Anthem+Infotech+Pvt.+Ltd./@30.638553,76.821708,17z/data=!3m1!4b1!4m6!3m5!1s0x390feb34165bc719:0xeef887919eec714c!8m2!3d30.6385484!4d76.8242829!16s%2Fg%2F1tf9ln69"
+    aria-label="Location"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i className="fa-solid fa-location-dot" />
+  </a>
             </div>
           </div>
         </div>
@@ -165,98 +187,42 @@ const footerData = [
   </div>
 </div>
 
-//     <div className="footer-section section footer-bg-color">
-//       <div className="container">
-//         <div className="row mb-lg-14 mb-md-10 mb-6">
-//           {/* Footer Logo & Contact Info  */}
-//           <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 mb-6">
-//             <div className="footer-widget">
-//               <div className="footer-logo">
-//                 <h3 className="text-white">Anthem Infotech Pvt. Ltd.</h3>
-//                 <p className="text-color-p">
-//                   #11, Floor 11, Sushma Infinium, Chandigarh - Ambala Highway,
-//                   Near Best Price Zirakpur, Punjab – 140603 India.
-//                 </p>
-//               </div>
-//               <div className="footer-widget-content">
-//                 <div className="content">
-//                   <p>
-//                     <a href="tel:9815340123">
-//                       <i className="fas fa-phone me-2" />
-//                       +91 9815-34-0123
-//                     </a>
-//                   </p>
-//                   <p>
-//                     <a href="mailto:info@antheminfotech.com">
-//                       <i className="fas fa-envelope me-2" />
-//                       info@antheminfotech.com
-//                     </a>
-//                   </p>
-//                 </div>
-//                 <div className="footer-social-inline">
-//                   <a href="https://x.com/antheminfotech" aria-label="Twitter">
-//                     <i className="fa-brands fa-square-x-twitter" />
-//                   </a>
-//                   <a
-//                     href="https://www.facebook.com/AnthemInfotech"
-//                     aria-label="Facebook"
-//                   >
-//                     <i className="fab fa-facebook-square" />
-//                   </a>
-//                   <a
-//                     href="https://www.instagram.com/antheminfotech"
-//                     aria-label="Instagram"
-//                   >
-//                     <i className="fab fa-instagram" />
-//                   </a>
-//                   <a
-//                     href="https://in.linkedin.com/company/anthem-infotech-pvt-ltd-"
-//                     aria-label="LinkedIn"
-//                   >
-//                     <i className="fa-brands fa-linkedin" />
-//                   </a>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
+<style jsx>{`
+  .footer-section,
+  .footer-section p,
+  .footer-section a
+  {
+    color: #34cccf;
+  }
 
-//           {/* Footer Links */}
-//           <div className="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-12 mb-6">
-//             <div className="row justify-content-end text-start">
-//               {footerData.map((item) => (
-//                 <div
-//                   key={item.id}
-//                   className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6 mb-6"
-//                 >
-//                   <FooterLinkItem data={item} />
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
+  .footer-section a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
 
-//         {/* Copyright */}
-//         <div className="row">
-//           <div className="col">
-//             <div className="row copyright d-flex justify-content-between">
-//               <div className="col-sm-6 text-sm-start text-center">
-//               <p>
-//   &copy; {new Date().getFullYear()}–{new Date().getFullYear() + 1}{" "}
-//   <strong>
-//     Anthem Infotech Private Limited. All rights reserved.
-//   </strong>
-// </p>
+  .footer-section i{
+  color:#ffffff;
+  }
+
+  .footer-section i:hover{
+  color:#34cccf;
+  }
+
+  /* Footer headings */
+  .footer-section h5 {
+    color: #34cccf;
+  }
+
+  /* Copyright text */
+  .footer-section .copyright p,
+  .footer-section .copyright strong {
+    color:#34cccf;
+  }
+`}</style>
 
 
-//               </div>
-//               <div className="col-sm-6 text-sm-end text-center">
-//                 Powered by <strong>Anthem Infotech Pvt. Ltd.</strong>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
+    </>
+  
   );
 };
 

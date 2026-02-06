@@ -20,7 +20,7 @@ const capitalize = (text) =>
         backgroundPosition: "center",
         backgroundSize: "cover",
        height: "220px",
-       
+     
       }}
     >
        {/* ✅ Mobile styles */}
@@ -39,17 +39,23 @@ const capitalize = (text) =>
       </style>
       <div className="absolute inset-0 bg-black/50 z-0 " />
 
-      <div className="relative page-title pt-4">
-        <div className="container">
+      {/* <div className="relative page-title">
+        <div className="container ">
           <h1
             className="title"
             dangerouslySetInnerHTML={{ __html: title }}
           ></h1>
         </div>
-      </div>
+      </div> */}
 
       <div className="relative page-breadcrumb position-static " >
-        <div className="container">
+        <div >
+           <div className="relative page-title">
+             <h1
+            className="title"
+            dangerouslySetInnerHTML={{ __html: title }}
+          ></h1>
+           </div>
           <ul className="breadcrumb justify-content-center text-white" >
             <li>
               <Link href="/">{content}</Link>

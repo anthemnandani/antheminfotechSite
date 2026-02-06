@@ -73,8 +73,10 @@ const WorkItemTwo = ({ data }) => {
       .join(" ");
 
   return (
-    <Tilt scale={scale} transitionSpeed={4000}>
-      <div className="card mb-4  custom-background-2 " >
+
+    <>
+     <Tilt scale={scale} transitionSpeed={4000} className="w-100 d-flex">
+      <div className="card mb-4 custom-background-2 equal-card h-100 w-100 " >
         {/* Project Image & Title */}
         <Link
           href={`/ViewProject/${data.projectID}`}
@@ -166,7 +168,29 @@ const WorkItemTwo = ({ data }) => {
           </Link>
         </div>
       </div>
+
+    <style jsx>{`
+  .equal-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 380px;
+  }
+
+  .equal-card .card-body {
+    flex: 1;
+  }
+
+  .equal-card .card-footer {
+    margin-top: auto;
+  }
+`}</style>
+
+
     </Tilt>
+    
+    
+    </>
+   
   );
 };
 

@@ -8,7 +8,7 @@ import SectionTitle from "../../components/SectionTitles/SectionTitle";
 
 const ServiceIconBox = ({ classOption}) => {
   return (
-    <section className={`section section-padding-t90-b100 ${classOption}`} style={{ paddingTop: "20px", paddingBottom: "30px" }}>
+    <section className={`section section-padding-t90-b100  ${classOption}`} style={{ paddingTop: "20px", paddingBottom: "30px" }}>
       <div className="container">
         <SectionTitle
           title="Crafting seamless partnerships that deliver intelligent, future-ready solutions"

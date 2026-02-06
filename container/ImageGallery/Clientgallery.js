@@ -47,8 +47,8 @@ const ClientGallery = ({ classOption }) => {
   return (
  
     <section
-  className={`section ${classOption} honeycomb-bg`}
-  style={{ paddingBottom: "30px", paddingTop: "30px" }}
+  className={`section ${classOption} custom-background-2`}
+  style={{ paddingBottom: "10px", paddingTop: "30px" }}
 >
   <div className="container">
     <div className="masonry">
@@ -79,12 +79,7 @@ const ClientGallery = ({ classOption }) => {
 
   {/* 🎨 Styles */}
  <style>{`
-  .honeycomb-bg {
-    background-color: #fafafa;
-    background-image: url("/images/about/honeycomb.avif");
-    background-repeat: repeat;
-    background-size: 200px 200px; /* adjust size as needed */
-  }
+  
 
   /* ✅ GRID LAYOUT: auto-fit based on screen width */
   .masonry {

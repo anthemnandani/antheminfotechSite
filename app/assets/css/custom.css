@@ -736,12 +736,14 @@ span.ruby-c-content {
   ul.ruby-menu > li > ul > li > ul > li > ul {
     visibility: hidden;
     opacity: 0;
+    pointer-events: none;
   }
   ul.ruby-menu > li:hover > ul,
   ul.ruby-menu > li > ul > li:hover > ul,
   ul.ruby-menu > li > ul > li > ul > li:hover > ul {
     visibility: visible;
     opacity: 1;
+    pointer-events: auto; 
   }
   ul.ruby-menu > li.ruby-menu-mega-blog > div,
   ul.ruby-menu > li.ruby-menu-mega > div {
@@ -752,6 +754,7 @@ span.ruby-c-content {
   ul.ruby-menu > li.ruby-menu-mega:hover > div {
     visibility: visible;
     opacity: 1;
+     pointer-events: auto; 
   }
   ul.ruby-menu
     > li.ruby-menu-mega-blog
@@ -761,6 +764,7 @@ span.ruby-c-content {
     > div {
     visibility: hidden;
     opacity: 0;
+     pointer-events: none;
   }
   ul.ruby-menu
     > li.ruby-menu-mega-blog:hover
@@ -1753,7 +1757,7 @@ span.ruby-c-content {
 
 }
 .ind-project-pattion {
-  padding-top: 450px;
+  padding-top: 380px;
 }
 
 @media (max-width: 1200px) {

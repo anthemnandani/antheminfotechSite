@@ -199,7 +199,7 @@ const HomeSuccess = ({ classOption }) => {
   className={`section ${classOption}`}
   style={{
     paddingTop: "30px",
-    paddingBottom: "30px",
+    paddingBottom: "10px",
     marginBottom: "0",
     minHeight: "auto",
   }}

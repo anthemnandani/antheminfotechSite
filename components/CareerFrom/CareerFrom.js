@@ -58,13 +58,36 @@ const CareerForm = () => {
       return;
     }
 
+    // const expText = data.experienceyear || "";
+
+    // const yearsMatch = expText.match(/(\d{1,2})\s*(year|years|yr|yrs)/i);
+    // const monthsMatch = expText.match(/(\d{1,2})\s*(month|months|mo|mos)/i);
+
+    // const experienceYear = yearsMatch ? Number(yearsMatch[1]) : 0;
+    // const experienceMonth = monthsMatch ? Number(monthsMatch[1]) : 0;
     const expText = data.experienceyear || "";
 
-    const yearsMatch = expText.match(/(\d{1,2})\s*(year|years|yr|yrs)/i);
-    const monthsMatch = expText.match(/(\d{1,2})\s*(month|months|mo|mos)/i);
+// match decimal or whole years
+const yearMatch = expText.match(/(\d+(\.\d+)?)\s*(year|years|yr|yrs)/i);
+const monthMatch = expText.match(/(\d{1,2})\s*(month|months|mo|mos)/i);
 
-    const experienceYear = yearsMatch ? Number(yearsMatch[1]) : 0;
-    const experienceMonth = monthsMatch ? Number(monthsMatch[1]) : 0;
+let experienceYear = 0;
+let experienceMonth = 0;
+
+if (yearMatch) {
+  const yearValue = parseFloat(yearMatch[1]);
+  experienceYear = Math.floor(yearValue);
+  experienceMonth += Math.round((yearValue - experienceYear) * 12);
+}
+
+if (monthMatch) {
+  experienceMonth += Number(monthMatch[1]);
+}
+
+// normalize overflow months
+experienceYear += Math.floor(experienceMonth / 12);
+experienceMonth = experienceMonth % 12;
+
     const joiningDays = data.selectjoining
       ? `${parseInt(data.selectjoining, 10)} days`
       : "";
@@ -273,7 +296,7 @@ const CareerForm = () => {
           </div>
           <div className="col-md-6 col-12 mb-6">
             <label htmlFor="experienceyear">Total Experience *</label>
-            <input
+            {/* <input
               id="experienceyear"
               type="text"
               placeholder="e.g., 1 Year 2 Months"
@@ -321,7 +344,72 @@ const CareerForm = () => {
                   return true;
                 },
               })}
-            />
+            /> */}
+<input
+  id="experienceyear"
+  type="text"
+  placeholder="e.g., 1.5 years or 1y 6m"
+  className="textbox-border"
+  maxLength={14}
+  onInput={(e) => {
+    let value = e.target.value.toLowerCase();
+
+    // allow digits, decimal, space, letters
+    value = value.replace(/[^0-9.a-z\s]/g, "");
+
+    // normalize shortcuts
+    value = value
+      .replace(/\byrs?\b/g, " year")
+      .replace(/\by\b/g, " year")
+      .replace(/\bmos?\b/g, " month")
+      .replace(/\bm\b/g, " month");
+
+    // remove extra spaces
+    value = value.replace(/\s+/g, " ").trim();
+
+    e.target.value = value;
+  }}
+  {...register("experienceyear", {
+    required: "Total Experience is required.",
+    validate: (value) => {
+      // match decimal or whole years
+      const yearMatch = value.match(/(\d+(\.\d+)?)\s*year/i);
+      const monthMatch = value.match(/(\d{1,2})\s*month/i);
+
+      let years = 0;
+      let months = 0;
+
+      if (yearMatch) {
+        const yearValue = parseFloat(yearMatch[1]);
+        years = Math.floor(yearValue);
+        months += Math.round((yearValue - years) * 12);
+      }
+
+      if (monthMatch) {
+        months += Number(monthMatch[1]);
+      }
+
+      // normalize months overflow
+      years += Math.floor(months / 12);
+      months = months % 12;
+
+      if (years === 0 && months === 0) {
+        return "Enter experience like 1.5 years or 1y 6m";
+      }
+
+      if (years > 20) {
+        return "Years cannot exceed 20";
+      }
+
+      if (months > 11) {
+        return "Months must be between 0–11";
+      }
+
+      return true;
+    },
+  })}
+/>
+
 
             {errors?.experienceyear && (
               <span className="text-danger">{errors.experienceyear.message}</span>

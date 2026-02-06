@@ -43,8 +43,9 @@
         "Regulatory Compliance",
         "Controls management"
       ],
-      "description": "Our financial audit and advisory solutions empower organizations with accurate, data-driven insights to support informed decision-making. We deliver real-time analytics, AI-enhanced market forecasting, and robust portfolio management tools that improve financial performance. Our platforms facilitate comprehensive risk assessment, strengthen regulatory compliance, and streamline audit workflows by reducing manual efforts. By leveraging advanced automation and intelligent reporting, we enable financial teams to build trust, enhance operational efficiency, and achieve consistent, long-term growth.",
-      "image":"images/Industries/FinancialAuditCompliance.webp",
+     "description": "Our financial audit and advisory solutions provide organizations with accurate, data-driven insights for informed decision-making. We offer real-time analytics, AI-enhanced forecasting, and robust portfolio management tools to improve financial performance. Our platforms enable comprehensive risk assessment, streamline audit workflows, strengthen compliance, and reduce manual effort, empowering financial teams to enhance efficiency, build trust, and achieve sustainable growth.", 
+      "image":"images/Industries/HOAAutomationSolutions.webp",
+    
       "relatedProductsID":[10,11,12,13,14,15]
     },
     {
@@ -120,7 +121,7 @@
         "Predictive Analytics",
         "AI-Driven Automation"
       ],
-      "description": "We enhanced logistics and supply chain workflows by creating intelligent solutions that improve visibility, efficiency, and decision-making. Our platforms enable precise fleet management, smart route optimisation, and continuous real-time tracking for seamless operations. With predictive analytics and AI-powered automation, we help businesses cut operational costs, prevent disruptions, and streamline delivery processes. These advanced capabilities empower logistics teams to operate with greater accuracy, adaptability, and long-term reliability in a highly competitive market.",
+    "description": "We enhance logistics and supply chain workflows with intelligent solutions that improve visibility, efficiency, and decision-making. Our platforms offer precise fleet management, smart route optimization, and real-time tracking for seamless operations. With predictive analytics and AI-powered automation, we help businesses reduce costs, prevent disruptions, and streamline deliveries, enabling logistics teams to operate with greater accuracy, adaptability, and reliability in a competitive market.",
       "image":"images/Industries/Logistics.webp",
       "relatedProductsID":[37,38,39,40]
     },
@@ -135,7 +136,7 @@
         "Risk Management",
         "AI-Powered Insights"
       ],
-      "description": "We empowered construction firms with intelligent software systems designed to streamline project execution from planning to delivery. Our platforms enhanced scheduling, team coordination, and communication to keep every phase running smoothly and within budget. With tools for accurate cost estimation, comprehensive risk management, and real-time project visibility, companies gained stronger operational control. By integrating AI-driven insights, we enabled teams to minimise delays, reduce resource wastage, and achieve higher productivity throughout the construction lifecycle.",
+     "description": "We empower construction firms with intelligent software systems that streamline project execution from planning to delivery. Our platforms enhance scheduling, team coordination, and communication to ensure every phase runs smoothly and within budget. With tools for accurate cost estimation, comprehensive risk management, and real-time project visibility, companies gain stronger operational control. By leveraging AI-driven insights, teams can minimize delays, reduce resource waste, and achieve higher productivity across the entire construction lifecycle.",
       "image":"images/Industries/ConstructionIndustrySoftware.webp",
       "relatedProductsID":[41,42,43,44,45,46]
     },
@@ -145,12 +146,10 @@
       "url": "/",
       "highlights": [
         "Telemedicine Solutions",
-        "Appointment Scheduling  Platforms",
-        "EHR Integration Services",
         "AI Diagnostics Tools",
         "Remote Patient Monitoring Solutions"
       ],
-      "description": "We deliver advanced healthcare technology solutions that improve patient care and optimize healthcare operations. Our platforms include telemedicine services, online appointment scheduling, and seamless EHR integration, helping medical providers manage workflows efficiently.Using AI-powered diagnostics and remote patient monitoring, we offer personalized treatment plans and support accurate clinical decision-making. Our solutions also streamline administrative tasks, reduce paperwork, and allow healthcare professionals to focus on providing quality care.From digital health management to innovative medical tools, our solutions empower healthcare organizations to enhance efficiency, improve patient outcomes, and embrace the future of digital healthcare.",
+    "description": "We deliver advanced healthcare technology solutions that enhance patient care and optimize operations. Our platforms include telemedicine, online appointment scheduling, and seamless EHR integration to help providers manage workflows efficiently. With AI-powered diagnostics and remote patient monitoring, we support personalized treatment plans and accurate clinical decisions. By streamlining administrative tasks and reducing paperwork, our solutions empower healthcare organizations to improve efficiency, patient outcomes, and embrace the future of digital healthcare.",
       "image":"images/Industries/HealthCareSoftware.webp",
       "relatedProductsID":[1,2,3,4,5,6]
     },
@@ -161,15 +160,15 @@
       "highlights": [
         "Online Bookings  Platforms",
        
-        "AI Diagnostics Tools",
-        "Global Multilingual Support",
+       
+       
         "Real-Time Travel Updates",
-        "Reservation Management Systems",
+       
         "Travel API Integration",
          "Virtual Tours  and Experiences",
         "AI-Powered Travel Recommendations"
       ],
-      "description": "We provide innovative tourism and travel technology solutions that streamline booking processes, enhance itinerary planning, and improve customer engagement. Our platforms feature online bookings, virtual tours, AI-powered recommendations, and multilingual support to deliver an enriched travel experience.With real-time updates, reservation management, and API integration, we ensure seamless operations and secure transactions. Our solutions also provide valuable data analytics to optimize business performance. Partnering with us enables travel companies to create memorable experiences, increase bookings, and foster customer loyalty in today’s competitive tourism market.",
+      "description":"We provide innovative tourism and travel technology solutions that streamline booking processes, enhance itinerary planning, and improve customer engagement. Our platforms offer online bookings, virtual tours, AI-powered recommendations, and multilingual support to deliver a seamless travel experience. With real-time updates, reservation management, secure transactions, and data analytics, we help travel companies increase bookings, optimize operations, and foster customer loyalty in a competitive market.",
       "image":"images/Industries/Tourism.webp",
       "relatedProductsID":[7,8,9,10,11,13]
     }

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React,{useEffect} from "react";
 import TestimonialData from "../../data/testimonial/testimonial.json";
 import Testimonial from "../../components/Testimonial/Testimonial.jsx";
 import SectionTitle from "../../components/SectionTitles/SectionTitle";
@@ -50,10 +50,38 @@ const TestimonialContainer = ({ classOption }) => {
     },
   },
 };
+useEffect(() => {
+  const equalizeHeights = () => {
+    const cards = document.querySelectorAll(".static-testimonial");
+
+    // Mobile: reset height to auto
+    if (window.innerWidth < 768) {
+      cards.forEach(card => (card.style.height = "auto"));
+      return;
+    }
+
+    // Desktop: find max height
+    let maxHeight = 0;
+    cards.forEach(card => {
+      card.style.height = "auto"; // reset before calculating
+      if (card.offsetHeight > maxHeight) maxHeight = card.offsetHeight;
+    });
+
+    // Apply max height
+    cards.forEach(card => {
+      card.style.height = maxHeight + "px";
+    });
+  };
+
+  equalizeHeights(); // initial calculation
+  window.addEventListener("resize", equalizeHeights);
+
+  return () => window.removeEventListener("resize", equalizeHeights);
+}, []);
 
   return (
     <div
-      className={`testimonial-section section section-padding-t90 ${classOption}`} style={{paddingTop:"20px",paddingBottom:"10px"}}>
+      className={`testimonial-section section section-padding-t90 ${classOption}`} style={{paddingTop:"20px",paddingBottom:"20px"}}>
       <div className="container-fluid ps-xl-16 ps-lg-3 ps-md-3 ps-sm-3 ps-3 pe-xl-16 pe-lg-3 pe-md-3 pe-sm-3 pe-3">
       {/* <div className="container-fluid ps-xl-0 ps-lg-2 ps-md-3 ps-sm-3 ps-3 pe-xl-16 pe-lg-3 pe-md-3 pe-sm-3 pe-3"> */}
 

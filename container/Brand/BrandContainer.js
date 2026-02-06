@@ -70,7 +70,7 @@ const BrandContainer = ({ classOption }) => {
 
   return (
     <>
-     <div className={`section  ${classOption}`} ></div>
+     <div className={` section  ${classOption} `} ></div>
     <section className={`section section-padding-t40  ${classOption}`} style={{paddingBottom:"20px"}}>
       <div className="container">
         <div className="row">

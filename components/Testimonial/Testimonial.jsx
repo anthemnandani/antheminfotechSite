@@ -3,6 +3,9 @@ import React from "react";
 import Image from "next/image";
 
 const Testimonial = ({ data }) => {
+
+
+  
   return (
     <div className="static-testimonial mb-6  ">
       <div className="testimonial-image">
@@ -17,7 +20,7 @@ const Testimonial = ({ data }) => {
       </div>
       <div className="testimonial-content">
         <p  style={{ fontSize: "16px", fontWeight: "500",textAlign: "justify" }}>{data.desc}</p>
-
+  {/* <p style={{ fontSize: "16px", fontWeight: "500",textAlign: "justify" }} className="testimonial-text">{data.desc}</p> */}
 
       </div>
       <div className="author-info">

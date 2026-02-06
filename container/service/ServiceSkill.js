@@ -154,13 +154,13 @@ const ServiceSkill = ({ classOption }) => {
               </div>
               <div className="shape shape-1" id="scene" ref={sceneEl}>
                 <span data-depth="1">
-                  <img
+                  {/* <img
                     src={
                       process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL +
                       "/images/shape-animation/video-shape-1.png"
                     }
                     alt=""
-                  />
+                  /> */}
                 </span>
               </div>
             </div>
