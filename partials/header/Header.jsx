@@ -83,11 +83,16 @@ const Header = () => {
         <div className="header-inner" style={{ backgroundColor: bgColor }}>
           <div className="container position-relative">
             <div className="row justify-content-between align-items-center position-static">
-              <div className="col-xl-4 col-sm-4 col-auto order-0 flex-shrink-0">
-                <Logo
+              <div className="col-auto order-0">
+
+              {/* <div className="col-xl-4 col-sm-4 col-auto order-0 flex-shrink-0"> */}
+                 <div className="logo-wrapper">
+                   <Logo
                   image={`${process.env.NEXT_PUBLIC_CLOUDINARY_IMAGE_BASE_URL}/images/logo/logo.webp`}
                   alt="anthem infotech logo"
                 />
+                 </div>
+               
               </div>
 
               <div className="col-auto col-xl-8 col-sm-4 d-flex align-items-center justify-content-xl-center justify-content-end order-2 order-xl-1">
@@ -127,44 +132,47 @@ const Header = () => {
       <MainSearch show={searchbarShow} onClose={() => setSearchbarShow(false)} />
 
 
-        <style jsx>{`
- .logo-container {
-    max-width: 180px; /* Adjust as needed */
-    width: 100%;
+       <style jsx>{`
+  .logo-wrapper {
+    width: 190px;
+    min-width: 190px;
+    display: flex;
+    align-items: center;
   }
 
-  .logo-container img {
-    width: 100%;
-    height: auto;
+  .logo-wrapper :global(img) {
+    width: 100% !important;
+    height: auto !important;
+    max-width: none !important;
     object-fit: contain;
+    display: block;
   }
 
+  /* 📱 Mobile: make logo BIGGER */
   @media (max-width: 576px) {
-    .logo-container {
-      max-width: 140px; /* smaller screens */
+    .logo-wrapper {
+      width: 200px;      /* ⬅️ increased */
+      min-width: 200px;
     }
   }
 
+  /* 📱 Very small phones */
   @media (max-width: 400px) {
-    .logo-container {
-      max-width: 120px; /* very small screens */
+    .logo-wrapper {
+      width: 180px;      /* ⬅️ still big */
+      min-width: 180px;
     }
   }
 
-
-
-  /* Common hamburger styles */
-
-  /* 🌞 Light mode → dark hamburger */
   .header-light .toggle i {
     background-color: #000;
   }
 
-  /* 🌙 Dark mode → white hamburger */
   .header-dark .toggle i {
     background-color: #fff;
   }
 `}</style>
+
 
     </Fragment>
   );

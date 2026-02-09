@@ -92,12 +92,10 @@ useEffect(() => {
                                 <span className="menu-text">Home</span>
                             </Link>
                         </li>
-
                         <li className="ruby-menu-mega-blog">
                             <Link href="/services">
                                 <span className="menu-text">Services</span>
                             </Link>
-
                             <div className="mega-height">
                                 <ul className="ruby-menu-mega-blog-nav">
                                     {/* Custom Software Section */}
