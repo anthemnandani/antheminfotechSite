@@ -143,6 +143,10 @@ export default function HomePage() {
         <ServiceIconBox classOption="background-1" />
          <CallToAction />
         <HomeSuccess classOption="bg-white" />
+        <div style={{ display: "none" }}>
+  <ContactInformation />
+</div>
+
         {/* <ContactInformation classOption="bg-white" />      */}
       </main>
       <ScrollToTop />                                   
