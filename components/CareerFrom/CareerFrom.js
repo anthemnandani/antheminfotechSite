@@ -600,11 +600,11 @@ experienceMonth = experienceMonth % 12;
               <button
                 type="submit"
                 className="btn btn btn-bottom"
-                data-hover="Submit"
+                data-hover="Send Application"
                 disabled={isSubmitting}
                 style={{ background: "#0e6497" }}
               >
-                {isSubmitting ? "Submitting..." : "Submit"}
+                {isSubmitting ? "Submitting..." : "Send Application"}
               </button>
 
             </div>

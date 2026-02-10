@@ -220,11 +220,7 @@ const cleanSlug = slug?.replace(/-/g, " ");
   return (
     <div className={`section section-padding-t90 ${classOption}`} style={{paddingTop:"20px",paddingBottom:"20px"}}>
       <div className="container">
-        <SectionTitle
-          headingOption="title fz-32"
-          title="Crafting Effective Digital Marketing, Web Development, <br> Video Content and Communication Design"
-        />
-
+        
         <div className="row align-items-center">
           <div className="col-lg-5">
             {/* <SectionTitleTwo
@@ -233,7 +229,7 @@ const cleanSlug = slug?.replace(/-/g, " ");
               title="Our Work"
             /> */}
           </div>
-          <div className="col-lg-7" data-aos="fade-up">
+          <div className="col-lg-12" data-aos="fade-up">
             <WorkFilter
               categories={categories}
               handleProjectWithCategory={handleProjectWithCategory}
@@ -278,7 +274,7 @@ const cleanSlug = slug?.replace(/-/g, " ");
               </div>
             }
           >
-            <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 mb-n6">
+            <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 mb-n6 mt-6">
               {visibleData.map((single, index) => (
                 <div key={index} className="col mb-6" data-aos="fade-up">
                   <WorkItemTwo classOption="box-border" data={single} />

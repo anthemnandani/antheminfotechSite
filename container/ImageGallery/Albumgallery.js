@@ -96,11 +96,7 @@ useEffect(()=>{
   return (
     <div className={`section section-padding-t90-b100 ${classOption}`}style={{paddingTop:"20px",paddingBottom:"20px"}}>
       <div className="container">
-        <SectionTitle
-          headingOption="title fz-32"
-          title="Crafting Effective Digital Marketing, Web Development, <br> Video Content and Communication Design"
-        />
-
+     
         {/* <div className="row align-items-center">
           <div className="col-lg-5">
             <SectionTitleTwo title="Our Gallery" />

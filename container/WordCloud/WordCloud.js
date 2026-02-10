@@ -144,10 +144,6 @@ const WordCloud = ({ classOption }) => {
       style={{ margin: "0 auto" ,paddingTop:"20px",paddingBottom:"20px"}}
     >
       <div className="container">
-       <SectionTitle
-          headingOption="title fz-32"
-          title="Anthem Infotech Leverages Innovative Technologies, Latest Tools, and Platforms to Deliver Scalable, Efficient Business Solutions"
-        />
        
         {loading ? (
           <Loader />

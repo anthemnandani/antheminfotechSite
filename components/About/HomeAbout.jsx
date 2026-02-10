@@ -42,7 +42,7 @@ const HomeAbout = ({ classOption }) => {
   return (
 
     <>
-     <div className={`section section-padding-t90 section-padding-bottom  ${classOption}`}style={{ paddingTop: "30px"}}>
+     <div className={`section section-padding-t90 section-padding-bottom  ${classOption}`}style={{ paddingTop: "20px"}}>
       <div className="container">
        
 <SectionTitle

@@ -87,7 +87,7 @@ useEffect(() => {
 
         <SectionTitle
           headingOption="title fz-28"
-          title="Our Clients Speak for Us"
+          title="Hear From Our Clients"
          
         />
 
@@ -96,6 +96,7 @@ useEffect(() => {
           data-aos="fade-up"
           data-aos-delay="300"
           options={sliderOptions}
+          
         >
           {TestimonialData &&
             TestimonialData.map((single, key) => {

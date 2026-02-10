@@ -35,7 +35,7 @@ useEffect(() => {
   
   
   return (
-    <div className={`section section-padding-top  ${classOption}`} style={{ paddingTop: "30px" }}>
+    <div className={`section section-padding-top  ${classOption}`} style={{ paddingTop: "20px" }}>
 
       <div className="container">
         <div className="row">
@@ -45,7 +45,8 @@ useEffect(() => {
               <SectionTitleTwo
                 // subTitle="Web Design, Digital Marketing & Software Solutions"
                 title="We combine strategic planning, UI/UX design, and advanced software development to deliver impactful digital solutions"
-              />
+            
+            />
               <div className="row row-cols-sm-2 row-cols-auto mb-n6">
                 <div className="col mb-6">
                   <div className="about-funfact">

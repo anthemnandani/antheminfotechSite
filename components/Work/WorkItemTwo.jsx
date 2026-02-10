@@ -141,7 +141,7 @@ const WorkItemTwo = ({ data }) => {
     );
   })
   .sort((a, b) => a.length - b.length)
-  .slice(0, 7)
+  .slice(0, 4)
   .map((highlight, index) => (
                 <Link
                   key={index}
@@ -168,12 +168,12 @@ const WorkItemTwo = ({ data }) => {
           </Link>
         </div>
       </div>
-
+{/* <p>removed->  min-height: 380px;  from equal card</p> */}
     <style jsx>{`
   .equal-card {
     display: flex;
     flex-direction: column;
-    min-height: 380px;
+         
   }
 
   .equal-card .card-body {

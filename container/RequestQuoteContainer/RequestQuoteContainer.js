@@ -34,10 +34,10 @@ const RequestQuoteContainer = ({ classOption }) => {
       </div>
     </div>
     
-      <div className={`contact-form-section ${classOption}`} style={{paddingTop:"30px",marginTop:"0px"}}>
+      <div className={`contact-form-section ${classOption}`} style={{paddingTop:"20px",marginTop:"0px"}}>
          
         
-     <TestimonialQuote classOption="bg-white" />
+     <TestimonialQuote classOption="custom-background-2" />
              
             
                 
