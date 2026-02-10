@@ -103,7 +103,7 @@ const ClientGallery = ({ classOption }) => {
 
   .client-card img {
     width: 100%;
-    height: 140px;
+    height:80px;
     object-fit: contain;
   }
 
