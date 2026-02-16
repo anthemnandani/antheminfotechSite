@@ -5,19 +5,10 @@ import Faq from "@/container/Faq/Faq";
 import Script from "next/script";
 
 export const metadata = {
-  title: "FAQs - Frequently Asked Questions | Anthem Infotech",
+  title: "FAQs | Anthem Infotech",
   description: "Find answers to your questions about Anthem Infotech's services, solutions, and how we can help your business succeed with our expert technology offerings. Learn about Web Development, AI Solutions, Custom Software Development, and more.",
-  keywords: [
-    "FAQs",
-    "Frequently Asked Questions",
-    "Anthem Infotech FAQs",
-    "Software Development Questions",
-    "Web Development FAQs",
-    "AI Solutions FAQs",
-    "Custom Software Development Questions",
-  ],
   openGraph: {
-    title: "FAQs - Frequently Asked Questions | Anthem Infotech",
+    title: "FAQs | Anthem Infotech",
     description: "Find answers to your questions about Anthem Infotech's services, solutions, and how we can help your business succeed with our expert technology offerings.",
     url: "https://antheminfotech.com/faqs",
     siteName: "Anthem Infotech",
@@ -34,8 +25,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FAQs - Frequently Asked Questions | Anthem Infotech",
-    description: "Find answers to your questions about Anthem Infotech's services and solutions.",
+    title: "FAQs | Anthem Infotech",
+    description: "Find answers to your questions about Anthem Infotech's services, solutions, and how we can help your business succeed with our expert technology offerings.",
     images: ["/images/og-image.png"],
   },
   alternates: {
@@ -80,7 +71,8 @@ const FaqsPage = () => {
                 "name": "How can I contact Anthem Infotech?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "You can contact Anthem Infotech through our contact page, email, or phone. We offer free consultations for all potential clients."
+                  "text": "You can contact Anthem Infotech through our contact page, email, or phone for inquiries and support."
+
                 }
               }
             ]
@@ -106,6 +98,7 @@ const FaqsPage = () => {
         content="Home"
         contentTwo="FAQs"
       />
+      <h1 className="visually-hidden">Frequently Asked Questions About Our Software & AI Services</h1>
       <Faq classOption="bg-white" />
     </>
   );

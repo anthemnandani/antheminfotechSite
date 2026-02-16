@@ -95,6 +95,10 @@ export default function Portfolio() {
         content="Home"
         contentTwo="Gallery"
       />
+      <h1 className="visually-hidden">
+        Our Gallery – Web Development & AI Projects Showcase in Chandigarh
+      </h1>
+      
         <AlbumGallery classOption="bg-white" />
     
     

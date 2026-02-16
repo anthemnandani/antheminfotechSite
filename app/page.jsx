@@ -1,21 +1,12 @@
 export const metadata = {
-  title: "Web Development Company in Chandigarh ∣ Custom Software Development Services in India",
-  description: "Anthem Infotech is a trusted Web Development and Custom Software Development Company in Chandigarh, India. We specialize in AI solutions, Full Stack Development, and scalable enterprise software for businesses worldwide. Leading IT solutions provider since 2011.",
-  keywords: [
-    "Web Development Company in Chandigarh",
-    "AI Software Development",
-    "Custom Software Development India",
-    "Full Stack Development Services",
-    "Enterprise Application Development",
-    "Anthem Infotech",
-    "Software Development Company India",
-    "Chandigarh IT Solutions",
-    "Mobile App Development",
-    "IT Consulting Services",
-  ],
+  title: "Anthem Infotech Pvt. Ltd. | Software Product Development Company",
+  description:
+    "Anthem Infotech Pvt. Ltd. is a software product development company delivering custom software, MVP development, AI solutions, and enterprise applications since 2011.",
+ 
   openGraph: {
-    title: "Anthem Infotech ∣ Leading Web Development & AI Software Company in Chandigarh, India",
-    description: "Partner with Anthem Infotech — experts in Web Development, AI, and Custom Software Solutions. Explore how we help businesses transform with innovation and technology.",
+    title: "Anthem Infotech Pvt. Ltd. | Software Product Development Company",
+    description:
+      "Anthem Infotech Pvt. Ltd. delivers custom software, MVP development, AI, and enterprise solutions for global businesses.",
     url: "https://antheminfotech.com/",
     siteName: "Anthem Infotech",
     type: "website",
@@ -31,8 +22,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anthem Infotech ∣ Web & AI Software Development Experts in Chandigarh",
-    description: "Innovative Web Development and Custom AI Software Solutions from Anthem Infotech — driving digital transformation for clients in India and beyond.",
+    title: "Anthem Infotech Pvt. Ltd. | Software Product Development Company",
+    description:
+      "Custom software, AI solutions, and MVP development by Anthem Infotech Pvt. Ltd.",
     images: ["/images/og-image.png"],
     creator: "@antheminfotech",
   },
@@ -134,22 +126,22 @@ export default function HomePage() {
           }),
         }}
       />
-    
+
       <main>
         <IntroSlider />
         <HomeAbout classOption="bg-white" />
         {/* <Funfact classOption="bg-white" /> */}
-          <BrandContainer classOption=" custom-background-2" />
+        <BrandContainer classOption=" custom-background-2" />
         <ServiceIconBox classOption="background-1" />
-         <CallToAction />
+        <CallToAction />
         <HomeSuccess classOption="bg-white" />
         <div style={{ display: "none" }}>
-  <ContactInformation />
-</div>
+          <ContactInformation />
+        </div>
 
         {/* <ContactInformation classOption="bg-white" />      */}
       </main>
-      <ScrollToTop />                                   
+      <ScrollToTop />
     </>
   );
 }

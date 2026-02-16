@@ -2,22 +2,55 @@ import Head from "next/head";
 import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
 import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import RequestQuoteContainer from "../../container/RequestQuoteContainer/RequestQuoteContainer";
+export const metadata = {
+  title:
+    "Request a Free Quote | Web & AI Software Development Company – Anthem Infotech",
 
-export default function RequestQuote() {
+  description:
+    "Request a free project quote from Anthem Infotech. We deliver Web Development, AI Solutions, and Custom Software Development tailored to your business goals.",
+
+  
+  openGraph: {
+    title:
+      "Request a Free Quote | Web & AI Software Development – Anthem Infotech",
+    description:
+      "Get a free quote for Web Development, AI Solutions, and Custom Software Development. Let Anthem Infotech help you build scalable digital solutions.",
+    url: "https://antheminfotech.com/request-a-quote",
+    siteName: "Anthem Infotech",
+    type: "website",
+    locale: "en_IN",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Request a Free Quote – Anthem Infotech",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Request a Free Quote | Anthem Infotech",
+    description:
+      "Request a free project quote for Web, AI, and Custom Software Development. Start your digital journey with Anthem Infotech.",
+    images: ["/images/og-image.png"],
+  },
+
+  alternates: {
+    canonical: "https://antheminfotech.com/request-a-quote",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+const RequestQuote = () => {
   return (
     <>
-      <Head>
-        <title>Anthem Infotech - Request A Quote</title>
-        <meta
-          name="description"
-          content="Get a personalized quote for your project needs. Anthem Infotech offers tailored solutions for businesses of all sizes. Reach out to us today for a quote and take the first step towards growth."
-        />
-        <meta property="og:title" content="Anthem Infotech - Request A Quote" />
-        <meta
-          property="og:description"
-          content="Get a personalized quote for your project needs. Anthem Infotech offers tailored solutions for businesses of all sizes. Reach out to us today for a quote and take the first step towards growth."
-        />
-      </Head>
+     
 
     <BreadcrumbSchema
     items={[
@@ -37,6 +70,8 @@ export default function RequestQuote() {
         content="Home"
         contentTwo="Request A Quote"
       />
+      <h1 className="visually-hidden">
+        Request a Free Quote for Your Software Development Project</h1>
       <RequestQuoteContainer classOption="bg-white" />
   
     </>
@@ -45,6 +80,7 @@ export default function RequestQuote() {
 
 
 
+export default RequestQuote;
 
 
 
@@ -60,29 +96,3 @@ export default function RequestQuote() {
 
 
 
-
-
-
-
-
-
-// import React from "react";
-// import Breadcrumb from "../../container/Breadcrumb/Breadcrumb.js";
-// import RequestQuoteContainer from "../../container/RequestQuoteContainer/RequestQuoteContainer.js";
-
-// const RequestQuote = () => {
-//   return (
-//     <React.Fragment>
-//       <Breadcrumb
-//         image="images/bg/breadcrumb-bg-three.jpg"
-//         title="Request A Quote"
-//         content="Home"
-//         contentTwo="Request A Quote"
-//       />
-//       <RequestQuoteContainer classOption="bg-white" />
- 
-//     </React.Fragment>
-//   );
-// };
-
-// export default RequestQuote;

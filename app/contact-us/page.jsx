@@ -10,14 +10,7 @@ import Script from "next/script";
 export const metadata = {
   title: "Contact Anthem Infotech - Web Development & AI Experts in Chandigarh",
   description: "Ready to start your project? Contact the leading Custom Software Development and Web Development Company in Chandigarh for a free consultation. Talk to our AI experts today! Get expert advice on Web Development, AI Solutions, and Custom Software Development.",
-  keywords: [
-    "Contact Anthem Infotech",
-    "Web Development Company Chandigarh",
-    "Software Development Contact",
-    "AI Solutions Consultation",
-    "Custom Software Development India",
-    "Chandigarh IT Company",
-  ],
+
   openGraph: {
     title: "Contact Anthem Infotech - Web Development & AI Experts in Chandigarh",
     description: "Ready to start your project? Contact the leading Custom Software Development and Web Development Company in Chandigarh for a free consultation. Talk to our AI experts today!",

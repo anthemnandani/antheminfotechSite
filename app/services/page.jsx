@@ -23,11 +23,12 @@ const ServicePage = () => {
   return (
     <>
       {/* SEO Metadata */}
-     <SEO
-  title="Custom Software Development Services ∣ AI & Web Development"
-  description="We are a leading Web Development Company and expert provider of Custom Software Development Services in India. Explore our expertise in AI Coding, Full Stack, and enterprise solutions."
-  ogtitle="Custom Software Development Services ∣ AI & Web Development"
-  ogdescription="We are a leading Web Development Company and expert provider of Custom Software Development Services in India. Explore our expertise in AI Coding, Full Stack, and enterprise solutions."
+
+<SEO
+  title="Custom Software Development Services | Anthem Infotech"
+  description="Anthem Infotech provides custom software development services, including AI, web, and enterprise solutions for scalable business growth."
+  ogtitle="Custom Software Development Services | Anthem Infotech"
+  ogdescription="Anthem Infotech delivers custom software development, AI, and web solutions for startups and enterprises."
 />
 
  {/* BreadcrumbList Schema */}
@@ -52,6 +53,9 @@ const ServicePage = () => {
         content="Home"
         contentTwo="Services"
       />
+<h1 className="visually-hidden">
+  Custom Software Development Services
+</h1>
 
       {/* Service Sections */}
       <ServiceIconBoxTwo classOption="bg-white" />

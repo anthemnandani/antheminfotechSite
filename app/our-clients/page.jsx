@@ -82,6 +82,7 @@ const OurClients = () => {
         content="Home"
         contentTwo="Our Clients"
       />
+      <h1 className="visually-hidden">Our Clients – Trusted by Leading Brands Worldwide</h1>
       {/* <BrandContainer classOption="section-padding bg-white" /> */}
       <ClientGallery classOption="bg-white" />
     </>

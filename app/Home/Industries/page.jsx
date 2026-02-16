@@ -6,9 +6,11 @@ import ReactTabs from "@/components/Tabs/Tab";
 // Dynamic page props for SEO
 export async function generateMetadata({ searchParams }) {
   // Static SEO metadata for Industries page
-  const titleTag = "Industries We Serve ∣ AI & Custom Software Development Company in India";
-  const metaDescription =
-    "Explore how Anthem Infotech delivers Custom Software Development and AI Solutions across multiple industries. Partner with a trusted Web Development Company in Chandigarh, India.";
+  const titleTag =
+  "Industries We Serve | Custom Software & AI Solutions by Anthem Infotech";
+
+const metaDescription =
+  "Discover how Anthem Infotech delivers custom software and AI solutions across industries, helping businesses innovate and scale globally.";
 
   return {
     title: titleTag,
@@ -62,6 +64,9 @@ const IndustriesPage = ({ searchParams }) => {
         content="Home"
         contentTwo="Industries"
       />
+      <h1 className="visually-hidden">
+  Industries We Serve with Custom Software & AI Solutions
+</h1>
       <ReactTabs industryType={industryType} />
    
      

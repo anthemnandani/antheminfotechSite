@@ -27,20 +27,12 @@ const AboutUs = ({classOption}) => {
             "name": "About Anthem Infotech",
             "description": "Leading Web Development and AI Software Company in Chandigarh, India since 2011",
             "url": "https://antheminfotech.com/about-us",
-            "mainEntity": {
-              "@type": "Organization",
-              "name": "Anthem Infotech Private Limited",
-              "foundingDate": "2011",
-              "founder": {
-                "@type": "Person",
-                "name": "Hemant Gupta",
-                "jobTitle": "CEO"
-              },
-              "description": "Leading Software Product Development and IT Solutions company"
-            }
+           
           }),
         }}
       />
+
+      
         {/* BreadcrumbList Schema */}
   <BreadcrumbSchema
     items={[
@@ -61,7 +53,7 @@ const AboutUs = ({classOption}) => {
         content="Home"
         contentTwo="About Us"
       />
-
+<h1 className="visually-hidden">About Anthem Infotech – Web & AI Software Development Company</h1>
       <AboutFour classOption="bg-white" />
       <Video />
       <AboutFive classOption="bg-white" />

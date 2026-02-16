@@ -7,22 +7,14 @@ import Script from "next/script";
 
 // Dynamic/Static metadata for SEO
 export async function generateMetadata() {
-  const title = "Career at Anthem Infotech ∣ Join Leading Web & AI Development Company in Chandigarh";
-  const description =
-    "Build your career with Anthem Infotech — a leading Web Development and AI Software Company in Chandigarh. Explore opportunities in Custom Software Development, AI Coding, and Full Stack technologies. Join our team of experts.";
+  const title =  "Careers at Anthem Infotech | Web & AI Development Company";
+ const description = "Explore career opportunities at Anthem Infotech. Join our Web, AI, and software development teams in Chandigarh and grow your tech career."
+
+
 
   return {
     title,
     description,
-    keywords: [
-      "Career at Anthem Infotech",
-      "Jobs in Chandigarh",
-      "Software Development Jobs",
-      "Web Development Careers",
-      "AI Developer Jobs",
-      "IT Jobs India",
-      "Tech Careers",
-    ],
     openGraph: {
       title,
       description,
@@ -85,7 +77,7 @@ const Career = () => {
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Chandigarh",
-                "addressRegion": "Punjab",
+                "addressRegion": "Chandigarh",
                 "addressCountry": "IN"
               }
             },
@@ -122,7 +114,9 @@ const Career = () => {
         content="Home"
         contentTwo="Career"
       />
-
+<h1 className="visually-hidden">
+  Careers at Anthem Infotech – Join Our Web & AI Development Team
+</h1>
       {/* Career Form Section */}
       <CareerFromContainer classOption="background-7" />
     </>

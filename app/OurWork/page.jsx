@@ -6,22 +6,15 @@ import Script from "next/script";
 
 // Server-side SSG metadata
 export async function generateMetadata() {
-  const title = "Our Portfolio ∣ Custom Web & AI App Development Projects in India";
-  const description =
-    "Discover Anthem Infotech's successful projects in Web and AI App Development. From Custom Software to Chatbots, explore how our Chandigarh-based team delivers innovative digital solutions.";
+const title =
+  "Our Portfolio | Web & AI Development Projects by Anthem Infotech";
 
+const description =
+  "Explore Anthem Infotech’s portfolio of web, AI, and custom software projects showcasing innovative digital solutions for global clients.";
   return {
     title,
     description,
-    keywords: [
-      "Anthem Infotech Portfolio",
-      "Web Development Projects",
-      "AI App Development",
-      "Custom Software Projects",
-      "Project Showcase",
-      "Case Studies",
-      "Success Stories",
-    ],
+  
     openGraph: {
       title,
       description,
@@ -95,6 +88,9 @@ export default function Portfolio() {
         content="Home"
         contentTwo="Portfolio"
       />
+      <h1 className="visually-hidden">
+        Our Portfolio – Web & AI Development Projects by Anthem Infotech
+      </h1>
       <WorkContainer classOption="bg-white" />
     
     </>
