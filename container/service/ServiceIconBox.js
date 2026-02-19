@@ -12,7 +12,7 @@ const ServiceIconBox = ({ classOption}) => {
       <div className="container">
         <SectionTitle
           title="Crafting seamless partnerships that deliver intelligent, future-ready solutions"
-          subTitle="<span class='text-white'>With over 13 years of proven expertise, we excel in AI-powered software development, ML-based automation, and modern mobile app engineering. Our team builds scalable web applications and advanced digital solutions tailored to your business goals. We ensure every solution is aligned for measurable growth, operational efficiency, and long-term digital success.</span>"
+          subTitle="<span class='text-white'>Since 2011, we excel in AI-powered software development, ML-based automation, and modern mobile app engineering — building scalable web applications and advanced digital solutions tailored for measurable growth, operational efficiency, and long-term digital success.</span>"
         />
 <div className="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6">
           {IconBoxData &&

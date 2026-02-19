@@ -106,12 +106,8 @@ const HomeAbout = ({ classOption }) => {
           </div>
         </div>
       </div>
-       
     </div>
-
     </>
-   
-
   );
 };
 export default HomeAbout;
