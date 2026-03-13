@@ -3,6 +3,7 @@ import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
 import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import BrandContainer from "../../container/Brand/BrandContainer";
 import ClientGallery from "../../container/ImageGallery/Clientgallery";
+import Clientsection from "../../container/CallToAction/Clientsection";
 import Script from "next/script";
 
 export const metadata = {
@@ -84,7 +85,10 @@ const OurClients = () => {
       />
       <h1 className="visually-hidden">Our Clients – Trusted by Leading Brands Worldwide</h1>
       {/* <BrandContainer classOption="section-padding bg-white" /> */}
+     
+    
       <ClientGallery classOption="bg-white" />
+     <Clientsection classOption="bg-white" />
     </>
   );
 };

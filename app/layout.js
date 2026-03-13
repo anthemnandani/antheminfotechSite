@@ -29,10 +29,6 @@ export const metadata = {
     canonical: "https://antheminfotech.com",
     languages: {
       "en-in": "https://antheminfotech.com/",
-      "en-us": "https://antheminfotech.com/usa",
-      "en-au": "https://antheminfotech.com/australia",
-      "en-ca": "https://antheminfotech.com/canada",
-      "en-nz": "https://antheminfotech.com/new-zealand",
       "x-default": "https://antheminfotech.com/",
     },
   },

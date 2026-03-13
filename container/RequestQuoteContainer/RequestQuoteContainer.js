@@ -17,13 +17,21 @@ const RequestQuoteContainer = ({ classOption }) => {
     <div className={`contact-form-section section section-padding-t90 ${classOption}`} style={{paddingTop:"20px", paddingBottom:"20px"}}>
       <div className="container">
      
-  {/* Leftt Column - Request Quote Form */}
-          <div className="contact-form-area background-1 " style={{paddingTop:"10px",paddingBottom:"20px"}}>
-            <SectionTitle
+  {/* Left Column - Request Quote Form */}
+          <div className="contact-form-area background-1 " style={{paddingTop:"0px",paddingBottom:"0px"}}>
+            {/* <SectionTitle
               headingOption="fz-32"
               // title="Request a Free Quote"
               subTitle="<span class='text-black'>Get a tailored quote within 24 hours. Our experts deliver efficient, scalable, and cost-effective solutions for your business.</span>"
-            />
+            /> */}
+        <SectionTitle
+  headingOption="fz-32"
+  subTitle={`<span class="text-black">
+<strong>Get a tailored quote within 24 hours. Our experts deliver efficient, scalable, and cost-effective solutions for your business.</strong>
+<br/>
+Request a custom quote for web development, AI solutions, and software development services designed to grow your business faster.
+</span>`}
+/>
             <RequestQuote />
           </div>
        
