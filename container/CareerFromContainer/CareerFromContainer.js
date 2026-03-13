@@ -17,7 +17,8 @@ const CareerFromContainer = ({ classOption }) => {
             <SectionTitle
               headingOption="fz-32"
               title="Join Us at Anthem Infotech"
-              subTitle="We make it easy for talented individuals to connect and grow with us. Whether you're starting your career or looking to advance, exciting opportunities await"
+              subTitle="Grow your career at Anthem Infotech with opportunities in web development, AI solutions, and custom software development in a professional IT environment."
+              // subTitle="We make it easy for talented individuals to connect and grow with us. Whether you're starting your career or looking to advance, exciting opportunities await"
             />
             <CareerFrom />
           </div>

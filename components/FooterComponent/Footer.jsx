@@ -28,7 +28,7 @@ const footerData = [
       {
         id: 4,
         text: "Industries",
-        url: "Home/Industries",
+        url: "/Home/Industries",
       },
       {
         id: 5,

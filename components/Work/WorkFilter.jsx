@@ -85,7 +85,11 @@ const WorkFilter = ({ categories, classOption, handleProjectWithCategory }) => {
   };
 
   return (
-    <div className={`d-flex align-items-center ${classOption}`}>
+    <>
+   
+
+    
+     <div className={`d-flex align-items-center ${classOption}`}>
   {/* Left side: Category buttons */}
   <div className="messonry-button d-flex flex-wrap gap-2 flex-grow-1 justify-content-start">
     <button
@@ -119,38 +123,19 @@ const WorkFilter = ({ categories, classOption, handleProjectWithCategory }) => {
   </button>
 </Link>
 </div>
+     <div className=" mt-4">
+    
+      <strong>
+        Explore our portfolio of web development, AI solutions, and custom software
+        projects delivered for clients across multiple industries. Our work
+        includes scalable web applications, enterprise software, AI-powered tools,
+        and modern digital platforms designed to improve business efficiency,
+        performance, and growth.
+      </strong>
+    </div>
+    </>
+   
 
-//    <div className={`d-flex align-items-center ${classOption}`}>
-//   {/* Left side: Category buttons */}
-//   <div className="messonry-button d-flex flex-wrap gap-2 flex-grow-1 justify-content-start">
-//     <button
-//       data-filter="*"
-//       className={activeCategory === "All" ? "is-checked" : ""}
-//       onClick={() => handleCategoryClick("All")}
-//     >
-//       <span className="filter-text">All</span>
-//     </button>
-//     {categories.map((cat, idx) => (
-//       <button
-//         key={idx}
-//         data-filter={`.${slugify(cat)}`}
-//         className={activeCategory === cat ? "is-checked" : ""}
-//         onClick={() => handleCategoryClick(cat)}
-//       >
-//         <span className="filter-text">{cat}</span>
-//       </button>
-//     ))}
-//   </div>
-
-//   {/* Right side: Skills button */}
-//   <button
-//     className="btn btn-bottom ms-3"
-//     data-hover="Skills"
-//     style={{ background: "#0e6497" }}
-//   >
-//     Skills
-//   </button>
-// </div>
 
   );
 };

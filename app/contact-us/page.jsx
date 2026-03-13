@@ -3,7 +3,9 @@ import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
 import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import IntroThree from "@/container/IntroSlider/IntroThree";
 import ContactInformation from "../../container/ContactInformation/ContactInformation";
+import Contactsection from "../../container/CallToAction/Contactsection";
 import GoogleMap from "../../container/Map/GoogleMap";
+
 import ContactFromContainer from "../../container/ContactFromContainer/ContactFromContainer";
 import Script from "next/script";
 
@@ -100,8 +102,11 @@ const ContactUs = () => {
       
         <ContactInformation classOption="bg-white" />
          <ContactFromContainer classOption="background-1" />
+          
       <IntroThree />
+    
        <GoogleMap classOption="bg-white" />
+           <Contactsection classOption="bg-white" />
       
       {/* <IntroThree />
       <ContactInformation classOption="bg-white" />

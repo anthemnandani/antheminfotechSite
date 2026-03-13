@@ -108,7 +108,7 @@ const RequestQuote = () => {
 
   return (
    <>
-<div className="contact-form" data-aos="fade-up" data-aos-delay="300">
+<div className="contact-form" data-aos="fade-up" data-aos-delay="300" >
   <form onSubmit={handleSubmit(onSubmit)}>
     <div className="row mb-n6">
       <div className="col-md-6 col-12 mb-6">

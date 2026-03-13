@@ -2,6 +2,7 @@
 import React from "react";
 import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
 import CareerFromContainer from "../../container/CareerFromContainer/CareerFromContainer";
+
 import BreadcrumbSchema from "@/components/BreadCrumbSchema";
 import Script from "next/script";
 
@@ -119,6 +120,8 @@ const Career = () => {
 </h1>
       {/* Career Form Section */}
       <CareerFromContainer classOption="background-7" />
+
+      
     </>
   );
 };
